@@ -18,8 +18,8 @@ def readBook(path):
     """
     f = codecs.open(path, encoding='utf-8')
     book = [line for line in f]
-    replacements = [(unicode('‘'),unicode("'")),(unicode("’"),unicode("'")),(unicode("—"),unicode("-")),(unicode('“'),unicode('"')),
-                    (unicode('”'),unicode('"')),(unicode('…'),unicode('... '))]
+    replacements = [(u"‘",unicode("'")),(u"’",unicode("'")),(u"—",unicode("-")),(u'“',unicode('"')),
+                    (u'”',unicode('"')),(u'…',unicode('... '))]
     for replacement in replacements:
         book = [line.replace(replacement[0],replacement[1]) for line in book]
     return book

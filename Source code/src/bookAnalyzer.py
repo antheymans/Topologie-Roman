@@ -64,8 +64,11 @@ def readAll():
         bookAnalyze(f)
     
 if __name__ == "__main__":
-    title = raw_input("Enter the title of the .txt file to be analyzed ('all' for all files).")
+    title = raw_input("Enter the title of the .txt file to be analyzed ('all' for all files).\n")
+    print title  ##debug
     if title == "all":
         readAll()
-    else:
+    elif title[-4:] == ".txt":
         bookAnalyze(title)
+    else:
+        print("the input is not valid")
