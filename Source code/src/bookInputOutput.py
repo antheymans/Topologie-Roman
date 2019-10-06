@@ -210,6 +210,7 @@ def csv_occurrences_CID(dialog_occurrences,filename):
         do += CSV_COMMA + str(o['sentiment']) + CSV_COMMA + str(o['index']) + CSV_COMMA + str(o['context']) 
     
     f = open(PATH_CSV + filename+"/occurrences_CID.csv", "w+")
+    print(do)
     f.write(do)
     f.close()
 
