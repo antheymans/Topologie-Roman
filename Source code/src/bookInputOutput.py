@@ -5,6 +5,7 @@
 
 import bookPreProcessing as bPP
 import pickle
+import dill
 import os
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -40,9 +41,12 @@ def loadBook(filename):
         print "Done !"
         return book
     else:
+        if not os.path.exists(PATH_BOOKS_OBJECT): ##check that the directory exist before creating file
+            print "NO BOOKS DIRECTORY FOUND! Creating the directory"
+            os.makedirs(PATH_BOOKS_OBJECT) 
         print "NO FILE FOUND! Building the collection..."
         book = bPP.buildBook(PATH_BOOKS+filename+".txt")
-        setObject(book,path)
+        setObject(book, path)
         print "Done !"
         return book
 
@@ -69,12 +73,19 @@ def setObject(o, filename):
         f = open(filename,'a+')
     print(pickle.dump(o, f))
 
+    #print len(o) #debu
+    #print(pickle.dump(o[0], f))
+    #print(pickle.dump(o[1], f))
+    #print(pickle.dump(o[2], f))
+    #print(pickle.dump(o[3], f))
+
+
 
 def getObject(filename):
     """
     Retrieve an object from a file
     """
-    f = open(filename, "rb")
+    f = open(filename, "r")
     return pickle.load(f)
 
 ###############################################################
@@ -87,6 +98,9 @@ def updateStats(name, stat):
         resfile[name] = stat
         setObject(resfile,resfilename)
     else:
+        if not os.path.exists(PATH_SERIALIZED): ##check that the directory exist before creating file
+            print "NO SERIALIZED DIRECTORY FOUND! Creating the directory"
+            os.makedirs(PATH_SERIALIZED) 
         resfile = {name:stat}
         setObject(resfile,resfilename)
     csv_dialogExtr_stats(resfile)
