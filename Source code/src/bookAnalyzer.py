@@ -65,7 +65,6 @@ def readAll():
     
 if __name__ == "__main__":
     title = raw_input("Enter the title of the .txt file to be analyzed ('all' for all files).\n")
-    print title  ##debug
     if title == "all":
         readAll()
     elif title[-4:] == ".txt":
