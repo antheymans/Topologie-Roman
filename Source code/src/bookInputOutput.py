@@ -71,7 +71,9 @@ def setObject(o, filename):
         f = open(filename,'w+')
     else:
         f = open(filename,'a+')
-    print(pickle.dump(o, f))
+    pickle.dump(o, f)
+    print("Object set in "+filename)#deb
+    #print(pickle.dump(o, f))
 
     #print len(o) #debu
     #print(pickle.dump(o[0], f))
@@ -139,7 +141,7 @@ def loadAliasTables(previous_book):
     aT, cT, aliases = getObject(aliasfilename)
     aliasTable = {key: [] for key in aT.keys()}
     connectionsTable = cT.copy()
-    for e in connectionsTable.edges_iter(data=True):
+    for e in list(connectionsTable.nodes(data=True)):
         e[2]['value'] = 0 
     return aliasTable, connectionsTable, aliases
 
@@ -210,7 +212,6 @@ def csv_occurrences_CID(dialog_occurrences,filename):
         do += CSV_COMMA + str(o['sentiment']) + CSV_COMMA + str(o['index']) + CSV_COMMA + str(o['context']) 
     
     f = open(PATH_CSV + filename+"/occurrences_CID.csv", "w+")
-    print(do)
     f.write(do)
     f.close()
 
@@ -420,10 +421,14 @@ def build_png_graph_double(filename,graphs):
 """
 
 def write_graph(G,filename):   
-    nx.write_gexf(G, PATH_GRAPHS+"/"+filename+".gexf")
+    import os.path
+    if not os.path.exists(PATH_GRAPHS): ##check that the directory exist before creating file
+        print "NO GRAPH DIRECTORY FOUND! Creating the directory"
+        os.makedirs(PATH_GRAPHS) 
+    nx.write_gexf(G, PATH_GRAPHS+filename+".gexf")
     data2 = json_graph.node_link_data(G)
     json.dumps(data2)
-    f2 = open(PATH_GRAPHS+"/"+filename+'.json','w+')
+    f2 = open(PATH_GRAPHS+filename+'.json','w+')
     json.dump(data2,f2) 
 
 ###############################################################
