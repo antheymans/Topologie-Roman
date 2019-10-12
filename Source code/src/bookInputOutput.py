@@ -5,7 +5,6 @@
 
 import pickle
 import dill
-import os
 import matplotlib.pyplot as plt
 import networkx as nx
 import json
@@ -13,6 +12,7 @@ from networkx.readwrite import json_graph
 from networkx.algorithms.cluster import average_clustering
 import os.path
 
+import bookPreProcessing as bPP
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT, PATH_GRAPHS, PATH_CSV, PATH_PNG, PATH_SERIALIZED
 
 CSV_COMMA=";"

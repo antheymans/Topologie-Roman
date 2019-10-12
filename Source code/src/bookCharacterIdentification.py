@@ -3,12 +3,12 @@
 
 #Library handling the character identification and alias resolution
 
-from helpers import is_root, uniques
 from collections import Counter
 import networkx as nx
 import pattern.text.en as pen
 
 from helpers import print_statistics_CID
+from helpers import is_root, uniques
 
 ###############################################################
 # Alias table functions
