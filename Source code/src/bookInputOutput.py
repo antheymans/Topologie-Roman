@@ -33,35 +33,45 @@ def get_files_in_folder(folder):
             files.append(l)
     return files
 
-def loadBook(filename):
+def load_book(filename):
     path = PATH_BOOKS_OBJECT+filename+".book"
     if os.path.isfile(path):
         print "FILE FOUND! Loading the collection..."
-        book = getObject(path)
+        book = get_object(path)
         print "Done !"
         return book
     else:
-        if not os.path.exists(PATH_BOOKS_OBJECT): ##check that the directory exist before creating file
-            print "NO BOOKS DIRECTORY FOUND! Creating the directory"
-            os.makedirs(PATH_BOOKS_OBJECT) 
         print "NO FILE FOUND! Building the collection..."
-        book = bPP.buildBook(PATH_BOOKS+filename+".txt")
-        setObject(book, path)
+        book = bPP.build_book(PATH_BOOKS+filename+".txt")
+        set_object(book, path)
         print "Done !"
         return book
 
 def create_folders(filename):
+    check_dir(PATH_SERIALIZED, PATH_BOOKS_OBJECT, PATH_GRAPHS)
     directories = [PATH_CSV+filename, PATH_CSV+filename+"/Context/", PATH_CSV+filename+"/Incremental/", 
                    PATH_PNG+filename, PATH_PNG+filename+"/CONTEXT/", PATH_PNG+filename+"/INCREMENTAL/"]
     for directory in directories:
         if not os.path.exists(directory):
             os.makedirs(directory)
 
+def check_dir(path_serialized, path_book_object, path_graphs):
+    if not os.path.exists(path_serialized): ##check that the directory exist before creating file
+        print "NO SERIALIZED DIRECTORY FOUND! Creating the directory"
+        os.makedirs(path_serialized) 
+    if not os.path.exists(path_book_object): ##check that the directory exist before creating file
+        print "NO BOOKS DIRECTORY FOUND! Creating the directory"
+        os.makedirs(path_book_object) 
+    if not os.path.exists(path_graphs): ##check that the directory exist before creating file
+        print "NO GRAPH DIRECTORY FOUND! Creating the directory"
+        os.makedirs(path_graphs) 
+        
+        
 ###############################################################
 # Serialization methods
 ###############################################################
 
-def setObject(o, filename):
+def set_object(o, filename):
     """
     Set an object to a file
     """
@@ -81,7 +91,7 @@ def setObject(o, filename):
 
 
 
-def getObject(filename):
+def get_object(filename):
     """
     Retrieve an object from a file
     """
@@ -91,52 +101,51 @@ def getObject(filename):
 ###############################################################
 # Serialize and loading functions
 ###############################################################
-def updateStats(name, stat):
+def update_stats(name, stat):
     resfilename = PATH_SERIALIZED+"speakerIDstats.txt"
     if os.path.isfile(resfilename):
-        resfile = getObject(resfilename)
+        resfile = get_object(resfilename)
         resfile[name] = stat
-        setObject(resfile,resfilename)
+        set_object(resfile,resfilename)
     else:
-        if not os.path.exists(PATH_SERIALIZED): ##check that the directory exist before creating file
-            print "NO SERIALIZED DIRECTORY FOUND! Creating the directory"
-            os.makedirs(PATH_SERIALIZED) 
         resfile = {name:stat}
-        setObject(resfile,resfilename)
-    csv_dialogExtr_stats(resfile)
+        set_object(resfile,resfilename)
+    csv_dialog_extr_stats(resfile)
 
-def updateStats_CID(name,stat):
+def update_stats_CID(name,stat):
     resfilename = PATH_SERIALIZED+"speakerIDstats_postCID.txt"
+    
     if os.path.isfile(resfilename):
-        resfile = getObject(resfilename)
+        resfile = get_object(resfilename)
         resfile[name] = stat
-        setObject(resfile,resfilename)
+        set_object(resfile,resfilename)
     else:
         resfile = {name:stat}
-        setObject(resfile,resfilename)
-    csv_dialogExtr_statsCID(resfile)
+        set_object(resfile,resfilename)
+    csv_dialog_extr_stats_CID(resfile)
+
 
 def save_occurrences_contexts(filename,dialog_occurrences,dialog_contexts):
-    setObject(dialog_occurrences, PATH_SERIALIZED+filename+"_occurrences")
+    set_object(dialog_occurrences, PATH_SERIALIZED+filename+"_occurrences")
     csv_occurrences(dialog_occurrences,filename)
-    setObject(dialog_contexts, PATH_SERIALIZED+filename+"_contexts")
+    set_object(dialog_contexts, PATH_SERIALIZED+filename+"_contexts")
     csv_contexts(dialog_contexts,filename)
     
 def save_occurrences_CID(filename, dialog_occurrences):
-    setObject(dialog_occurrences, PATH_SERIALIZED+filename+"_occurrences_CID")
+    set_object(dialog_occurrences, PATH_SERIALIZED+filename+"_occurrences_CID")
     csv_occurrences_CID(dialog_occurrences,filename)
 
-def exportAliases(aliasTable, connectionsTable, aliases, filename):
+def export_aliases(aliasTable, connectionsTable, aliases, filename):
     aliasfilename = PATH_SERIALIZED+filename+"_alias"
-    setObject((aliasTable, connectionsTable, aliases),aliasfilename)
+    set_object((aliasTable, connectionsTable, aliases),aliasfilename)
     csv_aliases(aliasTable, connectionsTable, aliases, filename)
 
-def loadAliasTables(previous_book):
+def load_alias_table(previous_book):
     aliasfilename = PATH_SERIALIZED+previous_book+"_alias"
     if previous_book == "" or not os.path.isfile(aliasfilename):
         return {},nx.Graph(), nx.Graph()
     print "File found."
-    aT, cT, aliases = getObject(aliasfilename)
+    aT, cT, aliases = get_object(aliasfilename)
     aliasTable = {key: [] for key in aT.keys()}
     connectionsTable = cT.copy()
     for e in list(connectionsTable.nodes(data=True)):
@@ -168,7 +177,7 @@ def build_csv_spacing_map(dialog_spacing,count,threshold,filename):
     f2.write(frequency)
     f2.close()
 
-def csv_dialogExtr_stats(resfile):
+def csv_dialog_extr_stats(resfile):
     idStats = "Book" + CSV_COMMA + "%ID\n"
     for b in resfile.keys():
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
@@ -177,7 +186,7 @@ def csv_dialogExtr_stats(resfile):
     f.write(idStats)
     f.close()
 
-def csv_dialogExtr_statsCID(resfile):
+def csv_dialog_extr_stats_CID(resfile):
     idStats = "Book" + CSV_COMMA + "%ID\n"
     for b in resfile.keys():
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
@@ -419,9 +428,6 @@ def build_png_graph_double(filename,graphs):
 """
 
 def write_graph(G,filename):   
-    if not os.path.exists(PATH_GRAPHS): ##check that the directory exist before creating file
-        print "NO GRAPH DIRECTORY FOUND! Creating the directory"
-        os.makedirs(PATH_GRAPHS) 
     nx.write_gexf(G, PATH_GRAPHS+filename+".gexf")
     data2 = json_graph.node_link_data(G)
     json.dumps(data2)

@@ -1,9 +1,10 @@
 import bookInputOutput as bIO
+import bookPreProcessing as bPP
+import os.path
 
-def preProcess(override):
+def preprocess(override):
     #Build a book collection
     #Main function for preprocess
-    import bookInputOutput as bIO
     files = bIO.get_files_in_folder(PATH_BOOKS)
 
     for f in files:
@@ -11,13 +12,13 @@ def preProcess(override):
             print "File",f[:-4]+".book","already exists"
         else:
             print "Creating object for",f[:-4]
-            book = buildBook(PATH_BOOKS+f)
-            bIO.setObject(book,PATH_BOOKS_OBJECT+f[:-4]+".book")
+            book = bPP.build_book(PATH_BOOKS+f)
+            bIO.set_object(book,PATH_BOOKS_OBJECT+f[:-4]+".book")
             print "Book object created for",f[:-4]
     print "Done!"
 
 if __name__ == '__main__':
-    preProcess(override = False)
+    preprocess(override = False)
 
 
 

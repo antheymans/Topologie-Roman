@@ -83,7 +83,7 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
 # Dialog occurrence building
 ###############################################################
 
-def extractAgents(sentence):
+def extract_agents(sentence):
     #We only consider dialogue
     s = sentence.split(unicode('"'))
     d_from=[]
@@ -104,7 +104,7 @@ def extractAgents(sentence):
     
     return d_from, d_to
 
-def getWeightFromSentiments(sentiment):
+def get_weight_from_sentiments(sentiment):
     """
     Extract weights from sentiment scores
     """
@@ -126,8 +126,8 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts):
         context = [j for j in range(len(dialog_contexts)) if (dialog_contexts[j][0] <= index and dialog_contexts[j][1] > index)][0] 
         
         #Dialog occurrence building
-        d_from, d_to = extractAgents(sentence)
-        d_sentiment = getWeightFromSentiments(sentiments[index])
+        d_from, d_to = extract_agents(sentence)
+        d_sentiment = get_weight_from_sentiments(sentiments[index])
         dialog_occurrence = {'from': d_from, 'to': d_to, 'sentiment': d_sentiment, 
                              'sentence': sentence, 'index': index, 'context': context}
         
@@ -140,7 +140,7 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts):
 # Main dialog extraction method
 ###############################################################
 
-def dialogExtraction(sentences, breaks, sentiments, chunks):
+def dialog_extraction(sentences, breaks, sentiments, chunks):
     dialog_spacing = spacing_map(sentences,breaks)
     threshold, count = compute_threshold(dialog_spacing)
     

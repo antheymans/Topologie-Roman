@@ -6,14 +6,13 @@
 
 import codecs
 import re
-import os
 
 import pattern.text.en as pen
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT
 
 EMPTY_STRING=re.compile('\s+',re.U)
 
-def readBook(path):
+def read_book(path):
     """
     Read a UTF-8 book in text format
     """
@@ -25,7 +24,7 @@ def readBook(path):
         book = [line.replace(replacement[0],replacement[1]) for line in book]
     return book
 
-def getSentences(book):
+def get_sentences(book):
     """
     Uses the CLiPS Pattern parse tree to get individual sentences and chunks
     """
@@ -54,7 +53,7 @@ def getSentences(book):
                     chunks.append(chunk)
     return sentences, chunks
 
-def getBreaks(sentences):
+def get_breaks(sentences):
     """
     Return whether or not each sentence in a list is a chapter break (empty lines)
     """
@@ -66,14 +65,14 @@ def getBreaks(sentences):
             breaks.append(False)
     return breaks
 
-def buildBook(path):
-    book = readBook(path)
+def build_book(path):
+    book = read_book(path)
     print "Book read!"
-    sentences, chunks = getSentences(book)
+    sentences, chunks = get_sentences(book)
     print "Sentences extracted!"
     #indices = range(len(sentences))
     #print "Indices generated!"
-    breaks = getBreaks(sentences)
+    breaks = get_breaks(sentences)
     print "Scene and chapter breaks identified!"
     sentiments = [pen.sentiment(sentence) for sentence in sentences]
     print "Sentiments extracted!"

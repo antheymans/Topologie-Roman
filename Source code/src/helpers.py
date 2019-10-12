@@ -10,6 +10,8 @@ PATH_PNG = "../png/"
 PATH_SERIALIZED = "../serialized/"
 PATH_GRAPHS = "../graphs/"
 
+
+
 def uniques(liste):
     """
     Return a list with removed duplicates
@@ -66,13 +68,11 @@ def is_root(word1,word2):
             return True
     return False
 
-
 ###############################################################
-# Functions for status update in console
+# Statistic of dialog occurence computation function
 ###############################################################
-
-def print_statistics(dialog_occurrences,filename):
-    import bookInputOutput as bIO
+    
+def compute_statistics(dialog_occurrences):
     """
     Print statistics of identified and unidentified in the dialog_occurrences
     """   
@@ -85,10 +85,9 @@ def print_statistics(dialog_occurrences,filename):
             cOth += 1
     percentID = (1.0*cOth)/(cOth+cUnk)*100
     print "Statistics : "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]"
-    bIO.updateStats(filename,percentID)
+    return percentID
 
-def print_statistics_CID(dialog_occurrences,filename):
-    import bookInputOutput as bIO
+def compute_statistics_CID(dialog_occurrences):
     """
     Print statistics of identified and unidentified in the dialog_occurrences
     """   
@@ -100,5 +99,7 @@ def print_statistics_CID(dialog_occurrences,filename):
         else:
             cOth += 1
     percentID = (1.0*cOth)/(cOth+cUnk)*100
-    print "Statistics : "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]"
-    bIO.updateStats_CID(filename,percentID)
+    print "Statistics CID: "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]"
+    return percentID
+
+

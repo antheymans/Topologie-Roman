@@ -7,13 +7,12 @@ from collections import Counter
 import networkx as nx
 import pattern.text.en as pen
 
-from helpers import print_statistics_CID
 from helpers import is_root, uniques
 
 ###############################################################
 # Alias table functions
 ###############################################################
-def isValid(word):
+def is_valid(word):
     if word == word.upper() or len(word) <= 2:
         return False
     return True
@@ -32,7 +31,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
         
     #First pass, isolate relevant proper nouns
     for c in chunks:
-        if c.head.type.find('NNP')==0 and isValid(c.head.string):
+        if c.head.type.find('NNP')==0 and is_valid(c.head.string):
             name = c.head.string
             if aliasTable.get(name,0)==0:
                 aliasTable[name]=[c.string]
@@ -44,7 +43,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
-        if c.head.type.find('NNP')==0 and isValid(c.head.string): #Relevant chunks
+        if c.head.type.find('NNP')==0 and is_valid(c.head.string): #Relevant chunks
             for w in c.words:
                 if w != c.head:
                     name = w.string
@@ -98,7 +97,7 @@ def alias_lookup(chunk,aliasTable):
     else:
         return ""
 
-def filterAliasTable(aliasTable,occurrences):
+def filter_alias_table(aliasTable,occurrences):
     s_t = []
     for o in occurrences:
         s_t.append(o['from'])
@@ -312,7 +311,7 @@ def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
 # Main character identification function
 ###############################################################
 
-def characterAnalysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldConnectionsTable,oldAliases):
+def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldConnectionsTable,oldAliases):
     aliasTable, connectionsTable, aliases = build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases)
     print "Alias table created."
     for index in range(len(dialog_contexts)):
@@ -329,20 +328,6 @@ def characterAnalysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldConn
         occurrences = uniformize_speakers(occurrences, aliasTable,sentence_chunks,dialog_indices)
     
     print "Character analysis: 100 % completed..."
-    filterAliasTable(aliasTable,dialog_occurrences)
+    filter_alias_table(aliasTable,dialog_occurrences)
     return aliasTable, connectionsTable, aliases
     
-if __name__ == "__main__":
-    filename = "Harry_Potter_1"
-    import bookInputOutput as bIO
-    print "Loading occurrences..."
-    dialog_occurrences = bIO.getObject("../serialized/"+filename+"_occurrences")
-    print "Loading contexts..."
-    dialog_contexts = bIO.getObject("../serialized/"+filename+"_contexts")
-    print "Loading OK. Analysis..."
-    aliasTable, connectionsTable, aliases = characterAnalysis(dialog_occurrences,dialog_contexts,{}, nx.Graph(), nx.Graph())
-    print "Complete!"
-    
-    print_statistics_CID(dialog_occurrences,filename)
-    bIO.save_occurrences_CID(filename,dialog_occurrences)
-    bIO.exportAliases(aliasTable,connectionsTable, aliases,filename)
