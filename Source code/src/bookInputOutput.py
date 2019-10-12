@@ -3,7 +3,6 @@
 
 #Library handling all inputs and outputs
 
-import bookPreProcessing as bPP
 import pickle
 import dill
 import os
@@ -12,6 +11,8 @@ import networkx as nx
 import json
 from networkx.readwrite import json_graph
 from networkx.algorithms.cluster import average_clustering
+import os.path
+
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT, PATH_GRAPHS, PATH_CSV, PATH_PNG, PATH_SERIALIZED
 
 CSV_COMMA=";"
@@ -34,7 +35,6 @@ def get_files_in_folder(folder):
 
 def loadBook(filename):
     path = PATH_BOOKS_OBJECT+filename+".book"
-    import os.path
     if os.path.isfile(path):
         print "FILE FOUND! Loading the collection..."
         book = getObject(path)
@@ -51,8 +51,6 @@ def loadBook(filename):
         return book
 
 def create_folders(filename):
-    import os.path
-    import os
     directories = [PATH_CSV+filename, PATH_CSV+filename+"/Context/", PATH_CSV+filename+"/Incremental/", 
                    PATH_PNG+filename, PATH_PNG+filename+"/CONTEXT/", PATH_PNG+filename+"/INCREMENTAL/"]
     for directory in directories:
@@ -421,7 +419,6 @@ def build_png_graph_double(filename,graphs):
 """
 
 def write_graph(G,filename):   
-    import os.path
     if not os.path.exists(PATH_GRAPHS): ##check that the directory exist before creating file
         print "NO GRAPH DIRECTORY FOUND! Creating the directory"
         os.makedirs(PATH_GRAPHS) 
