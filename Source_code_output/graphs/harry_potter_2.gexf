@@ -1,0 +1,5047 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf version="1.1" xmlns="http://www.gexf.net/1.1draft" xmlns:viz="http://www.gexf.net/1.1draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance">
+  <graph defaultedgetype="undirected" mode="static">
+    <attributes class="edge" mode="static">
+      <attribute id="0" title="mentions" type="integer" />
+    </attributes>
+    <nodes>
+      <node id="" label="" />
+      <node id="just" label="just" />
+      <node id="Norris" label="Norris" />
+      <node id="coolly" label="coolly" />
+      <node id="Treacle" label="Treacle" />
+      <node id="Salazar" label="Salazar" />
+      <node id="thirteen-year-old" label="thirteen-year-old" />
+      <node id="Dudley" label="Dudley" />
+      <node id="Hornby" label="Hornby" />
+      <node id="earth" label="earth" />
+      <node id="still" label="still" />
+      <node id="Hat" label="Hat" />
+      <node id="Ravenclaw" label="Ravenclaw" />
+      <node id="Dad" label="Dad" />
+      <node id="sagely" label="sagely" />
+      <node id="Fang" label="Fang" />
+      <node id="Seamus" label="Seamus" />
+      <node id="Know-Who" label="Know-Who" />
+      <node id="McGonagall" label="McGonagall" />
+      <node id="young" label="young" />
+      <node id="Award" label="Award" />
+      <node id="Fred" label="Fred" />
+      <node id="only" label="only" />
+      <node id="Hogwarts" label="Hogwarts" />
+      <node id="Flint" label="Flint" />
+      <node id="excitedly" label="excitedly" />
+      <node id="Granger" label="Granger" />
+      <node id="W-what" label="W-what" />
+      <node id="Snape" label="Snape" />
+      <node id="earnestly" label="earnestly" />
+      <node id="Hermes" label="Hermes" />
+      <node id="Day" label="Day" />
+      <node id="Minister" label="Minister" />
+      <node id="Magic" label="Magic" />
+      <node id="Celebrity" label="Celebrity" />
+      <node id="Voldemort" label="Voldemort" />
+      <node id="Mrs." label="Mrs." />
+      <node id="enthusiastically" label="enthusiastically" />
+      <node id="I'd" label="I'd" />
+      <node id="Aunt" label="Aunt" />
+      <node id="nearly" label="nearly" />
+      <node id="politely" label="politely" />
+      <node id="Mother" label="Mother" />
+      <node id="Patil" label="Patil" />
+      <node id="tonelessly" label="tonelessly" />
+      <node id="Lockhart" label="Lockhart" />
+      <node id="desperately" label="desperately" />
+      <node id="Potter" label="Potter" />
+      <node id="Squib" label="Squib" />
+      <node id="Alley" label="Alley" />
+      <node id="Defense" label="Defense" />
+      <node id="Petunia" label="Petunia" />
+      <node id="Draco" label="Draco" />
+      <node id="George" label="George" />
+      <node id="Weekly" label="Weekly" />
+      <node id="delicately" label="delicately" />
+      <node id="Perry" label="Perry" />
+      <node id="miserably" label="miserably" />
+      <node id="smoothly" label="smoothly" />
+      <node id="Willow" label="Willow" />
+      <node id="exasperated" label="exasperated" />
+      <node id="Weasley" label="Weasley" />
+      <node id="Mason" label="Mason" />
+      <node id="R-Riddle" label="R-Riddle" />
+      <node id="hoarsely" label="hoarsely" />
+      <node id="Master" label="Master" />
+      <node id="flatly" label="flatly" />
+      <node id="Goyle" label="Goyle" />
+      <node id="really" label="really" />
+      <node id="Head" label="Head" />
+      <node id="Gilderoy" label="Gilderoy" />
+      <node id="Nimbus" label="Nimbus" />
+      <node id="away" label="away" />
+      <node id="Mudbloods" label="Mudbloods" />
+      <node id="O.W.L.s" label="O.W.L.s" />
+      <node id="weapons" label="weapons" />
+      <node id="Filch" label="Filch" />
+      <node id="Harry" label="Harry" />
+      <node id="Ones" label="Ones" />
+      <node id="ever" label="ever" />
+      <node id="Neville" label="Neville" />
+      <node id="Bill" label="Bill" />
+      <node id="heavily" label="heavily" />
+      <node id="Professor" label="Professor" />
+      <node id="never" label="never" />
+      <node id="You-Know-Who" label="You-Know-Who" />
+      <node id="here" label="here" />
+      <node id="Lucius" label="Lucius" />
+      <node id="Angelina" label="Angelina" />
+      <node id="Malfoy" label="Malfoy" />
+      <node id="alone" label="alone" />
+      <node id="abruptly" label="abruptly" />
+      <node id="Yeh" label="Yeh" />
+      <node id="Bludger" label="Bludger" />
+      <node id="Hagrid" label="Hagrid" />
+      <node id="Dean" label="Dean" />
+      <node id="You'd" label="You'd" />
+      <node id="Ron" label="Ron" />
+      <node id="impatiently" label="impatiently" />
+      <node id="Please...they" label="Please...they" />
+      <node id="Percy" label="Percy" />
+      <node id="uncertainly" label="uncertainly" />
+      <node id="We'd" label="We'd" />
+      <node id="Committee" label="Committee" />
+      <node id="Slytherin" label="Slytherin" />
+      <node id="Cornelius" label="Cornelius" />
+      <node id="automatically" label="automatically" />
+      <node id="Aragog" label="Aragog" />
+      <node id="Brazil" label="Brazil" />
+      <node id="hotly" label="hotly" />
+      <node id="quietly" label="quietly" />
+      <node id="already" label="already" />
+      <node id="fervently" label="fervently" />
+      <node id="family" label="family" />
+      <node id="Beaters" label="Beaters" />
+      <node id="angrily" label="angrily" />
+      <node id="Nick" label="Nick" />
+      <node id="Muggle" label="Muggle" />
+      <node id="furiously" label="furiously" />
+      <node id="He-Who-Must-Not-Be-Named" label="He-Who-Must-Not-Be-Named" />
+      <node id="Tom" label="Tom" />
+      <node id="thoughtfully" label="thoughtfully" />
+      <node id="It'd" label="It'd" />
+      <node id="patiently" label="patiently" />
+      <node id="Minerva" label="Minerva" />
+      <node id="Parseltongue" label="Parseltongue" />
+      <node id="Revealer" label="Revealer" />
+      <node id="Express" label="Express" />
+      <node id="wonderingly" label="wonderingly" />
+      <node id="quickly" label="quickly" />
+      <node id="They'd" label="They'd" />
+      <node id="Vernon" label="Vernon" />
+      <node id="Parselmouth" label="Parselmouth" />
+      <node id="Uncle" label="Uncle" />
+      <node id="slowly" label="slowly" />
+      <node id="friend" label="friend" />
+      <node id="Care" label="Care" />
+      <node id="Justin" label="Justin" />
+      <node id="Ministry" label="Ministry" />
+      <node id="That'd" label="That'd" />
+      <node id="constantly" label="constantly" />
+      <node id="grimly" label="grimly" />
+      <node id="Snitch" label="Snitch" />
+      <node id="Mortlake" label="Mortlake" />
+      <node id="She'd" label="She'd" />
+      <node id="back" label="back" />
+      <node id="shrilly" label="shrilly" />
+      <node id="heartily" label="heartily" />
+      <node id="delightedly" label="delightedly" />
+      <node id="Relief" label="Relief" />
+      <node id="sharply" label="sharply" />
+      <node id="Mandrakes" label="Mandrakes" />
+      <node id="nervously" label="nervously" />
+      <node id="enviously" label="enviously" />
+      <node id="Lacewing" label="Lacewing" />
+      <node id="Lee" label="Lee" />
+      <node id="Better" label="Better" />
+      <node id="Flich" label="Flich" />
+      <node id="House" label="House" />
+      <node id="Fawkes" label="Fawkes" />
+      <node id="Bath" label="Bath" />
+      <node id="Tonight" label="Tonight" />
+      <node id="Colin" label="Colin" />
+      <node id="Wood" label="Wood" />
+      <node id="Fletcher" label="Fletcher" />
+      <node id="voice" label="voice" />
+      <node id="Dursleys" label="Dursleys" />
+      <node id="bet" label="bet" />
+      <node id="Sir" label="Sir" />
+      <node id="Mommy" label="Mommy" />
+      <node id="Quidditch" label="Quidditch" />
+      <node id="Ernie" label="Ernie" />
+      <node id="urgently" label="urgently" />
+      <node id="Father" label="Father" />
+      <node id="gently" label="gently" />
+      <node id="Wizardry" label="Wizardry" />
+      <node id="He'd" label="He'd" />
+      <node id="Mr." label="Mr." />
+      <node id="fiercely" label="fiercely" />
+      <node id="Dippet" label="Dippet" />
+      <node id="stubbornly" label="stubbornly" />
+      <node id="gloomily" label="gloomily" />
+      <node id="Mail" label="Mail" />
+      <node id="Ginny" label="Ginny" />
+      <node id="Albus" label="Albus" />
+      <node id="stiffly" label="stiffly" />
+      <node id="again" label="again" />
+      <node id="Gryffindor" label="Gryffindor" />
+      <node id="matter-of-factly" label="matter-of-factly" />
+      <node id="Power" label="Power" />
+      <node id="Club" label="Club" />
+      <node id="Protection" label="Protection" />
+      <node id="Creevey" label="Creevey" />
+      <node id="Transfiguration" label="Transfiguration" />
+      <node id="Millicent" label="Millicent" />
+      <node id="scornfully" label="scornfully" />
+      <node id="other" label="other" />
+      <node id="Charm" label="Charm" />
+      <node id="triumphantly" label="triumphantly" />
+      <node id="Errol" label="Errol" />
+      <node id="suspiciously" label="suspiciously" />
+      <node id="Crabbe" label="Crabbe" />
+      <node id="Hall" label="Hall" />
+      <node id="Howler" label="Howler" />
+      <node id="Great" label="Great" />
+      <node id="Dumbledore" label="Dumbledore" />
+      <node id="Third" label="Third" />
+      <node id="fearfully" label="fearfully" />
+      <node id="Prophet" label="Prophet" />
+      <node id="headmaster" label="headmaster" />
+      <node id="Hunt" label="Hunt" />
+      <node id="faintly" label="faintly" />
+      <node id="dimly" label="dimly" />
+      <node id="Hermione" label="Hermione" />
+      <node id="student" label="student" />
+      <node id="nothing" label="nothing" />
+      <node id="Hooch" label="Hooch" />
+      <node id="Flitwick" label="Flitwick" />
+      <node id="Order" label="Order" />
+      <node id="pleasantly" label="pleasantly" />
+      <node id="Chamber" label="Chamber" />
+      <node id="Hedwig" label="Hedwig" />
+      <node id="disbelievingly" label="disbelievingly" />
+      <node id="Pomfrey" label="Pomfrey" />
+      <node id="Perkins" label="Perkins" />
+      <node id="Hannah" label="Hannah" />
+      <node id="Dobby" label="Dobby" />
+      <node id="Finch-Fletchley" label="Finch-Fletchley" />
+      <node id="Myrtle" label="Myrtle" />
+      <node id="Fame" label="Fame" />
+    </nodes>
+    <edges>
+      <edge id="0" source="just" target="Professor" weight="0.245">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="1" source="Norris" target="Ron" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="2" source="Norris" target="Nick" weight="0.125340136054">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="3" source="Norris" target="Hermione" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="4" source="Norris" target="excitedly" weight="0.1125">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="5" source="Norris" target="Harry" weight="0.00225">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="6" source="Norris" target="patiently" weight="0.425">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="7" source="coolly" target="Better" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="8" source="coolly" target="Dudley" weight="0.0408163265306">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="9" source="coolly" target="Harry" weight="0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="10" source="Treacle" target="Hagrid" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="11" source="Salazar" target="Dumbledore" weight="0.426071428571">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="12" source="Salazar" target="Hermione" weight="0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="13" source="Salazar" target="Ron" weight="-0.05">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="14" source="thirteen-year-old" target="Neville" weight="0.4625">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="15" source="thirteen-year-old" target="sagely" weight="0.245833333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="16" source="thirteen-year-old" target="Dean" weight="0.3375">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="17" source="thirteen-year-old" target="Lee" weight="0.305357142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="18" source="thirteen-year-old" target="Ron" weight="0.345361305361">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="19" source="thirteen-year-old" target="impatiently" weight="0.1625">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="20" source="thirteen-year-old" target="Professor" weight="0.158333333333">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="21" source="thirteen-year-old" target="Dumbledore" weight="0.08125">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="22" source="thirteen-year-old" target="Malfoy" weight="-0.126666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="23" source="thirteen-year-old" target="Fred" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="24" source="thirteen-year-old" target="Harry" weight="0.0930555555556">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="25" source="Dudley" target="Dad" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="26" source="Dudley" target="Vernon" weight="0.146428571429">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="27" source="Dudley" target="Aunt" weight="0.346428571429">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="28" source="Dudley" target="Harry" weight="1.17255070008">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="29" source="Dudley" target="Uncle" weight="0.205862244898">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="30" source="Dudley" target="Petunia" weight="0.146428571429">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="31" source="Dudley" target="tonelessly" weight="0.146428571429">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="32" source="Dudley" target="Dursleys" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="33" source="Hornby" target="Harry" weight="0.0666666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="34" source="earth" target="Professor" weight="0.15">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="35" source="earth" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="36" source="still" target="Aragog" weight="0.206666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="37" source="still" target="Malfoy" weight="0.112662337662">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="38" source="Hat" target="Fawkes" weight="0.1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="39" source="Hat" target="Dumbledore" weight="0.426071428571">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="40" source="Hat" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="41" source="Hat" target="Ron" weight="-0.05">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="42" source="Hat" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="43" source="Ravenclaw" target="Harry" weight="-0.3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="44" source="Dad" target="Hagrid" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="45" source="Dad" target="Ron" weight="-0.383102272727">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="46" source="Dad" target="Fred" weight="0.047619047619">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="47" source="Dad" target="Ginny" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="48" source="Dad" target="George" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="49" source="sagely" target="Neville" weight="0.383333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="50" source="sagely" target="Dean" weight="0.258333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="51" source="sagely" target="Lee" weight="0.22619047619">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="52" source="sagely" target="Ron" weight="0.122668997669">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="53" source="sagely" target="impatiently" weight="0.0833333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="54" source="sagely" target="Professor" weight="0.140740740741">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="55" source="sagely" target="Dumbledore" weight="0.0416666666667">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="56" source="sagely" target="Harry" weight="0.0825">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="57" source="Fang" target="Hagrid" weight="0.0768565759637">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="58" source="Fang" target="Ron" weight="0.354178571429">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="59" source="Fang" target="smoothly" weight="0.65">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="60" source="Fang" target="Dumbledore" weight="0.261111111111">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="61" source="Fang" target="Malfoy" weight="0.0978869047619">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="62" source="Fang" target="Aragog" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="63" source="Fang" target="sharply" weight="0.475">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="64" source="Fang" target="Harry" weight="0.0413214285714">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="65" source="Fang" target="abruptly" weight="-0.0755952380952">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="66" source="Seamus" target="Ron" weight="0.45625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="67" source="Seamus" target="Professor" weight="0.0056">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="68" source="Seamus" target="Transfiguration" weight="0.00364583333333">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="69" source="Seamus" target="Chamber" weight="-0.0145833333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="70" source="Seamus" target="Snape" weight="0.2890625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="71" source="Seamus" target="Hermione" weight="0.131666666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="72" source="Seamus" target="Harry" weight="0.091884375">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="73" source="Know-Who" target="Ernie" weight="0.11875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="74" source="McGonagall" target="Gryffindor" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="75" source="McGonagall" target="Ron" weight="-0.162698412698">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="76" source="McGonagall" target="Harry" weight="0.163020833333">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="77" source="young" target="Lockhart" weight="0.288461538462">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="78" source="Award" target="Dumbledore" weight="0.678571428571">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="79" source="Fred" target="already" weight="-0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="80" source="Fred" target="Weasley" weight="0.398398351717">
+        <attvalues>
+          <attvalue for="0" value="52" />
+        </attvalues>
+      </edge>
+      <edge id="81" source="Fred" target="Wizardry" weight="0.0666666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="82" source="Fred" target="Wood" weight="-0.0327272727273">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="83" source="Fred" target="matter-of-factly" weight="-0.25">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="84" source="Fred" target="Ginny" weight="0.383333333333">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="85" source="Fred" target="Lee" weight="-0.0409090909091">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="86" source="Fred" target="Hogwarts" weight="0.1125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="87" source="Fred" target="Uncle" weight="0.0847719060524">
+        <attvalues>
+          <attvalue for="0" value="41" />
+        </attvalues>
+      </edge>
+      <edge id="88" source="Fred" target="Prophet" weight="0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="89" source="Fred" target="Ministry" weight="0.1125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="90" source="Fred" target="Errol" weight="-0.133333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="91" source="Fred" target="Hermione" weight="0.0150183982684">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="92" source="Fred" target="You-Know-Who" weight="0.0952380952381">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="93" source="Fred" target="Mrs." weight="0.321130952381">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="94" source="Fred" target="angrily" weight="-0.0727272727273">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="95" source="Fred" target="Malfoy" weight="0.178884548611">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="96" source="Fred" target="Harry" weight="0.0436601328718">
+        <attvalues>
+          <attvalue for="0" value="58" />
+        </attvalues>
+      </edge>
+      <edge id="97" source="Fred" target="Hooch" weight="0.166393849206">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="98" source="Fred" target="Lockhart" weight="0.36">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="99" source="Fred" target="Bludger" weight="-0.0327272727273">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="100" source="Fred" target="Hagrid" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="101" source="Fred" target="Ron" weight="-0.109553698241">
+        <attvalues>
+          <attvalue for="0" value="88" />
+        </attvalues>
+      </edge>
+      <edge id="102" source="Fred" target="Dursleys" weight="0.1125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="103" source="Fred" target="Percy" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="104" source="Fred" target="George" weight="0.215889615405">
+        <attvalues>
+          <attvalue for="0" value="59" />
+        </attvalues>
+      </edge>
+      <edge id="105" source="Fred" target="nearly" weight="0.0694444444444">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="106" source="only" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="107" source="Hogwarts" target="Hermione" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="108" source="Hogwarts" target="Ron" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="109" source="Hogwarts" target="Harry" weight="-0.05">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="110" source="Flint" target="sharply" weight="0.0517509276438">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="111" source="Flint" target="Ron" weight="0.0506392045455">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="112" source="Flint" target="exasperated" weight="0.0578733766234">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="113" source="Flint" target="Malfoy" weight="0.0773538961039">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="114" source="Flint" target="Colin" weight="0.149385054246">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="115" source="Flint" target="Wood" weight="0.0682320202584">
+        <attvalues>
+          <attvalue for="0" value="32" />
+        </attvalues>
+      </edge>
+      <edge id="116" source="Flint" target="Hermione" weight="0.124756493506">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="117" source="Flint" target="flatly" weight="0.0221590909091">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="118" source="Flint" target="Harry" weight="0.0468927221172">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </edge>
+      <edge id="119" source="Flint" target="heartily" weight="0.0703192640693">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="120" source="Flint" target="Draco" weight="0.3875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="121" source="Flint" target="George" weight="0.0506392045455">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="122" source="excitedly" target="Nick" weight="0.069708994709">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="123" source="excitedly" target="Harry" weight="0.0921428571429">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="124" source="Granger" target="Myrtle" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="125" source="Granger" target="Ron" weight="-0.1625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="126" source="Granger" target="Malfoy" weight="0.025">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="127" source="Granger" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="128" source="W-what" target="Weasley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="129" source="Snape" target="Ernie" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="130" source="Snape" target="patiently" weight="0.0611111111111">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="131" source="Snape" target="again" weight="0.0658333333333">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="132" source="Snape" target="Club" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="133" source="Snape" target="Millicent" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="134" source="Snape" target="Filch" weight="-0.00515873015873">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="135" source="Snape" target="Parselmouth" weight="-0.12683531746">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="136" source="Snape" target="Neville" weight="-0.130144557823">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="137" source="Snape" target="Prophet" weight="0.000833333333333">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="138" source="Snape" target="Professor" weight="0.0695181405896">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="139" source="Snape" target="Dumbledore" weight="0.1014">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="140" source="Snape" target="Malfoy" weight="-0.0838666180758">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="141" source="Snape" target="enthusiastically" weight="-0.0304166666667">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="142" source="Snape" target="Hermione" weight="0.0141294642857">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="143" source="Snape" target="Harry" weight="0.496549098486">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="144" source="Snape" target="nothing" weight="0.189583333333">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="145" source="Snape" target="Hooch" weight="0.0201388888889">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="146" source="Snape" target="Lockhart" weight="0.147716902282">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="147" source="Snape" target="Hagrid" weight="0.0875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="148" source="Snape" target="Dean" weight="-0.0769230769231">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="149" source="Snape" target="Ron" weight="0.222759122647">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="150" source="Snape" target="Slytherin" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="151" source="earnestly" target="Mason" weight="0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="152" source="earnestly" target="Uncle" weight="-0.0578125">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="153" source="earnestly" target="Dobby" weight="-0.114794146825">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="154" source="earnestly" target="politely" weight="-0.155555555556">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="155" source="earnestly" target="Harry" weight="0.0469093406593">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </edge>
+      <edge id="156" source="Hermes" target="Ron" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="157" source="Day" target="Dumbledore" weight="0.28125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="158" source="Minister" target="Weasley" weight="0.341666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="159" source="Magic" target="Ron" weight="0.0861111111111">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="160" source="Magic" target="Professor" weight="0.0125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="161" source="Magic" target="Dumbledore" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="162" source="Magic" target="Harry" weight="0.06875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="163" source="Magic" target="Patil" weight="0.116666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="164" source="Magic" target="Lockhart" weight="0.15">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="165" source="Celebrity" target="Hagrid" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="166" source="Voldemort" target="Ernie" weight="0.11875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="167" source="Voldemort" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="168" source="Voldemort" target="gently" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="169" source="Voldemort" target="Malfoy" weight="0.0966666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="170" source="Voldemort" target="slowly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="171" source="Voldemort" target="Harry" weight="0.0139393939394">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="172" source="Mrs." target="Hagrid" weight="0.100231481481">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="173" source="Mrs." target="Ron" weight="0.0643312682216">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="174" source="Mrs." target="Weasley" weight="0.118139648438">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="175" source="Mrs." target="Mr." weight="0.1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="176" source="Mrs." target="Harry" weight="0.0685287878788">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="177" source="Mrs." target="enviously" weight="0.1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="178" source="enthusiastically" target="again" weight="0.16875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="179" source="enthusiastically" target="Flich" weight="0.046875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="180" source="enthusiastically" target="Ron" weight="0.0695559210526">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="181" source="enthusiastically" target="Prophet" weight="-0.15625">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="182" source="enthusiastically" target="Hermione" weight="-0.136666666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="183" source="enthusiastically" target="Harry" weight="-0.119060639881">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="184" source="enthusiastically" target="Myrtle" weight="0.143571428571">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="185" source="I'd" target="Head" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="186" source="I'd" target="Hagrid" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="187" source="I'd" target="Justin" weight="0.516666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="188" source="I'd" target="Ron" weight="-0.368375">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="189" source="I'd" target="Hermione" weight="0.244444444444">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="190" source="I'd" target="Harry" weight="0.140454545455">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="191" source="I'd" target="gloomily" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="192" source="I'd" target="Myrtle" weight="-0.00343915343915">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="193" source="I'd" target="Lockhart" weight="-0.0863095238095">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="194" source="I'd" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="195" source="Aunt" target="Vernon" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="196" source="Aunt" target="Uncle" weight="0.374583333333">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="197" source="Aunt" target="Harry" weight="0.232614087302">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="198" source="Aunt" target="Petunia" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="199" source="Aunt" target="tonelessly" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="200" source="nearly" target="Harry" weight="-0.198611111111">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="201" source="nearly" target="Wizardry" weight="0.0155555555556">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="202" source="politely" target="Mason" weight="0.0222222222222">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="203" source="politely" target="Uncle" weight="-0.0686728395062">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="204" source="politely" target="Dobby" weight="-0.0956583443563">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="205" source="politely" target="Harry" weight="0.0394106407995">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="206" source="politely" target="voice" weight="-0.155555555556">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="207" source="Mother" target="Hermione" weight="-0.0263888888889">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="208" source="Patil" target="Professor" weight="0.00777777777778">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="209" source="Patil" target="Hermione" weight="0.131666666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="210" source="tonelessly" target="Vernon" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="211" source="tonelessly" target="Harry" weight="0.143725198413">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="212" source="tonelessly" target="Uncle" weight="0.307916666667">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="213" source="tonelessly" target="Petunia" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="214" source="Lockhart" target="Brazil" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="215" source="Lockhart" target="Sir" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="216" source="Lockhart" target="delicately" weight="0.0594047619048">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="217" source="Lockhart" target="Ernie" weight="0.125">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="218" source="Lockhart" target="Mandrakes" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="219" source="Lockhart" target="Weasley" weight="0.4645">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="220" source="Lockhart" target="He'd" weight="-0.31130952381">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="221" source="Lockhart" target="Nick" weight="0.26">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="222" source="Lockhart" target="hoarsely" weight="0.12890625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="223" source="Lockhart" target="angrily" weight="-0.0496794871795">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="224" source="Lockhart" target="thoughtfully" weight="0.354166666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="225" source="Lockhart" target="Ginny" weight="0.111111111111">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="226" source="Lockhart" target="patiently" weight="0.0708333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="227" source="Lockhart" target="stiffly" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="228" source="Lockhart" target="Head" weight="-0.0291666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="229" source="Lockhart" target="Filch" weight="-0.000297619047619">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="230" source="Lockhart" target="Parselmouth" weight="-0.0177876984127">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="231" source="Lockhart" target="Charm" weight="-0.124305555556">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="232" source="Lockhart" target="abruptly" weight="0.103125">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="233" source="Lockhart" target="Hall" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="234" source="Lockhart" target="nervously" weight="0.235892857143">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="235" source="Lockhart" target="furiously" weight="0.0636479591837">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="236" source="Lockhart" target="Justin" weight="-0.05">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="237" source="Lockhart" target="Neville" weight="-0.0237973484848">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </edge>
+      <edge id="238" source="Lockhart" target="Professor" weight="0.850028583972">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="239" source="Lockhart" target="Hunt" weight="-0.05">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="240" source="Lockhart" target="dimly" weight="0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="241" source="Lockhart" target="Malfoy" weight="0.243466186418">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="242" source="Lockhart" target="Gryffindor" weight="-0.0261904761905">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="243" source="Lockhart" target="shrilly" weight="0.145416666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="244" source="Lockhart" target="Hermione" weight="0.269812530146">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="245" source="Lockhart" target="fervently" weight="0.28125">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="246" source="Lockhart" target="Harry" weight="0.224088191086">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="247" source="Lockhart" target="nothing" weight="0.196875">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="248" source="Lockhart" target="Hooch" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="249" source="Lockhart" target="pleasantly" weight="0.491666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="250" source="Lockhart" target="Hagrid" weight="0.312824702381">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="251" source="Lockhart" target="Dean" weight="0.109615384615">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="252" source="Lockhart" target="Ron" weight="0.423261422858">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="253" source="Lockhart" target="gently" weight="0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="254" source="Lockhart" target="disbelievingly" weight="0.0594047619048">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="255" source="Lockhart" target="Pomfrey" weight="0.233333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="256" source="Lockhart" target="Colin" weight="0.100069444444">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="257" source="Lockhart" target="Wood" weight="0.0133333333333">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="258" source="Lockhart" target="Dobby" weight="0.127575757576">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="259" source="Lockhart" target="Dumbledore" weight="0.0786392156863">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="260" source="Lockhart" target="Myrtle" weight="0.0671218487395">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="261" source="Lockhart" target="Relief" weight="0.466666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="262" source="desperately" target="Filch" weight="0.266666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="263" source="desperately" target="Professor" weight="-0.00555555555556">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="264" source="desperately" target="Hermione" weight="0.0166666666667">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="265" source="desperately" target="Ron" weight="0.0285714285714">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="266" source="desperately" target="Harry" weight="0.0203703703704">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="267" source="Potter" target="Pomfrey" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="268" source="Potter" target="Ernie" weight="-0.15">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="269" source="Potter" target="Professor" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="270" source="Potter" target="Harry" weight="0.0554063182849">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="271" source="Potter" target="Malfoy" weight="0.4375">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="272" source="Potter" target="slowly" weight="0.127283549784">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="273" source="Potter" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="274" source="Potter" target="Tom" weight="0.16625">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="275" source="Potter" target="urgently" weight="0.04125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="276" source="Potter" target="triumphantly" weight="0.213869047619">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="277" source="Squib" target="Filch" weight="0.134375">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="278" source="Squib" target="Harry" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="279" source="Alley" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="280" source="Defense" target="gloomily" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="281" source="Defense" target="Ron" weight="-0.1875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="282" source="Defense" target="Harry" weight="-0.0338383838384">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="283" source="Petunia" target="Mason" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="284" source="Petunia" target="Vernon" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="285" source="Petunia" target="Uncle" weight="0.258697916667">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="286" source="Petunia" target="Harry" weight="0.11912202381">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="287" source="Petunia" target="Dursleys" weight="-0.25">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="288" source="Draco" target="Mr." weight="0.232265406162">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="289" source="Draco" target="Malfoy" weight="0.136734693878">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="290" source="George" target="quietly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="291" source="George" target="exasperated" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="292" source="George" target="Weasley" weight="0.159191135293">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </edge>
+      <edge id="293" source="George" target="Wood" weight="0.0551185683537">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </edge>
+      <edge id="294" source="George" target="flatly" weight="-0.0833333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="295" source="George" target="Ginny" weight="0.358333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="296" source="George" target="Gryffindor" weight="0.0333333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="297" source="George" target="Lee" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="298" source="George" target="Uncle" weight="0.123478835979">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="299" source="George" target="Snitch" weight="-0.8">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="300" source="George" target="heartily" weight="0.0290404040404">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="301" source="George" target="Errol" weight="0.0392063492063">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="302" source="George" target="Bill" weight="-0.175">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="303" source="George" target="Malfoy" weight="0.0454545454545">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="304" source="George" target="angrily" weight="-0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="305" source="George" target="Hermione" weight="-0.00620454545455">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="306" source="George" target="sharply" weight="-0.0142857142857">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="307" source="George" target="Harry" weight="-0.363649175355">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </edge>
+      <edge id="308" source="George" target="alone" weight="-0.10625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="309" source="George" target="Hooch" weight="0.12662037037">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="310" source="George" target="Bludger" weight="-0.053125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="311" source="George" target="You'd" weight="0.7">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="312" source="George" target="Ron" weight="0.179238926567">
+        <attvalues>
+          <attvalue for="0" value="59" />
+        </attvalues>
+      </edge>
+      <edge id="313" source="George" target="House" weight="0.0666666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="314" source="George" target="Percy" weight="0.14873015873">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="315" source="George" target="Colin" weight="0.18787037037">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="316" source="George" target="Slytherin" weight="-0.0315625">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="317" source="Weekly" target="Harry" weight="0.53">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="318" source="delicately" target="furiously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="319" source="delicately" target="Ron" weight="0.0416666666667">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="320" source="delicately" target="disbelievingly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="321" source="delicately" target="Harry" weight="-0.0670138888889">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="322" source="delicately" target="Myrtle" weight="0.0625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="323" source="Perry" target="hotly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="324" source="Perry" target="Ron" weight="-0.010625">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </edge>
+      <edge id="325" source="Perry" target="Weasley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="326" source="Perry" target="Percy" weight="0.3125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="327" source="Perry" target="Finch-Fletchley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="328" source="Perry" target="Colin" weight="0.171875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="329" source="Perry" target="Hermione" weight="0.0868131868132">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="330" source="Perry" target="Harry" weight="0.00136054421769">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="331" source="Perry" target="suspiciously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="332" source="Perry" target="Myrtle" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="333" source="Perry" target="automatically" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="334" source="miserably" target="Ron" weight="0.000648148148148">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="335" source="miserably" target="Harry" weight="0.0901709401709">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="336" source="smoothly" target="Hagrid" weight="0.0116898148148">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="337" source="smoothly" target="Ron" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="338" source="smoothly" target="Dumbledore" weight="-0.122222222222">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="339" source="smoothly" target="Malfoy" weight="0.0554166666667">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="340" source="smoothly" target="sharply" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="341" source="smoothly" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="342" source="Willow" target="Hermione" weight="0.392857142857">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="343" source="exasperated" target="sharply" weight="-0.0214285714286">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="344" source="exasperated" target="Ron" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="345" source="exasperated" target="Malfoy" weight="0.0681818181818">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="346" source="exasperated" target="Colin" weight="0.234837962963">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="347" source="exasperated" target="Wood" weight="0.0658633708113">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="348" source="exasperated" target="Hermione" weight="0.234090909091">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="349" source="exasperated" target="flatly" weight="-0.125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="350" source="exasperated" target="Harry" weight="0.00256734006734">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="351" source="exasperated" target="heartily" weight="0.0435606060606">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="352" source="Weasley" target="hotly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="353" source="Weasley" target="gently" weight="0.291666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="354" source="Weasley" target="Nick" weight="0.286111111111">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="355" source="Weasley" target="Mr." weight="-0.0333333333333">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="356" source="Weasley" target="Muggle" weight="0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="357" source="Weasley" target="thoughtfully" weight="0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="358" source="Weasley" target="Ginny" weight="0.0863763362488">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="359" source="Weasley" target="dimly" weight="0.145833333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="360" source="Weasley" target="scornfully" weight="-0.0333333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="361" source="Weasley" target="slowly" weight="0.183333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="362" source="Weasley" target="Uncle" weight="0.0123382936508">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="363" source="Weasley" target="Relief" weight="0.445833333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="364" source="Weasley" target="Mortlake" weight="-0.203333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="365" source="Weasley" target="Errol" weight="0.00893939393939">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="366" source="Weasley" target="Professor" weight="0.28869047619">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="367" source="Weasley" target="Dumbledore" weight="0.0713735119048">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </edge>
+      <edge id="368" source="Weasley" target="suspiciously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="369" source="Weasley" target="Malfoy" weight="0.127279567057">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="370" source="Weasley" target="Harry" weight="-0.00434092625058">
+        <attvalues>
+          <attvalue for="0" value="28" />
+        </attvalues>
+      </edge>
+      <edge id="371" source="Weasley" target="enviously" weight="-0.0333333333333">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="372" source="Weasley" target="pleasantly" weight="0.470833333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="373" source="Weasley" target="Hagrid" weight="0.303445095486">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="374" source="Weasley" target="Ron" weight="0.241704167783">
+        <attvalues>
+          <attvalue for="0" value="58" />
+        </attvalues>
+      </edge>
+      <edge id="375" source="Weasley" target="Percy" weight="0.327210606061">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="376" source="Weasley" target="Colin" weight="0.171875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="377" source="Weasley" target="Dobby" weight="0.136166666667">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="378" source="Weasley" target="Committee" weight="-0.203333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="379" source="Weasley" target="Finch-Fletchley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="380" source="Weasley" target="Myrtle" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="381" source="Weasley" target="automatically" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="382" source="Weasley" target="Hermione" weight="0.200563186813">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="383" source="Mason" target="Uncle" weight="-0.0291666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="384" source="Mason" target="Dobby" weight="-0.0759052579365">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="385" source="Mason" target="Harry" weight="0.0525793650794">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="386" source="Mason" target="voice" weight="0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="387" source="R-Riddle" target="Ron" weight="-0.15625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="388" source="hoarsely" target="Hagrid" weight="-0.0755084325397">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="389" source="hoarsely" target="Ron" weight="-0.0636222222222">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="390" source="hoarsely" target="Professor" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="391" source="hoarsely" target="Malfoy" weight="-0.616666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="392" source="hoarsely" target="Colin" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="393" source="hoarsely" target="Hermione" weight="0.353571428571">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="394" source="hoarsely" target="sharply" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="395" source="hoarsely" target="Harry" weight="0.0276224785141">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </edge>
+      <edge id="396" source="hoarsely" target="abruptly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="397" source="Master" target="Dumbledore" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="398" source="Master" target="Harry" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="399" source="flatly" target="Ron" weight="-0.0833333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="400" source="flatly" target="Malfoy" weight="-0.0568181818182">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="401" source="flatly" target="Colin" weight="0.172337962963">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="402" source="flatly" target="Wood" weight="0.056604111552">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="403" source="flatly" target="Hermione" weight="0.109090909091">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="404" source="flatly" target="sharply" weight="-0.146428571429">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="405" source="flatly" target="Harry" weight="-0.0113215488215">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="406" source="flatly" target="heartily" weight="-0.0814393939394">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="407" source="Goyle" target="Ron" weight="0.148577409433">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="408" source="Goyle" target="Harry" weight="0.0776388888889">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="409" source="Goyle" target="Malfoy" weight="0.113492063492">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="410" source="Goyle" target="Percy" weight="0.225">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="411" source="Goyle" target="Hermione" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="412" source="Goyle" target="Slytherin" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="413" source="Goyle" target="matter-of-factly" weight="0.4125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="414" source="Goyle" target="Crabbe" weight="0.321428571429">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="415" source="really" target="fiercely" weight="0.416666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="416" source="Head" target="stiffly" weight="0.370833333333">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="417" source="Head" target="Sir" weight="-0.0291666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="418" source="Head" target="nervously" weight="0.11">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="419" source="Head" target="Ron" weight="0.0474255952381">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="420" source="Head" target="quickly" weight="0.0166666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="421" source="Head" target="Nick" weight="0.223077876984">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="422" source="Head" target="Hermione" weight="0.0844972686044">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="423" source="Head" target="Harry" weight="0.0943721988796">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="424" source="Head" target="Myrtle" weight="-0.0583333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="425" source="Head" target="Hall" weight="-0.0291666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="426" source="Gilderoy" target="Malfoy" weight="0.416666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="427" source="Nimbus" target="Malfoy" weight="0.0517857142857">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="428" source="Nimbus" target="Harry" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="429" source="away" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="430" source="Mudbloods" target="Ron" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="431" source="Mudbloods" target="Malfoy" weight="0.027125">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="432" source="O.W.L.s" target="Ron" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="433" source="weapons" target="Fawkes" weight="0.4375">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="434" source="Filch" target="Ron" weight="0.0671986607143">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="435" source="Filch" target="Professor" weight="0.34880952381">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="436" source="Filch" target="Dumbledore" weight="-0.0428571428571">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="437" source="Filch" target="quickly" weight="0.383333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="438" source="Filch" target="Filch" weight="0.26875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="439" source="Filch" target="Hermione" weight="0.18">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="440" source="Filch" target="Harry" weight="0.116385717949">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="441" source="Filch" target="nothing" weight="0.0901785714286">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="442" source="Filch" target="patiently" weight="-0.0714285714286">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="443" source="Harry" target="Ones" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="444" source="Harry" target="Parselmouth" weight="0.0229671717172">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </edge>
+      <edge id="445" source="Harry" target="Snitch" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="446" source="Harry" target="heartily" weight="0.00740740740741">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="447" source="Harry" target="Muggle" weight="0.276905625">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="448" source="Harry" target="matter-of-factly" weight="-0.144897959184">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="449" source="Harry" target="Crabbe" weight="0.00552028218695">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="450" source="Harry" target="Lee" weight="-0.119607051282">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="451" source="Harry" target="furiously" weight="-0.0714814814815">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="452" source="Harry" target="ever" weight="0.0265625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="453" source="Harry" target="Neville" weight="-0.0122468900966">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="454" source="Harry" target="heavily" weight="0.075">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="455" source="Harry" target="Professor" weight="0.225375336847">
+        <attvalues>
+          <attvalue for="0" value="32" />
+        </attvalues>
+      </edge>
+      <edge id="456" source="Harry" target="never" weight="-0.291666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="457" source="Harry" target="Malfoy" weight="0.16352251194">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="458" source="Harry" target="Aragog" weight="0.0156705882353">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="459" source="Harry" target="abruptly" weight="0.0228500744048">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="460" source="Harry" target="Yeh" weight="0.375">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="461" source="Harry" target="Bludger" weight="-0.184375">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="462" source="Harry" target="Hagrid" weight="1.20983409268">
+        <attvalues>
+          <attvalue for="0" value="30" />
+        </attvalues>
+      </edge>
+      <edge id="463" source="Harry" target="Dean" weight="0.275033699634">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="464" source="Harry" target="Ron" weight="-0.0146834521799">
+        <attvalues>
+          <attvalue for="0" value="102" />
+        </attvalues>
+      </edge>
+      <edge id="465" source="Harry" target="impatiently" weight="0.0713888888889">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="466" source="Harry" target="Please...they" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="467" source="Harry" target="Percy" weight="0.232807556122">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="468" source="Harry" target="uncertainly" weight="0.025">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="469" source="Harry" target="Slytherin" weight="0.23025">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="470" source="Harry" target="automatically" weight="0.00136054421769">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="471" source="Harry" target="Mandrakes" weight="0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="472" source="Harry" target="hotly" weight="0.00136054421769">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="473" source="Harry" target="quietly" weight="0.0237179487179">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="474" source="Harry" target="Beaters" weight="-0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="475" source="Harry" target="angrily" weight="0.32421875">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="476" source="Harry" target="Nick" weight="0.121285649644">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="477" source="Harry" target="fearfully" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="478" source="Harry" target="Tom" weight="0.0338516414141">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </edge>
+      <edge id="479" source="Harry" target="thoughtfully" weight="0.0478349673203">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="480" source="Harry" target="patiently" weight="0.0148333333333">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="481" source="Harry" target="Parseltongue" weight="0.0265625">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="482" source="Harry" target="Revealer" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="483" source="Harry" target="quickly" weight="0.126091269841">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="484" source="Harry" target="Vernon" weight="0.229352678571">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="485" source="Harry" target="slowly" weight="0.0378049350649">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="486" source="Harry" target="Uncle" weight="0.501546102047">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="487" source="Harry" target="friend" weight="0.392857142857">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="488" source="Harry" target="Justin" weight="-0.119010416667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="489" source="Harry" target="Chamber" weight="0.06325">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="490" source="Harry" target="delightedly" weight="0.00714285714286">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="491" source="Harry" target="Relief" weight="0.0610702614379">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="492" source="Harry" target="sharply" weight="0.221987117605">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="493" source="Harry" target="Harry" weight="0.484411160714">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="494" source="Harry" target="enviously" weight="0.069696969697">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="495" source="Harry" target="Flich" weight="-0.000778388278388">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="496" source="Harry" target="House" weight="-0.107142857143">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="497" source="Harry" target="Fawkes" weight="0.0949718915344">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="498" source="Harry" target="Colin" weight="0.151517474007">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="499" source="Harry" target="Wood" weight="0.110592515321">
+        <attvalues>
+          <attvalue for="0" value="46" />
+        </attvalues>
+      </edge>
+      <edge id="500" source="Harry" target="voice" weight="0.0469093406593">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </edge>
+      <edge id="501" source="Harry" target="Dursleys" weight="0.724599125364">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="502" source="Harry" target="bet" weight="0.285714285714">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="503" source="Harry" target="Sir" weight="0.0265625">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="504" source="Harry" target="Quidditch" weight="-0.110833333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="505" source="Harry" target="Ernie" weight="0.157065631088">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="506" source="Harry" target="urgently" weight="0.0234349747475">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="507" source="Harry" target="gently" weight="0.0273871527778">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="508" source="Harry" target="Wizardry" weight="-0.244675925926">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="509" source="Harry" target="Mr." weight="0.069696969697">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="510" source="Harry" target="fiercely" weight="-0.0289920493197">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="511" source="Harry" target="Dippet" weight="-0.069972630027">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </edge>
+      <edge id="512" source="Harry" target="stubbornly" weight="-0.119010416667">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="513" source="Harry" target="gloomily" weight="0.25404040404">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="514" source="Harry" target="Ginny" weight="0.428841986093">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="515" source="Harry" target="stiffly" weight="0.0765625">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="516" source="Harry" target="again" weight="0.1140625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="517" source="Harry" target="Gryffindor" weight="0.0201016483516">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="518" source="Harry" target="Hannah" weight="-0.105787037037">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="519" source="Harry" target="Transfiguration" weight="0.00364583333333">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="520" source="Harry" target="Millicent" weight="-0.7">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="521" source="Harry" target="scornfully" weight="0.025">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="522" source="Harry" target="other" weight="0.2625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="523" source="Harry" target="Charm" weight="0.286666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="524" source="Harry" target="triumphantly" weight="0.0378198953824">
+        <attvalues>
+          <attvalue for="0" value="24" />
+        </attvalues>
+      </edge>
+      <edge id="525" source="Harry" target="suspiciously" weight="0.00136054421769">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="526" source="Harry" target="Hall" weight="0.495286458333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="527" source="Harry" target="Dumbledore" weight="0.593869237284">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="528" source="Harry" target="Prophet" weight="-0.0484375">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="529" source="Harry" target="Hunt" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="530" source="Harry" target="faintly" weight="-0.0555555555556">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="531" source="Harry" target="dimly" weight="0.0257761437908">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="532" source="Harry" target="Hermione" weight="-0.587343806886">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </edge>
+      <edge id="533" source="Harry" target="fervently" weight="0.16875">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="534" source="Harry" target="nothing" weight="0.0657575757576">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="535" source="Harry" target="Hooch" weight="0.00757575757576">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="536" source="Harry" target="pleasantly" weight="0.0640114379085">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="537" source="Harry" target="disbelievingly" weight="-0.0670138888889">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="538" source="Harry" target="Pomfrey" weight="0.61169095291">
+        <attvalues>
+          <attvalue for="0" value="26" />
+        </attvalues>
+      </edge>
+      <edge id="539" source="Harry" target="Dobby" weight="0.342071876813">
+        <attvalues>
+          <attvalue for="0" value="60" />
+        </attvalues>
+      </edge>
+      <edge id="540" source="Harry" target="Finch-Fletchley" weight="0.0015873015873">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="541" source="Harry" target="Myrtle" weight="0.115478056213">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </edge>
+      <edge id="542" source="Neville" target="Dean" weight="0.475">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="543" source="Neville" target="Lee" weight="0.442857142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="544" source="Neville" target="Ron" weight="-0.0599636197136">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="545" source="Neville" target="impatiently" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="546" source="Neville" target="Professor" weight="0.188888888889">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="547" source="Neville" target="Dumbledore" weight="0.15">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="548" source="Neville" target="faintly" weight="-0.0845238095238">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="549" source="Neville" target="Malfoy" weight="-0.13875">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="550" source="Neville" target="Parselmouth" weight="-0.15">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="551" source="Neville" target="Hermione" weight="-0.199726473923">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="552" source="Bill" target="Ginny" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="553" source="Bill" target="Ron" weight="-0.4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="554" source="heavily" target="Professor" weight="0.127083333333">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="555" source="heavily" target="Wood" weight="0.108333333333">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="556" source="heavily" target="Ron" weight="0.1875">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="557" source="Professor" target="Pomfrey" weight="0.0714814814815">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="558" source="Professor" target="Transfiguration" weight="0.00291666666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="559" source="Professor" target="Quidditch" weight="-0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="560" source="Professor" target="Mandrakes" weight="0.0285714285714">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="561" source="Professor" target="angrily" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="562" source="Professor" target="Nick" weight="0.245">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="563" source="Professor" target="thoughtfully" weight="0.330357142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="564" source="Professor" target="Ginny" weight="0.0788318452381">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="565" source="Professor" target="Albus" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="566" source="Professor" target="Percy" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="567" source="Professor" target="Gryffindor" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="568" source="Professor" target="Lee" weight="0.153968253968">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="569" source="Professor" target="Express" weight="0.207142857143">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="570" source="Professor" target="abruptly" weight="0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="571" source="Professor" target="Hall" weight="0.483333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="572" source="Professor" target="furiously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="573" source="Professor" target="Professor" weight="0.0285714285714">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="574" source="Professor" target="Dumbledore" weight="0.0846040952381">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="575" source="Professor" target="dimly" weight="0.142857142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="576" source="Professor" target="Malfoy" weight="0.0714285714286">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="577" source="Professor" target="Chamber" weight="0.202777777778">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="578" source="Professor" target="Hermione" weight="0.941991003612">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="579" source="Professor" target="alone" weight="-0.0666666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="580" source="Professor" target="Hooch" weight="0.0299744897959">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="581" source="Professor" target="pleasantly" weight="0.467857142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="582" source="Professor" target="Hagrid" weight="-0.0393408289242">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="583" source="Professor" target="Dean" weight="0.161111111111">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="584" source="Professor" target="Ron" weight="0.293088697106">
+        <attvalues>
+          <attvalue for="0" value="28" />
+        </attvalues>
+      </edge>
+      <edge id="585" source="Professor" target="impatiently" weight="0.122222222222">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="586" source="Professor" target="gently" weight="0.285714285714">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="587" source="Professor" target="Tonight" weight="0.48">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="588" source="Professor" target="Colin" weight="0.345">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="589" source="Professor" target="Wood" weight="0.146296296296">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="590" source="Professor" target="nothing" weight="0.575">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="591" source="Professor" target="Dobby" weight="0.0915647619048">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="592" source="Professor" target="Slytherin" weight="0.075">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="593" source="Professor" target="Relief" weight="0.442857142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="594" source="never" target="scornfully" weight="-0.0333333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="595" source="You-Know-Who" target="Hannah" weight="-0.00833333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="596" source="You-Know-Who" target="Colin" weight="0.142857142857">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="597" source="here" target="Ron" weight="-0.183333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="598" source="Lucius" target="Hagrid" weight="0.283333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="599" source="Angelina" target="Wood" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="600" source="Malfoy" target="urgently" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="601" source="Malfoy" target="Father" weight="0.664232142857">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="602" source="Malfoy" target="Mr." weight="0.149169799499">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="603" source="Malfoy" target="Wood" weight="0.0709138758618">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="604" source="Malfoy" target="gently" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="605" source="Malfoy" target="thoughtfully" weight="0.09375">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="606" source="Malfoy" target="Ginny" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="607" source="Malfoy" target="It'd" weight="0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="608" source="Malfoy" target="Crabbe" weight="0.0546626984127">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="609" source="Malfoy" target="Parselmouth" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="610" source="Malfoy" target="dimly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="611" source="Malfoy" target="Ernie" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="612" source="Malfoy" target="scornfully" weight="-0.140909090909">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="613" source="Malfoy" target="Protection" weight="-0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="614" source="Malfoy" target="heartily" weight="0.111742424242">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="615" source="Malfoy" target="Ministry" weight="0.15">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="616" source="Malfoy" target="Prophet" weight="-0.126666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="617" source="Malfoy" target="Dumbledore" weight="-0.0923414035088">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="618" source="Malfoy" target="angrily" weight="0.0569146825397">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="619" source="Malfoy" target="Chamber" weight="0.025">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="620" source="Malfoy" target="Hermione" weight="-0.337337790492">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </edge>
+      <edge id="621" source="Malfoy" target="sharply" weight="0.0939258658009">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="622" source="Malfoy" target="Order" weight="-0.235714285714">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="623" source="Malfoy" target="pleasantly" weight="0.1625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="624" source="Malfoy" target="Hagrid" weight="0.142637685058">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="625" source="Malfoy" target="Dean" weight="-0.0384615384615">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="626" source="Malfoy" target="Ron" weight="0.520633346094">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="627" source="Malfoy" target="Muggle" weight="-0.235714285714">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="628" source="Malfoy" target="Mommy" weight="-0.1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="629" source="Malfoy" target="Percy" weight="0.135496651786">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="630" source="Malfoy" target="Colin" weight="0.340235723366">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="631" source="Malfoy" target="uncertainly" weight="-0.140909090909">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="632" source="Malfoy" target="Dobby" weight="0.0891666666667">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="633" source="Malfoy" target="Slytherin" weight="0.078203125">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="634" source="Malfoy" target="Myrtle" weight="-0.196153846154">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="635" source="Malfoy" target="Relief" weight="0.15">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="636" source="abruptly" target="Hagrid" weight="-0.0710667600373">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="637" source="abruptly" target="Ron" weight="0.0591579861111">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="638" source="abruptly" target="Colin" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="639" source="abruptly" target="Hermione" weight="0.265178571429">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="640" source="Yeh" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="641" source="Yeh" target="Hagrid" weight="-0.0388888888889">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="642" source="Bludger" target="Lee" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="643" source="Bludger" target="angrily" weight="-0.1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="644" source="Bludger" target="Wood" weight="-0.0625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="645" source="Bludger" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="646" source="Hagrid" target="quietly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="647" source="Hagrid" target="urgently" weight="0.0714285714286">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="648" source="Hagrid" target="Mr." weight="0.0835648148148">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="649" source="Hagrid" target="slowly" weight="0.11875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="650" source="Hagrid" target="Hermione" weight="0.043074646251">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="651" source="Hagrid" target="That'd" weight="0.142857142857">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="652" source="Hagrid" target="Dumbledore" weight="-0.143936741363">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="653" source="Hagrid" target="sharply" weight="0.0338675213675">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="654" source="Hagrid" target="enviously" weight="0.0835648148148">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="655" source="Hagrid" target="Ron" weight="0.345331992889">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="656" source="Hagrid" target="Colin" weight="-0.0710667600373">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="657" source="Hagrid" target="Muggle" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="658" source="Hagrid" target="Fame" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="659" source="Hagrid" target="Aragog" weight="0.151666666667">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="660" source="Dean" target="Lee" weight="0.317857142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="661" source="Dean" target="Ernie" weight="-0.0384615384615">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="662" source="Dean" target="impatiently" weight="0.175">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="663" source="Dean" target="Dumbledore" weight="0.0875">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="664" source="Dean" target="Ron" weight="0.266454257993">
+        <attvalues>
+          <attvalue for="0" value="14" />
+        </attvalues>
+      </edge>
+      <edge id="665" source="You'd" target="Ron" weight="0.125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="666" source="Ron" target="Parselmouth" weight="-0.0606666666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="667" source="Ron" target="heartily" weight="0.0290404040404">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="668" source="Ron" target="Muggle" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="669" source="Ron" target="Creevey" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="670" source="Ron" target="Crabbe" weight="0.114768217893">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="671" source="Ron" target="Lee" weight="0.131826506827">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="672" source="Ron" target="Ron" weight="-0.125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="673" source="Ron" target="impatiently" weight="0.109848484848">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="674" source="Ron" target="Percy" weight="0.189217286184">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="675" source="Ron" target="uncertainly" weight="0.0453703703704">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="676" source="Ron" target="We'd" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="677" source="Ron" target="Slytherin" weight="0.127524777854">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="678" source="Ron" target="Cornelius" weight="0.625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="679" source="Ron" target="automatically" weight="-0.010625">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </edge>
+      <edge id="680" source="Ron" target="Aragog" weight="0.069375">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="681" source="Ron" target="hotly" weight="-0.010625">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </edge>
+      <edge id="682" source="Ron" target="angrily" weight="0.140163194444">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="683" source="Ron" target="Nick" weight="0.0196103896104">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="684" source="Ron" target="fearfully" weight="-0.05">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="685" source="Ron" target="thoughtfully" weight="0.109722222222">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="686" source="Ron" target="patiently" weight="0.0216049382716">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="687" source="Ron" target="Parseltongue" weight="-0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="688" source="Ron" target="wonderingly" weight="-0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="689" source="Ron" target="They'd" weight="-0.6">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="690" source="Ron" target="Uncle" weight="0.016882558579">
+        <attvalues>
+          <attvalue for="0" value="42" />
+        </attvalues>
+      </edge>
+      <edge id="691" source="Ron" target="slowly" weight="0.0520138888889">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="692" source="Ron" target="Care" weight="-0.103125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="693" source="Ron" target="Ministry" weight="0.125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="694" source="Ron" target="That'd" weight="-0.100641025641">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="695" source="Ron" target="Errol" weight="-0.266666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="696" source="Ron" target="Dumbledore" weight="-0.116474151424">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="697" source="Ron" target="She'd" weight="-0.246875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="698" source="Ron" target="back" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="699" source="Ron" target="shrilly" weight="0.219047619048">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="700" source="Ron" target="Chamber" weight="-0.120173412698">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="701" source="Ron" target="delightedly" weight="0.0363636363636">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="702" source="Ron" target="Relief" weight="0.222222222222">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="703" source="Ron" target="sharply" weight="0.131908618584">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="704" source="Ron" target="nervously" weight="0.263673469388">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="705" source="Ron" target="enviously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="706" source="Ron" target="Flich" weight="0.03710839599">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="707" source="Ron" target="Bath" weight="0.125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="708" source="Ron" target="Colin" weight="0.332367325">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="709" source="Ron" target="fiercely" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="710" source="Ron" target="Fletcher" weight="-0.0314814814815">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="711" source="Ron" target="Dursleys" weight="0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="712" source="Ron" target="Sir" weight="-0.0564285714286">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="713" source="Ron" target="Ernie" weight="0.306375661376">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="714" source="Ron" target="urgently" weight="0.325">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="715" source="Ron" target="Father" weight="-0.162698412698">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="716" source="Ron" target="gently" weight="-0.155555555556">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="717" source="Ron" target="Better" weight="0.35">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="718" source="Ron" target="Mr." weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="719" source="Ron" target="Wood" weight="0.293213806449">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </edge>
+      <edge id="720" source="Ron" target="Mail" weight="-0.1625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="721" source="Ron" target="Ginny" weight="0.635417703784">
+        <attvalues>
+          <attvalue for="0" value="22" />
+        </attvalues>
+      </edge>
+      <edge id="722" source="Ron" target="stiffly" weight="0.0235714285714">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="723" source="Ron" target="again" weight="0.233650793651">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="724" source="Ron" target="Gryffindor" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="725" source="Ron" target="Millicent" weight="0.45">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="726" source="Ron" target="scornfully" weight="0.0453703703704">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="727" source="Ron" target="Charm" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="728" source="Ron" target="suspiciously" weight="-0.010625">
+        <attvalues>
+          <attvalue for="0" value="20" />
+        </attvalues>
+      </edge>
+      <edge id="729" source="Ron" target="Hall" weight="0.0343854497354">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="730" source="Ron" target="Dobby" weight="0.25398902165">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="731" source="Ron" target="furiously" weight="0.05">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="732" source="Ron" target="Prophet" weight="0.125317460317">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="733" source="Ron" target="faintly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="734" source="Ron" target="dimly" weight="-0.0777777777778">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="735" source="Ron" target="Hermione" weight="0.101911716363">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="736" source="Ron" target="fervently" weight="0.211272321429">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="737" source="Ron" target="nothing" weight="0.0769444444444">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="738" source="Ron" target="Hooch" weight="5.55111512313e-18">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="739" source="Ron" target="pleasantly" weight="0.247222222222">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="740" source="Ron" target="Hedwig" weight="0.1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="741" source="Ron" target="disbelievingly" weight="0.0416666666667">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="742" source="Ron" target="Pomfrey" weight="0.0964814814815">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="743" source="Ron" target="Perkins" weight="0.05">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="744" source="Ron" target="Howler" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="745" source="Ron" target="Finch-Fletchley" weight="-0.0111842105263">
+        <attvalues>
+          <attvalue for="0" value="19" />
+        </attvalues>
+      </edge>
+      <edge id="746" source="Ron" target="Myrtle" weight="0.131856890126">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="747" source="impatiently" target="Lee" weight="0.142857142857">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="748" source="impatiently" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="749" source="Percy" target="hotly" weight="0.3125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="750" source="Percy" target="Ginny" weight="-0.00681818181818">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="751" source="Percy" target="Crabbe" weight="0.105952380952">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="752" source="Percy" target="suspiciously" weight="0.3125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="753" source="Percy" target="Hall" weight="0.120833333333">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="754" source="Percy" target="Errol" weight="0.116666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="755" source="Percy" target="angrily" weight="0.125">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="756" source="Percy" target="Hermione" weight="0.232967912088">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="757" source="Percy" target="Colin" weight="0.484375">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="758" source="Percy" target="Slytherin" weight="0.225">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="759" source="Percy" target="Finch-Fletchley" weight="0.625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="760" source="Percy" target="Myrtle" weight="0.13125">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="761" source="Percy" target="automatically" weight="0.3125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="762" source="uncertainly" target="Millicent" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="763" source="uncertainly" target="Hermione" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="764" source="uncertainly" target="Myrtle" weight="-0.5">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="765" source="We'd" target="slowly" weight="-0.309333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="766" source="Slytherin" target="Lee" weight="0.114814814815">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="767" source="Slytherin" target="Ernie" weight="0.225">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="768" source="Slytherin" target="Hannah" weight="0.00833333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="769" source="Slytherin" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="770" source="Slytherin" target="Finch-Fletchley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="771" source="Slytherin" target="Crabbe" weight="0.321428571429">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="772" source="Slytherin" target="Hermione" weight="0.262386607143">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="773" source="automatically" target="hotly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="774" source="automatically" target="suspiciously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="775" source="automatically" target="Colin" weight="0.171875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="776" source="automatically" target="Hermione" weight="0.0868131868132">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="777" source="automatically" target="Finch-Fletchley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="778" source="automatically" target="Myrtle" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="779" source="Aragog" target="Chamber" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="780" source="hotly" target="Finch-Fletchley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="781" source="hotly" target="Colin" weight="0.171875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="782" source="hotly" target="Hermione" weight="0.0868131868132">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="783" source="hotly" target="suspiciously" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="784" source="hotly" target="Myrtle" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="785" source="quietly" target="Gryffindor" weight="0.0666666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="786" source="fervently" target="Hermione" weight="0.28125">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="787" source="family" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="788" source="angrily" target="Lee" weight="-0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="789" source="angrily" target="Colin" weight="0.101851851852">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="790" source="angrily" target="Wood" weight="-0.1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="791" source="angrily" target="Hermione" weight="-0.075">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="792" source="angrily" target="Ginny" weight="0.037037037037">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="793" source="angrily" target="Hall" weight="0.491666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="794" source="Nick" target="stiffly" weight="0.526666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="795" source="Nick" target="Sir" weight="0.26">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="796" source="Nick" target="Hunt" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="797" source="Nick" target="Hermione" weight="0.123661067194">
+        <attvalues>
+          <attvalue for="0" value="23" />
+        </attvalues>
+      </edge>
+      <edge id="798" source="Nick" target="Myrtle" weight="0.39">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="799" source="Nick" target="Hall" weight="0.26">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="800" source="Muggle" target="Justin" weight="0.111051756885">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="801" source="Muggle" target="Dumbledore" weight="0.53">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="802" source="Muggle" target="fiercely" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="803" source="Muggle" target="Hermione" weight="-0.03125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="804" source="furiously" target="Myrtle" weight="0.0833333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="805" source="furiously" target="disbelievingly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="806" source="He-Who-Must-Not-Be-Named" target="Dobby" weight="0.148948863636">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="807" source="Tom" target="urgently" weight="-0.125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="808" source="Tom" target="slowly" weight="0.0164502164502">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="809" source="Tom" target="triumphantly" weight="0.047619047619">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="810" source="thoughtfully" target="dimly" weight="0.1875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="811" source="thoughtfully" target="Dumbledore" weight="0.0504901960784">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="812" source="thoughtfully" target="gently" weight="0.375">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="813" source="thoughtfully" target="Dobby" weight="0.1445">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="814" source="thoughtfully" target="pleasantly" weight="0.5125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="815" source="thoughtfully" target="Ginny" weight="0.125">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="816" source="thoughtfully" target="Relief" weight="0.4875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="817" source="patiently" target="Mandrakes" weight="0.425">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="818" source="patiently" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="819" source="patiently" target="nothing" weight="0.575">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="820" source="Minerva" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="821" source="Parseltongue" target="Dumbledore" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="822" source="Parseltongue" target="stubbornly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="823" source="They'd" target="Dumbledore" weight="0.212">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="824" source="Vernon" target="Uncle" weight="0.307916666667">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="825" source="Parselmouth" target="Hannah" weight="0.00833333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="826" source="Parselmouth" target="Hermione" weight="-0.00297619047619">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="827" source="Uncle" target="Dursleys" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="828" source="Uncle" target="Dobby" weight="-0.0811517857143">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </edge>
+      <edge id="829" source="Uncle" target="voice" weight="-0.0578125">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="830" source="slowly" target="Hermione" weight="-0.0102040816327">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="831" source="slowly" target="urgently" weight="-0.0668831168831">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="832" source="slowly" target="Dippet" weight="0.11875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="833" source="slowly" target="triumphantly" weight="0.0481962481962">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="834" source="slowly" target="Dumbledore" weight="0.11875">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="835" source="friend" target="Dumbledore" weight="0.290277777778">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="836" source="Justin" target="Justin" weight="0.111051756885">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="837" source="Justin" target="Ernie" weight="-0.0310080395795">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="838" source="Justin" target="Mandrakes" weight="0.0285714285714">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="839" source="Justin" target="Hannah" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="840" source="Justin" target="Hermione" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="841" source="Ministry" target="Mr." weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="842" source="Ministry" target="Dumbledore" weight="0.5">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="843" source="constantly" target="Pomfrey" weight="0.0416666666667">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="844" source="shrilly" target="nervously" weight="0.0595238095238">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="845" source="shrilly" target="Hermione" weight="0.121527777778">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="846" source="heartily" target="sharply" weight="0.022132034632">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="847" source="heartily" target="Colin" weight="0.256618265993">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="848" source="heartily" target="Wood" weight="0.0690900823713">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="849" source="heartily" target="Hermione" weight="0.277651515152">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="850" source="Relief" target="dimly" weight="0.3">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="851" source="Relief" target="Dumbledore" weight="0.0637254901961">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="852" source="Relief" target="gently" weight="0.6">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="853" source="Relief" target="Dobby" weight="0.167">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="854" source="Relief" target="Ginny" weight="0.2">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="855" source="Relief" target="pleasantly" weight="0.625">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="856" source="sharply" target="Wood" weight="0.064276069224">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="857" source="sharply" target="Colin" weight="0.224123677249">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="858" source="sharply" target="Hermione" weight="0.206412337662">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="859" source="sharply" target="Dumbledore" weight="0.144444444444">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="860" source="sharply" target="Myrtle" weight="0.2">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="861" source="sharply" target="Ginny" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="862" source="Mandrakes" target="Mandrakes" weight="0.25625">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="863" source="Mandrakes" target="Hermione" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="864" source="nervously" target="Hermione" weight="0.0906746031746">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="865" source="enviously" target="Mr." weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="866" source="Lacewing" target="Hermione" weight="0.0555555555556">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="867" source="Lee" target="Gryffindor" weight="0.0907407407407">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="868" source="Lee" target="Dumbledore" weight="0.0714285714286">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="869" source="Lee" target="Wood" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="870" source="Flich" target="Myrtle" weight="0.228988095238">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="871" source="Flich" target="Hermione" weight="-0.05125">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="872" source="Fawkes" target="Dumbledore" weight="0.0648148148148">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="873" source="Colin" target="Quidditch" weight="0.383333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="874" source="Colin" target="Wood" weight="0.0937125125433">
+        <attvalues>
+          <attvalue for="0" value="29" />
+        </attvalues>
+      </edge>
+      <edge id="875" source="Colin" target="suspiciously" weight="0.171875">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="876" source="Colin" target="Hermione" weight="0.490319406843">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="877" source="Colin" target="Finch-Fletchley" weight="0.34375">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="878" source="Colin" target="Myrtle" weight="0.0609375">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="879" source="Wood" target="Great" weight="0.7">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="880" source="Wood" target="Gryffindor" weight="-0.125">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="881" source="Wood" target="Hermione" weight="0.0832034381514">
+        <attvalues>
+          <attvalue for="0" value="27" />
+        </attvalues>
+      </edge>
+      <edge id="882" source="voice" target="Dobby" weight="-0.0815636941505">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="883" source="Dursleys" target="Third" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="884" source="Sir" target="stiffly" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="885" source="Sir" target="Hunt" weight="-0.3125">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="886" source="Sir" target="Hermione" weight="0.0982954545455">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="887" source="Sir" target="Myrtle" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="888" source="Sir" target="Hall" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="889" source="Quidditch" target="Hermione" weight="0.168229166667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="890" source="Ernie" target="Hannah" weight="-0.027132034632">
+        <attvalues>
+          <attvalue for="0" value="8" />
+        </attvalues>
+      </edge>
+      <edge id="891" source="Ernie" target="Transfiguration" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="892" source="Ernie" target="fiercely" weight="-0.0310080395795">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="893" source="Ernie" target="Hermione" weight="-0.0156">
+        <attvalues>
+          <attvalue for="0" value="6" />
+        </attvalues>
+      </edge>
+      <edge id="894" source="Ernie" target="stubbornly" weight="-0.0310080395795">
+        <attvalues>
+          <attvalue for="0" value="7" />
+        </attvalues>
+      </edge>
+      <edge id="895" source="urgently" target="Dumbledore" weight="-0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="896" source="urgently" target="triumphantly" weight="-0.077380952381">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="897" source="gently" target="dimly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="898" source="gently" target="Dumbledore" weight="0.0302083333333">
+        <attvalues>
+          <attvalue for="0" value="16" />
+        </attvalues>
+      </edge>
+      <edge id="899" source="gently" target="Dobby" weight="0.118888888889">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="900" source="gently" target="pleasantly" weight="0.65">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="901" source="gently" target="Ginny" weight="0.166666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="902" source="Wizardry" target="Chamber" weight="0.2">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="903" source="fiercely" target="Pomfrey" weight="0.107201646091">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="904" source="fiercely" target="Hannah" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="905" source="fiercely" target="Hermione" weight="0.1">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="906" source="fiercely" target="Dumbledore" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="907" source="fiercely" target="Dobby" weight="-0.0523888888889">
+        <attvalues>
+          <attvalue for="0" value="15" />
+        </attvalues>
+      </edge>
+      <edge id="908" source="stubbornly" target="Hannah" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="909" source="Ginny" target="dimly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="910" source="Ginny" target="Hall" weight="0.0351851851852">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="911" source="Ginny" target="Dumbledore" weight="0.0268518518519">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="912" source="Ginny" target="pleasantly" weight="0.216666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="913" source="Ginny" target="Dobby" weight="0.0972727272727">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="914" source="Ginny" target="Myrtle" weight="0.25">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="915" source="Ginny" target="Hermione" weight="0.286666666667">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="916" source="stiffly" target="Hermione" weight="0.136390692641">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="917" source="stiffly" target="Myrtle" weight="0.8">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="918" source="stiffly" target="Hall" weight="0.4">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="919" source="again" target="Prophet" weight="0.325">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="920" source="Gryffindor" target="Dumbledore" weight="0.300535714286">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="921" source="Gryffindor" target="Hermione" weight="1.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="922" source="matter-of-factly" target="Crabbe" weight="0.65">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="923" source="matter-of-factly" target="Hermione" weight="-0.333333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="924" source="Power" target="Dobby" weight="0.583333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="925" source="Millicent" target="Hermione" weight="-0.0223214285714">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="926" source="scornfully" target="Hermione" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="927" source="scornfully" target="Myrtle" weight="-0.5">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="928" source="suspiciously" target="Hermione" weight="0.0868131868132">
+        <attvalues>
+          <attvalue for="0" value="13" />
+        </attvalues>
+      </edge>
+      <edge id="929" source="suspiciously" target="Finch-Fletchley" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="930" source="suspiciously" target="Myrtle" weight="-0.025">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="931" source="Crabbe" target="Hermione" weight="0.0714285714286">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="932" source="Hall" target="Hermione" weight="0.0982954545455">
+        <attvalues>
+          <attvalue for="0" value="21" />
+        </attvalues>
+      </edge>
+      <edge id="933" source="Hall" target="Myrtle" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="934" source="Howler" target="faintly" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="935" source="Dumbledore" target="Pomfrey" weight="0.0877104377104">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="936" source="Dumbledore" target="dimly" weight="0.028431372549">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="937" source="Dumbledore" target="Dumbledore" weight="0.225">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="938" source="Dumbledore" target="Hermione" weight="0.05">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="939" source="Dumbledore" target="student" weight="0.766666666667">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="940" source="Dumbledore" target="nothing" weight="0.191666666667">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="941" source="Dumbledore" target="pleasantly" weight="0.0666666666667">
+        <attvalues>
+          <attvalue for="0" value="17" />
+        </attvalues>
+      </edge>
+      <edge id="942" source="Dumbledore" target="Dobby" weight="0.0378953744049">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="943" source="headmaster" target="Dobby" weight="0.583333333333">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="944" source="faintly" target="Hermione" weight="0.0642857142857">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="945" source="dimly" target="Dobby" weight="0.107">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="946" source="dimly" target="pleasantly" weight="0.325">
+        <attvalues>
+          <attvalue for="0" value="2" />
+        </attvalues>
+      </edge>
+      <edge id="947" source="Hermione" target="Hermione" weight="0.96525">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="948" source="Hermione" target="Flitwick" weight="0.1">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="949" source="Hermione" target="Pomfrey" weight="0.105892255892">
+        <attvalues>
+          <attvalue for="0" value="11" />
+        </attvalues>
+      </edge>
+      <edge id="950" source="Hermione" target="Dobby" weight="-0.0291903114187">
+        <attvalues>
+          <attvalue for="0" value="18" />
+        </attvalues>
+      </edge>
+      <edge id="951" source="Hermione" target="Finch-Fletchley" weight="0.0940476190476">
+        <attvalues>
+          <attvalue for="0" value="12" />
+        </attvalues>
+      </edge>
+      <edge id="952" source="Hermione" target="Myrtle" weight="-0.134172078937">
+        <attvalues>
+          <attvalue for="0" value="5" />
+        </attvalues>
+      </edge>
+      <edge id="953" source="Hermione" target="Chamber" weight="0.152380952381">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="954" source="pleasantly" target="Dobby" weight="0.172">
+        <attvalues>
+          <attvalue for="0" value="10" />
+        </attvalues>
+      </edge>
+      <edge id="955" source="Chamber" target="Dobby" weight="0.0">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+      <edge id="956" source="disbelievingly" target="Myrtle" weight="0.0625">
+        <attvalues>
+          <attvalue for="0" value="4" />
+        </attvalues>
+      </edge>
+      <edge id="957" source="Pomfrey" target="Dobby" weight="0.00715925925926">
+        <attvalues>
+          <attvalue for="0" value="25" />
+        </attvalues>
+      </edge>
+      <edge id="958" source="Dobby" target="Dobby" weight="0.120571022727">
+        <attvalues>
+          <attvalue for="0" value="9" />
+        </attvalues>
+      </edge>
+      <edge id="959" source="Finch-Fletchley" target="Myrtle" weight="-0.0333333333333">
+        <attvalues>
+          <attvalue for="0" value="3" />
+        </attvalues>
+      </edge>
+      <edge id="960" source="Myrtle" target="Myrtle" weight="-0.632638888889">
+        <attvalues>
+          <attvalue for="0" value="1" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

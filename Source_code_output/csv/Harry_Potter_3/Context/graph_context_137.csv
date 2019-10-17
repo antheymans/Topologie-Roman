@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+Animagus;Ron;0.0;1
+Ron;Animagus;0.0;1
+Ron;Harry;0.1;5
+Harry;Ron;0.1;5

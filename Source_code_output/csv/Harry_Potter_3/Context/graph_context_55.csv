@@ -1,0 +1,19 @@
+Node 1;Node 2;Weight;Mentions
+Ron;Lupin;0.0;1
+Ron;Hermione;-0.0875;6
+Ron;Harry;0.253703703704;4
+Hogsmeade;Harry;0.0111111111111;1
+Honeydukes;Harry;0.378787878788;1
+Lupin;Hermione;0.0;1
+Lupin;Ron;0.0;1
+Lupin;Harry;0.0;1
+Hermione;Lupin;0.0;1
+Hermione;Ron;-0.0875;6
+Hermione;Harry;0.0483024691358;6
+Butterbeer;Harry;0.0;1
+Harry;Ron;0.253703703704;4
+Harry;Hogsmeade;0.0111111111111;1
+Harry;Honeydukes;0.378787878788;1
+Harry;Lupin;0.0;1
+Harry;Hermione;0.0483024691358;6
+Harry;Butterbeer;0.0;1

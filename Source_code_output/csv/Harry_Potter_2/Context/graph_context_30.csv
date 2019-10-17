@@ -1,0 +1,13 @@
+Node 1;Node 2;Weight;Mentions
+Head;quickly;0.0166666666667;2
+Head;Harry;0.0823214285714;5
+Nimbus;Harry;0.4;1
+quickly;Filch;0.383333333333;1
+quickly;Head;0.0166666666667;2
+quickly;Harry;0.126091269841;3
+Filch;quickly;0.383333333333;1
+Ones;Harry;0.4;1
+Harry;Nimbus;0.4;1
+Harry;Head;0.0823214285714;5
+Harry;Ones;0.4;1
+Harry;quickly;0.126091269841;3

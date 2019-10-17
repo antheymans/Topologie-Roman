@@ -1,0 +1,23 @@
+Node 1;Node 2;Weight;Mentions
+Dean;Professor;-0.0753968253968;7
+Dean;Lee;-0.14525462963;6
+Dean;Ron;-0.0743055555556;5
+Dean;Harry;-0.0743055555556;5
+Lee;Professor;-0.13125;5
+Lee;Dean;-0.14525462963;6
+Lee;Ron;-0.166666666667;3
+Lee;Harry;-0.25;2
+Ron;Professor;-0.0390625;4
+Ron;Dean;-0.0743055555556;5
+Ron;Lee;-0.166666666667;3
+Ron;Harry;0.0;1
+Professor;Dean;-0.0753968253968;7
+Professor;Lee;-0.13125;5
+Professor;Ron;-0.0390625;4
+Professor;Harry;-0.0520833333333;3
+Flint;Harry;0.357142857143;1
+Harry;Flint;0.357142857143;1
+Harry;Professor;-0.0520833333333;3
+Harry;Dean;-0.0743055555556;5
+Harry;Lee;-0.25;2
+Harry;Ron;0.0;1

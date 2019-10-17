@@ -1,0 +1,19 @@
+Node 1;Node 2;Weight;Mentions
+Quidditch;Wood;0.244047619048;2
+Beaters;Wood;-0.0935185185185;1
+Snitch;Wood;0.0919871794872;1
+Weasley;Wood;0.0625;1
+only;Wood;0.0919871794872;1
+Wood;Quidditch;0.244047619048;2
+Wood;Beaters;-0.0935185185185;1
+Wood;Snitch;0.0919871794872;1
+Wood;Weasley;0.0625;1
+Wood;only;0.0919871794872;1
+Wood;Bludgers;0.0;2
+Wood;Quaffle;-0.0625;1
+Wood;Harry;0.109253472222;16
+Bludgers;Wood;0.0;2
+Quaffle;Wood;-0.0625;1
+Quaffle;Harry;0.0;1
+Harry;Wood;0.109253472222;16
+Harry;Quaffle;0.0;1

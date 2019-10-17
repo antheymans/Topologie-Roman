@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+Penelope;Harry;0.241666666667;1
+Penelope;Sirius;0.241666666667;1
+Penelope;hopefully;0.208333333333;3
+Harry;Penelope;0.241666666667;1
+Sirius;Penelope;0.241666666667;1
+hopefully;Penelope;0.208333333333;3

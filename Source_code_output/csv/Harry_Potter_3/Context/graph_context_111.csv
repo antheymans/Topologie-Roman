@@ -1,0 +1,13 @@
+Node 1;Node 2;Weight;Mentions
+Ron;Fred;0.00318181818182;1
+Ron;Snape;0.0;1
+Ron;Malfoy;0.0250231712732;13
+Ron;Crabbe;-0.0428571428571;7
+Malfoy;friend;-0.6;1
+Malfoy;Ron;0.0250231712732;13
+Malfoy;Crabbe;0.0781626533189;8
+Fred;Ron;0.00318181818182;1
+Snape;Ron;0.0;1
+friend;Malfoy;-0.6;1
+Crabbe;Malfoy;0.0781626533189;8
+Crabbe;Ron;-0.0428571428571;7

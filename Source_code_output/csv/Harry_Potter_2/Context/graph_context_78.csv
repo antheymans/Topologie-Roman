@@ -1,0 +1,23 @@
+Node 1;Node 2;Weight;Mentions
+Ron;heavily;0.1875;10
+Ron;Professor;0.189285714286;14
+Ron;Wood;0.238095238095;7
+Ron;Hermione;0.0;1
+Ron;Harry;0.214285714286;7
+heavily;Professor;0.127083333333;12
+heavily;Wood;0.108333333333;5
+heavily;Ron;0.1875;10
+heavily;Harry;0.075;5
+Professor;heavily;0.127083333333;12
+Professor;Wood;0.146296296296;9
+Professor;Ron;0.189285714286;14
+Professor;Harry;0.127777777778;9
+Wood;Professor;0.146296296296;9
+Wood;heavily;0.108333333333;5
+Wood;Ron;0.238095238095;7
+Wood;Harry;0.0833333333333;2
+Hermione;Ron;0.0;1
+Harry;Professor;0.127777777778;9
+Harry;Wood;0.0833333333333;2
+Harry;Ron;0.214285714286;7
+Harry;heavily;0.075;5

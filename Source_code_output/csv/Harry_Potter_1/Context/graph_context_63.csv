@@ -1,0 +1,14 @@
+Node 1;Node 2;Weight;Mentions
+I'd;Wood;0.283333333333;1
+Oliver;Wood;0.0;1
+Charlie;Professor;0.0;1
+Professor;Charlie;0.0;1
+Professor;Wood;0.00555555555556;9
+Wood;I'd;0.283333333333;1
+Wood;Oliver;0.0;1
+Wood;Professor;0.00555555555556;9
+Wood;Wood;0.0;1
+Wood;Heaven;0.166666666667;1
+Wood;Severus;0.166666666667;1
+Heaven;Wood;0.166666666667;1
+Severus;Wood;0.166666666667;1

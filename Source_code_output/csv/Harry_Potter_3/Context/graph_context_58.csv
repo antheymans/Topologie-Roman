@@ -1,0 +1,23 @@
+Node 1;Node 2;Weight;Mentions
+Dumbledore;Black;0.0111111111111;1
+Dumbledore;Snape;0.0479166666667;8
+Dumbledore;coldly;0.0;2
+Dumbledore;Harry;0.0;8
+Dementors;coldly;-0.3;1
+Filch;Harry;-0.0305555555556;2
+Snape;Dumbledore;0.0479166666667;8
+Snape;Black;-0.0657596371882;1
+Snape;coldly;0.0638888888889;6
+Snape;Harry;0.0319444444444;12
+Harry;Filch;-0.0305555555556;2
+Harry;Dumbledore;0.0;8
+Harry;Snape;0.0319444444444;12
+Harry;coldly;0.0;6
+Harry;Black;-0.416666666667;1
+Black;Dumbledore;0.0111111111111;1
+Black;Snape;-0.0657596371882;1
+Black;Harry;-0.416666666667;1
+coldly;Dementors;-0.3;1
+coldly;Dumbledore;0.0;2
+coldly;Snape;0.0638888888889;6
+coldly;Harry;0.0;6

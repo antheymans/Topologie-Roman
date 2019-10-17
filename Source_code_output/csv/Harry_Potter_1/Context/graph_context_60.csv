@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+reasonably;Malfoy;0.65;1
+reasonably;darkly;-0.166666666667;1
+Malfoy;reasonably;0.65;1
+darkly;reasonably;-0.166666666667;1

@@ -1,0 +1,15 @@
+Node 1;Node 2;Weight;Mentions
+Hagrid;Hermione;0.0433333333333;5
+Hagrid;Ron;0.0541666666667;4
+Hagrid;Harry;0.0;1
+Ron;Hagrid;0.0541666666667;4
+Ron;Flint;0.0;1
+Ron;Hermione;0.0;5
+I'd;Hermione;0.5;1
+Flint;Ron;0.0;1
+Hermione;I'd;0.5;1
+Hermione;Ron;0.0;5
+Hermione;Spinnet;-0.145833333333;1
+Hermione;Hagrid;0.0433333333333;5
+Spinnet;Hermione;-0.145833333333;1
+Harry;Hagrid;0.0;1

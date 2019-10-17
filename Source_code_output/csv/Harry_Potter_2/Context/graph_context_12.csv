@@ -1,0 +1,21 @@
+Node 1;Node 2;Weight;Mentions
+Ministry;Mr.;0.0;1
+Ministry;Malfoy;0.15;1
+Nimbus;Malfoy;0.0517857142857;1
+Voldemort;Malfoy;0.0966666666667;1
+Malfoy;Ministry;0.15;1
+Malfoy;Nimbus;0.0517857142857;1
+Malfoy;Voldemort;0.0966666666667;1
+Malfoy;Weasley;0.112662337662;1
+Malfoy;Mr.;0.149169799499;19
+Malfoy;Harry;0.0517857142857;1
+Malfoy;still;0.112662337662;1
+Malfoy;Draco;0.136734693878;14
+Weasley;Malfoy;0.112662337662;1
+Mr.;Draco;0.232265406162;17
+Mr.;Malfoy;0.149169799499;19
+Mr.;Ministry;0.0;1
+Harry;Malfoy;0.0517857142857;1
+still;Malfoy;0.112662337662;1
+Draco;Mr.;0.232265406162;17
+Draco;Malfoy;0.136734693878;14

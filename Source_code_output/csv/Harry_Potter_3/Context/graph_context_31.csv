@@ -1,0 +1,23 @@
+Node 1;Node 2;Weight;Mentions
+Ron;Lupin;0.0;1
+Ron;Crabbe;0.0204166666667;5
+Ron;Hermione;0.000297619047619;7
+Ron;Malfoy;-0.0107638888889;6
+Ron;Harry;0.034053030303;5
+Lupin;Ron;0.0;1
+Malfoy;Crabbe;-0.0555555555556;3
+Malfoy;Hermione;-0.0533333333333;5
+Malfoy;Ron;-0.0107638888889;6
+Malfoy;Harry;-0.0328282828283;3
+Hermione;Crabbe;-0.025;4
+Hermione;Ron;0.000297619047619;7
+Hermione;Malfoy;-0.0533333333333;5
+Hermione;Harry;-0.00795454545455;4
+Harry;Ron;0.034053030303;5
+Harry;Hermione;-0.00795454545455;4
+Harry;Malfoy;-0.0328282828283;3
+Harry;Crabbe;0.0340909090909;2
+Crabbe;Ron;0.0204166666667;5
+Crabbe;Hermione;-0.025;4
+Crabbe;Malfoy;-0.0555555555556;3
+Crabbe;Harry;0.0340909090909;2

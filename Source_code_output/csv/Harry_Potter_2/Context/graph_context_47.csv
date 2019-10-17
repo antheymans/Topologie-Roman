@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Hooch;George;0.12662037037;3
+Hooch;Fred;0.166393849206;4
+Slytherin;George;0.165972222222;1
+George;Hooch;0.12662037037;3
+George;Fred;0.0952380952381;3
+George;Slytherin;0.165972222222;1
+Fred;Hooch;0.166393849206;4
+Fred;George;0.0952380952381;3

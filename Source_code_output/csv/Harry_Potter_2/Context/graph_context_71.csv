@@ -1,0 +1,16 @@
+Node 1;Node 2;Weight;Mentions
+Chamber;Wizardry;0.2;1
+Harry;Harry;0.1875;1
+Harry;nearly;-0.198611111111;7
+Harry;Wizardry;-0.244675925926;6
+Harry;Fred;-0.253611111111;5
+nearly;Harry;-0.198611111111;7
+nearly;Wizardry;0.0155555555556;5
+nearly;Fred;0.0694444444444;4
+Wizardry;Chamber;0.2;1
+Wizardry;Harry;-0.244675925926;6
+Wizardry;nearly;0.0155555555556;5
+Wizardry;Fred;0.0666666666667;3
+Fred;nearly;0.0694444444444;4
+Fred;Wizardry;0.0666666666667;3
+Fred;Harry;-0.253611111111;5

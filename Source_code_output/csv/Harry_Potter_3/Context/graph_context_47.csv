@@ -1,0 +1,25 @@
+Node 1;Node 2;Weight;Mentions
+Ron;time;0.25;2
+Ron;Lupin;0.125;4
+Ron;Lavender;0.233333333333;3
+Ron;Harry;0.142857142857;7
+Lupin;Ron;0.125;4
+Lupin;Harry;0.0555555555556;9
+Lupin;Lavender;0.04;5
+Lupin;Hermione;0.6;1
+Lupin;time;0.0;4
+Lupin;Boggart;0.5;2
+Lavender;Lupin;0.04;5
+Lavender;time;0.0666666666667;3
+Lavender;Ron;0.233333333333;3
+Lavender;Harry;0.0875;8
+Harry;Lupin;0.0555555555556;9
+Harry;Lavender;0.0875;8
+Harry;Ron;0.142857142857;7
+Harry;time;0.0714285714286;7
+Hermione;Lupin;0.6;1
+time;Lupin;0.0;4
+time;Lavender;0.0666666666667;3
+time;Ron;0.25;2
+time;Harry;0.0714285714286;7
+Boggart;Lupin;0.5;2

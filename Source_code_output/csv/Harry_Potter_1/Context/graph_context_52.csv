@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+Percy;Baron;-0.3953125;2
+Percy;Ron;0.02375;10
+Baron;Percy;-0.3953125;2
+Ron;Percy;0.02375;10

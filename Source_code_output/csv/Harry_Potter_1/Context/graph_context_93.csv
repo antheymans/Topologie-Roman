@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+Bill;Ron;0.0;1
+Ron;Bill;0.0;1
+Ron;Harry;0.0660416666667;20
+Harry;Ron;0.0660416666667;20

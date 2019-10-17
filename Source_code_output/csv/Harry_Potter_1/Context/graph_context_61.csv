@@ -1,0 +1,10 @@
+Node 1;Node 2;Weight;Mentions
+Goyle;Remembrall;-0.133333333333;3
+Goyle;Malfoy;-0.2;2
+Goyle;Granger;-0.0892857142857;1
+Remembrall;Goyle;-0.133333333333;3
+Remembrall;Remembrall;0.0;1
+Remembrall;Malfoy;0.0;2
+Malfoy;Goyle;-0.2;2
+Malfoy;Remembrall;0.0;2
+Granger;Goyle;-0.0892857142857;1

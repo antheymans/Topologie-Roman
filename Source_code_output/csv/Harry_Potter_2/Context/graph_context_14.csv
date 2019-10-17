@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Percy;Weasley;-0.0972222222222;2
+Percy;Ron;0.116666666667;2
+Weasley;Percy;-0.0972222222222;2
+Weasley;Minister;0.341666666667;1
+Weasley;Ron;0.0194444444444;2
+Ron;Percy;0.116666666667;2
+Ron;Weasley;0.0194444444444;2
+Minister;Weasley;0.341666666667;1

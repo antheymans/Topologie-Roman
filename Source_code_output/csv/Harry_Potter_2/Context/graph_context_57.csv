@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+McGonagall;Harry;0.163020833333;9
+Potter;Harry;-0.0875;2
+Harry;McGonagall;0.163020833333;9
+Harry;Potter;-0.0875;2

@@ -1,0 +1,23 @@
+Node 1;Node 2;Weight;Mentions
+Mandrakes;Professor;0.18;1
+Mandrakes;Lockhart;0.0;1
+Willow;Hermione;0.392857142857;1
+Professor;Mandrakes;0.18;1
+Professor;Hermione;0.0843722943723;11
+Professor;Lockhart;0.00582417582418;13
+Professor;Harry;0.0437301587302;9
+I'd;Lockhart;0.219795209751;1
+Hermione;Willow;0.392857142857;1
+Hermione;Professor;0.0843722943723;11
+Hermione;Lockhart;0.0206349206349;6
+Hermione;Harry;0.0472222222222;3
+Harry;Professor;0.0437301587302;9
+Harry;Hermione;0.0472222222222;3
+Harry;Lockhart;-0.00357142857143;5
+Harry;Weekly;0.53;1
+Lockhart;Mandrakes;0.0;1
+Lockhart;Professor;0.00582417582418;13
+Lockhart;I'd;0.219795209751;1
+Lockhart;Hermione;0.0206349206349;6
+Lockhart;Harry;-0.00357142857143;5
+Weekly;Harry;0.53;1

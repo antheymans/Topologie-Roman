@@ -1,0 +1,27 @@
+Node 1;Node 2;Weight;Mentions
+Drive;Aunt;0.114107142857;6
+Drive;Uncle;0.117368538324;17
+Drive;Marge;0.3125;2
+Drive;Harry;0.0737179487179;13
+Fisheries;Harry;0.0;1
+Aunt;Marge;0.0442346938776;7
+Aunt;Uncle;0.0799956194599;21
+Aunt;Drive;0.114107142857;6
+Aunt;Harry;0.0378221288515;17
+Marge;Aunt;0.0442346938776;7
+Marge;Uncle;0.0869283108866;18
+Marge;Drive;0.3125;2
+Marge;Harry;0.0448717948718;13
+Black;Harry;-0.115238095238;1
+Harry;Drive;0.0737179487179;13
+Harry;Fisheries;0.0;1
+Harry;Aunt;0.0378221288515;17
+Harry;Marge;0.0448717948718;13
+Harry;Black;-0.115238095238;1
+Harry;Uncle;0.0697713744589;28
+Uncle;Marge;0.0869283108866;18
+Uncle;Aunt;0.0799956194599;21
+Uncle;Drive;0.117368538324;17
+Uncle;Brutus;0.06;1
+Uncle;Harry;0.0697713744589;28
+Brutus;Uncle;0.06;1

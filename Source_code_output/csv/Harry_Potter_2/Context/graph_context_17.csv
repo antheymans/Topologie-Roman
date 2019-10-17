@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Dad;Ron;-0.5;1
+miserably;Ron;0.000648148148148;15
+miserably;Harry;0.0901709401709;13
+Ron;Dad;-0.5;1
+Ron;miserably;0.000648148148148;15
+Ron;Harry;0.0153409090909;22
+Harry;miserably;0.0901709401709;13
+Harry;Ron;0.0153409090909;22

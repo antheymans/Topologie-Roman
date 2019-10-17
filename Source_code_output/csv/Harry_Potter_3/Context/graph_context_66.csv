@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+Nimbus;Wood;0.0;4
+Nimbus;Harry;-0.166666666667;3
+Wood;Nimbus;0.0;4
+Wood;Harry;-0.166666666667;3
+Harry;Nimbus;-0.166666666667;3
+Harry;Wood;-0.166666666667;3

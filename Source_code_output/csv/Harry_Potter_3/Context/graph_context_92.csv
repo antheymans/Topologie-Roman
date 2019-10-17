@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Dementors;Harry;0.203571428571;1
+Hermione;Ron;-0.0353535353535;11
+Hermione;Harry;0.0142857142857;7
+Ron;Hermione;-0.0353535353535;11
+Ron;Harry;-0.137037037037;6
+Harry;Dementors;0.203571428571;1
+Harry;Hermione;0.0142857142857;7
+Harry;Ron;-0.137037037037;6

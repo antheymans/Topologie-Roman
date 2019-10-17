@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Aunt;Vernon;0.145833333333;6
+Aunt;Uncle;0.0535714285714;7
+Vernon;Aunt;0.145833333333;6
+Vernon;Uncle;0.1;5
+Uncle;Vernon;0.1;5
+Uncle;Aunt;0.0535714285714;7
+Uncle;Monday;0.8;1
+Monday;Uncle;0.8;1

@@ -1,0 +1,19 @@
+Node 1;Node 2;Weight;Mentions
+Dad;Hermione;0.3125;1
+Dungbomb;Fred;0.0;1
+Fred;Dungbomb;0.0;1
+Fred;Hermione;0.06875;11
+Fred;George;0.0788949275362;23
+Fred;Harry;0.053515625;16
+Filch;George;-0.616666666667;1
+Hermione;Dad;0.3125;1
+Hermione;Harry;0.02;5
+Hermione;George;0.0962121212121;11
+Hermione;Fred;0.06875;11
+Harry;Hermione;0.02;5
+Harry;George;0.0723958333333;16
+Harry;Fred;0.053515625;16
+George;Filch;-0.616666666667;1
+George;Harry;0.0723958333333;16
+George;Hermione;0.0962121212121;11
+George;Fred;0.0788949275362;23

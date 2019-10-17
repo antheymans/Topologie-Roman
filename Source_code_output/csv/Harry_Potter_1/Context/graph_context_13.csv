@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+Aunt;Piers;0.162857142857;5
+Aunt;Harry;-0.112388392857;9
+Piers;Aunt;0.162857142857;5
+Piers;Harry;-0.141381448413;7
+Harry;Aunt;-0.112388392857;9
+Harry;Piers;-0.141381448413;7

@@ -1,0 +1,27 @@
+Node 1;Node 2;Weight;Mentions
+Pomfrey;Neville;0.416666666667;1
+Neville;Pomfrey;0.416666666667;1
+Neville;Ron;-0.00799168152109;17
+Neville;Harry;-0.0555194805195;7
+Neville;loudly;-0.0555194805195;7
+Neville;Hermione;-0.00935655253837;11
+Neville;Slytherin;0.4;1
+Bogies;Ron;0.0;1
+Ron;Bogies;0.0;1
+Ron;Neville;-0.00799168152109;17
+Ron;loudly;0.0210648148148;12
+Ron;Hermione;0.0336557539683;16
+Ron;Harry;0.0210648148148;12
+Harry;Neville;-0.0555194805195;7
+Harry;loudly;0.0;2
+Harry;Hermione;0.047619047619;6
+Harry;Ron;0.0210648148148;12
+loudly;Neville;-0.0555194805195;7
+loudly;Hermione;0.047619047619;6
+loudly;Ron;0.0210648148148;12
+loudly;Harry;0.0;2
+Hermione;Neville;-0.00935655253837;11
+Hermione;loudly;0.047619047619;6
+Hermione;Ron;0.0336557539683;16
+Hermione;Harry;0.047619047619;6
+Slytherin;Neville;0.4;1

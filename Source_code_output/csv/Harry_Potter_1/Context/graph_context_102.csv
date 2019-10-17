@@ -1,0 +1,25 @@
+Node 1;Node 2;Weight;Mentions
+Pomfrey;Ron;-0.190654761905;1
+Neville;Ron;-0.190654761905;1
+Ron;Pomfrey;-0.190654761905;1
+Ron;Neville;-0.190654761905;1
+Ron;Arts;-0.0297619047619;1
+Ron;Fred;-0.190654761905;1
+Ron;breathlessly;-0.0333333333333;3
+Ron;Quirrell;-0.0297619047619;1
+Ron;Hermione;0.0;2
+Ron;Slytherin;-0.190654761905;1
+Ron;Snape;-0.0297619047619;1
+Ron;Sorcerer;-0.0297619047619;1
+Arts;Ron;-0.0297619047619;1
+Fred;Ron;-0.190654761905;1
+breathlessly;Quirrell;0.034375;1
+breathlessly;Hermione;-0.0333333333333;3
+breathlessly;Ron;-0.0333333333333;3
+Quirrell;breathlessly;0.034375;1
+Quirrell;Ron;-0.0297619047619;1
+Hermione;breathlessly;-0.0333333333333;3
+Hermione;Ron;0.0;2
+Slytherin;Ron;-0.190654761905;1
+Snape;Ron;-0.0297619047619;1
+Sorcerer;Ron;-0.0297619047619;1

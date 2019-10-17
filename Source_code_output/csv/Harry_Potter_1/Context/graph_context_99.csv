@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+Snape;Ron;0.4;1
+Hermione;Ron;-0.05;1
+Ron;Snape;0.4;1
+Ron;Hermione;-0.05;1
+Ron;Slytherin;0.4;1
+Slytherin;Ron;0.4;1

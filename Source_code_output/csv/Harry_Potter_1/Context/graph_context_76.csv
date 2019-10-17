@@ -1,0 +1,25 @@
+Node 1;Node 2;Weight;Mentions
+Ron;something;0.106666666667;6
+Ron;past;-0.25;1
+Ron;Snape;-0.1;6
+Ron;Hermione;0.0;4
+Ron;Harry;0.0;5
+past;Ron;-0.25;1
+I'd;Hermione;-0.48828125;1
+Snape;something;0.01;4
+Snape;Hermione;-0.3;2
+Snape;Ron;-0.1;6
+Snape;Harry;-0.2;3
+Hermione;I'd;-0.48828125;1
+Hermione;Snape;-0.3;2
+Hermione;something;0.32;2
+Hermione;Ron;0.0;4
+Hermione;Harry;0.0;1
+Harry;Snape;-0.2;3
+Harry;Hermione;0.0;1
+Harry;Ron;0.0;5
+Harry;something;0.213333333333;3
+something;Snape;0.01;4
+something;Hermione;0.32;2
+something;Ron;0.106666666667;6
+something;Harry;0.213333333333;3

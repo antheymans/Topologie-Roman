@@ -1,0 +1,18 @@
+Node 1;Node 2;Weight;Mentions
+Hagrid;He'd;-0.1875;1
+Hagrid;Norbert;0.0;1
+Hagrid;Ron;0.25;4
+Hagrid;Harry;0.466666666667;3
+Ron;Hagrid;0.25;4
+Ron;Ron;0.0;1
+Ron;Harry;0.08;5
+Norbert;Hagrid;0.0;1
+Norbert;Harry;0.0625;1
+Charlie;Harry;0.0625;1
+Malfoy;Harry;-0.05;1
+He'd;Hagrid;-0.1875;1
+Harry;Charlie;0.0625;1
+Harry;Hagrid;0.466666666667;3
+Harry;Malfoy;-0.05;1
+Harry;Ron;0.08;5
+Harry;Norbert;0.0625;1

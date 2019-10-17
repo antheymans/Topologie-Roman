@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+Uncle;Dudley;0.0;1
+Uncle;Harry;0.0569727891156;14
+Dudley;Uncle;0.0;1
+Harry;Uncle;0.0569727891156;14

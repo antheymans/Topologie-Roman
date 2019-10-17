@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+Muggles;Cornelius;0.0950396825397;1
+Cornelius;Muggles;0.0950396825397;1
+Cornelius;Black;0.120105820106;3
+Cornelius;Minister;-0.0180555555556;1
+Black;Cornelius;0.120105820106;3
+Minister;Cornelius;-0.0180555555556;1

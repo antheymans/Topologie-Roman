@@ -1,0 +1,15 @@
+Node 1;Node 2;Weight;Mentions
+Professor;Harry;0.0771428571429;1
+Dumbledore;Harry;0.0771428571429;1
+You-Know-Who;Harry;0.0771428571429;1
+Voldemort;Harry;0.65;1
+Firenze;Harry;0.0;1
+Bane;Harry;0.65;1
+Snape;Harry;0.46875;2
+Harry;Professor;0.0771428571429;1
+Harry;Dumbledore;0.0771428571429;1
+Harry;You-Know-Who;0.0771428571429;1
+Harry;Voldemort;0.65;1
+Harry;Firenze;0.0;1
+Harry;Bane;0.65;1
+Harry;Snape;0.46875;2

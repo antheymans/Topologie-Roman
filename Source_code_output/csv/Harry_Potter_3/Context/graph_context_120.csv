@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+instead;Wood;0.3125;1
+Wood;instead;0.3125;1
+Firebolt;Malfoy;0.0;1
+Malfoy;Firebolt;0.0;1

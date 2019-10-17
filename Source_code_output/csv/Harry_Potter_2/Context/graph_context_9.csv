@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+Muggle;Harry;0.375;1
+already;Fred;-0.2;1
+Fred;already;-0.2;1
+Fred;Harry;0.50625;2
+Harry;Muggle;0.375;1
+Harry;Fred;0.50625;2

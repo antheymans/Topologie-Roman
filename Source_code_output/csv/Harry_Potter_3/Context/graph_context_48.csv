@@ -1,0 +1,13 @@
+Node 1;Node 2;Weight;Mentions
+approvingly;Dean;0.140833333333;6
+approvingly;Seamus;0.254;5
+approvingly;Ron;0.21125;4
+Dean;approvingly;0.140833333333;6
+Dean;Seamus;0.085;5
+Dean;Ron;0.0;4
+Seamus;approvingly;0.254;5
+Seamus;Dean;0.085;5
+Seamus;Ron;0.141666666667;3
+Ron;approvingly;0.21125;4
+Ron;Dean;0.0;4
+Ron;Seamus;0.141666666667;3

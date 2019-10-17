@@ -1,0 +1,12 @@
+Node 1;Node 2;Weight;Mentions
+Professor;Professor;-0.155555555556;1
+Professor;Miss;0.0;1
+Professor;Firebolt;0.0;1
+Professor;Ron;-0.103273809524;8
+Professor;Harry;-0.0748412698413;10
+Miss;Professor;0.0;1
+Firebolt;Professor;0.0;1
+Ron;Professor;-0.103273809524;8
+Ron;Harry;-0.0164141414141;11
+Harry;Professor;-0.0748412698413;10
+Harry;Ron;-0.0164141414141;11

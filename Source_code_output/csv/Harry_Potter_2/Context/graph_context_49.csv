@@ -1,0 +1,17 @@
+Node 1;Node 2;Weight;Mentions
+Pomfrey;Lockhart;0.233333333333;1
+Gryffindor;Wood;-0.125;2
+Gryffindor;Lockhart;-0.0261904761905;7
+Gryffindor;Harry;-0.00833333333333;6
+Great;Wood;0.7;1
+Wood;Gryffindor;-0.125;2
+Wood;Great;0.7;1
+Wood;Lockhart;0.0133333333333;5
+Wood;Harry;0.05;4
+Harry;Gryffindor;-0.00833333333333;6
+Harry;Wood;0.05;4
+Harry;Lockhart;0.0296296296296;9
+Lockhart;Pomfrey;0.233333333333;1
+Lockhart;Gryffindor;-0.0261904761905;7
+Lockhart;Wood;0.0133333333333;5
+Lockhart;Harry;0.0296296296296;9

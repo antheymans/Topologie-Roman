@@ -1,0 +1,15 @@
+Node 1;Node 2;Weight;Mentions
+Justin;I'd;0.516666666667;1
+Justin;Hermione;0.0571428571429;1
+Justin;Mandrakes;0.0285714285714;2
+Mandrakes;Hermione;0.0;1
+Mandrakes;Justin;0.0285714285714;2
+Mandrakes;Mandrakes;0.25625;1
+I'd;Justin;0.516666666667;1
+Hermione;Mother;-0.0263888888889;1
+Hermione;Mandrakes;0.0;1
+Hermione;Justin;0.0571428571429;1
+Hermione;Lockhart;-0.0263888888889;1
+Hermione;Hermione;0.5;1
+Mother;Hermione;-0.0263888888889;1
+Lockhart;Hermione;-0.0263888888889;1

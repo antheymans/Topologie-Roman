@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Filch;Professor;0.0;1
+Professor;Filch;0.0;1
+Professor;Gryffindor;0.00700437317784;7
+Professor;Longbottom;0.45;1
+Professor;Malfoy;-0.125;1
+Gryffindor;Professor;0.00700437317784;7
+Malfoy;Professor;-0.125;1
+Longbottom;Professor;0.45;1

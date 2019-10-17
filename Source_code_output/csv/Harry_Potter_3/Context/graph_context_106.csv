@@ -1,0 +1,7 @@
+Node 1;Node 2;Weight;Mentions
+He'd;Harry;0.0666666666667;1
+We'd;Ron;-0.4;1
+Ron;We'd;-0.4;1
+Ron;Harry;-0.137847222222;4
+Harry;He'd;0.0666666666667;1
+Harry;Ron;-0.137847222222;4

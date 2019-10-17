@@ -1,0 +1,17 @@
+Node 1;Node 2;Weight;Mentions
+Dumbledore;Christmas;-0.0357142857143;1
+Dumbledore;earth;0.325;1
+Dumbledore;Mirror;0.325;1
+Dumbledore;gently;0.0258101851852;8
+Dumbledore;Harry;0.035113960114;13
+gently;Erised;0.0;1
+gently;Dumbledore;0.0258101851852;8
+gently;Harry;-0.0388888888889;9
+Harry;Dumbledore;0.035113960114;13
+Harry;gently;-0.0388888888889;9
+Harry;Mirror;0.0909090909091;1
+Mirror;Dumbledore;0.325;1
+Mirror;Harry;0.0909090909091;1
+Erised;gently;0.0;1
+earth;Dumbledore;0.325;1
+Christmas;Dumbledore;-0.0357142857143;1

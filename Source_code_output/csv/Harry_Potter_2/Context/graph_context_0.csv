@@ -1,0 +1,23 @@
+Node 1;Node 2;Weight;Mentions
+Third;Dursleys;0.0;1
+Dudley;Petunia;1.85037170771e-17;3
+Dudley;Uncle;0.0625;8
+Dudley;Dursleys;0.5;1
+Dudley;Harry;0.0904017857143;8
+Uncle;Petunia;-0.0625;8
+Uncle;Dudley;0.0625;8
+Uncle;Dursleys;0.0;6
+Uncle;Harry;0.0171703296703;13
+Harry;Petunia;-0.030753968254;9
+Harry;Uncle;0.0171703296703;13
+Harry;Dursleys;0.031887755102;7
+Harry;Dudley;0.0904017857143;8
+Petunia;Dudley;1.85037170771e-17;3
+Petunia;Uncle;-0.0625;8
+Petunia;Dursleys;-0.25;2
+Petunia;Harry;-0.030753968254;9
+Dursleys;Petunia;-0.25;2
+Dursleys;Uncle;0.0;6
+Dursleys;Dudley;0.5;1
+Dursleys;Third;0.0;1
+Dursleys;Harry;0.031887755102;7

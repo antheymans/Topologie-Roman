@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Black;Crookshanks;0.0466666666667;5
+Black;Harry;0.04;5
+Crookshanks;Black;0.0466666666667;5
+Crookshanks;Harry;0.0916666666667;4
+Voldemort;Harry;0.5;1
+Harry;Black;0.04;5
+Harry;Crookshanks;0.0916666666667;4
+Harry;Voldemort;0.5;1

@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+Myrtle;Harry;0.0;1
+Aragog;Harry;0.0;1
+Harry;Myrtle;0.0;1
+Harry;Aragog;0.0;1

@@ -1,0 +1,5 @@
+Node 1;Node 2;Weight;Mentions
+Fred;Harry;0.0;1
+George;Harry;0.0;1
+Harry;George;0.0;1
+Harry;Fred;0.0;1

@@ -1,0 +1,11 @@
+Node 1;Node 2;Weight;Mentions
+coolly;Better;0.5;1
+coolly;Dudley;0.0408163265306;7
+coolly;Harry;0.166666666667;6
+Better;coolly;0.5;1
+Dudley;coolly;0.0408163265306;7
+Dudley;Dad;0.0;1
+Dudley;Harry;0.142857142857;9
+Dad;Dudley;0.0;1
+Harry;coolly;0.166666666667;6
+Harry;Dudley;0.142857142857;9

@@ -1,0 +1,17 @@
+Node 1;Node 2;Weight;Mentions
+Hagrid;Aragog;0.151666666667;4
+Hagrid;Harry;0.3;1
+Fang;Aragog;0.0;1
+Ron;Aragog;0.069375;16
+Ron;Harry;0.0136842105263;19
+Chamber;Aragog;0.4;1
+Aragog;Hagrid;0.151666666667;4
+Aragog;Ron;0.069375;16
+Aragog;Fang;0.0;1
+Aragog;Chamber;0.4;1
+Aragog;Harry;0.0217647058824;17
+Aragog;still;0.206666666667;1
+Harry;Hagrid;0.3;1
+Harry;Aragog;0.0217647058824;17
+Harry;Ron;0.0136842105263;19
+still;Aragog;0.206666666667;1

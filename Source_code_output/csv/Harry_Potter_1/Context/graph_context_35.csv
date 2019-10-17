@@ -1,0 +1,17 @@
+Node 1;Node 2;Weight;Mentions
+Hagrid;I'd;-0.03875;2
+Hagrid;Mr.;0.113463203463;11
+Hagrid;quickly;0.113463203463;11
+Hagrid;Harry;0.126883116883;22
+quickly;Mr.;0.0;2
+quickly;Hagrid;0.113463203463;11
+quickly;Harry;0.118717948718;13
+Mr.;quickly;0.0;2
+Mr.;Hagrid;0.113463203463;11
+Mr.;Harry;0.118717948718;13
+I'd;Hagrid;-0.03875;2
+He-Who-Must-Not-Be-Named;Harry;0.26;1
+Harry;Mr.;0.118717948718;13
+Harry;Hagrid;0.126883116883;22
+Harry;He-Who-Must-Not-Be-Named;0.26;1
+Harry;quickly;0.118717948718;13

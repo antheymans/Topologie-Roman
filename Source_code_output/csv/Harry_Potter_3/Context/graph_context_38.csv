@@ -1,0 +1,21 @@
+Node 1;Node 2;Weight;Mentions
+Percy;Neville;-0.0167613636364;5
+Percy;Hagrid;-0.0598405934343;4
+Percy;Hermione;-0.0209517045455;4
+Percy;Harry;-0.00666599025974;4
+Neville;Percy;-0.0167613636364;5
+Neville;Hagrid;-0.0518518518519;3
+Neville;Hermione;0.0;3
+Neville;Harry;0.0190476190476;3
+Hagrid;Percy;-0.0598405934343;4
+Hagrid;Neville;-0.0518518518519;3
+Hagrid;Hermione;-0.0777777777778;2
+Hagrid;Harry;-0.0492063492063;2
+Hermione;Percy;-0.0209517045455;4
+Hermione;Neville;0.0;3
+Hermione;Hagrid;-0.0777777777778;2
+Hermione;Harry;0.0285714285714;2
+Harry;Percy;-0.00666599025974;4
+Harry;Neville;0.0190476190476;3
+Harry;Hagrid;-0.0492063492063;2
+Harry;Hermione;0.0285714285714;2

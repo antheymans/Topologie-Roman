@@ -1,0 +1,9 @@
+Node 1;Node 2;Weight;Mentions
+Percy;Malfoy;0.0892857142857;7
+Percy;Harry;0.104166666667;6
+Potter;Malfoy;0.4375;1
+Malfoy;Percy;0.0892857142857;7
+Malfoy;Potter;0.4375;1
+Malfoy;Harry;0.0;5
+Harry;Percy;0.104166666667;6
+Harry;Malfoy;0.0;5

@@ -1,0 +1,25 @@
+Node 1;Node 2;Weight;Mentions
+Fubster;Uncle;-0.21875;1
+Dudley;Aunt;0.135763888889;2
+Dudley;Uncle;0.126791028912;7
+Dudley;Marge;0.127361111111;10
+Dudley;Harry;0.105;5
+Ripper;Uncle;0.0;1
+Aunt;Harry;-0.100694444444;5
+Aunt;Uncle;-0.020133574263;7
+Aunt;Marge;0.0245138888889;10
+Aunt;Dudley;0.135763888889;2
+Marge;Uncle;0.0574098875661;15
+Marge;Aunt;0.0245138888889;10
+Marge;Dudley;0.127361111111;10
+Marge;Harry;0.0383547008547;13
+Harry;Aunt;-0.100694444444;5
+Harry;Uncle;0.0112537202381;10
+Harry;Marge;0.0383547008547;13
+Harry;Dudley;0.105;5
+Uncle;Fubster;-0.21875;1
+Uncle;Dudley;0.126791028912;7
+Uncle;Ripper;0.0;1
+Uncle;Marge;0.0574098875661;15
+Uncle;Harry;0.0112537202381;10
+Uncle;Aunt;-0.020133574263;7

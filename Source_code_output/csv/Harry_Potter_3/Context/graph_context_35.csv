@@ -1,0 +1,27 @@
+Node 1;Node 2;Weight;Mentions
+Neville;Lupin;-0.0680803571429;8
+Neville;Hermione;-0.0267857142857;7
+Neville;Ron;0.0817171717172;15
+Neville;Harry;-0.0591517857143;8
+Ron;Neville;0.0817171717172;15
+Ron;Lupin;0.195952380952;10
+Ron;Dementors;-0.2;1
+Ron;I'd;-0.05;1
+Ron;Hermione;0.257407407407;9
+Ron;Harry;0.203095238095;10
+Ron;Ginny;-0.625;1
+Lupin;Neville;-0.0680803571429;8
+Lupin;Hermione;0.119047619048;4
+Lupin;Ron;0.195952380952;10
+Lupin;Harry;0.0892857142857;4
+Dementors;Ron;-0.2;1
+I'd;Ron;-0.05;1
+Hermione;Neville;-0.0267857142857;7
+Hermione;Lupin;0.119047619048;4
+Hermione;Ron;0.257407407407;9
+Hermione;Harry;0.238095238095;3
+Harry;Neville;-0.0591517857143;8
+Harry;Lupin;0.0892857142857;4
+Harry;Hermione;0.238095238095;3
+Harry;Ron;0.203095238095;10
+Ginny;Ron;-0.625;1

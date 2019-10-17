@@ -1,0 +1,13 @@
+Node 1;Node 2;Weight;Mentions
+Weasley;Hermione;0.0650793650794;2
+Weasley;Ron;-0.0398412698413;5
+Weasley;Harry;-0.0388888888889;4
+Hermione;Weasley;0.0650793650794;2
+Hermione;Ron;0.0484126984127;5
+Hermione;Harry;0.0714285714286;4
+Ron;Weasley;-0.0398412698413;5
+Ron;Hermione;0.0484126984127;5
+Ron;Harry;-0.0062358276644;7
+Harry;Hermione;0.0714285714286;4
+Harry;Ron;-0.0062358276644;7
+Harry;Weasley;-0.0388888888889;4
