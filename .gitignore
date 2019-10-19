@@ -1,2 +1,9 @@
 ﻿
 *.pyc
+*.BOOK
+*.txt
+*.csv
+*.NUMBERS
+*.gexf
+*.JSON
+*.png
