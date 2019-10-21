@@ -42,9 +42,9 @@ def load_book(filename):
         return book
     else:
         print "NO FILE FOUND! Building the collection..."
-        book = bPP.build_book(PATH_BOOKS+filename+".txt")
+        book = bPP.build_book(PATH_BOOKS+filename+".txt")        #book is: sentences, breaks, sentiments, chunks
         set_object(book, path)
-        print "Done !"
+        print "Done !"        
         return book
 
 def create_folders(filename):
