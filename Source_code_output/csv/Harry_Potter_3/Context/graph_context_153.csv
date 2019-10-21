@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Hogsmeade;Harry;0.0611904761905;1
-Black;Harry;0.0439722222222;2
-I'd;Harry;0.15625;1
-Potter;Harry;0.0384166666667;2
-Harry;Hogsmeade;0.0611904761905;1
-Harry;Black;0.0439722222222;2
-Harry;I'd;0.15625;1
-Harry;Potter;0.0384166666667;2

@@ -1,6 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Pettigrew;Harry;0.0;1
-Ron;Harry;0.132857142857;7
-Harry;Pettigrew;0.0;1
-Harry;Ron;0.132857142857;7
-Harry;Harry;0.0;1

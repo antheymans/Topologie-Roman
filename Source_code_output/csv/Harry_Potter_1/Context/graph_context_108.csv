@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Hedwig;Hagrid;0.0;1
-Charlie;Harry;0.0;1
-Hagrid;Hedwig;0.0;1
-Hagrid;way;-0.2125;1
-Hagrid;Harry;0.0;1
-way;Hagrid;-0.2125;1
-Harry;Charlie;0.0;1
-Harry;Hagrid;0.0;1

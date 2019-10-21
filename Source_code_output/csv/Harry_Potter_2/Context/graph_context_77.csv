@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Gryffindor;Ron;0.0;1
-fearfully;Ron;-0.05;4
-fearfully;Harry;0.0;4
-Ron;Gryffindor;0.0;1
-Ron;fearfully;-0.05;4
-Ron;Harry;-0.0333333333333;6
-Harry;fearfully;0.0;4
-Harry;Ron;-0.0333333333333;6

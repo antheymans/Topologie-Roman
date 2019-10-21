@@ -1,7 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Charlie;Harry;0.0952380952381;1
-Norbert;Harry;0.0;1
-Malfoy;Harry;-0.15;1
-Harry;Charlie;0.0952380952381;1
-Harry;Malfoy;-0.15;1
-Harry;Norbert;0.0;1

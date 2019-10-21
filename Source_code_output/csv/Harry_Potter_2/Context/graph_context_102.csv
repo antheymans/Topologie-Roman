@@ -1,5 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-earth;Professor;0.15;1
-Professor;earth;0.15;1
-Professor;Weasley;0.0;3
-Weasley;Professor;0.0;3

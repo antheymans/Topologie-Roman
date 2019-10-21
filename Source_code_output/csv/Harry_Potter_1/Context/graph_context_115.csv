@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Fred;Wood;-0.2;1
-Wood;Fred;-0.2;1
-Wood;Ron;0.161111111111;3
-Wood;Slytherin;0.102604166667;4
-Ron;Wood;0.161111111111;3
-Ron;Slytherin;-0.0145833333333;5
-Slytherin;Wood;0.102604166667;4
-Slytherin;Ron;-0.0145833333333;5

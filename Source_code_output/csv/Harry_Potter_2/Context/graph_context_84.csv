@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-delightedly;Ron;0.0363636363636;11
-delightedly;Harry;0.00714285714286;14
-Fang;Ron;0.2;1
-Ron;delightedly;0.0363636363636;11
-Ron;Fang;0.2;1
-Ron;Harry;0.02;15
-Harry;delightedly;0.00714285714286;14
-Harry;Ron;0.02;15

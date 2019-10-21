@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Uncle;Aunt;-0.0659090909091;4
-Uncle;Harry;-0.0727272727273;5
-Aunt;Uncle;-0.0659090909091;4
-Aunt;Dudley;-0.175;2
-Aunt;Harry;-0.025;4
-Dudley;Aunt;-0.175;2
-Harry;Uncle;-0.0727272727273;5
-Harry;Aunt;-0.025;4

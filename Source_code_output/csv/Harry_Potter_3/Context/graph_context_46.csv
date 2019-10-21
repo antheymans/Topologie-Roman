@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Neville;Lupin;0.0809523809524;1
-Lupin;Neville;0.0809523809524;1
-Lupin;Boggart;0.08125;4
-Lupin;Ron;0.25;7
-Boggart;Lupin;0.08125;4
-Boggart;Ron;0.0821428571429;7
-Ron;Lupin;0.25;7
-Ron;Boggart;0.0821428571429;7

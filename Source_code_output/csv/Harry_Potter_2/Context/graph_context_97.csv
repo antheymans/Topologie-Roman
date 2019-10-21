@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-weapons;Fawkes;0.4375;1
-Dumbledore;Harry;0.475;1
-Fawkes;weapons;0.4375;1
-Fawkes;Hat;0.1;1
-Fawkes;Harry;0.0949718915344;8
-Hat;Fawkes;0.1;1
-Harry;Dumbledore;0.475;1
-Harry;Fawkes;0.0949718915344;8

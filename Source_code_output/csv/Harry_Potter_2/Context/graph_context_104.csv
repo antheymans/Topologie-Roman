@@ -1,7 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Hagrid;Ron;-0.10546875;2
-Hagrid;Harry;0.39453125;2
-Ron;Hagrid;-0.10546875;2
-Ron;Harry;0.5;2
-Harry;Hagrid;0.39453125;2
-Harry;Ron;0.5;2

@@ -1,7 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Hermione;Ron;0.033253968254;10
-Hermione;Harry;0.05;10
-Ron;Hermione;0.033253968254;10
-Ron;Harry;0.104067460317;8
-Harry;Hermione;0.05;10
-Harry;Ron;0.104067460317;8

@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Chamber;Ron;0.0;1
-Hogwarts;Harry;0.0;2
-Hagrid;Ron;0.0;1
-Ron;Chamber;0.0;1
-Ron;Hagrid;0.0;1
-Ron;Harry;0.0301601080247;12
-Harry;Hogwarts;0.0;2
-Harry;Ron;0.0301601080247;12

@@ -1,9 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Snitch;Wood;0.0;1
-Wood;Snitch;0.0;1
-Wood;Hermione;0.281994047619;8
-Wood;Harry;0.271825396825;6
-Hermione;Wood;0.281994047619;8
-Hermione;Harry;0.104166666667;6
-Harry;Wood;0.271825396825;6
-Harry;Hermione;0.104166666667;6

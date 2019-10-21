@@ -1,7 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Pettigrew;Lupin;-0.25;2
-Pettigrew;Black;0.0515151515152;2
-Lupin;Pettigrew;-0.25;2
-Lupin;Black;-0.198484848485;2
-Black;Pettigrew;0.0515151515152;2
-Black;Lupin;-0.198484848485;2

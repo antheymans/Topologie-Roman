@@ -1,7 +1,0 @@
-Node 1;Node 2;Weight;Mentions
-Snape;Ron;0.0;3
-Snape;Harry;-0.25;2
-Ron;Snape;0.0;3
-Ron;Harry;-0.166666666667;3
-Harry;Snape;-0.25;2
-Harry;Ron;-0.166666666667;3
