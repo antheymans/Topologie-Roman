@@ -19,7 +19,8 @@ def read_book(path):
     f = codecs.open(path, encoding='utf-8')
     book = [line for line in f]
     replacements = [(u"‘",unicode("'")),(u"’",unicode("'")),(u"—",unicode("-")),(u'“',unicode('"')),
-                    (u'”',unicode('"')),(u"\u2013", unicode("-")), (u"\u2306", unicode("e")),(u'…',unicode(' ... '))]
+                    (u'”',unicode('"'))]
+                    ##,(u"\u2013", unicode("-")), (u"\u2306", unicode("e")),(u'…',unicode(' ... ')
     for replacement in replacements:
         book = [line.replace(replacement[0],replacement[1]) for line in book]
     return book
@@ -35,7 +36,8 @@ def get_sentences(book):
             sentences.append(line)
             chunks.append([])
         else:
-            parsedLine = pen.parsetree(line,relations=True)
+        
+            parsedLine = pen.parsetree(line, relations=True, encoding = "utf-8")
             #Regroup a whole dialogue into a single sentence
             to_ignore = []
             for i in range(len(parsedLine.sentences)):

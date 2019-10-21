@@ -72,7 +72,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}
     #Regroup entries of the dictionary corresponding to variations on the same name
     ##Via common references
-    for e in connectionsTable.edges_iter(data=True):
+    for e in list(connectionsTable.edges(data=True)):
         n1 = e[0]
         n2 = e[1]
         value = e[2]['value']
@@ -111,16 +111,16 @@ def validate_connections_table(connectionsTable, aliasTable):
     pairGraph = nx.Graph()
     
     cT2 = nx.Graph()
-    for e in connectionsTable.edges_iter(data=True) :
+    for e in list(connectionsTable.edges(data=True)) :
         if e[0] in aliasTable.keys() and e[1] in aliasTable.keys() and e[2]["paired"]:
             cT2.add_edge(e[0],e[1])
     
-    pairGraph.add_edges_from([e for e in cT2.edges() if len(cT2.neighbors(e[0]))==1 and len(cT2.neighbors(e[1]))==1])
+    pairGraph.add_edges_from([e for e in cT2.edges() if len(list(cT2.neighbors(e[0])))==1 and len(list(cT2.neighbors(e[1])))==1])
     
     used = {w : False for w in pairGraph.nodes()}
     
     for w in pairGraph.nodes():
-        if not used[w] and len(pairGraph.neighbors(w)) > 0:
+        if not used[w] and len(list(pairGraph.neighbors(w))) > 0:
             subgraph = [w]
             subgraph.extend(pairGraph.neighbors(w))
             subAT= {s: len(aliasTable.get(s,[])) for s in subgraph}
@@ -172,7 +172,7 @@ def validate_aliases(aliases, aliasTable):
     used = {w : False for w in aliases.nodes()}
     
     for w in aliases.nodes():
-        if not used[w] and len(aliases.neighbors(w)) > 0:
+        if not used[w] and len(list(aliases.neighbors(w))) > 0:
             subgraph = [w]
             subgraph.extend(aliases.neighbors(w))
             subAT= {s: len(aliasTable.get(s,[])) for s in subgraph}

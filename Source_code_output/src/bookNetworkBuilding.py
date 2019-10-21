@@ -36,7 +36,7 @@ def build_context_networks(len_dialog_contexts,dialog_occurrences):
                             else:
                                 curGraph.add_edge(o['from'], t, weight=o['sentiment'], mentions=1)
         
-        for e in curGraph.edges_iter():
+        for e in list(curGraph.edges()):
             curGraph[e[0]][e[1]]["weight"] /= curGraph[e[0]][e[1]]["mentions"]
         
         for n in curGraph.nodes():
@@ -61,7 +61,7 @@ def build_inc_networks(graphs, nodeCount):
         for n in g.nodes():
             G.add_node(n)
         
-        for e in g.edges_iter(data=True):
+        for e in list(g.edges(data=True)):
             if G.has_edge(e[0],e[1]):
                 mentions =G[e[0]][e[1]]['mentions'] 
                 G[e[0]][e[1]]['weight'] = G[e[0]][e[1]]['weight'] * TIME_FACTOR * (mentions-1)/mentions + e[2]['weight']

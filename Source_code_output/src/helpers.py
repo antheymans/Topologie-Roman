@@ -44,7 +44,7 @@ def is_root(word1,word2):
     
     if len(word1) <= 2 or len(word2) <=2:
         return False
-    if pen.singularize(word1) == pen.singularize(word2):
+    if pen.singularize(word1) == pen.singularize(word2):##if one word is plural of another
         return True
     if word1.find(word2) == 0 or word2.find(word1) == 0:
         return True

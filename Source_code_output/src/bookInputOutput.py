@@ -11,6 +11,8 @@ import json
 from networkx.readwrite import json_graph
 from networkx.algorithms.cluster import average_clustering
 import os.path
+import codecs
+
 
 import bookPreProcessing as bPP
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT, PATH_GRAPHS, PATH_CSV, PATH_PNG, PATH_SERIALIZED
@@ -182,7 +184,7 @@ def csv_dialog_extr_stats(resfile):
     for b in resfile.keys():
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
     
-    f = open(PATH_CSV + "speakerIDstats.csv", "w+")
+    f = codecs.open(PATH_CSV + "speakerIDstats.csv", "w+", encoding='utf-8')
     f.write(idStats)
     f.close()
 
@@ -191,7 +193,7 @@ def csv_dialog_extr_stats_CID(resfile):
     for b in resfile.keys():
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
     
-    f = open(PATH_CSV + "speakerIDstats_postCID.csv", "w+")
+    f = codecs.open(PATH_CSV + "speakerIDstats_postCID.csv", "w+", encoding='utf-8')
     f.write(idStats)
     f.close()
 
@@ -206,7 +208,7 @@ def csv_occurrences(dialog_occurrences,filename):
             do += t.string + ALT_COMMA  
         do += CSV_COMMA + str(o['sentiment']) + CSV_COMMA + str(o['index']) + CSV_COMMA + str(o['context']) 
     
-    f = open(PATH_CSV + filename+"/occurrences.csv", "w+")
+    f = codecs.open(PATH_CSV + filename+"/occurrences.csv", "w+", encoding='utf-8')
     f.write(do)
     f.close()
 
@@ -218,7 +220,7 @@ def csv_occurrences_CID(dialog_occurrences,filename):
             do += t + ALT_COMMA  
         do += CSV_COMMA + str(o['sentiment']) + CSV_COMMA + str(o['index']) + CSV_COMMA + str(o['context']) 
     
-    f = open(PATH_CSV + filename+"/occurrences_CID.csv", "w+")
+    f = codecs.open(PATH_CSV + filename+"/occurrences_CID.csv", "w+", encoding='utf-8')
     f.write(do)
     f.close()
 
@@ -237,7 +239,7 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
         for c in aliasTable[key]:
             alias_table_string += CSV_COMMA + c
             
-    f1 = open(PATH_CSV + filename + "/alias_table.csv", "w+")
+    f1 = codecs.open(PATH_CSV + filename + "/alias_table.csv", "w+", encoding='utf-8')
     f1.write(alias_table_string)
     f1.close()
     
@@ -247,7 +249,7 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
         for end in connectionsTable[n].keys():
             ct_string += "\n" + n + CSV_COMMA + str(nodes[n]["length"]) + CSV_COMMA + end + CSV_COMMA + str(nodes[end]["length"]) + CSV_COMMA + str(connectionsTable[n][end]["value"]) + CSV_COMMA + str(connectionsTable[n][end]["paired"])  
     
-    f2 = open(PATH_CSV + filename + "/connection_table.csv", "w+")
+    f2 = codecs.open(PATH_CSV + filename + "/connection_table.csv", "w+", encoding='utf-8')
     f2.write(ct_string)
     f2.close()
     
@@ -255,7 +257,7 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     for e in aliases.edges():
         alias_pairs_string += "\n" + e[0] + CSV_COMMA + e[1]
     
-    f3 = open(PATH_CSV + filename + "/alias_pairs.csv", "w+")
+    f3 = codecs.open(PATH_CSV + filename + "/alias_pairs.csv", "w+", encoding='utf-8')
     f3.write(alias_pairs_string)
     f3.close()
 
@@ -264,7 +266,7 @@ def csv_degree_incremental(filename,G):
     for n in G.nodes():
         csv += n + CSV_COMMA + str(G.degree(n)) + "\n"
     
-    f = open(PATH_CSV+filename+"/graph_degrees.csv","w+") 
+    f = codecs.open(PATH_CSV+filename+"/graph_degrees.csv","w+", encoding='utf-8')
     f.write(csv)
     f.close
 
@@ -316,7 +318,7 @@ def csv_new_characters(filename,iGraphs):
                     csv += m + CSV_COMMA
                 csv+= "\n" 
     
-    f = open(PATH_CSV+filename+"/new_characters.csv","w+")
+    f = codecs.open(PATH_CSV+filename+"/new_characters.csv","w+", encoding='utf-8')
     f.write(csv)
     f.close()
 
@@ -377,7 +379,8 @@ def build_png_graphs(filename,graphs,mode):
         edgecolor=[edge[2]['weight'] for edge in g.edges(data=True)]
         nodesize=[100*int(g.degree()[n]) for n in g.nodes()]
         cmap = plt.cm.get_cmap(name="RdYlGn")
-        nx.draw(g,with_labels=True,node_color='#65a5cc',alpha=0.8,node_size=nodesize,font_size=7,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
+        #nx.draw(g,with_labels=True,node_color='#65a5cc',alpha=0.8,node_size=nodesize,font_size=7,width=edgesize,edge_color=edgecolor,edge_cmap=cmap) #update this line to avoid depreciation messahe
+        nx.draw_networkx(g,with_labels=True,node_color='#65a5cc',alpha=0.8,node_size=nodesize,font_size=7,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
         plt.savefig(PATH_PNG+filename+"/"+mode.lower()+"/Context_"+str(context)+".png")
         plt.close()
 
@@ -386,15 +389,14 @@ def output_csv_graphs(filename,graphs,mode):
         degrees = "Name" + CSV_COMMA+"Degree\n"
         csv = "Node 1" + CSV_COMMA + "Node 2" + CSV_COMMA + "Weight" + CSV_COMMA + "Mentions\n"
         g = graphs[i]
-        for (node, adj_dic) in g.adjacency_iter():
+        for (node, adj_dic) in list(g.adjacency()):
             degrees += node + CSV_COMMA + str(g.degree()[node])+"\n"
             for node2 in adj_dic.keys():
                 csv+= node + CSV_COMMA + node2 + CSV_COMMA + str(adj_dic[node2]['weight']) + CSV_COMMA + str(adj_dic[node2]['mentions']) + "\n"
-    
-        f = open(PATH_CSV+filename+"/"+mode+"/graph_context_"+str(i)+".csv","w+")
+        f = codecs.open(PATH_CSV+filename+"/"+mode+"/graph_context_"+str(i)+".csv", "w+", encoding='utf-8')
         f.write(csv)
         f.close()
-        f2 = open(PATH_CSV+filename+"/"+mode+"/degrees_context_"+str(i)+".csv","w+")
+        f2 = codecs.open(PATH_CSV+filename+"/"+mode+"/degrees_context_"+str(i)+".csv", "w+", encoding='utf-8')
         f2.write(degrees)
         f2.close()
 
