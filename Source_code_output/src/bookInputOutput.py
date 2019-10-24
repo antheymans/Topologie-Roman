@@ -194,6 +194,7 @@ def csv_dialog_extr_stats_CID(resfile):
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
     
     f = codecs.open(PATH_CSV + "speakerIDstats_postCID.csv", "w+", encoding='utf-8')
+    
     f.write(idStats)
     f.close()
 
@@ -393,10 +394,10 @@ def output_csv_graphs(filename,graphs,mode):
             degrees += node + CSV_COMMA + str(g.degree()[node])+"\n"
             for node2 in adj_dic.keys():
                 csv+= node + CSV_COMMA + node2 + CSV_COMMA + str(adj_dic[node2]['weight']) + CSV_COMMA + str(adj_dic[node2]['mentions']) + "\n"
-        f = codecs.open(PATH_CSV+filename+"/"+mode+"/graph_context_"+str(i)+".csv", "w+", encoding='utf-8')
+        f = codecs.open(PATH_CSV+filename+"/"+mode+"/graph_"+mode+"_"+str(i)+".csv", "w+", encoding='utf-8')
         f.write(csv)
         f.close()
-        f2 = codecs.open(PATH_CSV+filename+"/"+mode+"/degrees_context_"+str(i)+".csv", "w+", encoding='utf-8')
+        f2 = codecs.open(PATH_CSV+filename+"/"+mode+"/degrees_"+mode+"_"+str(i)+".csv", "w+", encoding='utf-8')
         f2.write(degrees)
         f2.close()
 

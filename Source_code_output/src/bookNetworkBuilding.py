@@ -24,7 +24,6 @@ def build_context_networks(len_dialog_contexts,dialog_occurrences):
         
         speakers = uniques([o['from'] for o in occurrences])
         curGraph.add_nodes_from(speakers)
-        
         for o in occurrences:
             if len(o['from']) > 0:
                 if len(o['to']) > 0:
@@ -35,13 +34,13 @@ def build_context_networks(len_dialog_contexts,dialog_occurrences):
                                 curGraph[o['from']][t]["mentions"] += 1
                             else:
                                 curGraph.add_edge(o['from'], t, weight=o['sentiment'], mentions=1)
+                                
         
         for e in list(curGraph.edges()):
             curGraph[e[0]][e[1]]["weight"] /= curGraph[e[0]][e[1]]["mentions"]
         
         for n in curGraph.nodes():
             nodeCount[n] = nodeCount.get(n,0) + 1
-        
         graphs.append(curGraph)
         
     return graphs, nodeCount

@@ -34,8 +34,8 @@ def book_analyze(file_txt):
     
     #Print stats for character identification and output them to a file that is constantly updated.
     bIO.save_occurrences_contexts(filename,dialog_occurrences,dialog_contexts)
-    stat = compute_statistics_CID(dialog_occurrences)
-    bIO.update_stats_CID(filename,stat)
+    stat = compute_statistics(dialog_occurrences)
+    bIO.update_stats(filename,stat)
     
     #Load the name files
     previous_book = raw_input("Use a previous book? If so, enter its name.")

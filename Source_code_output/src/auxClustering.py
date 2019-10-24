@@ -31,8 +31,8 @@ def get_clustering(filename):
     clustering_file = open(PATH_CSV+filename+"/clustering_incremental.csv","r").read().decode("UTF-8").split("\n")
     return clustering_file[-2].split(CSV_COMMA)[1]
     
-def get_degrees():
-    degrees_files = open(PATH_CSV+"degrees_exponents.csv","r").read().decode("UTF_8").split("\n")
+def get_degrees():#graph_degrees or degrees_exponents ? bug
+    degrees_files = open(PATH_CSV+"graph_degrees.csv","r").read().decode("UTF_8").split("\n")
     degrees_exponents = {}
     for line in degrees_files:
         if line != "":

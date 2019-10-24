@@ -4,8 +4,9 @@ Created on 26 janv. 2015
 @author: thibautnicodeme
 '''
 
-from helpers import PATH_CSV, PATH_CORRECTED
+from helpers import PATH_CSV, PATH_CORRECTED, PATH_BOOKS_OBJECT
 from auxConvertOccurrences import generate_occurrences
+from bookInputOutput import get_files_in_folder
 
 #Compares the CSV output for a filename and the corrected_occurrences for the same filename
 def compare_occurrences(filename):
@@ -47,6 +48,8 @@ def compare_occurrences(filename):
     print "Conversation speaker identification:",float(conversation_correct)/float(conversation_speakers),conversation_correct,conversation_speakers
 
 if __name__ == '__main__':
-    test_books = ["Harry_Potter_3"]
-    for filename in test_books:
+    #test_books = ["Harry_Potter_3"]
+    #for filename in test_books:
+    for book_file in get_files_in_folder(PATH_BOOKS_OBJECT):
+        filename = book_file[:-5]
         compare_occurrences(filename)

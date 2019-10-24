@@ -6,8 +6,9 @@ Created on 20 nov. 2014
 '''
 
 
-from helpers import PATH_CSV, PATH_CORRECTED
+from helpers import PATH_CSV, PATH_CORRECTED, PATH_BOOKS_OBJECT
 from bookInputOutput import CSV_COMMA, ALT_COMMA
+from bookInputOutput import get_files_in_folder
 
 #Takes a csv file of occurrences and generates occurrences and a "clean" csv file.
 #Compatible with both csv files generated from bookInputOutput and with its own output to re-load a clean file
@@ -39,11 +40,13 @@ def generate_occurrences(occurrences_file):
 def convert_occurrences_export(filename):
     occurrences_file = open(PATH_CSV + filename + "/occurrences_CID.csv", "r")
     StringBuilder = generate_occurrences(occurrences_file)[1]
-    f = open(PATH_CSV+ filename + "/corrected_occurences_CID.csv","w+")
+    f = open(PATH_CORRECTED+filename+".csv","w+")
     f.write(StringBuilder)
     f.close()
 
 if __name__ == '__main__':
-    test_books = ["Harry_Potter_1"]
-    for filename in test_books:
+    #test_books = ["Harry_Potter_1", "Harry_Potter_3"]
+    #for filename in test_books:
+    for book_file in get_files_in_folder(PATH_BOOKS_OBJECT):
+        filename = book_file[:-5]
         convert_occurrences_export(filename)
