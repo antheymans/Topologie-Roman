@@ -85,7 +85,7 @@ def compute_statistics(dialog_occurrences):
         else:
             cOth += 1
     percentID = (1.0*cOth)/(cOth+cUnk)*100
-    print "Statistics : "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]"
+    print("Statistics : "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]")
     return percentID
 
 def compute_statistics_CID(dialog_occurrences):
@@ -100,7 +100,7 @@ def compute_statistics_CID(dialog_occurrences):
         else:
             cOth += 1
     percentID = (1.0*cOth)/(cOth+cUnk)*100
-    print "Statistics CID: "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]"
+    print("Statistics CID: "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]")
     return percentID
 
 

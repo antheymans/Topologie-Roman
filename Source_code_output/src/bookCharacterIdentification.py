@@ -39,7 +39,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
             else:
                 aliasTable[name].append(c.string)
     
-    names = aliasTable.keys()
+    names = list(aliasTable.keys())
     
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
@@ -57,16 +57,16 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     for name in names:
         connectionsTable.add_node(name, length=len(aliasTable[name]))
     
-    for key in aliasTable.keys():
+    for key in list(aliasTable.keys()):
         if len(aliasTable[key]) == 0:
             aliasTable.pop(key)
     
     for n in connectionsTable.nodes():
-        if n not in aliasTable.keys():
+        if n not in list(aliasTable.keys()):
             connectionsTable.remove_node(n)
             
     for n in aliases.nodes():
-        if n not in aliasTable.keys():
+        if n not in list(aliasTable.keys()):
             aliases.remove_node(n)
     
     connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}
@@ -87,7 +87,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
 
 def alias_lookup(chunk,aliasTable):
     cnames = []
-    for key in aliasTable.keys():
+    for key in list(aliasTable.keys()):
         if chunk.string in aliasTable[key]:
             cnames.append(key)
     if len(cnames) > 0:
@@ -103,7 +103,7 @@ def filter_alias_table(aliasTable,occurrences):
         s_t.append(o['from'])
         s_t.extend(o['to'])
     s_t = uniques(s_t)
-    for name in aliasTable.keys():
+    for name in list(aliasTable.keys()):
         if name not in s_t:
             aliasTable.pop(name)
 
@@ -112,7 +112,7 @@ def validate_connections_table(connectionsTable, aliasTable):
     
     cT2 = nx.Graph()
     for e in list(connectionsTable.edges(data=True)) :
-        if e[0] in aliasTable.keys() and e[1] in aliasTable.keys() and e[2]["paired"]:
+        if e[0] in list(aliasTable.keys()) and e[1] in list(aliasTable.keys()) and e[2]["paired"]:
             cT2.add_edge(e[0],e[1])
     
     pairGraph.add_edges_from([e for e in cT2.edges() if len(list(cT2.neighbors(e[0])))==1 and len(list(cT2.neighbors(e[1])))==1])
@@ -140,9 +140,9 @@ def validate_connections_table(connectionsTable, aliasTable):
                 for tag in tags:
                     if tag[0] != n and tag[1] == 'NNP':
                         otherRef = True
-                        if tag[0] in aliasTable.keys():
+                        if tag[0] in list(aliasTable.keys()):
                             pass #already in the other entry by construction
-                        elif tag[0] in toAppend.keys():
+                        elif tag[0] in list(toAppend.keys()):
                             toAppend[tag[0]].append(ref)
                         else:
                             toAppend[tag[0]] = [ref]
@@ -151,9 +151,9 @@ def validate_connections_table(connectionsTable, aliasTable):
             if len(aliasTable[n]) == 0:
                 aliasTable.pop(n)
     
-    for newName in toAppend.keys():
+    for newName in list(toAppend.keys()):
         noAliases = True
-        for n in aliasTable.keys():
+        for n in list(aliasTable.keys()):
             if is_root(newName,n):
                 aliasTable[n].extend(toAppend[newName])
                 noAliases = False
@@ -162,7 +162,7 @@ def validate_connections_table(connectionsTable, aliasTable):
     
     
 def validate_aliases(aliases, aliasTable):
-    names = aliasTable.keys()
+    names = list(aliasTable.keys())
     ##Via name similarity
     for name in names:
         for n in names[names.index(name)+1:]:
@@ -300,7 +300,7 @@ def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
         if len(new_from[index]) > 0:
             occurrences[index]['from'] = new_from[index][0]
         else:
-            occurrences[index]['from'] = u''
+            occurrences[index]['from'] = ''
         if len(new_to[index]) == 0:
             new_to[index].extend([s for s in speakers if s not in new_from[index]])
         occurrences[index]['to'] = uniques(new_to[index])
@@ -313,10 +313,10 @@ def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
 
 def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldConnectionsTable,oldAliases):
     aliasTable, connectionsTable, aliases = build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases)
-    print "Alias table created."
+    print("Alias table created.")
     for index in range(len(dialog_contexts)):
         if index==0 or index*10//len(dialog_contexts) > (index-1)*10//len(dialog_contexts):
-            print "Character analysis:", index*10//len(dialog_contexts)*10, "% completed..."
+            print("Character analysis:", index*10//len(dialog_contexts)*10, "% completed...")
         
         context = dialog_contexts[index]
         occurrences = [d for d in dialog_occurrences if d['context']==index]
@@ -327,7 +327,7 @@ def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldCon
         #Use the alias table to replace chunk objects by keys of the alias table
         occurrences = uniformize_speakers(occurrences, aliasTable,sentence_chunks,dialog_indices)
     
-    print "Character analysis: 100 % completed..."
+    print("Character analysis: 100 % completed...")
     filter_alias_table(aliasTable,dialog_occurrences)
     return aliasTable, connectionsTable, aliases
     

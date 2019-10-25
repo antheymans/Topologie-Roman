@@ -35,12 +35,12 @@ def compute_threshold(dialog_spacing):
         if count.get(i,0)==0:
             first_zero=i
             break
-    for i in reversed(range(1,first_zero)):
+    for i in reversed(list(range(1,first_zero))):
         currCount = count.get(i,0)
         if currCount >= 100 or (currCount >=max(10,count.get(i+1,0)*2) and all ([count.get(j,0) > currCount for j in range(1,i)])):
             threshold = i
             break
-    print "Threshold =",threshold
+    print("Threshold =",threshold)
     return threshold, count
 
 ###############################################################
@@ -64,7 +64,7 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
             prevSpace = dialog_indices[index-1]
             
         if space[1] == 0:
-            for brIndex in reversed(range(space[0])):
+            for brIndex in reversed(list(range(space[0]))):
                 if breaks[brIndex]:
                     break
             if len([i for i in range(d_start,brIndex) if i in dialog_indices]) > 0:
@@ -85,7 +85,7 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
 
 def extract_agents(sentence):
     #We only consider dialogue
-    s = sentence.split(unicode('"'))
+    s = sentence.split(str('"'))
     d_from=[]
     nnp_narration=[]
     d_to=[]
@@ -93,10 +93,10 @@ def extract_agents(sentence):
     for index in range(len(s)):
         ptree = pen.parsetree(s[index],relations=True)
         if index%2 == 1: #Dialogue, extract objects
-            d_to.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in t.relations['SBJ'].keys()])
-            d_to.extend([t.relations['OBJ'][key] for t in ptree.sentences for key in t.relations['OBJ'].keys()])
+            d_to.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in list(t.relations['SBJ'].keys())])
+            d_to.extend([t.relations['OBJ'][key] for t in ptree.sentences for key in list(t.relations['OBJ'].keys())])
         elif len(ptree.sentences) > 0: #Not dialogue, extract potential speakers
-            d_from.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in t.relations['SBJ'].keys()])
+            d_from.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in list(t.relations['SBJ'].keys())])
             nnp_narration.extend([c for t in ptree.sentences for c in t.chunks if c.head.type.find('NNP')==0])
     
     if all([f.head.type.find('NNP')!=0 for f in d_from]):
@@ -119,7 +119,7 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts):
     for i in range(len(dialog_indices)):
         index = dialog_indices[i]
         if i==0 or index*10//len(sentences) > dialog_indices[i-1]*10//len(sentences):
-            print "Dialog metadata generation:", index*10//len(sentences)*10, "% completed..."
+            print("Dialog metadata generation:", index*10//len(sentences)*10, "% completed...")
         sentence = sentences[index]
         
         #By construction, dialogs belong only to one context
@@ -133,7 +133,7 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts):
         
         dialog_occurrences.append(dialog_occurrence)
     
-    print "Dialog metadata generation: 100% completed!"
+    print("Dialog metadata generation: 100% completed!")
     return dialog_occurrences
 
 ###############################################################
@@ -145,7 +145,7 @@ def dialog_extraction(sentences, breaks, sentiments, chunks):
     threshold, count = compute_threshold(dialog_spacing)
     
     dialog_contexts = get_contexts(chunks, breaks,dialog_spacing,threshold,len(sentences))
-    print "Context generation complete..."
+    print("Context generation complete...")
     dialog_occurrences = get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts)
     
     return dialog_spacing, dialog_occurrences, dialog_contexts, count, threshold

@@ -9,13 +9,13 @@ def preprocess(override):
 
     for f in files:
         if (os.path.isfile(PATH_BOOKS_OBJECT+f[:-4]+".book") and not override):
-            print "File",f[:-4]+".book","already exists"
+            print("File",f[:-4]+".book","already exists")
         else:
-            print "Creating object for",f[:-4]
+            print("Creating object for",f[:-4])
             book = bPP.build_book(PATH_BOOKS+f)
             bIO.set_object(book,PATH_BOOKS_OBJECT+f[:-4]+".book")
-            print "Book object created for",f[:-4]
-    print "Done!"
+            print("Book object created for",f[:-4])
+    print("Done!")
 
 if __name__ == '__main__':
     preprocess(override = False)

@@ -61,18 +61,18 @@ def make_cluster_kmean(bookarray, books_labels):
         ksum =  sum(good_cluster)
         klen =  len(good_cluster)
         kmeans_tests[k] = [float(ksum)/float(klen), kmeans]
-        print k, float(ksum)/float(klen)
+        print(k, float(ksum)/float(klen))
     classifier= kmeans_tests[10][1][1]
     classes= {}
     for i in range(len(classifier)):
         classes[classifier[i]] = classes.get(classifier[i],[])
         classes[classifier[i]].append(books_labels[i])
-    print classes
+    print(classes)
 
 def make_cluster(signature, withdegrees):
     books = []
     books_labels=[]
-    for book in signature.keys():
+    for book in list(signature.keys()):
         books_labels.append(book)
         if withdegrees:
             books.append([float(signature[book]["Threshold"]),float(signature[book]["SIR"]),float(signature[book]["Clustering"]),float(signature[book]["Degree"])])
@@ -88,7 +88,7 @@ def make_cluster(signature, withdegrees):
 
 def export_signature_table(signature):
     csv = "Book" + CSV_COMMA + "Threshold" + CSV_COMMA + "SIR" + CSV_COMMA + "Clustering" + CSV_COMMA + "Degree" + "\n"
-    for book in signature.keys():
+    for book in list(signature.keys()):
         csv += book + CSV_COMMA + str(signature[book]["Threshold"]) + CSV_COMMA + str(signature[book]["SIR"]) + CSV_COMMA 
         csv += str(signature[book]["Clustering"]) + CSV_COMMA + "\n" # + str(signature[book]["Degree"]) ADD BEFORE \N
     f = open(PATH_CSV+"signatures.csv","w+")

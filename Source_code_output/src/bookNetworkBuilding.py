@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import networkx as nx
+
 from helpers import uniques
 
 TIME_FACTOR = 0.9 #Factor by which the score decreases after each new mention during the incremental networks

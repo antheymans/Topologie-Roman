@@ -6,8 +6,8 @@
 
 import codecs
 import re
-
 import pattern.text.en as pen
+
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT
 
 EMPTY_STRING=re.compile('\s+',re.U)
@@ -18,8 +18,8 @@ def read_book(path):
     """
     f = codecs.open(path, encoding='utf-8')
     book = [line for line in f]
-    replacements = [(u"‘",unicode("'")),(u"’",unicode("'")),(u"—",unicode("-")),(u'“',unicode('"')),
-                    (u'”',unicode('"')), (u'…',(u' ... '))]
+    replacements = [("‘",str("'")),("’",str("'")),("—",str("-")),('“',str('"')),
+                    ('”',str('"')), ('…',(' ... '))]
                     ##,(u"\u2013", unicode("-")), (u"\u2306", unicode("e"))
     for replacement in replacements:
         book = [line.replace(replacement[0],replacement[1]) for line in book]
@@ -69,15 +69,15 @@ def get_breaks(sentences):
 
 def build_book(path):
     book = read_book(path)
-    print "Book read!"
+    print("Book read!")
     sentences, chunks = get_sentences(book)
-    print "Sentences extracted!"
+    print("Sentences extracted!")
     #indices = range(len(sentences))
     #print "Indices generated!"
     breaks = get_breaks(sentences)
-    print "Scene and chapter breaks identified!"
+    print("Scene and chapter breaks identified!")
     sentiments = [pen.sentiment(sentence) for sentence in sentences]
-    print "Sentiments extracted!"
+    print("Sentiments extracted!")
     #return sentences, indices, breaks, chunks, sentiments
     return sentences, breaks, sentiments, chunks
 

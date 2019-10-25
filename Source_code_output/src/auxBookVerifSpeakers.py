@@ -14,7 +14,7 @@ def compare_occurrences(filename):
     o = generate_occurrences(occurrences_file)[0]
     corrected_file = open(PATH_CORRECTED+filename+".csv","r")
     oc = generate_occurrences(corrected_file)[0]
-    indices = oc.keys()
+    indices = list(oc.keys())
     len_from = len(indices)
     correct_from = 0
     
@@ -44,8 +44,8 @@ def compare_occurrences(filename):
                 context_speakers.append(oi['from'])
             if oi["from"] == oci["from"]:
                 correct_from += 1
-    print "Correct speaker identification:",float(correct_from)/len_from, correct_from, len_from
-    print "Conversation speaker identification:",float(conversation_correct)/float(conversation_speakers),conversation_correct,conversation_speakers
+    print("Correct speaker identification:",float(correct_from)/len_from, correct_from, len_from)
+    print("Conversation speaker identification:",float(conversation_correct)/float(conversation_speakers),conversation_correct,conversation_speakers)
 
 if __name__ == '__main__':
     #test_books = ["Harry_Potter_3"]

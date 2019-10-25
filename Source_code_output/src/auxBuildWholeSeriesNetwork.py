@@ -35,23 +35,23 @@ if __name__ == '__main__':
     #series = ["Harry_Potter", "ASOIAF", "His_Dark_Materials", "TLC", "TLT", "TMI", "TRWC", "TWOT"]
     series = ["Harry_Potter"]
     for s in series:
-        print "Series", s
+        print("Series", s)
         graphs = []
         nodeCount = {}
         for f in files:
             if s in f:
                 filename = f[:-4]
-                print "Book", filename
+                print("Book", filename)
                 my_graphs, my_nodeCount = recover_context_networks(filename)
                 graphs.extend(my_graphs)
-                for n in my_nodeCount.keys():
+                for n in list(my_nodeCount.keys()):
                     if nodeCount.get(n,'') == '':
                         nodeCount[n] = my_nodeCount[n]
                     else:
                         nodeCount[n] += my_nodeCount[n]
-                print "Book", filename, "done", len(my_graphs), len(graphs)
+                print("Book", filename, "done", len(my_graphs), len(graphs))
         iGraphs = build_inc_networks(graphs,nodeCount)
-        print "Series incremental graphs done"
+        print("Series incremental graphs done")
         directories = [PATH_CSV+s+"_series",PATH_CSV+s+"_series/Incremental/",]
         for directory in directories:
             if not os.path.exists(directory):

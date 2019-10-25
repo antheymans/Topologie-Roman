@@ -38,15 +38,15 @@ def get_files_in_folder(folder):
 def load_book(filename):
     path = PATH_BOOKS_OBJECT+filename+".book"
     if os.path.isfile(path):
-        print "FILE FOUND! Loading the collection..."
+        print("FILE FOUND! Loading the collection...")
         book = get_object(path)
-        print "Done !"
+        print("Done !")
         return book
     else:
-        print "NO FILE FOUND! Building the collection..."
+        print("NO FILE FOUND! Building the collection...")
         book = bPP.build_book(PATH_BOOKS+filename+".txt")        #book is: sentences, breaks, sentiments, chunks
         set_object(book, path)
-        print "Done !"        
+        print("Done !")        
         return book
 
 def create_folders(filename):
@@ -59,13 +59,13 @@ def create_folders(filename):
 
 def check_dir(path_serialized, path_book_object, path_graphs):
     if not os.path.exists(path_serialized): ##check that the directory exist before creating file
-        print "NO SERIALIZED DIRECTORY FOUND! Creating the directory"
+        print("NO SERIALIZED DIRECTORY FOUND! Creating the directory")
         os.makedirs(path_serialized) 
     if not os.path.exists(path_book_object): ##check that the directory exist before creating file
-        print "NO BOOKS DIRECTORY FOUND! Creating the directory"
+        print("NO BOOKS DIRECTORY FOUND! Creating the directory")
         os.makedirs(path_book_object) 
     if not os.path.exists(path_graphs): ##check that the directory exist before creating file
-        print "NO GRAPH DIRECTORY FOUND! Creating the directory"
+        print("NO GRAPH DIRECTORY FOUND! Creating the directory")
         os.makedirs(path_graphs) 
         
         
@@ -82,7 +82,7 @@ def set_object(o, filename):
     else:
         f = open(filename,'a+')
     pickle.dump(o, f)
-    print("Object set in "+filename)#deb
+    print(("Object set in "+filename))#deb
     #print(pickle.dump(o, f))
 
     #print len(o) #debu
@@ -146,9 +146,9 @@ def load_alias_table(previous_book):
     aliasfilename = PATH_SERIALIZED+previous_book+"_alias"
     if previous_book == "" or not os.path.isfile(aliasfilename):
         return {},nx.Graph(), nx.Graph()
-    print "File found."
+    print("File found.")
     aT, cT, aliases = get_object(aliasfilename)
-    aliasTable = {key: [] for key in aT.keys()}
+    aliasTable = {key: [] for key in list(aT.keys())}
     connectionsTable = cT.copy()
     for e in list(connectionsTable.nodes(data=True)):
         e[2]['value'] = 0 
@@ -181,7 +181,7 @@ def build_csv_spacing_map(dialog_spacing,count,threshold,filename):
 
 def csv_dialog_extr_stats(resfile):
     idStats = "Book" + CSV_COMMA + "%ID\n"
-    for b in resfile.keys():
+    for b in list(resfile.keys()):
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
     
     f = codecs.open(PATH_CSV + "speakerIDstats.csv", "w+", encoding='utf-8')
@@ -190,7 +190,7 @@ def csv_dialog_extr_stats(resfile):
 
 def csv_dialog_extr_stats_CID(resfile):
     idStats = "Book" + CSV_COMMA + "%ID\n"
-    for b in resfile.keys():
+    for b in list(resfile.keys()):
         idStats += b + CSV_COMMA + str(resfile[b]) + "\n"
     
     f = codecs.open(PATH_CSV + "speakerIDstats_postCID.csv", "w+", encoding='utf-8')
@@ -235,7 +235,7 @@ def csv_contexts(dialog_contexts,filename):
 
 def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     alias_table_string = "Key"+CSV_COMMA+"Expressions"
-    for key in aliasTable.keys():
+    for key in list(aliasTable.keys()):
         alias_table_string+= "\n" + key
         for c in aliasTable[key]:
             alias_table_string += CSV_COMMA + c
@@ -246,8 +246,8 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     
     ct_string = "Name 1" + CSV_COMMA + "Length 1" + CSV_COMMA + "Name 2" + CSV_COMMA + "Length 2" + CSV_COMMA + "Mentions" + CSV_COMMA + "Paired"
     nodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}
-    for n in nodes.keys():
-        for end in connectionsTable[n].keys():
+    for n in list(nodes.keys()):
+        for end in list(connectionsTable[n].keys()):
             ct_string += "\n" + n + CSV_COMMA + str(nodes[n]["length"]) + CSV_COMMA + end + CSV_COMMA + str(nodes[end]["length"]) + CSV_COMMA + str(connectionsTable[n][end]["value"]) + CSV_COMMA + str(connectionsTable[n][end]["paired"])  
     
     f2 = codecs.open(PATH_CSV + filename + "/connection_table.csv", "w+", encoding='utf-8')
@@ -392,7 +392,7 @@ def output_csv_graphs(filename,graphs,mode):
         g = graphs[i]
         for (node, adj_dic) in list(g.adjacency()):
             degrees += node + CSV_COMMA + str(g.degree()[node])+"\n"
-            for node2 in adj_dic.keys():
+            for node2 in list(adj_dic.keys()):
                 csv+= node + CSV_COMMA + node2 + CSV_COMMA + str(adj_dic[node2]['weight']) + CSV_COMMA + str(adj_dic[node2]['mentions']) + "\n"
         f = codecs.open(PATH_CSV+filename+"/"+mode+"/graph_"+mode+"_"+str(i)+".csv", "w+", encoding='utf-8')
         f.write(csv)

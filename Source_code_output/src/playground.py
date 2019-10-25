@@ -65,7 +65,7 @@ context = ["Mr. and Mrs. Dursley , of number four , Privet Drive , were proud to
 if __name__ == '__main__':
     from networkx.algorithms.cluster import average_clustering
     G = nx.Graph()
-    print average_clustering(G)
+    print(average_clustering(G))
     '''
     G.add_nodes_from(["A","B","C"])
     G.add_edge("A", "B", weight=0.5, mentions=1)

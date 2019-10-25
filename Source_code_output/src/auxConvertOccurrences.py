@@ -30,7 +30,7 @@ def generate_occurrences(occurrences_file):
             o_context = int(o[-1])
         
         except Exception:
-            print o
+            print(o)
 
         occurrences[o_index] = {"sentence":o_sentence, "from":o_from, "to" : o_to, "context" : o_context}
         StringBuilder += "\n" + o_sentence + CSV_COMMA + o_from + CSV_COMMA + ALT_COMMA.join(o_to) + CSV_COMMA + str(o_sentiment) + CSV_COMMA + str(o_index) + CSV_COMMA + str(o_context)

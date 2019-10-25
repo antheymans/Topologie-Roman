@@ -18,13 +18,13 @@ if __name__ == '__main__':
         if f[-4:]!="json": ##No need to use load book 2 times (json and gefx registered)
             filename = f[:-5]
 
-            print filename
-            print "Loading occurrences..."
+            print(filename)
+            print("Loading occurrences...")
             dialog_occurrences = bIO.get_object(PATH_SERIALIZED + filename + "_occurrences_CID")
             dialog_contexts = bIO.get_object(PATH_SERIALIZED + filename+ "_contexts")
             len_dialog_contexts = len(dialog_contexts)
-            print "Loading OK. Graph building..."
+            print("Loading OK. Graph building...")
             iGraphs, graphs = bNB.build_networks(dialog_occurrences, len_dialog_contexts)
-            print "OK, graph will be saved"
+            print("OK, graph will be saved")
             bIO.output_graphs(filename, iGraphs, graphs)
-            print "Output complete"
+            print("Output complete")
