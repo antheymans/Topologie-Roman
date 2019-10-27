@@ -4,6 +4,7 @@
 
 from bookInputOutput import get_files_in_folder, CSV_COMMA, get_object
 from helpers import PATH_CSV, PATH_BOOKS_OBJECT, PATH_SERIALIZED, PATH_PNG
+
 import os.path
 import numpy as np
 import scipy.cluster.hierarchy as hac
@@ -18,7 +19,7 @@ import pylab
 
 def get_threshold(filename):
     frequencies = open(PATH_CSV+filename+"/frequencies.csv","r")
-    firstline = frequencies.readline().decode("UTF-8")
+    firstline = frequencies.readline()
     return firstline[28:-1]
 
 def get_rates():
@@ -28,11 +29,11 @@ def get_rates():
     return resfile
 
 def get_clustering(filename):
-    clustering_file = open(PATH_CSV+filename+"/clustering_incremental.csv","r").read().decode("UTF-8").split("\n")
+    clustering_file = open(PATH_CSV+filename+"/clustering_incremental.csv","r").read().split("\n")
     return clustering_file[-2].split(CSV_COMMA)[1]
     
 def get_degrees():#graph_degrees or degrees_exponents ? bug
-    degrees_files = open(PATH_CSV+"graph_degrees.csv","r").read().decode("UTF_8").split("\n")
+    degrees_files = open(PATH_CSV+"graph_degrees.csv","r").read().split("\n")
     degrees_exponents = {}
     for line in degrees_files:
         if line != "":

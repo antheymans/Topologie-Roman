@@ -13,9 +13,8 @@ from networkx.algorithms.cluster import average_clustering
 import os.path
 import codecs
 
-
-import bookPreProcessing as bPP
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT, PATH_GRAPHS, PATH_CSV, PATH_PNG, PATH_SERIALIZED
+import bookPreProcessing as bPP
 
 CSV_COMMA=";"
 ALT_COMMA=","
