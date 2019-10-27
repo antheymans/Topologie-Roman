@@ -37,7 +37,7 @@ def get_sentences(book):
             chunks.append([])
         else:
         
-            parsedLine = pen.parsetree(line, relations=True, encoding = "utf-8")
+            parsedLine = pen.parsetree(line, relations=True, encoding = "utf-8", model = None)
             #Regroup a whole dialogue into a single sentence
             to_ignore = []
             for i in range(len(parsedLine.sentences)):
