@@ -91,7 +91,7 @@ def extract_agents(sentence):
     d_to=[]
     
     for index in range(len(s)):
-        ptree = pen.parsetree(s[index],relations=True,  encoding = "utf-8", model = None)
+        ptree = pen.parsetree(s[index],relations=True)
         if index%2 == 1: #Dialogue, extract objects
             d_to.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in list(t.relations['SBJ'].keys())])
             d_to.extend([t.relations['OBJ'][key] for t in ptree.sentences for key in list(t.relations['OBJ'].keys())])

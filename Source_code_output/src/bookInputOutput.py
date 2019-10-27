@@ -49,12 +49,6 @@ def load_book(filename):
         print("Done !")        
         return book
 
-
-###############################################################
-# Directory manipulation methods
-###############################################################
-
-
 def create_folders(filename):
     check_dir(PATH_SERIALIZED, PATH_BOOKS_OBJECT, PATH_GRAPHS)
     directories = [PATH_CSV+filename, PATH_CSV+filename+"/Context/", PATH_CSV+filename+"/Incremental/", 
@@ -84,14 +78,14 @@ def set_object(o, filename):
     Set an object to a file
     """
     if os.path.exists(filename):
-        f = open(filename,'wb+')
+        f = open(filename,'w+')
     else:
-        f = open(filename,'ab+')
+        f = open(filename,'a+')
     pickle.dump(o, f)
     print(("Object set in "+filename))#deb
     #print(pickle.dump(o, f))
 
-    #print len(o) #debug
+    #print len(o) #debu
     #print(pickle.dump(o[0], f))
     #print(pickle.dump(o[1], f))
     #print(pickle.dump(o[2], f))
@@ -103,7 +97,7 @@ def get_object(filename):
     """
     Retrieve an object from a file
     """
-    f = open(filename, "rb")
+    f = open(filename, "r")
     return pickle.load(f)
 
 ###############################################################
