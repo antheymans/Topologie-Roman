@@ -135,7 +135,7 @@ def validate_connections_table(connectionsTable, aliasTable):
     for n in cT2.nodes():
         if cT2.degree()[n] > 1 :
             for ref in aliasTable[n]:
-                tags = pen.tag(ref)
+                tags = pen.tag(ref, model=None)
                 otherRef= False
                 for tag in tags:
                     if tag[0] != n and tag[1] == 'NNP':

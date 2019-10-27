@@ -1,6 +1,7 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
+import helpers
 import bookInputOutput as bIO
 import bookDialogExtraction as bDE
 import bookCharacterIdentification as bCID
