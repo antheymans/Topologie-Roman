@@ -17,12 +17,12 @@ def read_book(path):
     Read a UTF-8 book in text format
     """
     f = codecs.open(path, encoding='utf-8')
+    #book = f.read()
     book = [line for line in f]
     replacements = [("‘",str("'")),("’",str("'")),("—",str("-")),('“',str('"')),
                     ('”',str('"')), ('…',(' ... '))]
-                    ##,(u"\u2013", unicode("-")), (u"\u2306", unicode("e"))
     for replacement in replacements:
-        book = [line.replace(replacement[0],replacement[1]) for line in book]
+        book = [line.replace(replacement[0],replacement[1]) for line in book]    
     return book
 
 def get_sentences(book):
@@ -70,17 +70,32 @@ def get_breaks(sentences):
 def build_book(path):
     book = read_book(path)
     print("Book read!")
+    #book = solve_coreference(book)
+    print("coreference extracted")
     sentences, chunks = get_sentences(book)
     print("Sentences extracted!")
-    #indices = range(len(sentences))
-    #print "Indices generated!"
     breaks = get_breaks(sentences)
     print("Scene and chapter breaks identified!")
     sentiments = [pen.sentiment(sentence) for sentence in sentences]
     print("Sentiments extracted!")
-    #return sentences, indices, breaks, chunks, sentiments
     return sentences, breaks, sentiments, chunks
 
 
-    
+def solve_coreference(book):
+    import spacy
+    import neuralcoref
+    nlp = spacy.load("en_core_web_sm")
+    text = "*".join( book )
+    print("Coreference resolution ...")
+    neuralcoref.add_to_pipe(nlp, greedyness=0.5, max_dist = 10, max_dist_match = 100, blacklist = False, store_scores = False)
+    doc = nlp(text)
+    text = doc._.coref_resolved
+    book = text.split("*")
+    """
+    #Line per line analysis
+    for line in book:
+        doc = nlp(line)
+        line = doc._.coref_resolved
+    """
+    return book
     

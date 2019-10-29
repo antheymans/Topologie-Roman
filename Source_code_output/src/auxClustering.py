@@ -32,8 +32,8 @@ def get_clustering(filename):
     clustering_file = open(PATH_CSV+filename+"/clustering_incremental.csv","r").read().split("\n")
     return clustering_file[-2].split(CSV_COMMA)[1]
     
-def get_degrees():#graph_degrees or degrees_exponents ? bug
-    degrees_files = open(PATH_CSV+"graph_degrees.csv","r").read().split("\n")
+def get_degrees(filename):#graph_degrees or degrees_exponents ? bug
+    degrees_files = open(PATH_CSV+filename+"/graph_degrees.csv","r").read().split("\n")
     degrees_exponents = {}
     for line in degrees_files:
         if line != "":
@@ -85,7 +85,7 @@ def make_cluster(signature, withdegrees):
         bookarray[:,i] /= bookarray.max(axis=0)[i]
     
     make_cluster_hier(bookarray, books_labels)
-    #make_cluster_kmean(bookarray, books_labels)
+    make_cluster_kmean(bookarray, books_labels)
 
 def export_signature_table(signature):
     csv = "Book" + CSV_COMMA + "Threshold" + CSV_COMMA + "SIR" + CSV_COMMA + "Clustering" + CSV_COMMA + "Degree" + "\n"
@@ -95,14 +95,16 @@ def export_signature_table(signature):
     f = open(PATH_CSV+"signatures.csv","w+")
     f.write(csv)
     f.close()
-
-if __name__ == '__main__':
+def get_signature(files):
     signature = {}
     speaker_rates = get_rates()
-    #degrees = get_degrees()
-    for book_file in get_files_in_folder(PATH_BOOKS_OBJECT):
+    for book_file in files:
         filename = book_file[:-5]
-        signature[filename] = {"Threshold":get_threshold(filename),"SIR":speaker_rates[filename], "Clustering": get_clustering(filename)#, "Degree": degrees.get(filename,u"N/A")#
-                                }
+        signature[filename] = {"Threshold":get_threshold(filename),"SIR":speaker_rates[filename], 
+            "Clustering": get_clustering(filename)}
     make_cluster(signature, False)
     export_signature_table(signature)
+    
+if __name__ == '__main__':
+    files = get_files_in_folder(PATH_BOOKS)
+    get_signature(files)

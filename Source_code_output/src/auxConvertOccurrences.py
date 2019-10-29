@@ -44,6 +44,8 @@ def convert_occurrences_export(filename):
     f.write(StringBuilder)
     f.close()
 
+
+
 if __name__ == '__main__':
     #test_books = ["Harry_Potter_1", "Harry_Potter_3"]
     #for filename in test_books:
