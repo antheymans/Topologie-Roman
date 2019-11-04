@@ -13,7 +13,7 @@ from helpers import is_root, uniques
 # Alias table functions
 ###############################################################
 def is_valid(word):
-    if word == word.capitalize() or len(word) <= 2:
+    if word != word.capitalize() or len(word) <= 2:
         return False
     return True
 
