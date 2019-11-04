@@ -51,13 +51,17 @@ def book_analyze(file_txt):
     
     stat = compute_statistics_CID(dialog_occurrences)
     bIO.update_stats_CID(filename,stat)
-
+    
+    import time 
+    tmps1=time.time()
     
     # Network building
     iGraphs, graphs = bNB.build_networks(dialog_occurrences, len(dialog_contexts))
     
     bIO.output_graphs(filename, iGraphs, graphs)
     
+    tmps2=time.time()-tmps1
+    print("Temps d'execution = %f" %tmps2)
     print("Analysis complete!")
 
 def read_all():

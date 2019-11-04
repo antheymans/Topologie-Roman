@@ -150,6 +150,7 @@ def export_aliases(aliasTable, connectionsTable, aliases, filename):
 def load_alias_table(previous_book):
     aliasfilename = PATH_SERIALIZED+previous_book+"_alias"
     if previous_book == "" or not os.path.isfile(aliasfilename):
+        print("New alias table created.")
         return {},nx.Graph(), nx.Graph()
     print("File found.")
     aT, cT, aliases = get_object(aliasfilename)

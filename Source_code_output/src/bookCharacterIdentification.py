@@ -13,7 +13,7 @@ from helpers import is_root, uniques
 # Alias table functions
 ###############################################################
 def is_valid(word):
-    if word == word.upper() or len(word) <= 2:
+    if word == word.capitalize() or len(word) <= 2:
         return False
     return True
 
@@ -21,7 +21,6 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     aliasTable = oldAliasTable
     connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
     aliases=oldAliases #Initialized at new graph if nothing is loaded
-    
     chunks = []
     for c in dialog_contexts:
         sentence_chunks = c[2]
@@ -40,7 +39,8 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
                 aliasTable[name].append(c.string)
     
     names = list(aliasTable.keys())
-    
+    print(names)
+    print(len(names))
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
         if c.head.type.find('NNP')==0 and is_valid(c.head.string): #Relevant chunks

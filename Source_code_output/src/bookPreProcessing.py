@@ -81,13 +81,20 @@ def build_book(path):
     return sentences, breaks, sentiments, chunks
 
 
+
+## Solve coreference and replace them in the text
+## Actually takes a lot of time and lead to worst result
 def solve_coreference(book):
+    import time 
+    tmps1=time.time()
+    
     import spacy
     import neuralcoref
+    
     nlp = spacy.load("en_core_web_sm")
     text = "*".join( book )
     print("Coreference resolution ...")
-    neuralcoref.add_to_pipe(nlp, greedyness=0.5, max_dist = 10, max_dist_match = 100, blacklist = False, store_scores = False)
+    neuralcoref.add_to_pipe(nlp, greedyness=0.5, max_dist = 1, max_dist_match = 100, blacklist = False, store_scores = False)
     doc = nlp(text)
     text = doc._.coref_resolved
     book = text.split("*")
@@ -97,5 +104,8 @@ def solve_coreference(book):
         doc = nlp(line)
         line = doc._.coref_resolved
     """
+    
+    tmps2=time.time()-tmps1
+    print("Temps d'execution = %f" %tmps2)
     return book
     
