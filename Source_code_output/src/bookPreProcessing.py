@@ -71,7 +71,7 @@ def build_book(path):
     book = read_book(path)
     print("Book read!")
     #book = solve_coreference(book)
-    print("coreference extracted")
+    #print("coreference extracted")
     sentences, chunks = get_sentences(book)
     print("Sentences extracted!")
     breaks = get_breaks(sentences)

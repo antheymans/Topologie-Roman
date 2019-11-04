@@ -39,8 +39,6 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
                 aliasTable[name].append(c.string)
     
     names = list(aliasTable.keys())
-    print(names)
-    print(len(names))
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
         if c.head.type.find('NNP')==0 and is_valid(c.head.string): #Relevant chunks
