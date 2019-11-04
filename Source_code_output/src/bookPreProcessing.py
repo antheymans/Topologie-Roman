@@ -20,7 +20,7 @@ def read_book(path):
     #book = f.read()
     book = [line for line in f]
     replacements = [("‘",str("'")),("’",str("'")),("—",str("-")),('“',str('"')),
-                    ('”',str('"')), ('…',(' ... '))]
+                    ('”',str('"')), ('…',(' ... ')), ('...',(' ... '))]
     for replacement in replacements:
         book = [line.replace(replacement[0],replacement[1]) for line in book]    
     return book
