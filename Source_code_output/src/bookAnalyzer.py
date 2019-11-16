@@ -20,6 +20,7 @@ def book_analyze(file_txt):
     OUTPUT: .csv, .png and output files (no return statement) 
     """
     filename = file_txt[:-4]
+
     print("COMPUTING BOOK : ", filename)
     bIO.create_folders(filename)
     sentences, breaks, sentiments, chunks = bIO.load_book(filename)

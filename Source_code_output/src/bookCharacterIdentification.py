@@ -19,6 +19,7 @@ def is_valid(word):
 
 def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases):
     aliasTable = oldAliasTable
+    aliasTable2 = {}
     connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
     aliases=oldAliases #Initialized at new graph if nothing is loaded
     chunks = []
@@ -27,21 +28,47 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
         for l in sentence_chunks:
             for s in l:
                 chunks.extend(s.chunks)
-        
+    
     #First pass, isolate relevant proper nouns
+
+    from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
+    
     for c in chunks:
-        if c.head.type.find('NNP')==0 and is_valid(c.head.string):
+        if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
             name = c.head.string
-            if aliasTable.get(name,0)==0:
-                aliasTable[name]=[c.string]
-                aliases.add_node(name)
-            else:
-                aliasTable[name].append(c.string)
+            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
+                if aliasTable.get(name,0)==0:
+                    aliasTable[name]=[c.string]
+                    aliases.add_node(name)
+                else:
+                    aliasTable[name].append(c.string)
+    """             
+    #import nltk.corpus as corpus
+    #dict2 = corpus.brown.words()
+    from nltk.corpus import wordnet
+
+    #dict_name = corpus.names.words()    
+    for c in chunks:
+        if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
+            #print(c.type,c.head, c.head.type, c.relations, c)            
+            name = c.head.string
+            #if (c.words[0].string == name):
+            #    print(name, c.start, c.string, c.sentence.chunk[0].start)
+            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
+                if aliasTable2.get(name,0)==0:
+                    aliasTable2[name]=[c.string]
+                    
+    names2 = list(aliasTable2.keys())
+    for elem in names:
+        if elem not in names2:
+            print(elem)
+    """
     
     names = list(aliasTable.keys())
+
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
-        if c.head.type.find('NNP')==0 and is_valid(c.head.string): #Relevant chunks
+        if c.head in aliasTable : #Relevnotant chunks
             for w in c.words:
                 if w != c.head:
                     name = w.string
@@ -55,9 +82,12 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     for name in names:
         connectionsTable.add_node(name, length=len(aliasTable[name]))
     
+    
+    ##check that list are coherent, generate an error if not| OPTIONNAL
     for key in list(aliasTable.keys()):
         if len(aliasTable[key]) == 0:
             aliasTable.pop(key)
+            print(key, "clef")
     
     for n in connectionsTable.nodes():
         if n not in list(aliasTable.keys()):
@@ -67,7 +97,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
         if n not in list(aliasTable.keys()):
             aliases.remove_node(n)
     
-    connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}
+    connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}# seem OPTIONNAL
     #Regroup entries of the dictionary corresponding to variations on the same name
     ##Via common references
     for e in list(connectionsTable.edges(data=True)):

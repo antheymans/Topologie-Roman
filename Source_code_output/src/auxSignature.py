@@ -3,7 +3,7 @@
 '''
 
 from bookInputOutput import get_files_in_folder, CSV_COMMA, get_object
-from helpers import PATH_CSV, PATH_BOOKS_OBJECT, PATH_SERIALIZED, PATH_PNG
+from helpers import PATH_CSV, PATH_BOOKS_OBJECT, PATH_SERIALIZED, PATH_PNG, PATH_GRAPHS
 
 import os.path
 import numpy as np
@@ -11,7 +11,7 @@ import scipy.cluster.hierarchy as hac
 import scipy.cluster.vq as vq
 from scipy.cluster.hierarchy import dendrogram, fcluster
 import pylab
-
+import networkx as nx
 
 ## Objective not defined by first author
 ## degree csv file does not exist
@@ -31,15 +31,54 @@ def get_rates():
 def get_clustering(filename):
     clustering_file = open(PATH_CSV+filename+"/clustering_incremental.csv","r").read().split("\n")
     return clustering_file[-2].split(CSV_COMMA)[1]
+
+def get_graph(filename):
+    return nx.read_gexf(PATH_GRAPHS+filename+".gexf")
+   
+def get_clustering_from_graph(G):
+    return nx.average_clustering(G)
+
+def get_transitivity_from_graph(G): #transitivity = general clustering
+    return nx.transitivity(G)
+
+def get_length_from_graph(G):
+    return G.size()
     
-def get_degrees(filename):#graph_degrees or degrees_exponents ? bug
+##Non functionning    
+def get_degree(filename):#graph_degrees or degrees_exponents ? bug
     degrees_files = open(PATH_CSV+filename+"/graph_degrees.csv","r").read().split("\n")
-    degrees_exponents = {}
-    for line in degrees_files:
+    degree = {}
+    for line in degrees_files[1:]:
         if line != "":
             splitline = line.split(CSV_COMMA)
-            degrees_exponents[splitline[0]]=splitline[1]
-    return degrees_exponents
+            degree[splitline[0]]=int(splitline[1])
+    return degree
+
+
+def averaging_degree(degree):
+    average_degree = 0.0
+    for value in degree.values():
+         average_degree += value
+    #print(average_degree,len(degree))
+    average_degree /= len(degree)
+    return average_degree
+    
+    
+    
+def get_average_degree(filename):
+    degrees_file = open(PATH_CSV+filename+"/graph_degrees.csv","r").read().split("\n")
+    average_degree = 0.0
+    value = 0
+    for line in degrees_file[1:]:
+        if line != "":
+            value +=1
+            splitline = line.split(CSV_COMMA)
+            average_degree +=int(splitline[1])
+    #print(average_degree,len(degrees_file)-2, value)
+    average_degree /= (len(degrees_file)-2)#-1 for "" line and -1 for title line
+    return average_degree
+
+
 
 def make_cluster_hier(bookarray, books_labels):
     methods = ["single", "complete","average","weighted","centroid","median","ward"]
@@ -87,24 +126,55 @@ def make_cluster(signature, withdegrees):
     make_cluster_hier(bookarray, books_labels)
     make_cluster_kmean(bookarray, books_labels)
 
+
+            
 def export_signature_table(signature):
-    csv = "Book" + CSV_COMMA + "Threshold" + CSV_COMMA + "SIR" + CSV_COMMA + "Clustering" + CSV_COMMA + "Degree" + "\n"
+    csv = "Book" + CSV_COMMA + "Threshold" + CSV_COMMA + "SIR" + CSV_COMMA + "Clustering" + CSV_COMMA +"Transitivity" + CSV_COMMA 
+    csv += "Average Degree" + CSV_COMMA + "Graph Size" + CSV_COMMA + "\n"
     for book in list(signature.keys()):
         csv += book + CSV_COMMA + str(signature[book]["Threshold"]) + CSV_COMMA + str(signature[book]["SIR"]) + CSV_COMMA 
-        csv += str(signature[book]["Clustering"]) + CSV_COMMA + "\n" # + str(signature[book]["Degree"]) ADD BEFORE \N
+        csv += str(signature[book]["Clustering"]) + CSV_COMMA + str(signature[book]["Transitivity"]) + CSV_COMMA
+        csv += str(signature[book]["Average Degree"]) + CSV_COMMA + str(signature[book]["Graph Size"]) + CSV_COMMA + "\n" 
     f = open(PATH_CSV+"signatures.csv","w+")
     f.write(csv)
     f.close()
+  
+def export_random_signature_table(signature):
+    csv = "Book" + CSV_COMMA + "Clustering" + CSV_COMMA +"Transitivity" +  CSV_COMMA 
+    csv += "Graph Size" + CSV_COMMA + "\n"
+    for book in list(signature.keys()):
+        csv += book + CSV_COMMA + str(signature[book]["Clustering"]) + CSV_COMMA 
+        csv += str(signature[book]["Transitivity"]) + CSV_COMMA 
+        csv += str(signature[book]["Graph Size"]) + CSV_COMMA + "\n" 
+    f = open(PATH_CSV+"random_graph_signatures.csv","w+")
+    f.write(csv)
+    f.close()  
+
 def get_signature(files):
     signature = {}
+    signature_random_graph = {}
     speaker_rates = get_rates()
     for book_file in files:
         filename = book_file[:-5]
+        degree = get_degree(filename)
+        graph = get_graph(filename)    
+        graph_size = len(graph)
+        graph_edge_size = graph.number_of_edges()
         signature[filename] = {"Threshold":get_threshold(filename),"SIR":speaker_rates[filename], 
-            "Clustering": get_clustering(filename)}
-    make_cluster(signature, False)
+            "Clustering": get_clustering(filename),"Transitivity": get_transitivity_from_graph(graph),
+            "Average Degree":get_average_degree(filename),"Graph Size": (len(graph), graph_edge_size) }
+        
+        random_graph = nx.fast_gnp_random_graph(graph_size, graph_edge_size * 2 /(graph_size * (graph_size -1))) #nbr edge among all existing edge 
+        signature_random_graph[filename] = {"Clustering": get_clustering_from_graph(random_graph),"Transitivity": get_transitivity_from_graph(random_graph),
+            "Graph Size": (len(graph), random_graph.number_of_edges()) }
+    return signature, signature_random_graph
+    
+    
+def main_signature(files):
+    signature, random_signature = get_signature(files)
     export_signature_table(signature)
+    export_random_signature_table(random_signature)
     
 if __name__ == '__main__':
     files = get_files_in_folder(PATH_BOOKS)
-    get_signature(files)
+    main_signature(files)

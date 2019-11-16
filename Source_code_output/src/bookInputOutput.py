@@ -271,6 +271,7 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
 def csv_degree_incremental(filename,G):
     csv="Node"+CSV_COMMA+"Degree\n"
     for n in G.nodes():
+        print(n)
         csv += n + CSV_COMMA + str(G.degree(n)) + "\n"
     
     f = codecs.open(PATH_CSV+filename+"/graph_degrees.csv","w+", encoding='utf-8')
@@ -456,4 +457,4 @@ def output_graphs(filename, iGraphs, graphs):
     build_png_graphs(filename,iGraphs,"Incremental")
     output_csv_graphs(filename,graphs,"Context")
     output_csv_graphs(filename,iGraphs,"Incremental")
-    write_graph(iGraphs[-1], filename)
+    write_graph(iGraphs[-1], filename)#weit
