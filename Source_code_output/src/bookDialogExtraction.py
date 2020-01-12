@@ -101,8 +101,41 @@ def extract_agents(sentence):
     
     if all([f.head.type.find('NNP')!=0 for f in d_from]):
         d_from.extend(nnp_narration)
+        
+    filtered_d_from = []
+    for chunk in d_from:
+        new_list = []
+        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
+        for word in chunk.words:
+            if word.string[0] == word.string[0].upper() or word == chunk.head:
+                if detected == -1:
+                    filtered_d_from.append(new_list)
+                    new_list = []
+                detected = 1
+                new_list.append(word)
+            elif detected == 1:
+                detected = -1
+        filtered_d_from.append(new_list)
+        
+        
+    filtered_d_to = []
+    for chunk in d_to:
+        new_list = []
+        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
+        for word in chunk.words:
+            if word.string[0] == word.string[0].upper() or word == chunk.head:
+                if detected == -1:
+                    filtered_d_to.append(new_list)
+                    new_list = []
+                detected = 1
+                new_list.append(word)
+            elif detected == 1:
+                detected = -1
+        filtered_d_to.append(new_list)
+        
+    return filtered_d_from, filtered_d_to
     
-    return d_from, d_to
+    
 
 def get_weight_from_sentiments(sentiment):
     """

@@ -6,6 +6,7 @@
 from collections import Counter
 import networkx as nx
 import pattern.text.en as pen
+import name_tools
 
 from helpers import is_root, uniques
 
@@ -24,8 +25,8 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     aliases=oldAliases #Initialized at new graph if nothing is loaded
     chunks = []
     for c in dialog_contexts:
-        sentence_chunks = c[2]
-        for l in sentence_chunks:
+        context_chunks = c[2]
+        for l in context_chunks:
             for s in l:
                 chunks.extend(s.chunks)
     
@@ -125,9 +126,9 @@ def alias_lookup(chunk,aliasTable):
     else:
         return ""
 
-def filter_alias_table(aliasTable,occurrences):
+def filter_alias_table(aliasTable,current_context_dialogs):
     s_t = []
-    for o in occurrences:
+    for o in current_context_dialogs:
         s_t.append(o['from'])
         s_t.extend(o['to'])
     s_t = uniques(s_t)
@@ -216,7 +217,7 @@ def validate_aliases(aliases, aliasTable):
 # Extraction of speakers
 ###############################################################
 
-def get_speakers_from_nearby_context(index,sentence_chunks,dialog_indices,aliasTable):
+def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTable):
     #Find the nearest sentence of narration that can provide potential information on the speaker
     pot_from = []
     pos_incr = True
@@ -230,13 +231,13 @@ def get_speakers_from_nearby_context(index,sentence_chunks,dialog_indices,aliasT
         if index-incr in dialog_indices:
             neg_incr = False
         if pos_incr:
-            sc = sentence_chunks.get(index+incr,[])
+            sc = context_chunks.get(index+incr,[])
             if len(sc) == 0:
                 pos_incr = False
             else:
                 pot_from.extend([alias_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
         if neg_incr:
-            sc = sentence_chunks.get(index-incr,[])
+            sc = context_chunks.get(index-incr,[])
             if len(sc) == 0:
                 neg_incr = False
             else:
@@ -263,12 +264,12 @@ def trim_new_from(new_from):
             max_refs = max(subSpeakers, key=subSpeakers.get)
             new_from[index] = [max_refs]
 
-def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
+def uniformize_speakers(current_context_dialogs,aliasTable,context_chunks,dialog_indices):
     #Lookups in the alias table
     new_from = []
     new_to = []
-    for o in occurrences:
-        nf = []
+    for o in current_context_dialogs:
+        nf = []#new_from
         nt = []
         for f in o['from']:
             fl = alias_lookup(f,aliasTable)
@@ -283,25 +284,24 @@ def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
         new_from.append(nf)
         new_to.append(nt)
     
-    for index in range(len(occurrences)):
+    for index in range(len(current_context_dialogs)):
         neighbors = []
         if index > 0:
             neighbors.append(index-1)
-        if index < len(occurrences)-1:
+        if index < len(current_context_dialogs)-1:
             neighbors.append(index+1)
-        
-        if len(new_from[index]) == 0 and all ([len(new_from[i]) == 0 for i in neighbors]):
-            new_from[index] = get_speakers_from_nearby_context(occurrences[index]['index'],sentence_chunks,dialog_indices,aliasTable)
+        if len(new_from[index]) == 0 and all ([len(new_from[i]) == 0 for i in neighbors]):#no speaker identified in dialog or ngb
+            new_from[index] = get_speakers_from_nearby_context(current_context_dialogs[index]['index'],context_chunks,dialog_indices,aliasTable)
     
     trim_new_from(new_from)
     
     #List of all speakers within the context
     speakers, speakersMention = update_speakers(new_from)
     
-    for index in range(len(occurrences)):
+    for index in range(len(current_context_dialogs)):
         if len(new_from[index]) == 0:
             if len(speakers) == 0:
-                new_from[index] = get_speakers_from_nearby_context(occurrences[index]['index'],sentence_chunks,dialog_indices,aliasTable)
+                new_from[index] = get_speakers_from_nearby_context(current_context_dialogs[index]['index'],context_chunks,dialog_indices,aliasTable)
                 speakers, speakersMention = update_speakers(new_from)
             elif len(speakers) == 1:
                 new_from[index].append(speakers[0])
@@ -309,14 +309,14 @@ def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
                 other_s = []
                 if index > 0:
                     other_s.append(new_from[index-1])
-                if len(other_s) == 0 and index < len(occurrences):
+                if len(other_s) == 0 and index < len(current_context_dialogs):
                     other_s.append(new_from[index+1])
                 new_from[index] = [s for s in speakers if s not in other_s]
             else :
                 exclKeys = []
                 if index > 0:
                     exclKeys.extend(new_from[index-1])
-                if index < len(occurrences)-1:
+                if index < len(current_context_dialogs)-1:
                     exclKeys.extend(new_from[index+1])
                 subSpeakers = {key: speakersMention[key] for key in speakers if key not in exclKeys}
                 max_refs = max(subSpeakers,key=subSpeakers.get)
@@ -324,16 +324,16 @@ def uniformize_speakers(occurrences,aliasTable,sentence_chunks,dialog_indices):
     
     trim_new_from(new_from)
     
-    for index in range(len(occurrences)):
+    for index in range(len(current_context_dialogs)):
         if len(new_from[index]) > 0:
-            occurrences[index]['from'] = new_from[index][0]
+            current_context_dialogs[index]['from'] = new_from[index][0]
         else:
-            occurrences[index]['from'] = ''
+            current_context_dialogs[index]['from'] = ''
         if len(new_to[index]) == 0:
             new_to[index].extend([s for s in speakers if s not in new_from[index]])
-        occurrences[index]['to'] = uniques(new_to[index])
+        current_context_dialogs[index]['to'] = uniques(new_to[index])
     
-    return occurrences
+    return current_context_dialogs
 
 ###############################################################
 # Main character identification function
@@ -346,14 +346,15 @@ def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldCon
         if index==0 or index*10//len(dialog_contexts) > (index-1)*10//len(dialog_contexts):
             print("Character analysis:", index*10//len(dialog_contexts)*10, "% completed...")
         
-        context = dialog_contexts[index]
-        occurrences = [d for d in dialog_occurrences if d['context']==index]
+        context = dialog_contexts[index]#[start,end,chunks[start:end]]
+        current_context_dialogs = [d for d in dialog_occurrences if d['context']==index]#load dialogue of the actual context
         #Each element = list of chunks
-        sentence_chunks = {(i+context[0]):context[2][i] for i in range(len(context[2]))}
-        dialog_indices = [o['index'] for o in occurrences]
+        context_chunks = {(i+context[0]):context[2][i] for i in range(len(context[2]))}#dict: index: chunks of context
+
+        dialog_indices = [o['index'] for o in current_context_dialogs]#index of the context chunks
         
         #Use the alias table to replace chunk objects by keys of the alias table
-        occurrences = uniformize_speakers(occurrences, aliasTable,sentence_chunks,dialog_indices)
+        current_context_dialogs = uniformize_speakers(current_context_dialogs, aliasTable,context_chunks,dialog_indices)
     
     print("Character analysis: 100 % completed...")
     filter_alias_table(aliasTable,dialog_occurrences)
