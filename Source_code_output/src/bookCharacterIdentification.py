@@ -20,7 +20,6 @@ def is_valid(word):
 
 def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases):
     aliasTable = oldAliasTable
-    aliasTable2 = {}
     connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
     aliases=oldAliases #Initialized at new graph if nothing is loaded
     chunks = []
@@ -33,74 +32,76 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     #First pass, isolate relevant proper nouns
 
     from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
-    
+    proper_nouns = {}
     for c in chunks:
         if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
             name = c.head.string
             if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
+                if name not in proper_nouns:
+                    name[proper_nouns] = 1
+                else:
+                    name[proper_nouns] += 1
+
+    
+    names = list(proper_nouns)
+    print(names)
+    #Second pass, make connections with the non-head words of a chunk
+    for c in chunks:
+        if c.head.string in names:
+            detected = 0
+            chunk_name_list = []
+            canonical_name = []
+            
+            for w in c.words:
+                if is_valid(w.string) or w == c.head:
+                    detected = 1
+                    canonical_name.append(w.string)
+                elif detected == 1:
+                    chunk_name_list.append(' '.join(canonical_name))
+                    canonical_name = []
+                    detected = 0
+            if detected == 1:
+                chunk_name_list.append(' '.join(canonical_name))
+                    
+            for canonical_name in chunk_name_list:
                 if aliasTable.get(name,0)==0:
                     aliasTable[name]=[c.string]
                     aliases.add_node(name)
                 else:
                     aliasTable[name].append(c.string)
-    """             
-    #import nltk.corpus as corpus
-    #dict2 = corpus.brown.words()
-    from nltk.corpus import wordnet
-
-    #dict_name = corpus.names.words()    
-    for c in chunks:
-        if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
-            #print(c.type,c.head, c.head.type, c.relations, c)            
-            name = c.head.string
-            #if (c.words[0].string == name):
-            #    print(name, c.start, c.string, c.sentence.chunk[0].start)
-            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
-                if aliasTable2.get(name,0)==0:
-                    aliasTable2[name]=[c.string]
-                    
-    names2 = list(aliasTable2.keys())
-    for elem in names:
-        if elem not in names2:
-            print(elem)
-    """
+                if connectionsTable.has_edge(name, c.head.string):
+                    connectionsTable[name][c.head.string]["value"] += 1
+                else:
+                    connectionsTable.add_edge(name, c.head.string, value=1, paired=False)
     
-    names = list(aliasTable.keys())
+    names = list(aliases)#;update names with composed name detected
 
-    #Second pass, make connections with the non-head words of a chunk
-    for c in chunks:
-        if c.head in aliasTable : #Relevnotant chunks
-            for w in c.words:
-                if w != c.head:
-                    name = w.string
-                    if w.string in names:
-                        aliasTable[name].append(c.string)
-                        if connectionsTable.has_edge(name, c.head.string):
-                            connectionsTable[name][c.head.string]["value"] += 1
-                        else:
-                            connectionsTable.add_edge(name, c.head.string, value=1, paired=False)
-    
-    for name in names:
-        connectionsTable.add_node(name, length=len(aliasTable[name]))
+              
     
     
     ##check that list are coherent, generate an error if not| OPTIONNAL
     for key in list(aliasTable.keys()):
         if len(aliasTable[key]) == 0:
             aliasTable.pop(key)
-            print(key, "clef")
+            print(key, "error key")
     
     for n in connectionsTable.nodes():
         if n not in list(aliasTable.keys()):
             connectionsTable.remove_node(n)
+            print(n, "error connection table")
             
     for n in aliases.nodes():
         if n not in list(aliasTable.keys()):
             aliases.remove_node(n)
+            print(n, "error aliases")
     
+    for name in names:
+        connectionsTable.add_node(name, length=len(aliasTable[name]))
+        
     connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}# seem OPTIONNAL
     #Regroup entries of the dictionary corresponding to variations on the same name
     ##Via common references
+
     for e in list(connectionsTable.edges(data=True)):
         n1 = e[0]
         n2 = e[1]
@@ -109,22 +110,45 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
         l2 = connectionNodes[n2]['length']
         if value > min(l1,l2)/3.0:
             e[2]["paired"] = True
-                
+            
     validate_aliases(aliases, aliasTable)
     validate_connections_table(connectionsTable, aliasTable)
+    exit()
     return aliasTable, connectionsTable, aliases
 
-def alias_lookup(chunk,aliasTable):
+def alias_lookup(canonical_name,aliasTable):
     cnames = []
     for key in list(aliasTable.keys()):
-        if chunk.string in aliasTable[key]:
+        if canonical_name == key:
+            cnames.append(key)
+    #isolate words from canonical name if can_name is not found
+    if len(cnames) == 0 and len(canonical_name) > 5:#name of >= 3letters + a space + new name ->possibility to have >=2 words
+        word_list = canonical_name.split()
+        if len(word_list)>1:#More than one word
+            for word in word_list:
+                for key in list(aliasTable.keys()):
+                    if word == key:
+                        cnames.append(key)
+    if len(cnames) > 0:
+        keyMentions = {key: len(aliasTable[key]) for key in cnames}    
+        maxMentionAlias = max(keyMentions, key = keyMentions.get)
+        return maxMentionAlias
+    else:
+        return chunk
+        
+def alias_chunk_lookup(chunk,aliasTable):
+    cnames = []
+    for key in list(aliasTable.keys()):
+        if chunk.string in aliasTable[key] or chunk.string == key:
             cnames.append(key)
     if len(cnames) > 0:
         keyMentions = {key: len(aliasTable[key]) for key in cnames}    
         maxMentionAlias = max(keyMentions, key = keyMentions.get)
         return maxMentionAlias
     else:
-        return ""
+        return chunk
+        
+  
 
 def filter_alias_table(aliasTable,current_context_dialogs):
     s_t = []
@@ -134,7 +158,9 @@ def filter_alias_table(aliasTable,current_context_dialogs):
     s_t = uniques(s_t)
     for name in list(aliasTable.keys()):
         if name not in s_t:
+            print("filtered ", name)
             aliasTable.pop(name)
+   
 
 def validate_connections_table(connectionsTable, aliasTable):
     pairGraph = nx.Graph()
@@ -147,13 +173,14 @@ def validate_connections_table(connectionsTable, aliasTable):
     pairGraph.add_edges_from([e for e in cT2.edges() if len(list(cT2.neighbors(e[0])))==1 and len(list(cT2.neighbors(e[1])))==1])
     
     used = {w : False for w in pairGraph.nodes()}
-    
     for w in pairGraph.nodes():
-        if not used[w] and len(list(pairGraph.neighbors(w))) > 0:
+        if not used[w] and len(list(pairGraph.neighbors(w))) > 0:#look at ngbhr from unmarked node
             subgraph = [w]
             subgraph.extend(pairGraph.neighbors(w))
             subAT= {s: len(aliasTable.get(s,[])) for s in subgraph}
+            print(subAT)
             maxMentions = max(subAT, key=subAT.get)
+            print(maxMentions)            
             for w2 in [s for s in subgraph if s != maxMentions and not used[s]]:
                 aliasTable[maxMentions].extend(aliasTable.pop(w2,[]))
                 used[w2] = True
@@ -235,14 +262,13 @@ def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTa
             if len(sc) == 0:
                 pos_incr = False
             else:
-                pot_from.extend([alias_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
+                pot_from.extend([alias_chunk_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
         if neg_incr:
             sc = context_chunks.get(index-incr,[])
             if len(sc) == 0:
                 neg_incr = False
             else:
-                pot_from.extend([alias_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
-        
+                pot_from.extend([alias_chunk_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
     return pot_from
 
 
@@ -358,5 +384,31 @@ def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldCon
     
     print("Character analysis: 100 % completed...")
     filter_alias_table(aliasTable,dialog_occurrences)
-    return aliasTable, connectionsTable, aliases
+    return aliasTable, connectionsTable, aliases #aliases: list with canonical names
+    #alias_table, dict: canonical names -> chunk detected in context
+    #connection table: link between canonical names and head_woord
     
+
+
+    """             
+    #import nltk.corpus as corpus
+    #dict2 = corpus.brown.words()
+    from nltk.corpus import wordnet
+
+    #dict_name = corpus.names.words()    
+    for c in chunks:
+        if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
+            #print(c.type,c.head, c.head.type, c.relations, c)            
+            name = c.head.string
+            #if (c.words[0].string == name):
+            #    print(name, c.start, c.string, c.sentence.chunk[0].start)
+            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
+                if aliasTable2.get(name,0)==0:
+                    aliasTable2[name]=[c.string]
+                    aliasTable2[name]=[c.string]
+                    
+    names2 = list(aliasTable2.keys())
+    for elem in names:
+        if elem not in names2:
+            print(elem)
+    """

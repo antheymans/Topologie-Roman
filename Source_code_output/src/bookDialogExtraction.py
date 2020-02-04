@@ -109,13 +109,13 @@ def extract_agents(sentence):
         for word in chunk.words:
             if word.string[0] == word.string[0].upper() or word == chunk.head:
                 if detected == -1:
-                    filtered_d_from.append(new_list)
+                    filtered_d_from.append(' '.join(new_list))
                     new_list = []
                 detected = 1
-                new_list.append(word)
+                new_list.append(word.string)
             elif detected == 1:
                 detected = -1
-        filtered_d_from.append(new_list)
+        filtered_d_from.append(' '.join(new_list))
         
         
     filtered_d_to = []
@@ -125,14 +125,13 @@ def extract_agents(sentence):
         for word in chunk.words:
             if word.string[0] == word.string[0].upper() or word == chunk.head:
                 if detected == -1:
-                    filtered_d_to.append(new_list)
+                    filtered_d_to.append(' '.join(new_list))
                     new_list = []
                 detected = 1
-                new_list.append(word)
+                new_list.append(word.string)
             elif detected == 1:
                 detected = -1
-        filtered_d_to.append(new_list)
-        
+        filtered_d_to.append(' '.join(new_list))
     return filtered_d_from, filtered_d_to
     
     

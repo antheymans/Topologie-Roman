@@ -209,10 +209,10 @@ def csv_occurrences(dialog_occurrences,filename):
     for o in dialog_occurrences:
         do += "\n" + o['sentence'] + CSV_COMMA
         for f in o['from']:
-            do += f.string + ALT_COMMA 
+            do += f + ALT_COMMA 
         do += CSV_COMMA 
         for t in o['to']:
-            do += t.string + ALT_COMMA  
+            do += t + ALT_COMMA  
         do += CSV_COMMA + str(o['sentiment']) + CSV_COMMA + str(o['index']) + CSV_COMMA + str(o['context']) 
     
     f = codecs.open(PATH_CSV + filename+"/occurrences.csv", "w+", encoding='utf-8')
@@ -271,7 +271,6 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
 def csv_degree_incremental(filename,G):
     csv="Node"+CSV_COMMA+"Degree\n"
     for n in G.nodes():
-        print(n)
         csv += n + CSV_COMMA + str(G.degree(n)) + "\n"
     
     f = codecs.open(PATH_CSV+filename+"/graph_degrees.csv","w+", encoding='utf-8')
