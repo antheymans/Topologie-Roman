@@ -10,7 +10,7 @@ if __name__ == "__main__":
     print("Loading contexts...")
     dialog_contexts = bIO.get_object("../serialized/"+filename+"_contexts")
     print("Loading OK. Analysis...")
-    aliasTable, connectionsTable, aliases = bCI.character_analysis(dialog_occurrences,dialog_contexts,{}, nx.Graph(), nx.Graph())
+    aliasTable, connectionsTable, aliases = bCI.character_analysis(dialog_occurrences,dialog_contexts,{}, nx.Graph(), nx.DiGraph())
     print("Complete!")
     
     helpers.compute_statistics_CID(dialog_occurrences)

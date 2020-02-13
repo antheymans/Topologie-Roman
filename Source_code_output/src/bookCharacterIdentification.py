@@ -38,69 +38,84 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
             name = c.head.string
             if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
                 if name not in proper_nouns:
-                    name[proper_nouns] = 1
+                    proper_nouns[name] = 1
                 else:
-                    name[proper_nouns] += 1
+                    proper_nouns[name] += 1
 
     
-    names = list(proper_nouns)
-    print(names)
+    proper_names = list(proper_nouns)
+    connectionsTable.add_nodes_from(proper_names, proper_name = 1)
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
-        if c.head.string in names:
+        if c.head.string in proper_names:
             detected = 0
             chunk_name_list = []
-            canonical_name = []
+            canonical_name_list = []#' '.join(canonical_name)
             
             for w in c.words:
-                if is_valid(w.string) or w == c.head:
+                if is_valid(w.string):
                     detected = 1
-                    canonical_name.append(w.string)
+                    canonical_name_list.append(w.string)
                 elif detected == 1:
-                    chunk_name_list.append(' '.join(canonical_name))
-                    canonical_name = []
+                    chunk_name_list.append(canonical_name_list)
+                    canonical_name_list = []
                     detected = 0
-            if detected == 1:
-                chunk_name_list.append(' '.join(canonical_name))
                     
-            for canonical_name in chunk_name_list:
-                if aliasTable.get(name,0)==0:
-                    aliasTable[name]=[c.string]
-                    aliases.add_node(name)
+            if detected == 1:
+                chunk_name_list.append(canonical_name_list)
+                    
+            for canonical_name_list in chunk_name_list:
+                canonical_name = ' '.join(canonical_name_list)
+                if aliasTable.get(canonical_name,0)==0:
+                    aliasTable[canonical_name]=[c.string]
                 else:
-                    aliasTable[name].append(c.string)
-                if connectionsTable.has_edge(name, c.head.string):
-                    connectionsTable[name][c.head.string]["value"] += 1
-                else:
-                    connectionsTable.add_edge(name, c.head.string, value=1, paired=False)
-    
-    names = list(aliases)#;update names with composed name detected
-
+                    aliasTable[canonical_name].append(c.string)
+                if len(canonical_name_list) > 1:    
+                    for word in canonical_name_list:   
+                        if word in proper_names:
+                            if connectionsTable.has_edge(canonical_name, word):
+                                connectionsTable[canonical_name][word]["value"] += 1
+                            else:
+                                connectionsTable.add_edge(canonical_name, word, value=1, paired=False)
+                elif canonical_name not in connectionsTable:
+                    connectionsTable.add_node(canonical_name)
+    #update information in connection_table
+    for name, data in connectionsTable.nodes(data = True):
+        if "proper_name" not in data:
+            connectionsTable.nodes(data=True)[name]["proper_name"] = 0
+        if name in aliasTable:
+            connectionsTable.nodes(data=True)[name]["canonical_name"] = 1
+        else:
+            connectionsTable.nodes(data=True)[name]["canonical_name"] = 0
               
-    
-    
     ##check that list are coherent, generate an error if not| OPTIONNAL
     for key in list(aliasTable.keys()):
         if len(aliasTable[key]) == 0:
             aliasTable.pop(key)
-            print(key, "error key")
+            print(key, "error key, no chunks associated")
     
-    for n in connectionsTable.nodes():
-        if n not in list(aliasTable.keys()):
-            connectionsTable.remove_node(n)
-            print(n, "error connection table")
-            
-    for n in aliases.nodes():
-        if n not in list(aliasTable.keys()):
-            aliases.remove_node(n)
-            print(n, "error aliases")
-    
-    for name in names:
-        connectionsTable.add_node(name, length=len(aliasTable[name]))
-        
-    connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}# seem OPTIONNAL
-    #Regroup entries of the dictionary corresponding to variations on the same name
-    ##Via common references
+    for n, data in connectionsTable.nodes(data = True):
+        if data["canonical_name"] == 1 and n not in list(aliasTable.keys()):
+            #connectionsTable.remove_node(n)
+            print(n, "error canonical name in connection table")
+        if data["proper_name"] == 1 and n not in proper_nouns:
+            #connectionsTable.remove_node(n)
+            print(n, "error proper name in connection table")
+        if data["proper_name"] == 0 and data["canonical_name"] == 0:
+            #connectionsTable.remove_node(n)
+            print(n, "error useless name in connection table")
+
+    #count the number of occurence of each canonical name
+    for name, data in connectionsTable.nodes(data = True):
+        if data["canonical_name"] == 1:
+            connectionsTable.add_node(name, length=len(aliasTable[name])) 
+        else:
+            connectionsTable.add_node(name, length=0)
+    ## add the node in an alias network        
+    aliases.add_nodes_from(connectionsTable.nodes(data = True))
+
+    ## note as pair the nodes being linked most of the time
+    connectionNodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}
 
     for e in list(connectionsTable.edges(data=True)):
         n1 = e[0]
@@ -111,11 +126,88 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
         if value > min(l1,l2)/3.0:
             e[2]["paired"] = True
             
-    validate_aliases(aliases, aliasTable)
-    validate_connections_table(connectionsTable, aliasTable)
+    validate_connections_table(connectionsTable, aliasTable, aliases)
     exit()
     return aliasTable, connectionsTable, aliases
 
+def validate_connections_table(connectionsTable, aliasTable, aliases):
+    pairGraph = nx.Graph()
+    cT2 = nx.Graph()
+    
+    names = list(aliases.nodes())
+    ##Via name similarity
+    for name in names:
+        for n in names[names.index(name)+1:]:
+            if is_root(name,n):
+                pairGraph.add_edge(name,n)
+    
+    for e in list(connectionsTable.edges(data=True)) :
+        if e[0] in list(aliasTable.keys()) and e[1] in list(aliasTable.keys()) and e[2]["paired"]:
+            cT2.add_edge(e[0],e[1])
+    
+    pairGraph.add_edges_from([e for e in cT2.edges() if len(list(cT2.neighbors(e[0])))==1 and len(list(cT2.neighbors(e[1])))==1])
+    
+    used = {w : False for w in pairGraph.nodes()}
+    for w in pairGraph.nodes():
+        if not used[w] and len(list(pairGraph.neighbors(w))) > 0:#look at ngbhr from unmarked node
+            subgraph = [w]
+            subgraph.extend(pairGraph.neighbors(w))
+            subAT= {s: aliases.nodes(data = True)[s]["length"] for s in subgraph}
+            maxMentions = max(subAT, key=subAT.get)
+            for w2 in [s for s in subgraph if s != maxMentions and not used[s]]:
+                aliases.add_edge(w2, maxMentions)
+                if w2 in cT2:
+                    cT2.remove_node(w2)
+                used[w2] = True
+            used[maxMentions] = True
+            
+    #try to takes "clusters" or pair each with his max nbgh ?
+    used = {w : False for w in cT2.nodes()}
+    for w in cT2.nodes():
+        if not used[w] and len(list(cT2.neighbors(w))) > 0:#look at ngbhr from unmarked node
+            subgraph = [w]
+            subgraph.extend(cT2.neighbors(w))
+            subAT= {s: aliases.nodes(data = True)[s]["length"] for s in subgraph}
+            maxMentions = max(subAT, key=subAT.get)
+            for w2 in [s for s in subgraph if s != maxMentions and not used[s]]:
+                aliases.add_edge(w2, maxMentions)
+                used[w2] = True
+            used[maxMentions] = True
+            
+    ## takes shortcut
+    
+"""        
+    for n in cT2.nodes():
+        if cT2.degree()[n] > 1 :
+            for ref in aliasTable[n]:
+                tags = pen.tag(ref, model=None)
+                otherRef= False
+                for tag in tags:
+                    if tag[0] != n and tag[1] == 'NNP':
+                        otherRef = True
+                        if tag[0] in list(aliasTable.keys()):
+                            pass #already in the other entry by construction
+                        elif tag[0] in list(toAppend.keys()):
+                            toAppend[tag[0]].append(ref)
+                        else:
+                            toAppend[tag[0]] = [ref]
+                if otherRef:
+                    aliasTable[n].remove(ref)
+            if len(aliasTable[n]) == 0:
+                aliasTable.pop(n)
+    
+    for newName in list(toAppend.keys()):
+        noAliases = True
+        for n in list(aliasTable.keys()):
+            if is_root(newName,n):
+                aliasTable[n].extend(toAppend[newName])
+                noAliases = False
+        if noAliases:
+            aliasTable[newName]= toAppend[newName]
+"""    
+    
+
+            
 def alias_lookup(canonical_name,aliasTable):
     cnames = []
     for key in list(aliasTable.keys()):
@@ -162,81 +254,7 @@ def filter_alias_table(aliasTable,current_context_dialogs):
             aliasTable.pop(name)
    
 
-def validate_connections_table(connectionsTable, aliasTable):
-    pairGraph = nx.Graph()
-    
-    cT2 = nx.Graph()
-    for e in list(connectionsTable.edges(data=True)) :
-        if e[0] in list(aliasTable.keys()) and e[1] in list(aliasTable.keys()) and e[2]["paired"]:
-            cT2.add_edge(e[0],e[1])
-    
-    pairGraph.add_edges_from([e for e in cT2.edges() if len(list(cT2.neighbors(e[0])))==1 and len(list(cT2.neighbors(e[1])))==1])
-    
-    used = {w : False for w in pairGraph.nodes()}
-    for w in pairGraph.nodes():
-        if not used[w] and len(list(pairGraph.neighbors(w))) > 0:#look at ngbhr from unmarked node
-            subgraph = [w]
-            subgraph.extend(pairGraph.neighbors(w))
-            subAT= {s: len(aliasTable.get(s,[])) for s in subgraph}
-            print(subAT)
-            maxMentions = max(subAT, key=subAT.get)
-            print(maxMentions)            
-            for w2 in [s for s in subgraph if s != maxMentions and not used[s]]:
-                aliasTable[maxMentions].extend(aliasTable.pop(w2,[]))
-                used[w2] = True
-            used[maxMentions] = True
-    
-    toAppend = {}
-    
-    for n in cT2.nodes():
-        if cT2.degree()[n] > 1 :
-            for ref in aliasTable[n]:
-                tags = pen.tag(ref, model=None)
-                otherRef= False
-                for tag in tags:
-                    if tag[0] != n and tag[1] == 'NNP':
-                        otherRef = True
-                        if tag[0] in list(aliasTable.keys()):
-                            pass #already in the other entry by construction
-                        elif tag[0] in list(toAppend.keys()):
-                            toAppend[tag[0]].append(ref)
-                        else:
-                            toAppend[tag[0]] = [ref]
-                if otherRef:
-                    aliasTable[n].remove(ref)
-            if len(aliasTable[n]) == 0:
-                aliasTable.pop(n)
-    
-    for newName in list(toAppend.keys()):
-        noAliases = True
-        for n in list(aliasTable.keys()):
-            if is_root(newName,n):
-                aliasTable[n].extend(toAppend[newName])
-                noAliases = False
-        if noAliases:
-            aliasTable[newName]= toAppend[newName]
-    
-    
-def validate_aliases(aliases, aliasTable):
-    names = list(aliasTable.keys())
-    ##Via name similarity
-    for name in names:
-        for n in names[names.index(name)+1:]:
-            if is_root(name,n):
-                aliases.add_edge(name,n)
-    
-    used = {w : False for w in aliases.nodes()}
-    
-    for w in aliases.nodes():
-        if not used[w] and len(list(aliases.neighbors(w))) > 0:
-            subgraph = [w]
-            subgraph.extend(aliases.neighbors(w))
-            subAT= {s: len(aliasTable.get(s,[])) for s in subgraph}
-            maxMentions = max(subAT, key=subAT.get)
-            for w2 in [s for s in subgraph if s != maxMentions and not used[s]]:
-                aliasTable[maxMentions].extend(aliasTable.pop(w2,[]))
-                used[w2] = True
-            used[maxMentions] = True
+
            
     
 
