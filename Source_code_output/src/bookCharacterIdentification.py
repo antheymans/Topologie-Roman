@@ -127,7 +127,6 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
             e[2]["paired"] = True
             
     validate_connections_table(connectionsTable, aliasTable, aliases)
-    exit()
     return aliasTable, connectionsTable, aliases
 
 def validate_connections_table(connectionsTable, aliasTable, aliases):
@@ -175,6 +174,20 @@ def validate_connections_table(connectionsTable, aliasTable, aliases):
             used[maxMentions] = True
             
     ## takes shortcut
+        
+    for w in aliases.nodes():
+        successors = list(aliases.successors(w))
+        if len(successors) > 1:
+            print("error in the aliases graph with node ", w)
+        elif len(successors) == 1:
+            edge_set =[]
+            for predecessor in aliases.predecessors(w):
+                aliases.add_edge(predecessor, successors[0])
+                edge_set.append((predecessor, w))
+            aliases.remove_edges_from(edge_set)
+
+                
+                
     
 """        
     for n in cT2.nodes():
@@ -208,9 +221,9 @@ def validate_connections_table(connectionsTable, aliasTable, aliases):
     
 
             
-def alias_lookup(canonical_name,aliasTable):
+def alias_lookup(canonical_name,aliasTable, aliases):
     cnames = []
-    for key in list(aliasTable.keys()):
+    for key in list(aliases.nodes()):
         if canonical_name == key:
             cnames.append(key)
     #isolate words from canonical name if can_name is not found
@@ -221,24 +234,31 @@ def alias_lookup(canonical_name,aliasTable):
                 for key in list(aliasTable.keys()):
                     if word == key:
                         cnames.append(key)
+    for i in range(0, len(cnames)):
+        if len(aliases[cnames[i]]) != 0:
+            cnames[i] = list(aliases[cnames[i]])[0]
+    
     if len(cnames) > 0:
         keyMentions = {key: len(aliasTable[key]) for key in cnames}    
         maxMentionAlias = max(keyMentions, key = keyMentions.get)
         return maxMentionAlias
     else:
-        return chunk
+        return canonical_name
         
-def alias_chunk_lookup(chunk,aliasTable):
+def alias_chunk_lookup(chunk,aliasTable,aliases):
     cnames = []
-    for key in list(aliasTable.keys()):
+    for key in list(aliasTable.nodes()):
         if chunk.string in aliasTable[key] or chunk.string == key:
             cnames.append(key)
+    for i in range(0, len(cnames)):
+        if len(aliases[cnames[i]]) != 0:
+            cnames[i] = list(aliases[cnames[i]])[0]
     if len(cnames) > 0:
         keyMentions = {key: len(aliasTable[key]) for key in cnames}    
         maxMentionAlias = max(keyMentions, key = keyMentions.get)
         return maxMentionAlias
     else:
-        return chunk
+        return canonical_name
         
   
 
@@ -262,7 +282,7 @@ def filter_alias_table(aliasTable,current_context_dialogs):
 # Extraction of speakers
 ###############################################################
 
-def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTable):
+def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTable, aliases):
     #Find the nearest sentence of narration that can provide potential information on the speaker
     pot_from = []
     pos_incr = True
@@ -280,13 +300,13 @@ def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTa
             if len(sc) == 0:
                 pos_incr = False
             else:
-                pot_from.extend([alias_chunk_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
+                pot_from.extend([alias_chunk_lookup(c,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
         if neg_incr:
             sc = context_chunks.get(index-incr,[])
             if len(sc) == 0:
                 neg_incr = False
             else:
-                pot_from.extend([alias_chunk_lookup(c,aliasTable) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
+                pot_from.extend([alias_chunk_lookup(c,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
     return pot_from
 
 
@@ -308,7 +328,7 @@ def trim_new_from(new_from):
             max_refs = max(subSpeakers, key=subSpeakers.get)
             new_from[index] = [max_refs]
 
-def uniformize_speakers(current_context_dialogs,aliasTable,context_chunks,dialog_indices):
+def uniformize_speakers(current_context_dialogs,aliasTable,aliases,context_chunks,dialog_indices):
     #Lookups in the alias table
     new_from = []
     new_to = []
@@ -316,12 +336,12 @@ def uniformize_speakers(current_context_dialogs,aliasTable,context_chunks,dialog
         nf = []#new_from
         nt = []
         for f in o['from']:
-            fl = alias_lookup(f,aliasTable)
+            fl = alias_lookup(f,aliasTable, aliases)
             if len(fl) > 0:
                 nf.append(fl)
                 o['from'].remove(f)
         for t in o['to']:
-            tl = alias_lookup(t,aliasTable)
+            tl = alias_lookup(t,aliasTable, aliases)
             if len(tl) > 0:
                 nt.append(tl)
                 o['to'].remove(t)
@@ -345,7 +365,7 @@ def uniformize_speakers(current_context_dialogs,aliasTable,context_chunks,dialog
     for index in range(len(current_context_dialogs)):
         if len(new_from[index]) == 0:
             if len(speakers) == 0:
-                new_from[index] = get_speakers_from_nearby_context(current_context_dialogs[index]['index'],context_chunks,dialog_indices,aliasTable)
+                new_from[index] = get_speakers_from_nearby_context(current_context_dialogs[index]['index'],context_chunks,dialog_indices,aliasTable, aliases)
                 speakers, speakersMention = update_speakers(new_from)
             elif len(speakers) == 1:
                 new_from[index].append(speakers[0])
@@ -398,7 +418,7 @@ def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldCon
         dialog_indices = [o['index'] for o in current_context_dialogs]#index of the context chunks
         
         #Use the alias table to replace chunk objects by keys of the alias table
-        current_context_dialogs = uniformize_speakers(current_context_dialogs, aliasTable,context_chunks,dialog_indices)
+        current_context_dialogs = uniformize_speakers(current_context_dialogs, aliasTable, aliases, context_chunks,dialog_indices)
     
     print("Character analysis: 100 % completed...")
     filter_alias_table(aliasTable,dialog_occurrences)
