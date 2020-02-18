@@ -7,6 +7,7 @@ from collections import Counter
 import networkx as nx
 import pattern.text.en as pen
 import name_tools
+import ast
 
 from helpers import is_root, uniques
 
@@ -36,30 +37,18 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     for c in chunks:
         if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
             name = c.head.string
-            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC 
+            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC \
                 and name.lower() not in PROFANITY and name.lower() not in TIME and name not in honorifics:
                 if name not in proper_nouns:
                     proper_nouns[name] = 1
                 else:
                     proper_nouns[name] += 1
-
-    import nltk
-    emma = nltk.corpus.gutenberg.words('austen-emma.txt')
     
     proper_names = list(proper_nouns)
-    print("ok")
-    for name in proper_names:
-        if name.lower in emma:
-            print("shit ", name)
-        else: 
-            print(name)
-    print(proper_nouns)
-    print("ok")
     connectionsTable.add_nodes_from(proper_names, proper_name = 1)
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
         if c.head.string in proper_names:
-            print(c.string)
             detected = 0
             canonical_names_list = [] #list of canonical names
             wordlist = []# canonical name in a form of wordlist
@@ -288,7 +277,7 @@ def filter_alias_table(aliasTable,current_context_dialogs):
             print("filtered ", name)
             aliasTable.pop(name)
     
-def get_honorifics()
+def get_honorifics():
     f = open("honorifics.txt", "r")
     string  = f.read()
     honorifics = ast.literal_eval(string)
