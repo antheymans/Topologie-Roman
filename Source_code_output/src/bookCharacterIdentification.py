@@ -33,20 +33,37 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
 
     from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
     proper_nouns = {}
+    locations = {}
     honorifics = get_honorifics()
     for c in chunks:
-        if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
+        if c.head.type.find('NNP')==0 and is_valid(c.head.string):
             name = c.head.string
-            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC \
-                and name.lower() not in PROFANITY and name.lower() not in TIME and name not in honorifics:
-                if name not in proper_nouns:
-                    proper_nouns[name] = 1
-                else:
-                    proper_nouns[name] += 1
+            if c.head.type == "NNP-LOC":
+                if name not in locations:
+                        locations[name] = 1
+                    else:
+                        locations[name] += 1
+             
+            else:
+                if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC \
+                    and name.lower() not in PROFANITY and name.lower() not in TIME and name not in honorifics:
+                    if name not in proper_nouns:
+                        proper_nouns[name] = 1
+                    else:
+                        proper_nouns[name] += 1
     
+    for loc in locations:
+        if loc in proper_nouns:
+            print(loc)
+            if locations[loc] >= proper_nouns[loc]:
+                del proper_nouns[loc]
+            else:
+                del locations[loc]
+    print(locations)
     proper_names = list(proper_nouns)
-    connectionsTable.add_nodes_from(proper_names, proper_name = 1)
+    #connectionsTable.add_nodes_from(proper_names, proper_name = 1)
     #Second pass, make connections with the non-head words of a chunk
+    canonical_names = {}
     for c in chunks:
         if c.head.string in proper_names:
             detected = 0
@@ -67,17 +84,20 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
                     
             for wordlist in canonical_names_list:
                 canonical_name = ' '.join(wordlist)
-                if len(wordlist) > 1:    
-                    for word in wordlist:   
-                        if word in proper_names:
-                            if connectionsTable.has_edge(canonical_name, word):
-                                connectionsTable[canonical_name][word]["value"] += 1
-                            else:
-                                connectionsTable.add_edge(canonical_name, word, value=1, paired=False)
-                elif canonical_name not in proper_names:
-                    break
-                if aliasTable.get(canonical_name,0)==0:
+                if canonical_name not in canonical_names:
                     aliasTable[canonical_name]=[c.string]
+                    canonical_names[canonical_name] = [[],[]]
+                    index = 0
+                    first_name = 0 #boolean saying if the first name has appeared
+                    while index < len(wordlist):
+                        if word_list[index] in honorifics:
+                            canonical_names[canonical_name][0].append(word_list[index])
+                        else: 
+                            break
+                    while index < len(wordlist):
+                            canonical_names[canonical_name][1].append(word_list[index])
+                            if canonical_names[canonical_name][1] > 1 and word_list[index] not in surnames:
+                                surnames.append(word_list[index])
                 else:
                     aliasTable[canonical_name].append(c.string)
 
