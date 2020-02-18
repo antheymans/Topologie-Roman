@@ -17,7 +17,6 @@ def is_valid(word):
     if word[0] != word[0].upper() or word == word.upper() or len(word) <= 2:
         return False
     return True
-
 def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases):
     aliasTable = oldAliasTable
     connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
@@ -33,52 +32,66 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
 
     from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
     proper_nouns = {}
+    honorifics = get_honorifics()
     for c in chunks:
         if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
             name = c.head.string
-            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
+            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC 
+                and name.lower() not in PROFANITY and name.lower() not in TIME and name not in honorifics:
                 if name not in proper_nouns:
                     proper_nouns[name] = 1
                 else:
                     proper_nouns[name] += 1
 
+    import nltk
+    emma = nltk.corpus.gutenberg.words('austen-emma.txt')
     
     proper_names = list(proper_nouns)
+    print("ok")
+    for name in proper_names:
+        if name.lower in emma:
+            print("shit ", name)
+        else: 
+            print(name)
+    print(proper_nouns)
+    print("ok")
     connectionsTable.add_nodes_from(proper_names, proper_name = 1)
     #Second pass, make connections with the non-head words of a chunk
     for c in chunks:
         if c.head.string in proper_names:
+            print(c.string)
             detected = 0
-            chunk_name_list = []
-            canonical_name_list = []#' '.join(canonical_name)
+            canonical_names_list = [] #list of canonical names
+            wordlist = []# canonical name in a form of wordlist
             
             for w in c.words:
                 if is_valid(w.string):
                     detected = 1
-                    canonical_name_list.append(w.string)
+                    wordlist.append(w.string)
                 elif detected == 1:
-                    chunk_name_list.append(canonical_name_list)
-                    canonical_name_list = []
+                    canonical_names_list.append(wordlist)
+                    wordlist = []
                     detected = 0
                     
             if detected == 1:
-                chunk_name_list.append(canonical_name_list)
+                canonical_names_list.append(wordlist)
                     
-            for canonical_name_list in chunk_name_list:
-                canonical_name = ' '.join(canonical_name_list)
-                if aliasTable.get(canonical_name,0)==0:
-                    aliasTable[canonical_name]=[c.string]
-                else:
-                    aliasTable[canonical_name].append(c.string)
-                if len(canonical_name_list) > 1:    
-                    for word in canonical_name_list:   
+            for wordlist in canonical_names_list:
+                canonical_name = ' '.join(wordlist)
+                if len(wordlist) > 1:    
+                    for word in wordlist:   
                         if word in proper_names:
                             if connectionsTable.has_edge(canonical_name, word):
                                 connectionsTable[canonical_name][word]["value"] += 1
                             else:
                                 connectionsTable.add_edge(canonical_name, word, value=1, paired=False)
-                elif canonical_name not in connectionsTable:
-                    connectionsTable.add_node(canonical_name)
+                elif canonical_name not in proper_names:
+                    break
+                if aliasTable.get(canonical_name,0)==0:
+                    aliasTable[canonical_name]=[c.string]
+                else:
+                    aliasTable[canonical_name].append(c.string)
+
     #update information in connection_table
     for name, data in connectionsTable.nodes(data = True):
         if "proper_name" not in data:
@@ -125,7 +138,8 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
         l2 = connectionNodes[n2]['length']
         if value > min(l1,l2)/3.0:
             e[2]["paired"] = True
-            
+    
+        
     validate_connections_table(connectionsTable, aliasTable, aliases)
     return aliasTable, connectionsTable, aliases
 
@@ -185,6 +199,7 @@ def validate_connections_table(connectionsTable, aliasTable, aliases):
                 aliases.add_edge(predecessor, successors[0])
                 edge_set.append((predecessor, w))
             aliases.remove_edges_from(edge_set)
+            aliasTable[successors[0]].extend(aliasTable.pop(w,[]))
 
                 
                 
@@ -240,14 +255,14 @@ def alias_lookup(canonical_name,aliasTable, aliases):
     
     if len(cnames) > 0:
         keyMentions = {key: len(aliasTable[key]) for key in cnames}    
-        maxMentionAlias = max(keyMentions, key = keyMentions.get)
+        maxMentionAlias = max(keyMentions, key = keyMentions.gget)
         return maxMentionAlias
     else:
-        return canonical_name
+        return ""
         
 def alias_chunk_lookup(chunk,aliasTable,aliases):
     cnames = []
-    for key in list(aliasTable.nodes()):
+    for key in list(aliasTable.keys()):
         if chunk.string in aliasTable[key] or chunk.string == key:
             cnames.append(key)
     for i in range(0, len(cnames)):
@@ -258,7 +273,7 @@ def alias_chunk_lookup(chunk,aliasTable,aliases):
         maxMentionAlias = max(keyMentions, key = keyMentions.get)
         return maxMentionAlias
     else:
-        return canonical_name
+        return ""
         
   
 
@@ -272,9 +287,12 @@ def filter_alias_table(aliasTable,current_context_dialogs):
         if name not in s_t:
             print("filtered ", name)
             aliasTable.pop(name)
-   
-
-
+    
+def get_honorifics()
+    f = open("honorifics.txt", "r")
+    string  = f.read()
+    honorifics = ast.literal_eval(string)
+    return honorifics
            
     
 
@@ -355,7 +373,7 @@ def uniformize_speakers(current_context_dialogs,aliasTable,aliases,context_chunk
         if index < len(current_context_dialogs)-1:
             neighbors.append(index+1)
         if len(new_from[index]) == 0 and all ([len(new_from[i]) == 0 for i in neighbors]):#no speaker identified in dialog or ngb
-            new_from[index] = get_speakers_from_nearby_context(current_context_dialogs[index]['index'],context_chunks,dialog_indices,aliasTable)
+            new_from[index] = get_speakers_from_nearby_context(current_context_dialogs[index]['index'],context_chunks,dialog_indices,aliasTable, aliases)
     
     trim_new_from(new_from)
     

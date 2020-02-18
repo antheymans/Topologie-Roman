@@ -266,6 +266,17 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     
     f3 = codecs.open(PATH_CSV + filename + "/alias_pairs.csv", "w+", encoding='utf-8')
     f3.write(alias_pairs_string)
+    
+    
+    alias_pairs_string = "Main Name" + CSV_COMMA + "Other names" + "\n"
+    for node in aliases.nodes():
+        if list(aliases.successors(node)) == []:
+            alias_pairs_string += node
+            for predecessor in aliases.predecessors(node):
+                alias_pairs_string += CSV_COMMA + predecessor
+            alias_pairs_string += "\n"   
+    f3 = codecs.open(PATH_CSV + filename + "/alias_cluster.csv", "w+", encoding='utf-8')
+    f3.write(alias_pairs_string)
     f3.close()
 
 def csv_degree_incremental(filename,G):
