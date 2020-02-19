@@ -6,6 +6,8 @@
 from collections import Counter
 import networkx as nx
 import pattern.text.en as pen
+from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
+import nltk
 import name_tools
 import ast
 
@@ -31,10 +33,9 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
     
     #First pass, isolate relevant proper nouns
 
-    from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
     proper_nouns = {}
     locations = {}
-    honorifics = get_honorifics()
+    honorifics, female_honorifics, male_honorifics = get_honorifics()
     for c in chunks:
         if c.head.type.find('NNP')==0 and is_valid(c.head.string):
             name = c.head.string
@@ -61,8 +62,7 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
                 del locations[loc]
     print(locations)
     proper_names = list(proper_nouns)
-    #connectionsTable.add_nodes_from(proper_names, proper_name = 1)
-    #Second pass, make connections with the non-head words of a chunk
+    #Second pass,check all canonical names from chunks headed by a proper name
     canonical_names = {}
     for c in chunks:
         if c.head.string in proper_names:
@@ -86,20 +86,35 @@ def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAlias
                 canonical_name = ' '.join(wordlist)
                 if canonical_name not in canonical_names:
                     aliasTable[canonical_name]=[c.string]
-                    canonical_names[canonical_name] = [[],[]]
+                    canonical_names[canonical_name] = [,[],[]]
                     index = 0
                     first_name = 0 #boolean saying if the first name has appeared
                     while index < len(wordlist):
                         if word_list[index] in honorifics:
-                            canonical_names[canonical_name][0].append(word_list[index])
+                            canonical_names[canonical_name][1].append(word_list[index])
+                            index+=1
                         else: 
                             break
                     while index < len(wordlist):
-                            canonical_names[canonical_name][1].append(word_list[index])
-                            if canonical_names[canonical_name][1] > 1 and word_list[index] not in surnames:
+                        if word_list[index] in proper_names:
+                            canonical_names[canonical_name][2].append(word_list[index])
+                            if canonical_names[canonical_name][2] > 1 and word_list[index] not in surnames:
                                 surnames.append(word_list[index])
+                        index+=1
                 else:
                     aliasTable[canonical_name].append(c.string)
+    
+    names = nltk.corpus.names
+    male_names = names.words('male.txt')
+    female_names = names.words('female.txt')
+
+
+
+
+
+
+
+
 
     #update information in connection_table
     for name, data in connectionsTable.nodes(data = True):
@@ -300,8 +315,8 @@ def filter_alias_table(aliasTable,current_context_dialogs):
 def get_honorifics():
     f = open("honorifics.txt", "r")
     string  = f.read()
-    honorifics = ast.literal_eval(string)
-    return honorifics
+    honorifics, female_honor, male_honor = ast.literal_eval(string)
+    return honorifics, female_honor, male_honor
            
     
 
