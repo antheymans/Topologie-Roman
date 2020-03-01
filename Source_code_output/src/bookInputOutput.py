@@ -250,11 +250,11 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     f1.write(alias_table_string)
     f1.close()
     
-    ct_string = "Name 1" + CSV_COMMA + "Length 1" + CSV_COMMA + "Name 2" + CSV_COMMA + "Length 2" + CSV_COMMA + "Mentions" + CSV_COMMA + "Paired"
+    ct_string = "Name 1" + CSV_COMMA + "Length 1" + CSV_COMMA + "Gender 1" + CSV_COMMA + "Name 2" + CSV_COMMA + "Length 2" + CSV_COMMA + "Gender 2" + CSV_COMMA + "Paired"
     nodes = {n[0]: n[1] for n in connectionsTable.nodes(data=True)}
     for n in list(nodes.keys()):
         for end in list(connectionsTable[n].keys()):
-            ct_string += "\n" + n + CSV_COMMA + str(nodes[n]["length"]) + CSV_COMMA + end + CSV_COMMA + str(nodes[end]["length"]) + CSV_COMMA + str(connectionsTable[n][end]["value"]) + CSV_COMMA + str(connectionsTable[n][end]["paired"])  
+            ct_string += "\n" + n + CSV_COMMA + str(nodes[n]["value"]) + CSV_COMMA + str(nodes[n]["gender"]) + CSV_COMMA + end + CSV_COMMA + str(nodes[end]["value"]) + CSV_COMMA + str(nodes[end]["gender"]) + CSV_COMMA + str(connectionsTable[n][end]["paired"])  
     
     f2 = codecs.open(PATH_CSV + filename + "/connection_table.csv", "w+", encoding='utf-8')
     f2.write(ct_string)
