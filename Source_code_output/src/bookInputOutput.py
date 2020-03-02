@@ -268,10 +268,10 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     f3.write(alias_pairs_string)
     
     
-    alias_pairs_string = "Main Name" + CSV_COMMA + "Other names" + "\n"
+    alias_pairs_string = "Gender" + CSV_COMMA +  "Main Name" + CSV_COMMA + "Other names" + "\n"
     for node in aliases.nodes():
         if list(aliases.successors(node)) == []:
-            alias_pairs_string += node
+            alias_pairs_string += str(connectionsTable.nodes[node]["gender"]) + CSV_COMMA + node
             for predecessor in aliases.predecessors(node):
                 alias_pairs_string += CSV_COMMA + predecessor
             alias_pairs_string += "\n"   
