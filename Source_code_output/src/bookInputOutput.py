@@ -260,24 +260,39 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     f2.write(ct_string)
     f2.close()
     
+    """
     alias_pairs_string = "Name 1" + CSV_COMMA + "Name 2"
     for e in aliases.edges():
         alias_pairs_string += "\n" + e[0] + CSV_COMMA + e[1]
     
     f3 = codecs.open(PATH_CSV + filename + "/alias_pairs.csv", "w+", encoding='utf-8')
     f3.write(alias_pairs_string)
+    """
     
-    
-    alias_pairs_string = "Gender" + CSV_COMMA +  "Main Name" + CSV_COMMA + "Other names" + "\n"
+    alias_pairs_string = "Cluster mentions" + CSV_COMMA + "Gender" + CSV_COMMA +  "Main Name" + CSV_COMMA + "Other names" + "\n"
     for node in aliases.nodes():
         if list(aliases.successors(node)) == []:
-            alias_pairs_string += str(connectionsTable.nodes[node]["gender"]) + CSV_COMMA + node
+            mentions = connectionsTable.nodes[node]["value"]
+            cluster_string = str(connectionsTable.nodes[node]["gender"]) + CSV_COMMA + node
             for predecessor in aliases.predecessors(node):
-                alias_pairs_string += CSV_COMMA + predecessor
-            alias_pairs_string += "\n"   
-    f3 = codecs.open(PATH_CSV + filename + "/alias_cluster.csv", "w+", encoding='utf-8')
-    f3.write(alias_pairs_string)
-    f3.close()
+                mentions += connectionsTable.nodes[predecessor]["value"]
+                cluster_string += CSV_COMMA + predecessor
+            alias_pairs_string += str(mentions) + CSV_COMMA + cluster_string + "\n" 
+    f4 = codecs.open(PATH_CSV + filename + "/alias_cluster.csv", "w+", encoding='utf-8')
+    f4.write(alias_pairs_string)
+    f4.close()
+    
+    name_string = "Canonical Name" + CSV_COMMA + "Honorifics" + CSV_COMMA + "Firstname" + CSV_COMMA + "MiddleName" + CSV_COMMA \
+        + "LastName"  +  CSV_COMMA + "Name_category"  +  CSV_COMMA + "Gender" 
+    for node, data in connectionsTable.nodes(data = True):
+        name_string += "\n" + node + CSV_COMMA + data["name"].title + CSV_COMMA + data["name"].first + CSV_COMMA +\
+            data["name"].middle +\
+            CSV_COMMA + data["name"].last +  \
+            CSV_COMMA + str(data["name_category"]) + \
+            CSV_COMMA + str(data["gender"])
+        name_string += "\n"
+    f3 = codecs.open(PATH_CSV + filename + "/names.csv", "w+", encoding='utf-8')
+    f3.write(name_string)
 
 def csv_degree_incremental(filename,G):
     csv="Node"+CSV_COMMA+"Degree\n"
