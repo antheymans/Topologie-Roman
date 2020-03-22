@@ -260,15 +260,6 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     f2.write(ct_string)
     f2.close()
     
-    """
-    alias_pairs_string = "Name 1" + CSV_COMMA + "Name 2"
-    for e in aliases.edges():
-        alias_pairs_string += "\n" + e[0] + CSV_COMMA + e[1]
-    
-    f3 = codecs.open(PATH_CSV + filename + "/alias_pairs.csv", "w+", encoding='utf-8')
-    f3.write(alias_pairs_string)
-    """
-    
     alias_pairs_string = "Cluster mentions" + CSV_COMMA + "Gender" + CSV_COMMA +  "Main Name" + CSV_COMMA + "Other names" + "\n"
     for node in aliases.nodes():
         if list(aliases.successors(node)) == []:

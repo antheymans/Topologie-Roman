@@ -25,12 +25,11 @@ def book_analyze(file_txt):
     bIO.create_folders(filename)
     sentences, breaks, sentiments, chunks = bIO.load_book(filename)
     
-    
     # Extracts the dialogs from the book
     print("Extracting dialogs...")
     dialog_spacing, dialog_occurrences, dialog_contexts, count, threshold = bDE.dialog_extraction(sentences, breaks, sentiments, chunks)
     print("Dialog extraction complete !")
-    
+
     #Build the CSV spacing map
     bIO.build_csv_spacing_map(dialog_spacing, count, threshold, filename)
     
@@ -40,11 +39,13 @@ def book_analyze(file_txt):
     bIO.update_stats(filename,stat)
     
     #Load the name files
-    previous_book = input("Use a previous book? If so, enter its name.")
+    previous_book = ""
+    if False:
+        previous_book = input("Use a previous book? If so, enter its name.")
     oldAliasTable, oldConnectionsTable, oldAliases = bIO.load_alias_table(previous_book)
     
     print("Character analysis...")
-    aliasTable, connectionsTable, aliases = bCID.character_analysis(dialog_occurrences, dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases)
+    aliasTable, connectionsTable, aliases = bCID.character_analysis(dialog_contexts, dialog_occurrences, chunks,oldAliasTable,oldConnectionsTable,oldAliases)
     print("Character analysis complete !")
     
     bIO.export_aliases(aliasTable, connectionsTable, aliases, filename)
@@ -78,4 +79,4 @@ if __name__ == "__main__":
     elif title[-4:] == ".txt":
         book_analyze(title)
     else:
-        print("the input is not valid")
+        book_analyze(title + ".txt")

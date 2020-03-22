@@ -4,13 +4,18 @@ import networkx as nx
 import helpers
 
 if __name__ == "__main__":
-    filename = "Harry_Potter_1"
+    filename = input("Enter the title of the .txt file to be analyzed \n")
+    if filename == "":
+        filename = "Harry_Potter_1"
+     
+    print("Loading book...")
+    sentences, breaks, sentiments, chunks = bIO.load_book(filename)    
     print("Loading occurrences...")
     dialog_occurrences = bIO.get_object("../serialized/"+filename+"_occurrences")
     print("Loading contexts...")
     dialog_contexts = bIO.get_object("../serialized/"+filename+"_contexts")
     print("Loading OK. Analysis...")
-    aliasTable, connectionsTable, aliases = bCI.character_analysis(dialog_occurrences,dialog_contexts,{}, nx.Graph(), nx.DiGraph())
+    aliasTable, connectionsTable, aliases = bCI.character_analysis(dialog_contexts, dialog_occurrences, chunks, {}, nx.Graph(), nx.DiGraph())
     print("Complete!")
     
     helpers.compute_statistics_CID(dialog_occurrences)

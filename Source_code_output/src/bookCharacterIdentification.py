@@ -4,388 +4,16 @@
 #Library handling the character identification and alias resolution
 
 from collections import Counter
-import networkx as nx
-import pattern.text.en as pen
-from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
-from copy import copy
-import nltk
-import nameparser
 
-import ast
+from helpers import uniques
+import book_character_table_construction
 
-from helpers import is_root, uniques
+
+
 
 ###############################################################
-# Alias table functions
+# Identification of speakers from chunk
 ###############################################################
-def is_valid(word):
-    if word[0] != word[0].upper() or word == word.upper():
-        return False
-    return True
-def build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases):
-    aliasTable = oldAliasTable
-    connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
-    aliases=oldAliases #Initialized at new graph if nothing is loaded
-    chunks = []
-    for c in dialog_contexts:
-        context_chunks = c[2]
-        for l in context_chunks:
-            for s in l:
-                chunks.extend(s.chunks)
-    
-    #First pass, isolate relevant proper nouns
-
-    proper_nouns = {}
-    locations = {}
-    honorifics, female_honorifics, male_honorifics = get_honorifics()
-    honorifics = nameparser.config.titles.TITLES
-    for c in chunks:
-        if c.head.type.find('NNP')==0 and is_valid(c.head.string):
-            name = c.head.string
-            if c.head.type == "NNP-LOC":
-                if name not in locations:
-                    locations[name] = 1
-                else:
-                    locations[name] += 1
-            else:
-                if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC \
-                    and name.lower() not in PROFANITY and name.lower() not in TIME and name not in honorifics:
-                    if name not in proper_nouns:
-                        proper_nouns[name] = 0
-                    else:
-                        proper_nouns[name] += 1
-    
-    for loc in locations:
-        if loc in proper_nouns:
-            print(loc)
-            if locations[loc] >= proper_nouns[loc]:
-                del proper_nouns[loc]
-            else:
-                del locations[loc]
-    print("locations: ",locations)
-            
-    nicknames = get_nicknames()
-    proper_names = list(proper_nouns)
-    for name in proper_names:
-        for n in proper_names[proper_names.index(name)+1:]:
-            nick = []
-            if is_root(name,n):
-                nick.append(n)
-        if len(nick) > 0:
-            nick.append(name)
-            nicknames.add(nick)
-    
-    #create dict containing canonical name linked to each proper noun    
-    canonical_names_dict = {}
-    for proper_noun  in proper_names:
-        canonical_names_dict[proper_noun] = []
-        
-    names_corpus = nltk.corpus.names
-    male_names = names_corpus.words('male.txt')
-    female_names = names_corpus.words('female.txt')
-    
-    #Second pass,check all canonical names from chunks headed by a proper name
-    for c in chunks:
-        if c.head.string in proper_names:
-            detected = 0
-            canonical_names_list = [] #list of canonical names
-            wordlist = []# canonical name in a form of wordlist
-            
-            for w in c.words:
-                if is_valid(w.string):
-                    detected = 1
-                    wordlist.append(w.string)
-                elif detected == 1:
-                    canonical_names_list.append(wordlist)
-                    wordlist = []
-                    detected = 0
-                    
-            if detected == 1:
-                canonical_names_list.append(wordlist)
-                    
-            for wordlist in canonical_names_list:
-                canonical_name = ' '.join(wordlist)
-                
-                if canonical_name not in connectionsTable:        
-                    name = nameparser.HumanName(canonical_name)
-                    gender = 0
-                    for i in range(len(name.title_list)):
-                        honorific = name.title_list[i]
-                        if honorific[-1] == ".":
-                            honorific = honorific[:-1]
-                        if honorific in female_honorifics:
-                            gender -= 1
-                        elif honorific in male_honorifics:
-                            gender += 1
-                    if name.first != "":
-                        if name.first in male_names:
-                            gender +=1
-                        elif name.first in female_names:
-                            gender -=1
-                    if gender > 0:
-                        gender = 1
-                    elif gender < 0:
-                        gender = -1
-                    name_category = 5 #default 5: only first or lastname
-                    if name.title != "" and name.first in proper_names and name.last != "":
-                        name_category = 1
-                    elif name.first in proper_names and name.last != "":
-                        name_category = 2
-                    elif name.title != "" and name.first in proper_names:
-                        name_category = 3
-                    elif name.title != "" and name.last != "":
-                        name_category = 4 
-                    else:
-                        name_category = 5
-                    if name_category != 5:
-                        connectionsTable.add_node(canonical_name)
-                        connectionsTable.nodes[canonical_name]["gender"] = gender
-                        connectionsTable.nodes[canonical_name]["name_category"] = name_category
-                        connectionsTable.nodes[canonical_name]["name"] = name
-                        connectionsTable.nodes[canonical_name]["value"] = 1
-                        
-                        aliasTable[canonical_name]=[c.string]
-                        for word in wordlist:
-                            if word in proper_names:
-                                canonical_names_dict[word].append(canonical_name)                    
-                else:
-                    aliasTable[canonical_name].append(c.string)
-                    connectionsTable.nodes[canonical_name]["value"] += 1 
-    
-    #del all name detected as proper but not related not any canonical name
-    for proper_name in proper_nouns:
-        if len(canonical_names_dict[proper_name]) == 0:
-            del canonical_names_dict[proper_name]
-            
-    #link between them canonical names sharing firstname
-    #name sharing a 1-value edge are considered as the same character while 2-value edge means a potential selection    
-    used = {w : False for w in proper_nouns}
-
-    for canonical_name, data in connectionsTable.nodes(data = True):
-        #Use all firstname, category 3 or 4 indicates that firstname/last name have not been separated properly
-        if data["name_category"] < 3: 
-            firstname = data["name"].first
-            if firstname != "" and used[firstname] == False:
-                used[firstname] = True
-                names_bucket = set()
-                firstname_bucket = set()
-                firstname_bucket.add(firstname)
-                names_bucket.update(canonical_names_dict[firstname])
-                for cluster in nicknames:#check nickname associated
-                    if firstname in cluster:
-                        for nickname in cluster:
-                            if nickname in proper_nouns:
-                                names_bucket.update(canonical_names_dict[nickname])
-                                firstname_bucket.add(nickname)
-                                used[nickname] = True
-                if firstname[0] in proper_nouns:#check initial present
-                    names_bucket.update(canonical_names_dict[firstname[0]])
-                    firstname_bucket.add(firstname[0])
-                    used[firstname] = True
-            names_bucket = list(names_bucket)
-            for i in range(len(names_bucket)):
-                for j in range(i+1, len(names_bucket)): 
-                    node1 = connectionsTable.nodes[names_bucket[i]]
-                    node2 = connectionsTable.nodes[names_bucket[j]]
-                    if node1["gender"]*node2["gender"] != -1:#avoid to link male and female CN
-                        if node1["name"].first in firstname_bucket and node2["name"].first in firstname_bucket:                        
-                            if node1["name"].last == node2["name"].last:
-                                equalize_gender(node1, node2)
-                                connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 1)                    
-                            elif node1["name"].last == "" or node2["name"].last == "": 
-                                if node1["name"].last == "" and node2["name"].last == "":
-                                    equalize_gender(node1, node2)
-                                    connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 1)
-                                else:
-                                    connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 2)
-                        elif node1["name"].first == "" or node2["name"].first == "" :
-                            if node1["name"].first == "" and node2["name"].first == "":
-                                equalize_gender(node1, node2)
-                                connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 1)
-                            else:
-                                connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 2)
-                        #else:
-                            #print(node1["name"], node2["name"])
-                            
-    #BUG McGiffin    
-    #link name sharing only lastname
-    for canonical_name, data in connectionsTable.nodes(data = True):
-        lastname_list = data["name"].last_list
-        for lastname in lastname_list:
-            if lastname in proper_names and used[lastname] == False:
-                bucket = []
-                bucket.extend(canonical_names_dict[lastname])
-                if lastname[0] in proper_nouns:#check initial
-                    for canonical_name in canonical_names_dict[lastname[0]]:
-                        if canonical_name not in bucket:
-                            bucket.add(canonical_name)
-                for i in range(len(bucket)):
-                    for j in range(i+1, len(bucket)):
-                        node1 = connectionsTable.nodes[bucket[i]]
-                        node2 = connectionsTable.nodes[bucket[j]]
-                        if node1["gender"] * node2["gender"] != -1 :
-                            if node1["name"].first not in proper_names or node2["name"].first not in proper_names \
-                                or node1["name"].last == "" or node2["name"].last == "":
-                                connectionsTable.add_edge(bucket[i], bucket[j], paired = 2)
-        
-    used = {w : False for w in connectionsTable.nodes}
-    for canonical_name, data in connectionsTable.nodes(data = True):
-        if used[canonical_name] == False and data["name_category"] > 2:
-            used[canonical_name] = True  
-            cluster = [canonical_name]
-            ## group paired nodes from the neutral cluster
-            index = 0
-            while index < len(cluster):
-                for edge in connectionsTable.edges(cluster[index], data = True):
-                    if edge[2]["paired"] == 1 and not used[edge[1]]:
-                        used[edge[1]] = True
-                        cluster.append(edge[1])
-                index+=1          
-                
-            ## group their non-neutral nbh using their edges
-            candidates_edge = []
-            for cn2 in cluster:    
-                for edge in connectionsTable.edges(canonical_name, data = True):                
-                    if edge[2]["paired"] == 2 and connectionsTable.nodes[edge[1]]["gender"] * \
-                        connectionsTable.nodes[canonical_name]["gender"] != -1:
-                        candidates_edge.append(edge)
-                if len(candidates_edge) > 0:             
-                    subAT= {s[1]: connectionsTable.nodes[s[1]]["value"] for s in candidates_edge}
-                    maxMentions = max(subAT, key=subAT.get)
-                    
-                    connectionsTable.add_edge(maxMentions, canonical_name, paired = 1)
-
-                    if connectionsTable.nodes[maxMentions]["gender"] != connectionsTable.nodes[canonical_name]["gender"]:
-                        for cn2 in cluster:
-                            connectionsTable.nodes[canonical_name]["gender"] = connectionsTable.nodes[maxMentions]["gender"]
-                            
-    
-    
-    #link neutral noun with the most used nouns among their potential partner
-    used = {w : False for w in connectionsTable.nodes}
-    
-    for canonical_name, data in connectionsTable.nodes(data = True):
-        if used[canonical_name] == False and data["gender"] == 0:
-            used[canonical_name] = True
-            """
-            cluster = [canonical_name]
-            ## group paired nodes from the neutral cluster
-            cluster_1_pair(connectionsTable, used, cluster)
-
-            ## group their non-neutral nbh using their edges
-            candidates_edge = []
-            for cn2 in cluster:    
-                for edge in connectionsTable.edges(canonical_name, data = True):  
-                    if edge[2]["paired"] == 2:
-                        candidates_edge.append(edge)
-            if len(candidates_edge) > 0:     
-                subAT= {s[1]: connectionsTable.nodes[s[1]]["value"] for s in candidates_edge}
-                while len(subAT.keys()) != 0:
-                    maxMentions = max(subAT, key=subAT.get)
-                    gender = connectionsTable.nodes[maxMentions]["gender"]
-                    del subAT[maxMentions]
-                    if gender != 0:
-                        for cn2 in cluster:
-                            connectionsTable.nodes[cn2]["gender"] = gender                       
-                        break
-                    else:
-                        connectionsTable.add_edge(canonical_name, maxMentions, paired = 1)
-                        cluster.append(maxMentions)
-                        cluster_1_pair(connectionsTable, used, cluster, index = len(cluster)-1)
-            """
-
-        elif used[canonical_name] == False and data["name_category"] > 2:
-            
-            used[canonical_name] = True  
-            """
-            cluster = [canonical_name]
-            cluster_1_pair(connectionsTable, used, cluster) 
-                
-            ## group their non-neutral nbh using their edges
-            candidates_edge = []
-            for cn2 in cluster:    
-                for edge in connectionsTable.edges(canonical_name, data = True):                
-                    if edge[2]["paired"] == 2 and connectionsTable.nodes[edge[1]]["gender"] * \
-                        connectionsTable.nodes[canonical_name]["gender"] != -1:
-                        candidates_edge.append(edge)
-                if len(candidates_edge) > 0:             
-                    subAT= {s[1]: connectionsTable.nodes[s[1]]["value"] for s in candidates_edge}
-                    while len(subAT.keys()) != 0:
-                        maxMentions = max(subAT, key=subAT.get)
-                        del subAT[maxMentions]
-                        if connectionsTable.nodes[maxMentions]["name_category"] < 3:
-                            connectionsTable.add_edge(maxMentions, canonical_name, paired = 1)
-                            if connectionsTable.nodes[canonical_name]["gender"] == 0 and connectionsTable.nodes[maxMentions]["gender"] != 0:
-                                for node in cluster:
-                                    connectionsTable.nodes[node]["gender"] = connectionsTable.nodes[maxMentions]["gender"]
-                            elif connectionsTable.nodes[canonical_name]["gender"] != 0 and connectionsTable.nodes[maxMentions]["gender"] == 0:
-                                    cluster = [maxMentions]
-                                    used2 = {w : False for w in connectionsTable.nodes}
-                                    cluster_1_pair_without_used(connectionsTable, cluster) 
-                                    for node in cluster:
-                                        connectionsTable.nodes[node]["gender"] = connectionsTable.nodes[canonical_name]["gender"]
-            """        
-        """elif used[canonical_name] == False:
-            gender = connectionsTable.nodes[canonical_name]["gender"]
-            bucket = []
-            bucket.extend(connectionsTable.neighbors(canonical_name))
-            for nghb in bucket: 
-                if connectionsTable.nodes[nghb]["gender"] * gender == -1:
-                    connectionsTable.remove_edge(canonical_name,nghb)
-        """
-    #directed graph containg arrow linked to main canonical name of a cluster
-    aliases.add_nodes_from(connectionsTable.nodes(data = True))
-    print("connection established")
-    used = {w : False for w in connectionsTable.nodes}
-
-    #creates cluster of names related to every character
-    for canonical_name, data in connectionsTable.nodes(data = True):
-        if used[canonical_name] == False:  
-            used[canonical_name] = True
-            #add all neibhors and their neighbors recursively to our cluster
-            cluster = []
-            candidates = [canonical_name]
-            while len(candidates) > 0:
-                cn2 = candidates.pop()
-                cluster.append(cn2)
-                for edge in connectionsTable.edges(cn2, data = True):
-                    
-                    if edge[2]["paired"] == 1 and not used[edge[1]]:
-                        used[edge[1]] = True
-                        candidates.append(edge[1])
-                        
-            subAT= {s: connectionsTable.nodes[s]["value"] for s in cluster}
-            maxMentions = max(subAT, key=subAT.get) 
-            cluster.remove(maxMentions)
-            for cn2 in cluster:
-                aliases.add_edge(cn2, maxMentions)
-                aliasTable[maxMentions].extend(aliasTable.pop(cn2,[]))
-    print("graph made")            
-    return aliasTable, connectionsTable, aliases
-
-def equalize_gender(node1, node2):
-    if node1["gender"] == 0:
-        node1["gender"] = node2["gender"]
-    elif node2["gender"] == 0:
-        node2["gender"] = node1["gender"]
-
-#cluster unused nodes linked by an 1-value edge
-def cluster_1_pair(connectionsTable, used, cluster, index = 0):
-    while index < len(cluster):
-        for edge in connectionsTable.edges(cluster[index], data = True):
-            if edge[2]["paired"] == 1 and not used[edge[1]]:
-                used[edge[1]] = True
-                cluster.append(edge[1])
-        index+=1
-#cluster nodes linked by an 1-value edge
-def cluster_1_pair_without_used(connectionsTable, cluster, index = 0):
-    used = []
-    while index < len(cluster):
-        for edge in connectionsTable.edges(cluster[index], data = True):
-            if edge[2]["paired"] == 1 and edge[1] not in used:
-                used.append(edge[1])
-                cluster.append(edge[1])
-        index+=1
                             
 def alias_lookup(canonical_name,aliasTable, aliases):
     cnames = []
@@ -427,36 +55,6 @@ def alias_chunk_lookup(chunk,aliasTable,aliases):
         return ""
         
   
-
-def filter_alias_table(aliasTable, connectionsTable, aliases, current_context_dialogs):
-    s_t = []
-    for o in current_context_dialogs:
-        s_t.append(o['from'])
-        s_t.extend(o['to'])
-    s_t = uniques(s_t)
-    for name in list(aliasTable.keys()):
-        if name not in s_t:
-            print("filtered ", name)
-            bucket = []
-            bucket.extend(aliases.predecessors(name))
-            aliases.remove_nodes_from(bucket)
-            aliasTable.pop(name)
-            aliases.remove_node(name)
-def get_honorifics():
-    f = open("honorifics.txt", "r")
-    string  = f.read()
-    honorifics, female_honor, male_honor = ast.literal_eval(string)
-    f.close()
-    return honorifics, female_honor, male_honor
-           
-def get_nicknames():
-    f = open("nicknames.txt", "r")
-    f1 = f.read().split("\n")
-    strings = []
-    for line in f1:
-        strings.append(line.split())
-    f.close()
-    return strings
 
 ###############################################################
 # Extraction of speakers
@@ -580,11 +178,30 @@ def uniformize_speakers(current_context_dialogs,aliasTable,aliases,context_chunk
     return current_context_dialogs
 
 ###############################################################
+# Unused character filtering
+###############################################################
+
+def filter_alias_table(aliasTable, connectionsTable, aliases, current_context_dialogs):
+    s_t = []
+    for o in current_context_dialogs:
+        s_t.append(o['from'])
+        s_t.extend(o['to'])
+    s_t = uniques(s_t)
+    for name in list(aliasTable.keys()):
+        if name not in s_t:
+            #print("filtered ", name)
+            bucket = []
+            bucket.extend(aliases.predecessors(name))
+            aliases.remove_nodes_from(bucket)
+            aliasTable.pop(name)
+            aliases.remove_node(name)
+            
+###############################################################
 # Main character identification function
 ###############################################################
 
-def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldConnectionsTable,oldAliases):
-    aliasTable, connectionsTable, aliases = build_alias_table(dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases)
+def character_analysis(dialog_contexts, dialog_occurrences, chunks, oldAliasTable,oldConnectionsTable,oldAliases):
+    aliasTable, connectionsTable, aliases = book_character_table_construction.build_alias_table(chunks, oldAliasTable,oldConnectionsTable,oldAliases)
     print("Alias table created.")
     for index in range(len(dialog_contexts)):
         if index==0 or index*10//len(dialog_contexts) > (index-1)*10//len(dialog_contexts):
@@ -608,25 +225,4 @@ def character_analysis(dialog_occurrences, dialog_contexts, oldAliasTable,oldCon
     
 
 
-    """             
-    #import nltk.corpus as corpus
-    #dict2 = corpus.brown.words()
-    from nltk.corpus import wordnet
-
-    #dict_name = corpus.names.words()    
-    for c in chunks:
-        if c.head.type.find('NNP')==0 and c.head.type != "NNP-LOC" and is_valid(c.head.string):
-            #print(c.type,c.head, c.head.type, c.relations, c)            
-            name = c.head.string
-            #if (c.words[0].string == name):
-            #    print(name, c.start, c.string, c.sentence.chunk[0].start)
-            if (c != c.sentence.chunk[0] or c.words[0].string != name) and name.lower() not in BASIC and name.lower() not  in ACADEMIC and name.lower() not in PROFANITY and name.lower() not in TIME:
-                if aliasTable2.get(name,0)==0:
-                    aliasTable2[name]=[c.string]
-                    aliasTable2[name]=[c.string]
-                    
-    names2 = list(aliasTable2.keys())
-    for elem in names:
-        if elem not in names2:
-            print(elem)
-    """
+ 
