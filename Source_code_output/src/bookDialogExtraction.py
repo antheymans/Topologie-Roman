@@ -10,8 +10,7 @@ from collections import Counter
 ###############################################################
 
 def spacing_map(sentences,breaks):
-    dialog_spacing = []
-    
+    dialog_spacing = []    
     previousIndex = 0
     sceneBreak = True
     for index in range(len(sentences)):

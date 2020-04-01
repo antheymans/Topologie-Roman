@@ -31,14 +31,14 @@ def build_context_networks(len_dialog_contexts,dialog_occurrences):
                     for t in o['to']:
                         if len(t) > 0:
                             if curGraph.has_edge(o['from'], t):
-                                curGraph[o['from']][t]["weight"] += o['sentiment']
+                                curGraph[o['from']][t]["sentiment"] += o['sentiment']
                                 curGraph[o['from']][t]["mentions"] += 1
                             else:
-                                curGraph.add_edge(o['from'], t, weight=o['sentiment'], mentions=1)
+                                curGraph.add_edge(o['from'], t, sentiment=o['sentiment'], mentions=1)
                                 
         
         for e in list(curGraph.edges()):
-            curGraph[e[0]][e[1]]["weight"] /= curGraph[e[0]][e[1]]["mentions"]
+            curGraph[e[0]][e[1]]["sentiment"] /= curGraph[e[0]][e[1]]["mentions"]
         
         for n in curGraph.nodes():
             nodeCount[n] = nodeCount.get(n,0) + 1
@@ -64,13 +64,14 @@ def build_inc_networks(graphs, nodeCount):
         for e in list(g.edges(data=True)):
             if G.has_edge(e[0],e[1]):
                 mentions =G[e[0]][e[1]]['mentions'] 
-                G[e[0]][e[1]]['weight'] = G[e[0]][e[1]]['weight'] * TIME_FACTOR * (mentions-1)/mentions + e[2]['weight']
+                G[e[0]][e[1]]['sentiment'] = G[e[0]][e[1]]['sentiment'] * TIME_FACTOR * (mentions-1)/mentions + e[2]['sentiment']
                 G[e[0]][e[1]]['mentions'] += 1
             else:
-                G.add_edge(e[0],e[1],mentions=e[2]['mentions'], weight=e[2]['weight'])
+                G.add_edge(e[0],e[1],mentions=e[2]['mentions'], sentiment=e[2]['sentiment'])
 
         for n in g.nodes():
             if nodeCount[n] < NOTABILITY:
+                print(n , "node count is ", nodeCount[n])
                 G.remove_node(n)
         
         iGraphs.append(G.copy())

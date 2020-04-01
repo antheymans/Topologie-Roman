@@ -19,10 +19,11 @@ def read_book(path):
     f = codecs.open(path, encoding='utf-8')
     #book = f.read()
     book = [line for line in f]
-    replacements = [("‘",str("'")),("’",str("'")),("—",str("-")),('“',str('"')),
-                    ('”',str('"')), ('…',(' ... ')), ('...',(' ... '))]
+    replacements = [("‘",str("'")),("’",str("'")),("—",str(" - ")),('“',str('"')),
+                    ('”',str('"')), ('…',(' ... ')), ('...',(' ... ')), (",", " , ")]
+    
     for replacement in replacements:
-        book = [line.replace(replacement[0],replacement[1]) for line in book]    
+        book = [line.replace(replacement[0],replacement[1]) for line in book] 
     return book
 
 def get_sentences(book):
