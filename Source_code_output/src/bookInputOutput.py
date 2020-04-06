@@ -274,14 +274,14 @@ def csv_aliases(aliasTable, connectionsTable, aliases, filename):
     f4.close()
     
     name_string = "Canonical Name" + CSV_COMMA + "Honorifics" + CSV_COMMA + "Firstname" + CSV_COMMA + "MiddleName" + CSV_COMMA \
-        + "LastName"  +  CSV_COMMA + "Name_category"  +  CSV_COMMA + "Gender" 
+        + "LastName"  +  CSV_COMMA + "Name_category"  +  CSV_COMMA + "Gender" + CSV_COMMA + "Value"
     for node, data in connectionsTable.nodes(data = True):
         name_string += "\n" + node + CSV_COMMA + data["name"].title + CSV_COMMA + data["name"].first + CSV_COMMA +\
             data["name"].middle +\
             CSV_COMMA + data["name"].last +  \
             CSV_COMMA + str(data["name_category"]) + \
-            CSV_COMMA + str(data["gender"])
-        name_string += "\n"
+            CSV_COMMA + str(data["gender"]) + \
+            CSV_COMMA + str(data["value"])
     f3 = codecs.open(PATH_CSV + filename + "/names.csv", "wb+", encoding='utf-8')
     f3.write(name_string)
 
@@ -469,8 +469,10 @@ def output_graphs(filename, iGraphs, graphs):
     csv_clustering(filename,iGraphs,"Incremental")
     csv_degree_incremental(filename,iGraphs[-1])
     csv_new_characters(filename,iGraphs)
-    build_png_graphs(filename,graphs,"Context")
-    build_png_graphs(filename,iGraphs,"Incremental")
     output_csv_graphs(filename,graphs,"Context")
     output_csv_graphs(filename,iGraphs,"Incremental")
+    print("csv saved")
+    build_png_graphs(filename,graphs,"Context")
+    build_png_graphs(filename,iGraphs,"Incremental")
+    print("png saved")
     write_graph(iGraphs[-1], filename)#weit

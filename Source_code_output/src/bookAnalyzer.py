@@ -58,7 +58,7 @@ def book_analyze(file_txt):
     tmps1=time.time()
     
     # Network building
-    iGraphs, graphs = bNB.build_networks(dialog_occurrences, len(dialog_contexts))
+    iGraphs, graphs = bNB.build_networks(dialog_occurrences, len(dialog_contexts), connectionsTable)
     
     bIO.output_graphs(filename, iGraphs, graphs)
     

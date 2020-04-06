@@ -4,7 +4,6 @@
 import networkx as nx
 
 from helpers import uniques
-
 TIME_FACTOR = 0.9 #Factor by which the score decreases after each new mention during the incremental networks
 NOTABILITY = 1 #Minimum number of conversations in which an agent must be present for relevance
     
@@ -82,9 +81,13 @@ def build_inc_networks(graphs, nodeCount):
 # Main network generation function
 ###############################################################
 
-def build_networks(dialog_occurrences, len_dialog_contexts):
+def build_networks(dialog_occurrences, len_dialog_contexts, connectionsTable):
     graphs, nodeCount = build_context_networks(len_dialog_contexts, dialog_occurrences)
     iGraphs = build_inc_networks(graphs,nodeCount)
+    for node in iGraphs[-1].nodes():
+        if node in connectionsTable.nodes():
+            gender = connectionsTable.nodes()[node]["gender"]
+            iGraphs[-1].nodes()[node]["gender"] = gender
     return iGraphs, graphs
 
 

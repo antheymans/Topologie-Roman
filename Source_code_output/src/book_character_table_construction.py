@@ -280,14 +280,23 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
                         node2 = connectionsTable.nodes[bucket[j]]
                         if node1["gender"] * node2["gender"] != -1 and (bucket[i], bucket[j]) not in connectionsTable.edges() :
                             connectionsTable.add_edge(bucket[i], bucket[j], paired = 2)
+    
+    for edge in connectionsTable.edges(data = True):
+        if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
+            print("error begin")
+            exit()
+    #during the first phase, some inconsistent 2-paired conenction could have been made 
+    #if a neutral name change its gender after a connection have been made
+    for edge in connectionsTable.edges():
+        if connectionsTable.nodes[edge[0]]["gender"] * connectionsTable.nodes[edge[1]]["gender"] == -1:        
+            connectionsTable.remove_edge(edge[0],edge[1])
+
+
                             
     #link neutral noun with the most used nouns among their potential partner
-    used = {w : False for w in connectionsTable.nodes}
-    
+    used = {w : False for w in connectionsTable.nodes}    
     for canonical_name, data in connectionsTable.nodes(data = True):
         if used[canonical_name] == False and data["gender"] == 0 and data["name_category"] <= 2:
-            used[canonical_name] = True
-            
             cluster = [canonical_name]
             ## group paired nodes from the neutral cluster
             cluster_1_pair(connectionsTable, used, cluster)
@@ -296,7 +305,7 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
             candidates_edge = []
             for cn2 in cluster:    
                 for edge in connectionsTable.edges(canonical_name, data = True):  
-                    if edge[2]["paired"] == 2:
+                    if edge[2]["paired"] == 2 and edge not in candidates_edge:
                         candidates_edge.append(edge)
             if len(candidates_edge) > 0:     
                 subAT= {s[1]: connectionsTable.nodes[s[1]]["value"] for s in candidates_edge}
@@ -306,27 +315,44 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
                     del subAT[maxMentions]
                     if gender != 0:
                         for cn2 in cluster:
-                            connectionsTable.nodes[cn2]["gender"] = gender                       
+                            connectionsTable.nodes[cn2]["gender"] = gender  
+                            used[cn2] = True
+                        for cn2 in cluster:
+                            for edge in connectionsTable.edges(canonical_name, data = True):
+                                if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
+                                    print(edge, connectionsTable.nodes[edge[0]]["gender"], connectionsTable.nodes[edge[1]]["gender"], "error neutral")
+                                    print(cluster)
+                                    exit()
+                        #remove edge genderly incorrect
+                        for edge in candidates_edge:
+                            if connectionsTable.nodes[edge[0]]["gender"] * connectionsTable.nodes[edge[1]]["gender"] == -1:        
+                                connectionsTable.remove_edge(edge[0],edge[1])
+                        print(cluster)
                         break
-                    else:
+                        
+                        
+                    elif not used[maxMentions]:
                         connectionsTable.add_edge(canonical_name, maxMentions, paired = 1)
                         cluster.append(maxMentions)
                         cluster_1_pair(connectionsTable, used, cluster, index = len(cluster)-1)
-            
 
-        elif used[canonical_name] == False and data["name_category"] > 2:
+           
+    for edge in connectionsTable.edges(data = True):
+        if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
+            print(used[edge[0]], used[edge[1]])
+            print(edge, connectionsTable.nodes[edge[0]]["gender"], connectionsTable.nodes[edge[1]]["gender"], "error neutral")
             
+    for canonical_name, data in connectionsTable.nodes(data = True):
+        if used[canonical_name] == False and data["name_category"] > 2:
             used[canonical_name] = True  
-            
             cluster = [canonical_name]
             cluster_1_pair(connectionsTable, used, cluster) 
-                
             ## group their non-neutral nbh using their edges
             candidates_edge = []
             for cn2 in cluster:    
                 for edge in connectionsTable.edges(canonical_name, data = True):                
                     if edge[2]["paired"] == 2 and connectionsTable.nodes[edge[1]]["gender"] * \
-                        connectionsTable.nodes[canonical_name]["gender"] != -1:
+                        connectionsTable.nodes[canonical_name]["gender"] != -1 and edge not in candidates_edge:
                         candidates_edge.append(edge)
             if len(candidates_edge) > 0: 
                 subAT= {s[1]: connectionsTable.nodes[s[1]]["value"] for s in candidates_edge}
@@ -349,16 +375,16 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
                         cluster_1_pair_without_used(connectionsTable, cluster) 
                         for node in cluster:
                             connectionsTable.nodes[node]["gender"] = connectionsTable.nodes[canonical_name]["gender"]
+                #remove useless edge            
+                for edge in candidates_edge:
+                    if connectionsTable.nodes[edge[0]]["gender"] * connectionsTable.nodes[edge[1]]["gender"] == -1:        
+                        connectionsTable.remove_edge(edge[0],edge[1])        
 
-                        
-        elif used[canonical_name] == False:#during the first phase, some inconsistent 2-paired conenction could have been made
-            gender = connectionsTable.nodes[canonical_name]["gender"]
-            bucket = []
-            bucket.extend(connectionsTable.neighbors(canonical_name))
-            for nghb in bucket: 
-                if connectionsTable.nodes[nghb]["gender"] * gender == -1:
-                    connectionsTable.remove_edge(canonical_name,nghb)
-     
+    for edge in connectionsTable.edges(data = True):
+        if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
+            print("error 3+")
+            exit()     
+            
     #directed graph containg arrow linked to main canonical name of a cluster
     aliases.add_nodes_from(connectionsTable.nodes(data = True))
     print("connection established")
@@ -374,8 +400,7 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
             while len(candidates) > 0:
                 cn2 = candidates.pop()
                 cluster.append(cn2)
-                for edge in connectionsTable.edges(cn2, data = True):
-                    
+                for edge in connectionsTable.edges(cn2, data = True):                
                     if edge[2]["paired"] == 1 and not used[edge[1]]:
                         used[edge[1]] = True
                         candidates.append(edge[1])
@@ -386,7 +411,10 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
             for cn2 in cluster:
                 aliases.add_edge(cn2, maxMentions)
                 aliasTable[maxMentions].extend(aliasTable.pop(cn2,[]))
-    print("graph made")            
+    print("graph made")        
+    for edge in aliases.edges():
+        if connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
+            print("error incorect gender for :" , edge, connectionsTable.nodes[edge[0]]["gender"], connectionsTable.nodes[edge[1]]["gender"])
     return aliasTable, connectionsTable, aliases
 
 #from chunk, extract canonical name in a wordlist form
