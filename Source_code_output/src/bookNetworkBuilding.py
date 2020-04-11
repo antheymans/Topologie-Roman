@@ -72,7 +72,9 @@ def build_inc_networks(graphs, nodeCount):
             if nodeCount[n] < NOTABILITY:
                 print(n , "node count is ", nodeCount[n])
                 G.remove_node(n)
-        
+        #"" is null speaker and should not be considered as a node        
+        if "" in G.nodes():
+            G.remove_node("")
         iGraphs.append(G.copy())
         
     return iGraphs
@@ -87,7 +89,10 @@ def build_networks(dialog_occurrences, len_dialog_contexts, connectionsTable):
     for node in iGraphs[-1].nodes():
         if node in connectionsTable.nodes():
             gender = connectionsTable.nodes()[node]["gender"]
-            iGraphs[-1].nodes()[node]["gender"] = gender
+            iGraphs[-1].nodes()[node]["gender"] = gender            
+        else:
+            print("error graph construction: node " + str(iGraphs[-1].nodes(data = True)[node]) + " not in connectionsTable")
+            iGraphs[-1].nodes()[node]["gender"] = 0
     return iGraphs, graphs
 
 

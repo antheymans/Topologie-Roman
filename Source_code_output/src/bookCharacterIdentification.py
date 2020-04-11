@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-#Library handling the character identification and alias resolution
+#Library handling the character identification
 
 from collections import Counter
 
@@ -190,11 +190,11 @@ def filter_alias_table(aliasTable, connectionsTable, aliases, current_context_di
     for name in list(aliasTable.keys()):
         if name not in s_t:
             #print("filtered ", name)
-            bucket = []
+            bucket = [name]
             bucket.extend(aliases.predecessors(name))
             aliases.remove_nodes_from(bucket)
+            connectionsTable.remove_nodes_from(bucket)
             aliasTable.pop(name)
-            aliases.remove_node(name)
             
 ###############################################################
 # Main character identification function

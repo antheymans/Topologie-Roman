@@ -43,6 +43,9 @@ def get_transitivity_from_graph(G): #transitivity = general clustering
 
 def get_length_from_graph(G):
     return G.size()
+
+def get_average_degree_from_graph(G):
+    return (2*G.size())/len(G)
     
 ##Non functionning    
 def get_degree(filename):#graph_degrees or degrees_exponents ? bug
@@ -74,7 +77,6 @@ def get_average_degree(filename):
             value +=1
             splitline = line.split(CSV_COMMA)
             average_degree +=int(splitline[1])
-    #print(average_degree,len(degrees_file)-2, value)
     average_degree /= (len(degrees_file)-2)#-1 for "" line and -1 for title line
     return average_degree
 
@@ -139,41 +141,60 @@ def export_signature_table(signature):
     f.write(csv)
     f.close()
   
-def export_random_signature_table(signature):
+def export_graph_signature_table(signature, filename):
     csv = "Book" + CSV_COMMA + "Clustering" + CSV_COMMA +"Transitivity" +  CSV_COMMA 
-    csv += "Graph Size" + CSV_COMMA + "\n"
+    csv += "Average Degree" + CSV_COMMA + "Graph Size" + CSV_COMMA + "\n"
     for book in list(signature.keys()):
         csv += book + CSV_COMMA + str(signature[book]["Clustering"]) + CSV_COMMA 
-        csv += str(signature[book]["Transitivity"]) + CSV_COMMA 
+        csv += str(signature[book]["Transitivity"]) + CSV_COMMA + str(signature[book]["Average Degree"]) + CSV_COMMA
         csv += str(signature[book]["Graph Size"]) + CSV_COMMA + "\n" 
-    f = open(PATH_CSV+"random_graph_signatures.csv","w+")
+    f = open(PATH_CSV+ filename + ".csv","w+")
     f.write(csv)
     f.close()  
 
 def get_signature(files):
     signature = {}
     signature_random_graph = {}
+    signature_male_graph = {}
+    signature_female_graph = {}
+    signature_gendered_graph = {}
     speaker_rates = get_rates()
     for book_file in files:
         filename = book_file[:-5]
-        degree = get_degree(filename)
+        #degree = get_degree(filename)
         graph = get_graph(filename)    
         graph_size = len(graph)
         graph_edge_size = graph.number_of_edges()
+        male_graph = graph.subgraph([n for n, d in graph.nodes(data=True) if d['gender']==1])
+        female_graph = graph.subgraph([n for n, d in graph.nodes(data=True) if d['gender']==-1])
+        gendered_graph = graph.subgraph([n for n, d in graph.nodes(data=True) if d['gender']!=0])
+        
+        
         signature[filename] = {"Threshold":get_threshold(filename),"SIR":speaker_rates[filename], 
             "Clustering": get_clustering(filename),"Transitivity": get_transitivity_from_graph(graph),
             "Average Degree":get_average_degree(filename),"Graph Size": (len(graph), graph_edge_size) }
         
+
+        
         random_graph = nx.fast_gnp_random_graph(graph_size, graph_edge_size * 2 /(graph_size * (graph_size -1))) #nbr edge among all existing edge 
         signature_random_graph[filename] = {"Clustering": get_clustering_from_graph(random_graph),"Transitivity": get_transitivity_from_graph(random_graph),
-            "Graph Size": (len(graph), random_graph.number_of_edges()) }
-    return signature, signature_random_graph
+            "Average Degree":get_average_degree_from_graph(random_graph), "Graph Size": (len(random_graph), random_graph.number_of_edges()) }
+        signature_male_graph[filename] = {"Clustering": get_clustering_from_graph(male_graph),"Transitivity": get_transitivity_from_graph(male_graph),
+            "Average Degree":get_average_degree_from_graph(male_graph), "Graph Size": (len(male_graph), male_graph.number_of_edges()) }
+        signature_female_graph[filename] = {"Clustering": get_clustering_from_graph(female_graph),"Transitivity": get_transitivity_from_graph(female_graph),
+            "Average Degree":get_average_degree_from_graph(female_graph), "Graph Size": (len(female_graph), female_graph.number_of_edges()) }
+        signature_gendered_graph[filename] = {"Clustering": get_clustering_from_graph(gendered_graph),"Transitivity": get_transitivity_from_graph(gendered_graph),
+            "Average Degree":get_average_degree_from_graph(gendered_graph), "Graph Size": (len(gendered_graph), gendered_graph.number_of_edges()) }
+    return signature, signature_random_graph, signature_male_graph, signature_female_graph, signature_gendered_graph
     
     
 def main_signature(files):
-    signature, random_signature = get_signature(files)
+    signature, random_signature, signature_male_graph, signature_female_graph,signature_gendered_graph = get_signature(files)
     export_signature_table(signature)
-    export_random_signature_table(random_signature)
+    export_graph_signature_table(random_signature, "random_graph_signatures")
+    export_graph_signature_table(signature_male_graph, "male_graph_signatures")
+    export_graph_signature_table(signature_female_graph, "female_graph_signatures")
+    export_graph_signature_table(signature_gendered_graph, "gendered_graph_signatures")
     
 if __name__ == '__main__':
     files = get_files_in_folder(PATH_BOOKS)

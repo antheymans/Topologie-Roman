@@ -472,7 +472,9 @@ def output_graphs(filename, iGraphs, graphs):
     output_csv_graphs(filename,graphs,"Context")
     output_csv_graphs(filename,iGraphs,"Incremental")
     print("csv saved")
+    write_graph(iGraphs[-1], filename)#weit
+    print("json saved")
     build_png_graphs(filename,graphs,"Context")
     build_png_graphs(filename,iGraphs,"Incremental")
     print("png saved")
-    write_graph(iGraphs[-1], filename)#weit
+    
