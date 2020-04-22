@@ -1,7 +1,6 @@
 #!/usr/bin/python2.7
 # -*- coding: utf-8 -*-
 
-import helpers
 import bookInputOutput as bIO
 import bookDialogExtraction as bDE
 import bookCharacterIdentification as bCID
@@ -20,16 +19,16 @@ def book_analyze(file_txt):
     OUTPUT: .csv, .png and output files (no return statement) 
     """
     filename = file_txt[:-4]
-
-    print("COMPUTING BOOK : ", filename)
+    print "COMPUTING BOOK : ", filename
     bIO.create_folders(filename)
-    sentences, breaks, sentiments, chunks, speakers = bIO.load_book(filename)
+    sentences, breaks, sentiments, chunks = bIO.load_book(filename)
+    
     
     # Extracts the dialogs from the book
-    print("Extracting dialogs...")
-    dialog_spacing, dialog_occurrences, dialog_contexts, count, threshold = bDE.dialog_extraction(sentences, breaks, sentiments, chunks, speakers)
-    print("Dialog extraction complete !")
-
+    print "Extracting dialogs..."
+    dialog_spacing, dialog_occurrences, dialog_contexts, count, threshold = bDE.dialog_extraction(sentences, breaks, sentiments, chunks)
+    print "Dialog extraction complete !"
+    
     #Build the CSV spacing map
     bIO.build_csv_spacing_map(dialog_spacing, count, threshold, filename)
     
@@ -39,32 +38,26 @@ def book_analyze(file_txt):
     bIO.update_stats(filename,stat)
     
     #Load the name files
-    previous_book = ""
-    if False:
-        previous_book = input("Use a previous book? If so, enter its name.")
+    previous_book = raw_input("Use a previous book? If so, enter its name.")
     oldAliasTable, oldConnectionsTable, oldAliases = bIO.load_alias_table(previous_book)
     
-    print("Character analysis...")
-    aliasTable, connectionsTable, aliases = bCID.character_analysis(dialog_contexts, dialog_occurrences, chunks,oldAliasTable,oldConnectionsTable,oldAliases,speakers)
-    print("Character analysis complete !")
+    print "Character analysis..."
+    aliasTable, connectionsTable, aliases = bCID.character_analysis(dialog_occurrences, dialog_contexts,oldAliasTable,oldConnectionsTable,oldAliases)
+    print "Character analysis complete !"
     
     bIO.export_aliases(aliasTable, connectionsTable, aliases, filename)
     bIO.save_occurrences_CID(filename, dialog_occurrences)
     
     stat = compute_statistics_CID(dialog_occurrences)
     bIO.update_stats_CID(filename,stat)
-    
-    import time 
-    tmps1=time.time()
+
     
     # Network building
-    iGraphs, graphs = bNB.build_networks(dialog_occurrences, len(dialog_contexts), connectionsTable)
+    iGraphs, graphs = bNB.build_networks(dialog_occurrences, len(dialog_contexts))
     
     bIO.output_graphs(filename, iGraphs, graphs)
     
-    tmps2=time.time()-tmps1
-    print("Temps d'execution = %f" %tmps2)
-    print("Analysis complete!")
+    print "Analysis complete!"
 
 def read_all():
     # Go through all the books
@@ -73,10 +66,10 @@ def read_all():
         book_analyze(f)
     
 if __name__ == "__main__":
-    title = input("Enter the title of the .txt file to be analyzed ('all' for all files).\n")
+    title = raw_input("Enter the title of the .txt file to be analyzed ('all' for all files).\n")
     if title == "all":
         read_all()
     elif title[-4:] == ".txt":
         book_analyze(title)
     else:
-        book_analyze(title + ".txt")
+        print("the input is not valid")

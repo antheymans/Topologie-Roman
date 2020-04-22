@@ -21,13 +21,13 @@ def is_valid(word):
         return False
     return True
     
-def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
+def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
     aliasTable = oldAliasTable
     connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
     aliases=oldAliases #Initialized at new graph if nothing is loaded
     chunks = []
 
-    for l in sentence:
+    for l in sentences:
         for s in l:
             if isinstance(s, pen.Sentence):
                 chunks.extend(s.chunks)
@@ -44,7 +44,6 @@ def build_alias_table(sentence, oldAliasTable,oldConnectionsTable,oldAliases):
             nameparser.config.CONSTANTS.titles.add(honorific.lower())
            
     honorifics = nameparser.config.titles.TITLES
-    verbs = get_verb_dependency()
     stop_words = get_stop_list()
 
     for c in chunks:
@@ -505,6 +504,64 @@ def get_verb_dependency():
     f.close()
     return strings
 
+def build_alias_table_script(sentences, oldAliasTable,oldConnectionsTable,oldAliases, speakers):
+    aliasTable = oldAliasTable
+    connectionsTable = oldConnectionsTable #Initialized at new graph if nothing is loaded
+    aliases=oldAliases #Initialized at new graph if nothing is loaded
+    honorifics, female_honorifics, male_honorifics = get_honorifics()
+    for honorific in honorifics:
+        if honorific not in nameparser.config.CONSTANTS.titles:
+            nameparser.config.CONSTANTS.titles.add(honorific)
+            nameparser.config.CONSTANTS.titles.add(honorific.lower())
+    honorifics = nameparser.config.titles.TITLES
+    stop_words = get_stop_list()
+    names_corpus = nltk.corpus.names
+    male_names = names_corpus.words('male.txt')
+    female_names = names_corpus.words('female.txt')
+        
+    #Second pass,check all canonical names from chunks headed by a proper name
 
+    for i in range(len(speakers)):
+        canonical_name = speakers[i]
+        if canonical_name != "":
+            if canonical_name not in connectionsTable:        
+                name = nameparser.HumanName(canonical_name)                    
+                gender = 0
+                for i in range(len(name.title_list)):
+                    honorific = name.title_list[i]
+                    if honorific[-1] == ".":
+                        honorific = honorific[:-1]
+                    if honorific in female_honorifics:
+                        gender -= 1
+                    elif honorific in male_honorifics:
+                        gender += 1
+                if name.first != "":
+                    if name.first in male_names:
+                        gender +=1
+                    elif name.first in female_names:
+                        gender -=1
+                if gender > 0:
+                    gender = 1
+                elif gender < 0:
+                    gender = -1
+                name_category = 6 #default 6: only title
+                if name.title != "" and name.first != "" and name.last != "":
+                    name_category = 1
+                elif name.first != "" and name.last != "":
+                    name_category = 2
+                elif name.title != "" and name.first != "":
+                    name_category = 3
+                elif name.title != "" and name.last != "":
+                    name_category = 4 
+                elif name.first != "" or name.last != "" :
+                    name_category = 5
 
-
+                connectionsTable.add_node(canonical_name)
+                connectionsTable.nodes[canonical_name]["gender"] = gender
+                connectionsTable.nodes[canonical_name]["name_category"] = name_category
+                connectionsTable.nodes[canonical_name]["name"] = name
+                connectionsTable.nodes[canonical_name]["value"] = 1                        
+            else:
+                connectionsTable.nodes[canonical_name]["value"] += 1 
+    aliases.add_nodes_from(connectionsTable.nodes())
+    return aliasTable, connectionsTable, aliases

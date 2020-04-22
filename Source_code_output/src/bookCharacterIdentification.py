@@ -25,7 +25,7 @@ def alias_lookup(canonical_name,aliasTable, aliases):
         word_list = canonical_name.split()
         if len(word_list)>1:#More than one word
             for word in word_list:
-                for key in list(aliasTable.keys()):
+                for key in list(aliases.nodes()):
                     if word == key:
                         cnames.append(key)
     for i in range(0, len(cnames)):
@@ -200,7 +200,8 @@ def filter_alias_table(aliasTable, connectionsTable, aliases, current_context_di
 # Main character identification function
 ###############################################################
 
-def character_analysis(dialog_contexts, dialog_occurrences, chunks, oldAliasTable,oldConnectionsTable,oldAliases):
+def character_analysis(dialog_contexts, dialog_occurrences, chunks, oldAliasTable,oldConnectionsTable,oldAliases, speakers):
+    #aliasTable, connectionsTable, aliases = book_character_table_construction.build_alias_table_script(chunks, oldAliasTable,oldConnectionsTable,oldAliases, speakers)
     aliasTable, connectionsTable, aliases = book_character_table_construction.build_alias_table(chunks, oldAliasTable,oldConnectionsTable,oldAliases)
     print("Alias table created.")
     for index in range(len(dialog_contexts)):

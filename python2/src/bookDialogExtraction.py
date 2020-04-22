@@ -10,7 +10,8 @@ from collections import Counter
 ###############################################################
 
 def spacing_map(sentences,breaks):
-    dialog_spacing = []    
+    dialog_spacing = []
+    
     previousIndex = 0
     sceneBreak = True
     for index in range(len(sentences)):
@@ -34,12 +35,12 @@ def compute_threshold(dialog_spacing):
         if count.get(i,0)==0:
             first_zero=i
             break
-    for i in reversed(list(range(1,first_zero))):
+    for i in reversed(range(1,first_zero)):
         currCount = count.get(i,0)
         if currCount >= 100 or (currCount >=max(10,count.get(i+1,0)*2) and all ([count.get(j,0) > currCount for j in range(1,i)])):
             threshold = i
             break
-    print("Threshold =",threshold)
+    print "Threshold =",threshold
     return threshold, count
 
 ###############################################################
@@ -63,7 +64,7 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
             prevSpace = dialog_indices[index-1]
             
         if space[1] == 0:
-            for brIndex in reversed(list(range(space[0]))):
+            for brIndex in reversed(range(space[0])):
                 if breaks[brIndex]:
                     break
             if len([i for i in range(d_start,brIndex) if i in dialog_indices]) > 0:
@@ -82,58 +83,26 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
 # Dialog occurrence building
 ###############################################################
 
-def extract_agents(sentence, speaker):
+def extract_agents(sentence):
     #We only consider dialogue
-    s = sentence.split(str('"'))
+    s = sentence.split(unicode('"'))
     d_from=[]
     nnp_narration=[]
     d_to=[]
     
     for index in range(len(s)):
-        ptree = pen.parsetree(s[index],relations=True,  encoding = "utf-8", model = None)
+        ptree = pen.parsetree(s[index],relations=True)
         if index%2 == 1: #Dialogue, extract objects
-            d_to.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in list(t.relations['SBJ'].keys())])
-            d_to.extend([t.relations['OBJ'][key] for t in ptree.sentences for key in list(t.relations['OBJ'].keys())])
+            d_to.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in t.relations['SBJ'].keys()])
+            d_to.extend([t.relations['OBJ'][key] for t in ptree.sentences for key in t.relations['OBJ'].keys()])
         elif len(ptree.sentences) > 0: #Not dialogue, extract potential speakers
-            d_from.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in list(t.relations['SBJ'].keys())])
+            d_from.extend([t.relations['SBJ'][key] for t in ptree.sentences for key in t.relations['SBJ'].keys()])
             nnp_narration.extend([c for t in ptree.sentences for c in t.chunks if c.head.type.find('NNP')==0])
     
     if all([f.head.type.find('NNP')!=0 for f in d_from]):
         d_from.extend(nnp_narration)
-        
-    filtered_d_from = []
-    for chunk in d_from:
-        new_list = []
-        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
-        for word in chunk.words:
-            if word.string[0] == word.string[0].upper() or word == chunk.head:
-                if detected == -1:
-                    filtered_d_from.append(' '.join(new_list))
-                    new_list = []
-                detected = 1
-                new_list.append(word.string)
-            elif detected == 1:
-                detected = -1
-        filtered_d_from.append(' '.join(new_list))
-        
-        
-    filtered_d_to = []
-    for chunk in d_to:
-        new_list = []
-        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
-        for word in chunk.words:
-            if word.string[0] == word.string[0].upper() or word == chunk.head:
-                if detected == -1:
-                    filtered_d_to.append(' '.join(new_list))
-                    new_list = []
-                detected = 1
-                new_list.append(word.string)
-            elif detected == 1:
-                detected = -1
-        filtered_d_to.append(' '.join(new_list))
-    return filtered_d_from, filtered_d_to
     
-    
+    return d_from, d_to
 
 def get_weight_from_sentiments(sentiment):
     """
@@ -143,43 +112,40 @@ def get_weight_from_sentiments(sentiment):
     polarity, subjectivity = sentiment
     return polarity
 
-def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts, speakers):
+def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts):
     dialog_occurrences = []
     dialog_indices = [s[0] for s in dialog_spacing]
     
     for i in range(len(dialog_indices)):
         index = dialog_indices[i]
         if i==0 or index*10//len(sentences) > dialog_indices[i-1]*10//len(sentences):
-            print("Dialog metadata generation:", index*10//len(sentences)*10, "% completed...")
+            print "Dialog metadata generation:", index*10//len(sentences)*10, "% completed..."
         sentence = sentences[index]
         
         #By construction, dialogs belong only to one context
         context = [j for j in range(len(dialog_contexts)) if (dialog_contexts[j][0] <= index and dialog_contexts[j][1] > index)][0] 
         
         #Dialog occurrence building
-        d_from, d_to = extract_agents(sentence, speakers[index])
-        d_from.append(speakers[index])
+        d_from, d_to = extract_agents(sentence)
         d_sentiment = get_weight_from_sentiments(sentiments[index])
         dialog_occurrence = {'from': d_from, 'to': d_to, 'sentiment': d_sentiment, 
                              'sentence': sentence, 'index': index, 'context': context}
         
         dialog_occurrences.append(dialog_occurrence)
-        #print("sentence ",sentence, "speaker ", speakers[index], d_from, d_to)
-        
     
-    print("Dialog metadata generation: 100% completed!")
+    print "Dialog metadata generation: 100% completed!"
     return dialog_occurrences
 
 ###############################################################
 # Main dialog extraction method
 ###############################################################
 
-def dialog_extraction(sentences, breaks, sentiments, chunks, speakers):
+def dialog_extraction(sentences, breaks, sentiments, chunks):
     dialog_spacing = spacing_map(sentences,breaks)
     threshold, count = compute_threshold(dialog_spacing)
     
     dialog_contexts = get_contexts(chunks, breaks,dialog_spacing,threshold,len(sentences))
-    print("Context generation complete...")
-    dialog_occurrences = get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts, speakers)
+    print "Context generation complete..."
+    dialog_occurrences = get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts)
     
     return dialog_spacing, dialog_occurrences, dialog_contexts, count, threshold

@@ -11,6 +11,7 @@ import pattern.text.en as pen
 from helpers import PATH_BOOKS, PATH_BOOKS_OBJECT
 
 EMPTY_STRING=re.compile('\s+',re.U)
+SCRIPT_SPEAKER =re.compile('_',re.U)
 
 def read_book(path):
     """
@@ -32,12 +33,21 @@ def get_sentences(book):
     """
     sentences = []
     chunks = []
+    speakers = []
+    speaker = ""
+    script = True
     for line in book:
         if EMPTY_STRING.match(line):
             sentences.append(line)
             chunks.append([])
+            speakers.append("")            
+        elif SCRIPT_SPEAKER.match(line):
+            wordlist = line[1:-2].split("(")[0].split()
+            for i in range(len(wordlist)):
+                wordlist[i] = wordlist[i].capitalize()
+            speaker = ' '.join(wordlist)
+            print(repr(speaker))
         else:
-        
             parsedLine = pen.parsetree(line, relations=True, encoding = "utf-8", model = None)
             #Regroup a whole dialogue into a single sentence
             to_ignore = []
@@ -54,7 +64,9 @@ def get_sentences(book):
                                 break
                     sentences.append(sentence)
                     chunks.append(chunk)
-    return sentences, chunks
+                    speakers.append(speaker)
+            speaker = ""
+    return sentences, chunks, speakers
 
 def get_breaks(sentences):
     """
@@ -68,18 +80,30 @@ def get_breaks(sentences):
             breaks.append(False)
     return breaks
 
+def get_speaker(sentences):
+    """
+    Return whether or not each sentence in a list is a speaker description (for scripts)
+    """
+    speaker = []
+    for sentence in sentences:
+        if SCRIPT_SPEAKER.match(sentence):
+            speaker.append(True)
+        else:
+            speaker.append(False)
+    return speaker
+    
 def build_book(path):
     book = read_book(path)
     print("Book read!")
     #book = solve_coreference(book)
     #print("coreference extracted")
-    sentences, chunks = get_sentences(book)
+    sentences, chunks, speakers = get_sentences(book)
     print("Sentences extracted!")
     breaks = get_breaks(sentences)
     print("Scene and chapter breaks identified!")
     sentiments = [pen.sentiment(sentence) for sentence in sentences]
     print("Sentiments extracted!")
-    return sentences, breaks, sentiments, chunks
+    return sentences, breaks, sentiments, chunks, speakers
 
 
 
