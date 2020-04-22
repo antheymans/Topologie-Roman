@@ -4,6 +4,7 @@
 import pattern.text.en as pen
 from collections import Counter
 
+from helpers import extract_name_from_chunk
 ###############################################################
 # Build the dialog_spacing map 
 # (has to be done independently to extract the threshold value)
@@ -103,37 +104,18 @@ def extract_agents(sentence, speaker):
         
     filtered_d_from = []
     for chunk in d_from:
-        new_list = []
-        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
-        for word in chunk.words:
-            if word.string[0] == word.string[0].upper() or word == chunk.head:
-                if detected == -1:
-                    filtered_d_from.append(' '.join(new_list))
-                    new_list = []
-                detected = 1
-                new_list.append(word.string)
-            elif detected == 1:
-                detected = -1
-        filtered_d_from.append(' '.join(new_list))
+        names = extract_name_from_chunk(chunk)
+        filtered_d_from.extend(names)
         
         
     filtered_d_to = []
     for chunk in d_to:
-        new_list = []
-        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
-        for word in chunk.words:
-            if word.string[0] == word.string[0].upper() or word == chunk.head:
-                if detected == -1:
-                    filtered_d_to.append(' '.join(new_list))
-                    new_list = []
-                detected = 1
-                new_list.append(word.string)
-            elif detected == 1:
-                detected = -1
-        filtered_d_to.append(' '.join(new_list))
+        names = extract_name_from_chunk(chunk)
+        filtered_d_to.extend(names)
+        
     return filtered_d_from, filtered_d_to
-    
-    
+
+
 
 def get_weight_from_sentiments(sentiment):
     """
@@ -157,8 +139,9 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts, spea
         context = [j for j in range(len(dialog_contexts)) if (dialog_contexts[j][0] <= index and dialog_contexts[j][1] > index)][0] 
         
         #Dialog occurrence building
-        d_from, d_to = extract_agents(sentence, speakers[index])
-        d_from.append(speakers[index])
+        d_from, d_to = extract_agents(sentence)
+        if speakers[index] != "":
+            d_from.append(speakers[index])
         d_sentiment = get_weight_from_sentiments(sentiments[index])
         dialog_occurrence = {'from': d_from, 'to': d_to, 'sentiment': d_sentiment, 
                              'sentence': sentence, 'index': index, 'context': context}

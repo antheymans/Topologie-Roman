@@ -103,4 +103,18 @@ def compute_statistics_CID(dialog_occurrences):
     print("Statistics CID: "+str(percentID)+ "% of recognized [UNKNOWN, Identified] = ["+str(cUnk)+","+str(cOth)+"]")
     return percentID
 
-
+def extract_name_from_chunk(chunk):
+        name_list = []
+        wordlist = []
+        detected = 0#no from detected, 1 from detected , -1 from already detected: looking for a second one
+        for word in chunk.words:
+            if word.string[0] == word.string[0].upper() or word == chunk.head:
+                if detected == -1:
+                    name_list.append(' '.join(wordlist))
+                    wordlist = []
+                detected = 1
+                wordlist.append(word.string)
+            elif detected == 1:
+                detected = -1
+        name_list.append(' '.join(wordlist))
+        return name_list

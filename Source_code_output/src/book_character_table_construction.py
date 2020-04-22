@@ -413,6 +413,7 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
             print("error incorect gender for :" , edge, connectionsTable.nodes[edge[0]]["gender"], connectionsTable.nodes[edge[1]]["gender"])
     return aliasTable, connectionsTable, aliases
 
+        
 #from chunk, extract canonical name in a wordlist form
 def canonical_names_from_chunk(chunk, proper_names):
     detected = 0

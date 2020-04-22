@@ -5,7 +5,7 @@
 
 from collections import Counter
 
-from helpers import uniques
+from helpers import uniques, extract_name_from_chunk
 import book_character_table_construction
 
 
@@ -35,24 +35,17 @@ def alias_lookup(canonical_name,aliasTable, aliases):
     if len(cnames) > 0:
         keyMentions = {key: len(aliasTable[key]) for key in cnames}    
         maxMentionAlias = max(keyMentions, key = keyMentions.get)
+        print(maxMentionAlias)
         return maxMentionAlias
     else:
         return ""
         
 def alias_chunk_lookup(chunk,aliasTable,aliases):
-    cnames = []
-    for key in list(aliasTable.keys()):
-        if chunk.string in aliasTable[key] or chunk.string == key:
-            cnames.append(key)
-    for i in range(0, len(cnames)):
-        if len(aliases[cnames[i]]) != 0:
-            cnames[i] = list(aliases[cnames[i]])[0]
-    if len(cnames) > 0:
-        keyMentions = {key: len(aliasTable[key]) for key in cnames}    
-        maxMentionAlias = max(keyMentions, key = keyMentions.get)
-        return maxMentionAlias
-    else:
-        return ""
+    #for name in extract_name_from_chunk(chunk):
+    #    alias_lookup(name,aliasTable, aliases)
+    print(chunk)
+    return alias_lookup(chunk,aliasTable, aliases)
+    
         
   
 
@@ -78,13 +71,13 @@ def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTa
             if len(sc) == 0:
                 pos_incr = False
             else:
-                pot_from.extend([alias_chunk_lookup(c,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
+                pot_from.extend([alias_chunk_lookup(name,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0 for name in extract_name_from_chunk(c)])
         if neg_incr:
             sc = context_chunks.get(index-incr,[])
             if len(sc) == 0:
                 neg_incr = False
             else:
-                pot_from.extend([alias_chunk_lookup(c,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0])
+                pot_from.extend([alias_chunk_lookup(name,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0 for name in extract_name_from_chunk(c)])
     return pot_from
 
 
@@ -207,7 +200,7 @@ def character_analysis(dialog_contexts, dialog_occurrences, chunks, oldAliasTabl
     for index in range(len(dialog_contexts)):
         if index==0 or index*10//len(dialog_contexts) > (index-1)*10//len(dialog_contexts):
             print("Character analysis:", index*10//len(dialog_contexts)*10, "% completed...")
-        
+
         context = dialog_contexts[index]#[start,end,chunks[start:end]]
         current_context_dialogs = [d for d in dialog_occurrences if d['context']==index]#load dialogue of the actual context
         #Each element = list of chunks
