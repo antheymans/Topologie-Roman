@@ -227,7 +227,8 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                                 else:
                                     connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 2)
                         elif node1["name"].first == "" or node2["name"].first == "" :
-                            if node1["name"].first == "" and node2["name"].first == "":
+                            if node1["name"].first == "" and node2["name"].first == "" or \
+                            node1["name"].last == node2["name"].first or node1["name"].first == node2["name"].last :
                                 equalize_gender(node1, node2)
                                 connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 1)
                             else:
@@ -238,7 +239,7 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
         lastname_list = data["name"].last_list
         if data["name"].first != "" and not used[data["name"].first] :
             lastname_list.append(data["name"].first)
-            data["name"].first == None
+            data["name"].first = None
         for lastname in lastname_list:
             if lastname in proper_names and used[lastname] == False:
                 used[lastname] = True
@@ -260,8 +261,12 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                     for j in range(i+1, len(bucket)):
                         node1 = connectionsTable.nodes[bucket[i]]
                         node2 = connectionsTable.nodes[bucket[j]]
-                        if node1["gender"] * node2["gender"] != -1 and (bucket[i], bucket[j]) not in connectionsTable.edges() :
-                            connectionsTable.add_edge(bucket[i], bucket[j], paired = 2)
+                        if node1["gender"] * node2["gender"] != -1:
+                            if node1["name"].first == "" and node2["name"].first == "":
+                                connectionsTable.add_edge(bucket[i], bucket[j], paired = 1)
+                                equalize_gender(node1, node2)
+                            elif (bucket[i], bucket[j]) not in connectionsTable.edges() :
+                                connectionsTable.add_edge(bucket[i], bucket[j], paired = 2)
     
     #for edge in connectionsTable.edges(data = True):
     #    if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:

@@ -83,7 +83,7 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
 # Dialog occurrence building
 ###############################################################
 
-def extract_agents(sentence, speaker):
+def extract_agents(sentence):
     #We only consider dialogue
     s = sentence.split(str('"'))
     d_from=[]

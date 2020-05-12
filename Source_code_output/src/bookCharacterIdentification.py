@@ -29,23 +29,11 @@ def alias_lookup(canonical_name,aliasTable, aliases):
                     if word == key:
                         cnames.append(key)
     for i in range(0, len(cnames)):
-        if len(aliases[cnames[i]]) != 0:
-            cnames[i] = list(aliases[cnames[i]])[0]
-    
-    if len(cnames) > 0:
-        keyMentions = {key: len(aliasTable[key]) for key in cnames}    
-        maxMentionAlias = max(keyMentions, key = keyMentions.get)
-        print(maxMentionAlias)
-        return maxMentionAlias
-    else:
-        return ""
-        
-def alias_chunk_lookup(chunk,aliasTable,aliases):
-    #for name in extract_name_from_chunk(chunk):
-    #    alias_lookup(name,aliasTable, aliases)
-    print(chunk)
-    return alias_lookup(chunk,aliasTable, aliases)
-    
+        if len(aliases[cnames[i]]) != 0:#check that node has a successor
+            cnames[i] = list(aliases[cnames[i]])[0]#replace node by successor
+    return cnames
+
+
         
   
 
@@ -71,13 +59,21 @@ def get_speakers_from_nearby_context(index,context_chunks,dialog_indices,aliasTa
             if len(sc) == 0:
                 pos_incr = False
             else:
-                pot_from.extend([alias_chunk_lookup(name,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0 for name in extract_name_from_chunk(c)])
+                for s in sc:
+                    for c in s.chunks:
+                        if c.head.type.find('NNP')==0:
+                            for name in extract_name_from_chunk(c):   
+                                pot_from.extend(alias_lookup(name,aliasTable, aliases))
         if neg_incr:
             sc = context_chunks.get(index-incr,[])
             if len(sc) == 0:
                 neg_incr = False
             else:
-                pot_from.extend([alias_chunk_lookup(name,aliasTable, aliases) for s in sc for c in s.chunks if c.head.type.find('NNP')==0 for name in extract_name_from_chunk(c)])
+                for s in sc:
+                    for c in s.chunks:
+                        if c.head.type.find('NNP')==0:
+                            for name in extract_name_from_chunk(c):   
+                                pot_from.extend(alias_lookup(name,aliasTable, aliases))   
     return pot_from
 
 
@@ -107,15 +103,16 @@ def uniformize_speakers(current_context_dialogs,aliasTable,aliases,context_chunk
         nf = []#new_from
         nt = []
         for f in o['from']:
-            fl = alias_lookup(f,aliasTable, aliases)
-            if len(fl) > 0:
-                nf.append(fl)
-                o['from'].remove(f)
+            for fl in alias_lookup(f,aliasTable, aliases): 
+                alias_lookup(f,aliasTable, aliases)
+                if len(fl) > 0:
+                    nf.append(fl)
+            o['from'].remove(f)
         for t in o['to']:
-            tl = alias_lookup(t,aliasTable, aliases)
-            if len(tl) > 0:
-                nt.append(tl)
-                o['to'].remove(t)
+            for tl in alias_lookup(t,aliasTable, aliases):
+                if len(tl) > 0:
+                    nt.append(tl)
+            o['to'].remove(t)
         new_from.append(nf)
         new_to.append(nt)
     
