@@ -46,7 +46,6 @@ def get_sentences(book):
             for i in range(len(wordlist)):
                 wordlist[i] = wordlist[i].capitalize()
             speaker = ' '.join(wordlist)
-            print(repr(speaker))
         else:
             parsedLine = pen.parsetree(line, relations=True, encoding = "utf-8", model = None)
             #Regroup a whole dialogue into a single sentence

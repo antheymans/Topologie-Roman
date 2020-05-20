@@ -9,6 +9,7 @@ from pattern.en.wordlist import ACADEMIC, BASIC, PROFANITY, TIME
 import ast
 import nameparser
 import nltk
+import csv
 
 
 from helpers import is_root
@@ -34,9 +35,7 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
             else:
                print("error, wrong type ", type(s), type(l))
     
-    #First pass, isolate relevant proper nouns
-    proper_nouns = {}
-    locations = {}
+    #Load all set of words used help the classification between names and non-names words
     honorifics, female_honorifics, male_honorifics = get_honorifics()
     for honorific in honorifics:
         if honorific not in nameparser.config.CONSTANTS.titles:
@@ -45,7 +44,10 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
            
     honorifics = nameparser.config.titles.TITLES
     stop_words = get_stop_list()
-
+    countries, nationalities = get_nationality_country()
+    #First pass, isolate relevant proper nouns
+    proper_nouns = {}
+    locations = {}
     for c in chunks:
         if c.head.type.find('NNP')==0 and is_valid(c.head.string):
             name = c.head.string
@@ -57,15 +59,25 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
             else:
                 if c.head != c.sentence.chunk[0].words[0] and name.lower() not  in ACADEMIC \
                     and name.lower() not in PROFANITY and name.lower() not in TIME\
-                    and name.lower() not in stop_words and name not in honorifics:
+                    and name.lower() not in stop_words and name not in honorifics and name not in nationalities:
                     if name not in proper_nouns:
                         proper_nouns[name] = 0
                     else:
                         proper_nouns[name] += 1
                         
-    #for all names that are both proper name and locations, choose the dominant use                    
-    deleted_locations = []
-    #print("ambiguous locations:")
+    #country name are locations                        
+    deleted_names = []
+    for name in proper_nouns:
+        if name in countries:
+            if name in locations:
+                locations[name] += proper_noun[name]
+            else:
+                locations[name] = proper_nouns[name]
+                deleted_names.append(name)
+    for name in deleted_names:
+        del proper_nouns[name]  
+    #for all names that are both classified as proper name and locations following context, choose the dominant use                            
+    deleted_locations = []    
     for loc in locations:
         if loc in proper_nouns:
             print(loc)
@@ -130,7 +142,8 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                     
                     if name.first != "" and name.first not in proper_names:
                         if name.first.lower() not in BASIC and name.first.lower() not in ACADEMIC and name.first.lower() not in PROFANITY \
-                            and name.first.lower() not in TIME and name.first not in locations and len(name.first.split()) == 1:
+                            and name.first.lower() not in TIME and name.first not in locations and name.first.capitalize() not in nationalities \
+                            and len(name.first.split()) == 1:
                             proper_names.append(name.first)
                             if c != c.sentence.chunk[0] or gender != 0:
                                 #if begin of a sentence, firstname could be wrongly added
@@ -227,8 +240,7 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                                 else:
                                     connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 2)
                         elif node1["name"].first == "" or node2["name"].first == "" :
-                            if node1["name"].first == "" and node2["name"].first == "" or \
-                            node1["name"].last == node2["name"].first or node1["name"].first == node2["name"].last :
+                            if (node1["name"].first == "" or node1["name"].last == "")  and (node2["name"].first == "" or node2["name"].last == "") :
                                 equalize_gender(node1, node2)
                                 connectionsTable.add_edge(names_bucket[i], names_bucket[j], paired = 1)
                             else:
@@ -267,7 +279,6 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                                 equalize_gender(node1, node2)
                             elif (bucket[i], bucket[j]) not in connectionsTable.edges() :
                                 connectionsTable.add_edge(bucket[i], bucket[j], paired = 2)
-    
     #for edge in connectionsTable.edges(data = True):
     #    if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
     #        print("error begin")
@@ -332,7 +343,10 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
     #        print(used[edge[0]], used[edge[1]])
     #        print(edge, connectionsTable.nodes[edge[0]]["gender"], connectionsTable.nodes[edge[1]]["gender"], "error neutral end")
     #        exit()
-            
+
+
+    used = {w : False for w in connectionsTable.nodes} 
+    #link nouns from 3+ categories noun with the most used nouns 1-2 category noun among their potential partner        
     for canonical_name, data in connectionsTable.nodes(data = True):
         if used[canonical_name] == False and data["name_category"] > 2:
             cluster = [canonical_name]
@@ -345,13 +359,14 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                 for node in cluster:
                     if connectionsTable.nodes[node]["name_category"] > 2:
                         used[node] = True
-                break
+                    break
             ## group their further nbhs using their 2-values edges
             candidates_edge = []
             for cn2 in cluster:    
-                for edge in connectionsTable.edges(canonical_name, data = True):                
+                for edge in connectionsTable.edges(cn2, data = True):                
                     if edge[2]["paired"] == 2 and connectionsTable.nodes[edge[1]]["gender"] * \
-                        connectionsTable.nodes[canonical_name]["gender"] != -1 and edge not in candidates_edge:
+                        connectionsTable.nodes[cn2]["gender"] != -1 and edge not in candidates_edge\
+                        and connectionsTable.nodes[edge[1]]["gender"] not in cluster:
                         candidates_edge.append(edge)
             if len(candidates_edge) > 0: 
                 subAT= {s[1]: connectionsTable.nodes[s[1]]["value"] for s in candidates_edge}
@@ -363,6 +378,7 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                         break
                     elif len(subAT.keys()) == 0:
                         maxMentions = first_mention
+                        print(canonical_name, first_mention)
                         break
                 connectionsTable.add_edge(maxMentions, canonical_name, paired = 1)
                 if connectionsTable.nodes[canonical_name]["gender"] == 0 and connectionsTable.nodes[maxMentions]["gender"] != 0:
@@ -380,7 +396,6 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                 for edge in candidates_edge:
                     if connectionsTable.nodes[edge[0]]["gender"] * connectionsTable.nodes[edge[1]]["gender"] == -1:        
                         connectionsTable.remove_edge(edge[0],edge[1])        
-
     for edge in connectionsTable.edges(data = True):
         if edge[2]["paired"] == 1 and connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
             print("error 3+")
@@ -413,6 +428,7 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                 aliases.add_edge(cn2, maxMentions)
                 aliasTable[maxMentions].extend(aliasTable.pop(cn2,[]))
     print("graph made")        
+    
     for edge in aliases.edges():
         if connectionsTable.nodes[edge[0]]["gender"] != connectionsTable.nodes[edge[1]]["gender"]:
             print("error incorect gender for :" , edge, connectionsTable.nodes[edge[0]]["gender"], connectionsTable.nodes[edge[1]]["gender"])
@@ -480,6 +496,17 @@ def get_honorifics():
     honorifics, female_honor, male_honor = ast.literal_eval(string)
     f.close()
     return honorifics, female_honor, male_honor
+    
+def get_nationality_country():
+    country_list = []
+    nationality_list = []
+    with open("text_file\\nationality.csv", newline='') as csvfile:
+        spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
+        for row in spamreader:
+            country_list.append(row[3])
+            nationality_list.append(row[4])
+    nationality_list.extend(["Black", "White"])
+    return country_list, nationality_list
 
 def get_stop_list():
     f = open("text_file\stop-list.txt", "r")
