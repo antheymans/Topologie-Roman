@@ -1,0 +1,50 @@
+requirement python3
+
+
+
+STANFORD
+pip install stanfordnlp
+conda install pytorch
+
+no true documentation for python
+ poor doc in java
+
+
+SPACY
+conda install spacy
+pip install neuralcoref
+Existing doc (not very clear)
+
+
+
+
+
+nlp = spacy.load("en_core_web_sm")!
+
+Remplacer coref dans tout texte
+-> Temps de processing long ?
+-> Non supervisé, on ne connais pas fiabilité
+-> On n'utilise pas analyse preprocessing
+Travailler par chapitre ? DIalogue ?
+
+Remplacer dans chaque ligne ?
+Remplace surtout pronoms
+Pronoms inutile, on cherche a identifier personnage dans dialogue
+
+Remplacer dans chaque dialogue ?
+Même raison
+
+->On ne veux pas remplacer les pronoms mais une analyse sur les personnages pour retrouver ceux qui ont des noms proches.
+
+Is coreference resolution adapted ? What we really need is connect character wich posseess various title.
+Docs: phrase
+Span: Morceau docs
+token: word
+
+Paramètre greedyness: how grady about adding links
+Max dist about coreference, initially donc pas tout le texte
+	-> not all the book
+max_dist_match: max dist extended si noun en commun.
+Blacklist si pronom doit être replacé
+conv_dict use embedded dictionnary for single words
+

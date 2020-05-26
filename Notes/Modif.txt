@@ -1,0 +1,8 @@
+DIfference/Modification:
+
+Les noms sont fltrés pour être capitalisés.
+harry1: 699 contre 545 mots sauvegardés
+On rate Who_you-Know -> Who-you-know
+
+
+Replacement -> add space around ... to be sure that words are correctly separated

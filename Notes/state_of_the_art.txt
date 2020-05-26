@@ -1,0 +1,110 @@
+https://gist.github.com/marijn/274449 nationality csv
+https://www.researchgate.net/publication/306377060_Social_Networks_Analysis_in_Discovering_the_Narrative_Structure_of_Literary_Fiction
+https://www.researchgate.net/publication/259289237_On_Social_Networks_in_Plays_and_Novels
+articles
+https://github.com/harrisonpim/bookworm/blob/master/data/other-files/Bookworm,%20Databeers%20London%202018.pdf
+code a tester
+
+
+wonderland 2012
+https://www.aclweb.org/anthology/W12-2513.pdf
+
+
+
+Network of thrones
+https://www.maa.org/sites/default/files/pdf/Mathhorizons/NetworkofThrones%20%281%29.pdf
+-keyword windows
+-normalization
+
+Extracting social networks fromfiction (master thesis 2017)
+http://www.diva-portal.org/smash/get/diva2:1133542/FULLTEXT01.pdf
+Use key words windows instead of conversations as for network of thrones
+-Named entity normalization
+
+
+
+Extracting Social Network from Literature to PredictAntagonist and Protagonist
+https://nlp.stanford.edu/courses/cs224n/2015/reports/14.pdf
+alias resolution and charachter identification:
+    1.Run StanfordNLP to find coreferent mentions
+    2.Identify the mention chains that correspond to characters or groups of characters
+    3.Replace the original text
+    4.Post process to address clumps of characters and first person words (e.g. “I”)
+
+    ->  -marking all chains that are animate (a character that behaves or has the actions of a living being) asa character
+        -dentifying all chains that are coreferent with pronouns that refer to humans (e.g. “he”).
+    ->  In step three, we replace the mentions in all marked chains with a number. This number wil l be the same across all mentions for a specific chain
+    ->  In step four, we have a post­processing step that collects and identifies ambiguous chains.
+    
+-> use corenlp, could be more performant
+-> use novels or fairy tales, les computattionnal cost
+-> Sex disanbiguation using pronouns from coresolution
+
+They obtain result that we can compare and use their metrics ! If we find supervised data
+
+
+
+
+
+http://www1.cs.columbia.edu/~delson/pubs/ACL2010-ElsonDamesMcKeown.pdf
+Extracting Social Networks from Literary Fiction 2010 state of the art
+"Some theorists have suggested a relationship be-tween the size of a community and the amount ofdialogue that occurs, 
+positing that “face to facetime” diminishes as the number of characters inthe novel grows. 
+Others suggest that as the socialsetting becomes more urbanized, the quality of di-alogue also changes, 
+with more interactions occur-ring in rural communities than urban communities"
+
+"the density of the network providesevidence about the cohesion of a large or smallcommunity, 
+and cliques may indicate a social frag-mentation"
+-coreferent generation -> cluster of mention
+- quoted speech
+
+conclusion :
+   ASSUMPTION hat there is an inverse correlation betweenthe amount of dialogue in a novel and thenumber of characters in that novel. FALSE
+    Geographical, urban area vs country
+   FORM is better predicter that setting for novels.
+
+-> "we filtered outthe entities that are mentioned fewer than three"
+-> generate variation of catched nous, good idea ! to find dursley from Mr Dursley
+
+
+
+https://www.aclweb.org/anthology/D15-1088/ 2015
+
+
+
+
+
+Mr. Bennet, his coachman, and the Archbishop walk into a bar but onlyone of them gets recognized:On The Difficulty of Detecting Characters in Literary Texts
+https://www.aclweb.org/anthology/D15-1088.pdf 2015
+https://www.aclweb.org/anthology/D15-1088/ 2015
+
+
+
+https://www.aclweb.org/anthology/P14-5010.pdf
+The Stanford CoreNLP Natural Language Processing Toolkit
+Seems better than pattern because its
+	-use coref tools
+	-use gender assignation tools based on coref
+	-only in java, not compatible with our program
+
+Methods for Precise Named Entity Matching in Digital Collections
+http://www.cs.columbia.edu/~delson/pubs/jcdl03.pdf
+toolkit that generate possible alias of a name, initially for architecture project
+-takes a name as input
+-remove sequentially modifiers
+-add deteminers "the", for people we could add here some title as "Professor","Mr","Mrs"
+
+
+https://www.aclweb.org/anthology/W14-0905.pdf
+Structure-based Clustering of Novels 2014
+-location name count number of people/location count
+-firstname, honorifics, surname diferentiation
+-gender based clustering of names due to honorifics, sliding windows(non feasible here)-> could add a gender name dictionnary
+-good overview of different technique of network construction and analysis
+
+
+https://gist.github.com/abrambailey/9dbca470e9a562c625fd
++ wikipedia english honorifics
+  
+
+

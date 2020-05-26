@@ -1,0 +1,21 @@
+python 2 vs python 3
+
+
+networkx 2.2 -> 2.4
+
+pattern running - Nope
+
+
+
+
+
+
+
+
+rapidité ? graph non computable pour games of thrones
+
+utilisation de spacy pour coresolution
+utilisation de pattern 3 encore en devellopement
+
+nombre de personnage identifié étrangement supérieur avec python 3 dont pas mal d'élements inutiles
+

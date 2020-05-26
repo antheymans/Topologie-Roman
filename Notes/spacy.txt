@@ -1,0 +1,5 @@
+Passage de Pattern à Spacy
+parsetree
+singularize
+tag
+sentiment

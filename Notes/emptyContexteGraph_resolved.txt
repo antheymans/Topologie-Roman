@@ -1,0 +1,7 @@
+
+(<networkx.classes.graph.Graph object at 0x000000003AA524A8>, 109, [{'index': 4171, 'from': u'Harry', 'sentiment': -0.16666666666666666, 'sentence': u'" We \'ve got the invisibility cloak , " said Harry . " It should n\'t be too difficult - I think the cloaks big enough to cover two of us and Norbert . "', 'to': [], 'context': 109}], [u'Harry'], '/n')
+(<networkx.classes.graph.Graph object at 0x000000003AA52588>, 113, [{'index': 4234, 'from': u"They'd", 'sentiment': 0.0, 'sentence': u'" Well , well , well , " he whispered , " we are in trouble . "', 'to': [], 'context': 113}], [u"They'd"], '/n')
+(<networkx.classes.graph.Graph object at 0x000000003AA52630>, 116, [{'index': 4309, 'from': u'Quirrell', 'sentiment': 0.0, 'sentence': u'" No - no - not again , please - "', 'to': [], 'context': 116}, {'index': 4312, 'from': u'Quirrell', 'sentiment': 0.2857142857142857, 'sentence': u'" All right - all right - " he heard Quirrell sob .', 'to': [], 'context': 116}], [u'Quirrell'], '/n')
+
+Why empty node no represented in graph ? No connection ?
+(<networkx.classes.graph.Graph object at 0x000000003AA52710>, 120, [{'index': 4495, 'from': u'Malfoy', 'sentiment': 0.0, 'sentence': u'" AAAAAAAAAARGH ! "', 'to': [], 'context': 120}], [u'Malfoy'], '/n')

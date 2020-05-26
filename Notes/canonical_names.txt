@@ -1,0 +1,39 @@
+Canonical form based, justification:
+chunk is not a good base: 
+Hermionne and Ron -> more than one author
+"the mysterious harry potter" -> chunk contained word not directly related to the name of a character
+
+Proper names are not good base:
+Hermionne and Ron -> one head word but the chunk is related to 2 authors
+Harry Potter - James Potter -> share one proper name but different character
+Professor Dumbledore, Mr Dumbledore -> share one proper name and are same character
+
+
+
+
+
+Canonical names -> related to chunk
+
+Proper names, one word, could be canonical
+
+One word and not proper -> we don't want it
+
+
+
+
+
+still ambiguous,
+the Dursleys =? Dudley Dursley
+the great wizard =? DUmbledore
+Professor McGonagall ==? Minerva(first name mentionned only one time among the first book of the serie)
+
+
+
+Title rmeoving:
+harry is a verb and a noun -> difficult to filter noun from proper nouns
+some proper noun are invented and non repertoried -> difficult to select "True" proper names
+https://gist.github.com/abrambailey/9dbca470e9a562c625fd
+
+
+
+-> add a dictionnary or nickname, gender dictionnary

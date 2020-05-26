@@ -1,0 +1,7 @@
+speaker identification rate SIR
+
+CIR ? character identification ? 
+
+convertOccurence
+->dialog verifier
+-> clustering

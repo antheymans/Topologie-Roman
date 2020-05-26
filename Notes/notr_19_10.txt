@@ -1,0 +1,79 @@
+résumé debut <19 octobre.
+
+Domestication du code
+Correction d'erreur/bug/ de modification incomplète (appel à constante/fonction non définie,..)
+Modification de fonctions imcompltement implémentées. (ex, certains unicode récurrents non traités)
+Update du code vers python 2.7.16
+Refactoring convention, séparation entre fichier,restructuration package
+Obtention des résultats précèdents à l'exception d'un fichier auxilliaire ("clustering")
+
+-> Passage vers python 3 afin de traiter correctement les ascii
+-> pattern library version 3 est encore en dévellopement
+
+
+-> Passage de la librairie pattern a d'autre techniques de traitement de language plus avancées.
+
+Choix librairie
+NLTK pas de neural network/flexible 08/19-11/18
+spaCY neural/non flexible 10-2019
+scikit incomplet
+gensim:imcomplet, design pour document classification
+pattern: not enough optimized
+
+
+spaCy NLTK Pattern
+NLTK has huge documentation/ huge community can't parse syntactic dependencies without specifying grammar
+pattern poor support, not properly adapted to python 3
+pattern has penn treebank 2, but not correctly documented, no guarranty it's better
+
+COreNLP ? Java but python interface 01/19
+
+
+
+
+
+pattern 3.0 en devellopement mais parais utilisable / pas de doc: C:\Users\antoi\Anaconda3\envs\memoire\Lib\site-packages\Pattern-3.6.1-py3.6.egg\pattern\text
+(plusieurs autres versions existent)
+parse(Model = None)//parametre non présent sur les version précèdentes
+
+subjectivity demande un autre constructeur, pickle pas content
+book non serializable -> la faute a sentiment object
+
+Attention import répété -> erreur
+import général de helpers d'abord pour provisoirement éviter erreur
+
+Use of pattern: separate paragraph into sentences
+
+
+!! use symbol recognised by pattern function
+
+sentiment analysis on sentence
+
+
+python 3 indispensable ? si tout transformé unicode, et limite sur les characteres reconnus par les fonctions
+analyser charactère reconnus par différents package
+analyser si code actuel utilise toute cette richesse
+éventuellement coresolution via librairie externe
+
+
+
+
+
+ajout unicode à l'analyse, préceddement ascii avec replacement of frequent non-ascii symbol, ouvrir fichier avec codec
+ajout network draw_graph instead draw
+update to graph 2.0 ->
+
+
+actuellement
+pen parsetree
+pen sentiment gives polarity and unused subjjectivity/ mood could also be used
+pen singularize 96% gives singular noun/adj
+
+
+
+
+
+
+
+TODO
+best forumula treshold, sentiment using subjectivity

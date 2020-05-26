@@ -1,0 +1,55 @@
+Social network:
+Self-organizing: Global structure appears
+Emergent: Pattern supposed to emerge from interaction
+Complex: Diverse, Multiple element, adapted to environnement
++-Self Organizing: Node add themselve to network and modify topology
+Small world: type of network in which most nodes are not connected, but the shortest distance between two nodes is small (formally, means proportional to the logarithm of # nodes). 
+		Hifh clustering compare to random with equal average degree
+		low average shortest path
+		Random graph are small-world, scale-free graph are super-small world
+Scale-free network:
+	Notion of preferential attachementgrg
+		-> Existence of hub, particular distribution of degree: decreasing line different from random graph wich have a non-asymptotic maximum.
+		-> "super small world" shortest path in Log Log N.
+		
+
+
+But here in a book, 
+	- character are imagined by the author to be part of the book. Not self organizing.
+	 (difficult to speak about time because the author could invent its book in a non linear way.µ
+
+	- Only few agent act at a time.
+
+
+Other classidication:
+	(un)directed
+
+
+
+
+Coefficient, measure: 
+
+
+
+Clustering:
+	Global clustering coefficient:
+	In graph theory, a clustering coefficient is a measure of the degree to which nodes in a graph tend to cluster together.
+	C = # closed triplets / # all triplets = 3 x # triangle / # all triplets
+
+	Local clustering coefficient:
+	Local measure
+	Number of triangle related / measure depending of the vextex degree
+
+	Network average clustering coefficient: (average clustering coefficient Watts and Strogatz)
+	Different from global clustering coefficient, gives more weight to low degree node.
+	Each vertex contributing to the coefficient has its contribution weighted by k_i (k_i -1) compared to global coefficient.		
+
+Hubs
+"Histogram" #node following # neighbours
+
+Average degree
+
+
+https://www.nyfa.edu/student-resources/10-great-websites-download-movie-scripts/
+http://www.script-o-rama.com/snazzy/table2.html
+

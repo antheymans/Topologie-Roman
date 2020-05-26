@@ -1,0 +1,29 @@
+weighted degree
+https://networkdatascience.ceu.edu/article/2017-07-08/network-science-predicts-who-dies-next-game-thrones
+
+
+Modeling affective character network for story analytics?
+https://www-sciencedirect-com.ezproxy.ulb.ac.be/science/article/pii/S0167739X17310221
+more an add-on to previously pre-processed story, non focussed on litterature
+
+film social network
+http://jucs.org/jucs_21_6/cocharnet_extracting_social_networks/jucs_21_06_0796_0815_tran.pdf
+
+social network analysis Alice in wonderland book
+https://pdfs.semanticscholar.org/845c/095b679e75f5f7d299935407ea89313741f2.pdf
+
+Social network analysis in a movie using character-net
+https://link-springer-com.ezproxy.ulb.ac.be/article/10.1007/s11042-011-0725-1
+citation
+https://citations-springer-com.ezproxy.ulb.ac.be/item?doi=10.1007/s11042-011-0725-1
+Major-Minor character using max-flow-min-cut algorithm
+COmmunity separation, belong to multiple ? CLustering ? 
+Movie analysis is content based or STORY-BASED.
+Weight #scene but scene have themselves different weight =>useful to classify personage importance  Degree Centrality (DC)
+role classification
+
+2 degree, weighted and overal personage related ?
+
+
+
+

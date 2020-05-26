@@ -1,0 +1,32 @@
+Note réunion 24/10
+"Topology analysis of social networks extracted from literature"
+
+Je possède : article, mémoire, code donné par waumans
+
+
+Domestication du code
+Correction d'erreur/bug/ de modification incomplète (appel à constante/fonction non définie,..)
+Modification de fonctions imcompltement implémentées. (ex, certains unicode récurrents non traités)
+Update du code vers python 2.7.16
+Refactoring convention, séparation entre fichier,restructuration package
+Obtention des résultats précèdents à l'exception d'un fichier auxilliaire ("clustering")
+
+-> Passage vers python 3 afin de traiter correctement les ascii
+-> pattern library version 3 est encore en dévellopement
+
+Prochains objectifs: optimisation de fonction existante via résolution d'alias
+		     remplacer pattern et passer à python 3 ?
+
+travailler plus sur avancée de traitement de texte que réellement topologie
+
+confirmer résultat de topologie/ avancer ma compréhension du programme afin de trouver dans le futur des idées ?
+
+Futur ? Réseaux de personnage féminin/masculin
+	Script... provenant d'autres médias ?
+
+
+accès git
+	D'autres outils pour données additionelles réseau existant
+
+
+	

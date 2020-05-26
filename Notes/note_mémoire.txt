@@ -1,0 +1,97 @@
+Normalizer,
+Mots contraire cos négatif,
+Skip frequent word (the, a ,...)
+
+Livres collection of document ? Not working on all existing books, but could use 50 frequent book as a base or another collection(book read by the reader..., wich vary following the reader -).
+Recommandr system tf-idf
+
+NLP natural language processing
+
+Pointwise Mutual Information measure with random expectation PPMI -> need to find word strongly associated
+Laplace smoothing
+
+first-order co-occurrence
+cooccurrence
+(sometimes called syntagmatic association) if they are typically nearby each other.
+Thus wrote is a first-order associate of book or poem. Two words have second-order
+secondorder
+co-occurrence (sometimes called paradigmatic association)
+
+s
+In NLP dense > sparse
+
+Probability, reliability of computation
+
+Visualisation tool
+
+Window 3-20 word, small for syntactic, big for syntaxic
+
+Books classified by subject, seriousness, ... ? COntext word contain info about all this subject 
+
+
+
+
+
+
+Software python 2 vs 3
+Python2 unsupervised from 01/12
+Sentiment analysis
+Pattern python 2  : https://github.com/clips/pattern trial python 3 ?
+		but NLTKDRT python 3 ? 
+		Stanford Coreference Resolution System) https://stanfordnlp.github.io/stanfordnlp/ python 3 ?
+
+SentiWordNet via python 3 NLTK
+
+NLTK python 2-3 but 3 strongly recommanded
+
+Stanford's library CoreNLP java but could interact, easyer with python 3.6.8 ->  stanfordcorenlp 
+
+Networkx 2.2 python 2-3 python 2.3 -> python 3
+
+
+As pattern should be replaced in either way, migration to python 3.
+More librarie could potentially not being anymore in state of the art ! Check that.
+Unicode easyer in python3 !
+
+
+
+
+REQUIREMENT 
+
+python2
+pattern " conda install -c asmeurer pattern "
+matplotlib "conda install matplotlib"
+networkx "conda install networkx"
+conda install networkx=1.11
+dill
+
+
+
+(connectionsTable.nodes(data=True)):
+
+gérer import / fonction creation directory
+sauvegarder méta-données
+acceleration/trouver meilleur ordi
+
+
+
+
+
+
+
+
+Debug, 4th element cause lambda
+what output pickles sauvegarde
+warning encodage git
+
+
+Helper auxilliaries n'existe pas
+... rajouter un espace
+
+
+convention !!!
+import dans fonction
+import circulaire pre_process
+
+
+
