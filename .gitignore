@@ -1,4 +1,14 @@
-﻿(!\.)*
+﻿Article Revision3/
+Source_code_output/src/bak/
+Working files/
+Source_code_output/books_objects
+Source_code_output/corrected_occurrences
+Source_code_output/csv
+Source_code_output/graphs
+Source_code_output/png
+Source_code_output/serialized
+python2/
+supplemental/
 *.pyc
 *.BOOK
 *.txt
