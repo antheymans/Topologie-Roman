@@ -24,7 +24,6 @@ def spacing_map(sentences,breaks):
                 dialog_spacing.append((index,index-previousIndex))
             sceneBreak = False
             previousIndex = index     
-    
     return dialog_spacing
 
 #TODO: Make sure best option
@@ -140,8 +139,8 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts, spea
         
         #Dialog occurrence building
         d_from, d_to = extract_agents(sentence)
-        if speakers[index] != "":
-            d_from.append(speakers[index])
+        if speakers[index] != []:
+            d_from.extend(speakers[index])
         d_sentiment = get_weight_from_sentiments(sentiments[index])
         dialog_occurrence = {'from': d_from, 'to': d_to, 'sentiment': d_sentiment, 
                              'sentence': sentence, 'index': index, 'context': context}

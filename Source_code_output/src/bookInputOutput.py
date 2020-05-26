@@ -36,6 +36,7 @@ def get_files_in_folder(folder):
 
 def load_book(filename):
     path = PATH_BOOKS_OBJECT+filename+".book"
+    print(path)
     if os.path.isfile(path):
         print("FILE FOUND! Loading the collection...")
         book = get_object(path)
@@ -88,13 +89,7 @@ def set_object(o, filename):
         f = open(filename,'ab+')
     pickle.dump(o, f)
     print(("Object set in "+filename))#deb
-    #print(pickle.dump(o, f))
 
-    #print len(o) #debug
-    #print(pickle.dump(o[0], f))
-    #print(pickle.dump(o[1], f))
-    #print(pickle.dump(o[2], f))
-    #print(pickle.dump(o[3], f))
 
 
 
@@ -464,7 +459,7 @@ def write_graph(G,filename):
 # All graphs outputting function
 ###############################################################
 
-def output_graphs(filename, iGraphs, graphs):
+def output_graphs(filename, iGraphs, graphs, png = False):
     csv_clustering(filename,graphs,"Context")
     csv_clustering(filename,iGraphs,"Incremental")
     csv_degree_incremental(filename,iGraphs[-1])
@@ -472,9 +467,10 @@ def output_graphs(filename, iGraphs, graphs):
     output_csv_graphs(filename,graphs,"Context")
     output_csv_graphs(filename,iGraphs,"Incremental")
     print("csv saved")
-    write_graph(iGraphs[-1], filename)#weit
+    write_graph(iGraphs[-1], filename)
     print("json saved")
-    build_png_graphs(filename,graphs,"Context")
-    build_png_graphs(filename,iGraphs,"Incremental")
-    print("png saved")
+    if png:
+        build_png_graphs(filename,graphs,"Context")
+        build_png_graphs(filename,iGraphs,"Incremental")
+        print("png saved")
     

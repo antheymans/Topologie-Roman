@@ -6,6 +6,8 @@ import bookInputOutput as bIO
 import bookDialogExtraction as bDE
 import bookCharacterIdentification as bCID
 import bookNetworkBuilding as bNB
+import time 
+
 
 from helpers import PATH_BOOKS, compute_statistics, compute_statistics_CID
 
@@ -14,6 +16,8 @@ from helpers import PATH_BOOKS, compute_statistics, compute_statistics_CID
 ###############################################################
 
 def book_analyze(file_txt):
+    tmps1=time.time()
+    
     """
     DESCRIPTION: Main book analysis function
     INPUT: Filename in the PATH_BOOKS folder
@@ -23,7 +27,7 @@ def book_analyze(file_txt):
 
     print("COMPUTING BOOK : ", filename)
     bIO.create_folders(filename)
-    sentences, breaks, sentiments, chunks, speakers = bIO.load_book(filename)
+    sentences, breaks, sentiments, chunks, speakers, script = bIO.load_book(filename)
     
     # Extracts the dialogs from the book
     print("Extracting dialogs...")
@@ -45,7 +49,7 @@ def book_analyze(file_txt):
     oldAliasTable, oldConnectionsTable, oldAliases = bIO.load_alias_table(previous_book)
     
     print("Character analysis...")
-    aliasTable, connectionsTable, aliases = bCID.character_analysis(dialog_contexts, dialog_occurrences, chunks,oldAliasTable,oldConnectionsTable,oldAliases,speakers)
+    aliasTable, connectionsTable, aliases = bCID.character_analysis(dialog_contexts, dialog_occurrences, chunks,oldAliasTable,oldConnectionsTable,oldAliases,speakers, script)
     print("Character analysis complete !")
     
     bIO.export_aliases(aliasTable, connectionsTable, aliases, filename)
@@ -54,9 +58,7 @@ def book_analyze(file_txt):
     stat = compute_statistics_CID(dialog_occurrences)
     bIO.update_stats_CID(filename,stat)
     
-    import time 
-    tmps1=time.time()
-    
+
     # Network building
     iGraphs, graphs = bNB.build_networks(dialog_occurrences, len(dialog_contexts), connectionsTable)
     
@@ -69,8 +71,14 @@ def book_analyze(file_txt):
 def read_all():
     # Go through all the books
     files = bIO.get_files_in_folder(PATH_BOOKS)
+    files_analyzed = bIO.get_files_in_folder(helpers.PATH_BOOKS_OBJECT)
+    for index in range(len(files_analyzed)):
+        files_analyzed[index] = files_analyzed[index][:-5]+".txt"
+    print(files)
+    print(files_analyzed)
     for f in files:
-        book_analyze(f)
+        if f not in files_analyzed and True:
+            book_analyze(f)
     
 if __name__ == "__main__":
     title = input("Enter the title of the .txt file to be analyzed ('all' for all files).\n")
