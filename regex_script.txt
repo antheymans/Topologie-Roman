@@ -1,0 +1,26 @@
+1- delete unrelated informations upper and lower
+^\r\n\r\n -> \r\n delete multiple skip lines
+^[                             ][ ]*[1-9]+.\r\n  -> nothing
+delete random number at end of lines, error ?
+delete all skipline
+^([1-9]) -> \r\n($1) add a line at begin of each chapter
+^    (\w)->($1) iteratively remove all indentation in context dialog but be careful leave conversation withotu modifying them
+^                                                        [^\n]*\n ->  //remove all line with such indentation
+^           [ ]*([A-Z][A-Z][^\n]*\n) -> _($1) add _ before speaker
+now add "" around each dialog
+concatenate dialogs folowing each others
+The encoding of first line could lead to errors, ending at first line
+
+
+
+(                                   )[ ]*
+[ ]*CLOSE -[^(\r\n)]*
+^          (\w)                   ->       ($1)
+\n^([a-z])                        ->  ($1)
+
+
+
+
+
+
+(_[^\n]*\n)([^\n]*)\n   add "dialog" after each _speaker if no skipped line
