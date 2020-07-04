@@ -30,10 +30,16 @@ def spacing_map(sentences,breaks):
 def compute_threshold(dialog_spacing):
     count = Counter([s[1] for s in dialog_spacing])
     max_spacing = max(count.keys())
+    first_zero = max_spacing+1
     for i in range(1,max_spacing):
         if count.get(i,0)==0:
             first_zero=i
             break
+    m = 0
+    for i in reversed(list(range(1,first_zero))):
+        if count.get(i,0) > m:
+            m =  count.get(i,0) 
+            threshold = i
     for i in reversed(list(range(1,first_zero))):
         currCount = count.get(i,0)
         if currCount >= 100 or (currCount >=max(10,count.get(i+1,0)*2) and all ([count.get(j,0) > currCount for j in range(1,i)])):
@@ -61,14 +67,14 @@ def get_contexts(chunks, breaks,dialog_spacing,threshold,length):
             prevSpace = 0
         else:
             prevSpace = dialog_indices[index-1]
-            
-        if space[1] == 0:
+        if space[1] == 0:#first sentence of a dialog
             for brIndex in reversed(list(range(space[0]))):
                 if breaks[brIndex]:
                     break
             if len([i for i in range(d_start,brIndex) if i in dialog_indices]) > 0:
                 dialog_contexts.append(build_context(chunks,d_start,brIndex))
             d_start = brIndex +1
+            
         elif space[1] > threshold:
             dialog_contexts.append(build_context(chunks,d_start,space[0]))
             d_start = prevSpace+1

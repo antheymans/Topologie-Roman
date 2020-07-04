@@ -43,11 +43,13 @@ def get_sentences(book):
             chunks.append([])
             speakers.append("")            
         elif SCRIPT_SPEAKER.match(line):
-            wordlist = line[1:-1].split("(")[0].split()
+            wordlist = line[1:-1].split("(")[0].replace('.', '').replace(';', '').replace('V/0', '').split()
             for i in range(len(wordlist)):
                 wordlist[i] = wordlist[i].capitalize()
-            for elem in ' '.join(wordlist).split(" And "):
-                speaker = elem.split(", ")
+            speaker = []
+            for elem in re.split(' AND |, |/', ' '.join(wordlist)):                
+                if len(elem) > 1:
+                    speaker.append(elem)
             script = True
         else:
             parsedLine = pen.parsetree(line, relations=True, encoding = "utf-8", model = None)

@@ -6,7 +6,7 @@
 from collections import Counter
 
 from helpers import uniques, extract_name_from_chunk
-import book_character_table_construction
+import bookCharacterTableConstruction
 
 
 
@@ -192,9 +192,9 @@ def filter_alias_table(aliasTable, connectionsTable, aliases, current_context_di
 
 def character_analysis(dialog_contexts, dialog_occurrences, chunks, oldAliasTable,oldConnectionsTable,oldAliases, speakers = None, script = False):
     if script:
-        aliasTable, connectionsTable, aliases = book_character_table_construction.build_alias_table_script(chunks, oldAliasTable,oldConnectionsTable,oldAliases, speakers)
+        aliasTable, connectionsTable, aliases = bookCharacterTableConstruction.build_alias_table_script(chunks, oldAliasTable,oldConnectionsTable,oldAliases, speakers)
     else:
-        aliasTable, connectionsTable, aliases = book_character_table_construction.build_alias_table(chunks, oldAliasTable,oldConnectionsTable,oldAliases)
+        aliasTable, connectionsTable, aliases = bookCharacterTableConstruction.build_alias_table(chunks, oldAliasTable,oldConnectionsTable,oldAliases)
     print("Alias table created.")
     for index in range(len(dialog_contexts)):
         if index==0 or index*10//len(dialog_contexts) > (index-1)*10//len(dialog_contexts):
