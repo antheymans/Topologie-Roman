@@ -48,7 +48,20 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
     #First pass, isolate relevant proper nouns
     proper_nouns = {}
     locations = {}
-            
+    
+    #import spacy 
+    #nlp = spacy.load('en_core_web_sm',disable=['parser', 'tagger', 'textcat'])   
+    #for chunk in chunks:
+    #    for ent in nlp(chunk.string).ents:
+    #        if ent.label_ == "PERSON":
+    #            print(ent.text)
+    #            if ent.text not in proper_nouns:
+    #                proper_nouns[ent.text] = 0
+    #            else:
+    #                proper_nouns[ent.text] += 1
+    
+    #print(proper_nouns)
+    #exit()
     for c in chunks:
         if c.head.type.find('NNP')==0 and is_valid(c.head.string):
             name = c.head.string
@@ -288,8 +301,9 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                     maxMentions = max(subAT, key=subAT.get)
                     gender = connectionsTable.nodes[maxMentions]["gender"]
                     del subAT[maxMentions]
+                    connectionsTable.add_edge(canonical_name, maxMentions, paired = 1)
                     if gender != 0:
-                        cluster.append(maxMentions)
+
                         for cn2 in cluster:
                             connectionsTable.nodes[cn2]["gender"] = gender  
                             
@@ -309,8 +323,6 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
                                 connectionsTable.remove_edge(edge[0],edge[1])
                         break                  
                     elif not used[maxMentions]:
-                        #print(cluster, maxMentions)
-                        connectionsTable.add_edge(canonical_name, maxMentions, paired = 1)
                         cluster.append(maxMentions)
                         cluster_1_pair(connectionsTable, used, cluster, index = len(cluster)-1)
      

@@ -5,6 +5,9 @@ articles
 https://github.com/harrisonpim/bookworm/blob/master/data/other-files/Bookworm,%20Databeers%20London%202018.pdf
 code a tester
 
+https://sci-hub.st/https://doi.org/10.1177/0038038588022001007
+social network analysis 
+brief historique de la branche
 
 wonderland 2012
 https://www.aclweb.org/anthology/W12-2513.pdf
@@ -108,3 +111,9 @@ https://gist.github.com/abrambailey/9dbca470e9a562c625fd
   
 
 
+https://www.researchgate.net/publication/324575362_Social_network_analysis_An_overview/link/5df37591299bf10bc3579ff4/download
+metrics for Social Network Naalysis
+
+
+https://sci-hub.st/10.1007/978-1-4419-7142-5_1
+general social network analysis

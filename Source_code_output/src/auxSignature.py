@@ -90,6 +90,7 @@ def get_average_degree(filename):
 def make_cluster_hier(bookarray, books_labels):
     methods = ["single", "complete","average","weighted","centroid","median","ward"]
     for method in methods:
+        print(bookarray)
         booklinkage =  hac.linkage(bookarray,method=method)
         dendrogram(booklinkage, labels = books_labels, leaf_font_size=5)
         pylab.savefig(PATH_PNG+"dendrogram_"+method+".png", bbox_inches = 'tight')
@@ -116,13 +117,16 @@ def make_cluster_kmean(bookarray, books_labels):
         classes[classifier[i]].append(books_labels[i])
     print(classes)
 
-def make_cluster(signature, mode = 0):
+def make_cluster(signature, mode = 0, male_signature = None, female_signature =  None):
     books = []
     books_labels=[]
     for book in list(signature.keys()):
         books_labels.append(book)
-        if mode == 0:
-            books.append([float(signature[book]["Threshold"]),float(signature[book]["SIR"]),float(signature[book]["Clustering"]),float(signature[book]["Degree"])])
+        if mode == 2:
+            print([float(signature[book]["Threshold"]), float(signature[book]["Transitivity"]), float(signature[book]["Clustering"])])
+            books.append([float(signature[book]["Threshold"]), float(signature[book]["Transitivity"]), float(signature[book]["Clustering"])])
+        elif mode == 1:
+            books.append([float(signature[book]["Threshold"]),float(signature[book]["SIR"]),float(signature[book]["Clustering"]),float(signature[book]["Average Degree"])])
         else:
             books.append([float(signature[book]["Threshold"]),float(signature[book]["SIR"]),float(signature[book]["Clustering"])])
     
@@ -200,7 +204,7 @@ def main_signature(files):
     export_graph_signature_table(signature_male_graph, "male_graph_signatures")
     export_graph_signature_table(signature_female_graph, "female_graph_signatures")
     export_graph_signature_table(signature_gendered_graph, "gendered_graph_signatures")
-    make_cluster(signature, 1)
+    make_cluster(signature, 2)
     
 if __name__ == '__main__':
     files = get_files_in_folder(PATH_BOOKS)
