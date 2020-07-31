@@ -1,5 +1,4 @@
-#!/usr/bin/python2.7
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3.6# -*- coding: utf-8 -*-
 
 import nltk.sem.drt as drt
 import pattern.text.en as pen

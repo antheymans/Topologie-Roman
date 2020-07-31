@@ -1,10 +1,11 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3.6
 # -*- coding: utf-8 -*-
 
 import pattern.text.en as pen
 from collections import Counter
 
 from helpers import extract_name_from_chunk
+
 ###############################################################
 # Build the dialog_spacing map 
 # (has to be done independently to extract the threshold value)
@@ -36,10 +37,10 @@ def compute_threshold(dialog_spacing):
             first_zero=i
             break
     m = 0
+    threshold = -1
     for i in reversed(list(range(1,first_zero))):
         if count.get(i,0) > m:
             m =  count.get(i,0) 
-            threshold = i
     for i in reversed(list(range(1,first_zero))):
         currCount = count.get(i,0)
         if currCount >= 100 or (currCount >=max(10,count.get(i+1,0)*2) and all ([count.get(j,0) > currCount for j in range(1,i)])):

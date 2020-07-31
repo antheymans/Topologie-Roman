@@ -1,4 +1,4 @@
-#!/usr/bin/python2.7
+#!/usr/bin/python3.6
 # -*- coding: utf-8 -*-
 
 import helpers
@@ -77,7 +77,7 @@ def read_all():
     print(files)
     print(files_analyzed)
     for f in files:
-        if f not in files_analyzed and True:
+        if f not in files_analyzed and f[-4:] == ".txt":
             book_analyze(f)
     
 if __name__ == "__main__":

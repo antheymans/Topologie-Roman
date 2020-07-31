@@ -1,5 +1,4 @@
-#!/usr/bin/python2.7
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3.6# -*- coding: utf-8 -*-
 
 #Library handling the character extraction and alias resolution
 
