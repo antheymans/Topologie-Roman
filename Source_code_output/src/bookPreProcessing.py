@@ -46,7 +46,7 @@ def get_sentences(book):
             for i in range(len(wordlist)):
                 wordlist[i] = wordlist[i].capitalize()
             speaker = []
-            for elem in re.split(' AND |, |/', ' '.join(wordlist)):                
+            for elem in re.split(' And |, |/', ' '.join(wordlist)):  
                 if len(elem) > 1:
                     speaker.append(elem)
             script = True
