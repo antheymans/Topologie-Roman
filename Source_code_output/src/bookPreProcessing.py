@@ -42,7 +42,7 @@ def get_sentences(book):
             chunks.append([])
             speakers.append("")            
         elif SCRIPT_SPEAKER.match(line):
-            wordlist = line[1:-1].split("(")[0].replace('.', '').replace(';', '').replace('V/0', '').split()
+            wordlist = line[1:-1].split("(")[0].replace('.', '').replace(';', '').replace('V/0', '').replace('-', ' - ').split()
             for i in range(len(wordlist)):
                 wordlist[i] = wordlist[i].capitalize()
             speaker = []

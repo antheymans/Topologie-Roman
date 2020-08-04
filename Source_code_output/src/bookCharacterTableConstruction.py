@@ -576,48 +576,76 @@ def build_alias_table_script(sentences, oldAliasTable,oldConnectionsTable,oldAli
     #Second pass,check all canonical names from chunks headed by a proper name
 
     for i in range(len(speakers)):
-        for speaker in speakers[i]:
-            for index in range(0, len(speaker.split("-"))):
-                canonical_name = speaker.split("-")[index]
-                if canonical_name != "":
-                    while canonical_name[0] == " ":
-                        canonical_name = canonical_name[1:]
-                    while canonical_name[-1] == " ":
-                        canonical_name = canonical_name[:-1]
-                    canonical_name = canonical_name.capitalize()
-                    if canonical_name not in connectionsTable:
-                        gender, name_category, name =categorize_name(canonical_name, male_honorifics, female_honorifics, male_names, female_names, connectionsTable)
-                        connectionsTable.add_node(canonical_name)
-                        connectionsTable.nodes[canonical_name]["gender"] = gender
-                        connectionsTable.nodes[canonical_name]["name_category"] = name_category
-                        connectionsTable.nodes[canonical_name]["name"] = name
-                        connectionsTable.nodes[canonical_name]["value"] = 1 
-                        #if name is composed, keep all the component in the database to identify aliases
-                        if len(canonical_name.split()) >0:
-                            for alias in canonical_name.split():
-                                if alias not in connectionsTable:
-                                    gender, name_category, name =categorize_name(alias, male_honorifics, female_honorifics, male_names, female_names, connectionsTable)
-                                    connectionsTable.add_node(alias)
-                                    connectionsTable.nodes[alias]["gender"] = gender
-                                    connectionsTable.nodes[alias]["name_category"] = name_category *-1
-                                    connectionsTable.nodes[alias]["name"] = name
-                                    connectionsTable.nodes[alias]["value"] = 0
-                                    connectionsTable.add_edge(canonical_name, alias, paired = 2  )
-                    else:
-                        connectionsTable.nodes[canonical_name]["value"] += 1 
-                    if index > 0:
-                        print(canonical_name, last_name)
-                        connectionsTable.add_edge(canonical_name, last_name, paired = 1  )
-                    last_name = canonical_name
-                    
+        for canonical_name in speakers[i]:
+            if canonical_name != "":
+                if canonical_name not in connectionsTable:
+                    gender, name_category, name =categorize_name(canonical_name, male_honorifics, female_honorifics, male_names, female_names, connectionsTable)
+                    connectionsTable.add_node(canonical_name)
+                    connectionsTable.nodes[canonical_name]["gender"] = gender
+                    connectionsTable.nodes[canonical_name]["name_category"] = name_category
+                    connectionsTable.nodes[canonical_name]["name"] = name
+                    connectionsTable.nodes[canonical_name]["value"] = 1 
+                    #if name is composed, keep all the component in the database to identify aliases
+                    if len(canonical_name.split()) >0:
+                        for alias in canonical_name.split():
+                            if alias not in connectionsTable and len(alias) > 1:
+                                gender, name_category, name =categorize_name(alias, male_honorifics, female_honorifics, male_names, female_names, connectionsTable)
+                                connectionsTable.add_node(alias)
+                                connectionsTable.nodes[alias]["gender"] = gender
+                                connectionsTable.nodes[alias]["name_category"] = name_category *-1
+                                connectionsTable.nodes[alias]["name"] = name
+                                connectionsTable.nodes[alias]["value"] = 0
+                                connectionsTable.add_edge(canonical_name, alias, paired = 2  )
+                            elif len(alias) > 1 and connectionsTable.nodes[alias]["name_category"] > 0:
+                                connectionsTable.nodes[alias]["name_category"] = connectionsTable.nodes[alias]["name_category"]  *-1
+                    if len(canonical_name.split(" - ")) >0:
+                        for alias in canonical_name.split(" - "):
+                            if alias not in connectionsTable:
+                                gender, name_category, name =categorize_name(alias, male_honorifics, female_honorifics, male_names, female_names, connectionsTable)
+                                connectionsTable.add_node(alias)
+                                connectionsTable.nodes[alias]["gender"] = gender
+                                connectionsTable.nodes[alias]["name_category"] = name_category 
+                                connectionsTable.nodes[alias]["name"] = name
+                                connectionsTable.nodes[alias]["value"] = 0
+                            connectionsTable.add_edge(canonical_name, alias, paired = 1)
+                            equalize_gender(canonical_name, alias, connectionsTable)
+                else:
+                    connectionsTable.nodes[canonical_name]["value"] += 1 
+                
     aliases.add_nodes_from(connectionsTable.nodes())
     for name, data in connectionsTable.nodes(data = True):
         if data["name_category"] <0:
             subAT= {s: connectionsTable.nodes[s]["value"] for s in connectionsTable.neighbors(name)}
-            maxMentions = max(subAT, key=subAT.get)
-            aliases.add_edge(name, maxMentions)
-            connectionsTable.add_edge(name, maxMentions, paired = 1)
-
+            while len(subAT) != 0:
+                maxMentions = max(subAT, key=subAT.get)
+                del subAT[maxMentions]
+                if data["gender"] * connectionsTable.nodes[maxMentions]["gender"] != -1:
+                    connectionsTable.add_edge(name, maxMentions, paired = 1)
+                    equalize_gender(name, maxMentions, connectionsTable)
+                    break
+                    
+    used = {w : False for w in connectionsTable.nodes}
+    #creates cluster of names related to every character
+    for canonical_name, data in connectionsTable.nodes(data = True):
+        if used[canonical_name] == False:  
+            used[canonical_name] = True
+            #add all neibhors and their neighbors recursively to our cluster
+            cluster = []
+            candidates = [canonical_name]
+            while len(candidates) > 0:
+                cn2 = candidates.pop()
+                cluster.append(cn2)
+                for edge in connectionsTable.edges(cn2, data = True):                
+                    if edge[2]["paired"] == 1 and not used[edge[1]]:
+                        used[edge[1]] = True
+                        candidates.append(edge[1])                   
+            subAT= {s: connectionsTable.nodes[s]["value"] for s in cluster}
+            maxMentions = max(subAT, key=subAT.get) 
+            cluster.remove(maxMentions)
+            for cn2 in cluster:
+                aliases.add_edge(cn2, maxMentions)
+    print("graph made")                    
+    
     print("graph made")            
     return aliasTable, connectionsTable, aliases
 

@@ -103,7 +103,6 @@ def uniformize_speakers(current_context_dialogs,aliasTable,aliases,context_chunk
         nt = []
         for f in o['from']:
             for fl in alias_lookup(f,aliasTable, aliases): 
-                alias_lookup(f,aliasTable, aliases)
                 if len(fl) > 0:
                     nf.append(fl)
             o['from'].remove(f)
