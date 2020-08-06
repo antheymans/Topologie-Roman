@@ -30,30 +30,26 @@
 \newcommand{\fontColor}{\sffamily \selectfont \color{ULBblue}}
 
 % Titre
-\newcommand{\titleA}{\fontTitle{Première ligne de titre du mémoire}} % Titre identique au titre remis au secrétariat
-\newcommand{\titleB}{\fontTitle{Deuxième ligne de titre du mémoire}} % (dans la langue de rédaction a priori)
+\newcommand{\titleA}{\fontTitle{Etude de la topologie de réseaux d'acteurs}} % Titre identique au titre remis au secrétariat
+\newcommand{\titleB}{\fontTitle{extraits à partir de romans célèbre}} % (dans la langue de rédaction a priori)
 % Sous-titre
 \newcommand{\subtitle}{\fontSubtitle{Ligne du sous-titre du mémoire}}
 % Titre du diplôme
 \newcommand{\diplomaA}{\fontText{Mémoire présenté en vue de l’obtention du diplôme}} % A laisser en Français
-\newcommand{\diplomaB}{\fontText{d'Ingénieur Civil [...] à finalité [...]}}
+\newcommand{\diplomaB}{\fontText{d’Ingénieur Civil en informatique à finalité spécialisée}}
 
 % Etudiant
-\newcommand{\student}{\textbf{\sffamily \large [Prénom Nom]}}
+\newcommand{\student}{\textbf{\sffamily \large [Antoine Heymans]}}
 
 % Supervision
-\newcommand{\promAa}{\fontColor{ primary eur}}
-\newcommand{\promAb}{\fontText{Professeur [Prénom Nom]}}
-\newcommand{\promBa}{\fontColor{Co-Promoteur}}
-\newcommand{\promBb}{\fontText{Professeur [Prénom Nom]}}
-\newcommand{\promCa}{\fontColor{Superviseur}}
-\newcommand{\promCb}{\fontText{[Prénom Nom]}}
+\newcommand{\promAa}{\fontColor{Promoteur}}
+\newcommand{\promAb}{\fontText{Professeur [Hugues Bersini]}}
 \newcommand{\deptA}{\fontColor{Service}}
-\newcommand{\deptB}{\fontText{[Nom du service]}}
+\newcommand{\deptB}{\fontText{[Iridia]}}
 
 % Année académique
 \newcommand{\yearA}{\fontColor{Année académique}}
-\newcommand{\yearB}{\fontText{20xx - 20xx}}
+\newcommand{\yearB}{\fontText{2019 - 2020}}
 
 \begin{document}
 
@@ -82,10 +78,10 @@
 		
 		\put(8,44){\makebox(80,5)[l]{\promAa}}
 		\put(8,39){\makebox(80,5)[l]{\promAb}}
-		\put(8,31){\makebox(80,5)[l]{\promBa}} % Commenter la ligne si pas nécessaire
-		\put(8,26){\makebox(80,5)[l]{\promBb}} % Commenter la ligne si pas nécessaire
-		\put(8,18){\makebox(80,5)[l]{\promCa}} % Commenter la ligne si pas nécessaire
-		\put(8,13){\makebox(80,5)[l]{\promCb}} % Commenter la ligne si pas nécessaire
+		%\put(8,31){\makebox(80,5)[l]{\promBa}} Commenter la ligne si pas nécessaire
+		%\put(8,26){\makebox(80,5)[l]{\promBb}} % Commenter la ligne si pas nécessaire
+		%\put(8,18){\makebox(80,5)[l]{\promCa}} % Commenter la ligne si pas nécessaire
+		%\put(8,13){\makebox(80,5)[l]{\promCb}} % Commenter la ligne si pas nécessaire
 		\put(8,5){\makebox(80,5)[l]{\deptA}}
 		\put(8,0){\makebox(80,5)[l]{\deptB}}
 		
@@ -98,21 +94,36 @@
 
 
 \chapter{Introduction}
-Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consist of using graph and network theory to represent links among individuals as a network in order to analyze them. \\
+Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consist of using graph and network theory to represent relations among actors as a network in order to analyze them.  Originally the ``actor'' used in the network are people but in some field use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various field like geography \citep{economic_geography} or organizations  management \citep{management}.  It has been used in psychology \citep{psy} as  it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agent of  Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it.  Social network analysis have also be designated as a way to enforce laws and disrupt gang by the The International Association of Chiefs of Police \citep{police}. \\
 
 Research in computer science are developing semantically-oriented techniques to analyze fiction. \cite{character_country} had presented a method to extract social network from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated method that analyze text of fiction also produce metadata that help to analyze them. For instance \cite{original} produce the social network novels but also count the mean distance between two dialogs in the novel. This measure produce meaningful result when it is used to classify novels. Social network can be seen as a metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
 
-This master thesis consists firstly in the development of a software that extracts social networks and other metadata from novels and movie scripts. Secondly it consists in the analysis of the topology of the extracted networks. The software has been originally developed during an other master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was only working on novels. For this reason I will focus on the modification that I have made and the evolution of the state of the art since this period. The global way the software works and the main steps will also be explained more briefly. \\
+This master thesis consists firstly in the development of a software that extracts social networks and other metadata from novels and movie scripts. Secondly it consists in the analysis of the topology of the extracted networks. The software has been originally developed during an other master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was only working on novels. For this reason I will focus on the modification that I have made and the evolution of the state of the art since this period. The global way the software works will also be explained more briefly. \\
+
+
+\chapter{Social Network}
+Before extracting or analyzing any social networks, let's introduce the basic concept related to network. We should note that the word network and the word graph have the same meaning, the choice of of these words usually depends on the application. For ``instance social'' network are never called  ``social graph'' but it would have the same meaning. \citep{network_theory}
+\section{Network Theory: Basics}
+
+\begin{figure}
+\centering
+\includegraphics{diestel_graph.png}
+\caption{Network of Nodes $= 1,...,7$ and links $= \{(1, 2), (1, 5), (2, 5), (3, 4), (5, 7)\}$  \citep{diestel}}
+\label{diestel graph}
+\end{figure}
+
+Network vs graph : Same ? Network can evoluate with time ? Presence of attribute in network ? Network transport things while graphs have inherent property ?
+
+Network theory is the study of networks. A  network or a graph are defined mathematically as a pair of set $G = (V, E)$ such that $E  \subseteq [V ]^2$. Concretely it means that element from the second set should be tuple of 2 element from the first set.
+Graph are usually represented with points symbolizing element from the first set linked by lines representing element from the second set. You can see an example of this representation on figure X. In network theory, element from the first set are called ``nodes'' and element from the second set are called ``edges''. If for any pair $XY \in V$,  the link $(X,Y) = (Y,X)$ then the graph is called undirected. This is the most common type of graph. There exist also directed graphs whose edges are directed from a sender to a receiver.
 
 
 
+\citep{diestel}
 
+\chapter{Social network construction}
 
-
-
-\chapter{Method of the software}
-
-In this part of this Master Thesis, I will briefly explain what are the main step executed by the software to extract social network and meta data from novels or script. The modification of the program that I've made will be more detailed. Every information about the initial software are available at \cite{original}. The initial software was only analyzing novels, some adjustments have been made to extend it to movie scripts.
+In this part of this Master Thesis, I will briefly explain what are the main step executed by the software to extract social network and meta data from novels or script. The modification of the program that I've made will be more detailed. The bigger changes concerns the extraction of characters from novels.  Also the original software was only analyzing novels, some adjustments have been made to extend it to movie scripts. I don't the state of the part for part who don't have been deeply modified. Every information about it are available at \cite{original} and \cite{original_thesis}. 
 
 \section{Assumption and conception of the social network}
 There is multiple way of constructing a social network from a text.  Especially because there is multiple way of analyzing the structure of the narrative. \cite{original} choose to see a narrative as a succession of event. The text is composed of a series of \textbf{conversation} that involve a set of characters. Each conversation can be subdivided into a succession of mini-event that are called dialog. In a \textbf{dialog} a person chosen in the set of character involved in the conversation will address a message to a the other characters from the set, the \textbf{audience}. The person that send the message is called the \textbf{speaker}. Also all sentences that are out of dialogs are called \textbf{context} and linked with the following each conversation or the one that is currently happening. Sentences of context can be located between dialogs from a same conversation. Characters that appear together in a conversation are linked in the social network with a weight that correspond to the number of conversation they are both in.
@@ -567,10 +578,10 @@ The social network is constructed using the identification of characters in dial
 Two types of network are constructed:
 \begin{enumerate}
 \item context networks: social network that are relative to a single conversation and the associated context. 
-\item an incremental network: a network which the result of the incremental addition of all context networks. This is a network representing all relations of characters in the fiction and information from all conversations. 
+\item incremental networks: networks which are the result of the incremental addition of context networks. They represent the link between characters from a set of conversation.
 \end{enumerate}
 \subsection{context networks}
-Context network are a particular type of network developed by \cite{original}. They have the particularity of representing only a conversation, so, all characters of those networks tend to be linked between them. They have been builded following the intuition that the incremental addition of context networks can be used to learn about the evolution of a narration.\\
+Context network are a particular type of network developed by \cite{original}. They have the particularity of representing only a conversation, so, all characters of those networks tend to be linked between them. They have been designed only to make possible the construction of incremental network. \\
 
 They are builded by executing the following steps:
 \begin{enumerate}
@@ -580,22 +591,42 @@ They are builded by executing the following steps:
 \item At the end of the network construction, the sentiment weight of each link is normalized by dividing it by the first weight of the link.
 \end{enumerate}
 
-\susection{incremental networks}
-The name ``incremental network'' come from \cite{original} in opposition from the context networks. However incremental networks can be considered as standard social network extracted from fiction that have been studied in many article such as \cite{agarwal-etal-2013-automatic, NER, character_country, movie, fiction, Dekker2018EvaluatingSN}.
- 
+\subsection{incremental networks}
+The name ``incremental network'' come from \cite{original} in opposition from the context networks. They are constructed by incrementally adding context network in a chronological order. There is as much incremental networks as there is conversations in a novel or a script. The objective of constructing such graphs is to observe how the social network evolve with the story.
+The final incremental networks represent all the relations in the narrative. It can be considered as a standard social network extracted from fiction that have been studied in many article such as \cite{agarwal-etal-2013-automatic, NER, character_country, movie, fiction, Dekker2018EvaluatingSN}.\\
 
+\begin{equation}
+\label{sentiment}
+sentiment_{incremental}^{n+1} = \frac{weight - 1}{weight} \cdot Time-Factor * sentiment_{incremental}^{n} + sentiment_{context}\\
+\end{equation}
 
-    %37/109
+To build incremental networks, the context graphs are merges as follow: All new nodes of the new context graph are added to the incremental networks. All links are added by conserving the sentiment of the node and setting a weight at 1. This weight represent the number of conversation where the link appear and should not be confused with the weight of the context network. If a link was already existent in the incremental networks, the weight is increased by one. The sentiment score is modified by using equation \cite{equation} with $Time-Factor = 1$. The goal of this equation is to slightly decrease importance of previous sentiment score and see how the sentiment between characters evolve during the narrative. At the end of the addition of links, all node that represent character that don't appear in enough conversation are removed. The goal of this removal is to throw all false characters and minor character that are not important for the social network. The threshold value have been kept at 1 to keep minor character as the new character extraction system have already removed a lot of false characters.
 
-
-%\textit{Proper names detection}: For each chunk of each dialog context, if the main word is labelled as a proper noun, is composed of at least 3 letters and is not only uppercase, this noun is added in the alias table.\\
-%\textit{Aliases detection}: All chunks are read again and the program compute the number of times that each pair of proper names appear together in a chunk. If 2 words appear more than 2/3 of the time together, they are considered as alias.
+\newpage
+\section{Data-extracted}
+Various data are extracted from the document and can be used for further analysis. This data include network, information about the characters and dialogs or meta-data used by the program.
+The networks include:
+\begin{itemize}
+\item The global network under the form of a \textit{.gefx} and \textit{.json} file. Those format make possible to manipulate the graph using external software like Gephi.
+\item \textit{.png} representation of each context and incremental graphs.
+\item A csv file with the edges, weight and sentiment of all incremental and context graph produced.
+\item Two csv files containing the clustering coefficient of each graph.
+\end{itemize}
+The other data produced by the program are csv files containing:
+\begin{itemize}
+\item the extracted speaker and audience of each dialog of the text with the perceived sentiment and the index of the conversation.
+\item all aliases associated to each character, the number of appearance of all thoses aliases and the inferred gender.
+\item all the proper nouns extracted with their inferred gender, categories and number of appearance.
+\item all primary and secondary links between names used for alias co-resolution.
+\item the spacings between each pair of consecutive dialogs, the frequency of each spacing value and the final threshold value used on spacing to delimit dialogs.
+\item the index of the begin and end of each conversation.
+\end{itemize}
 
 
 
 
 \bibliography{biblio} 
-%\printbibliography%
+
 
 \end{document}
 
