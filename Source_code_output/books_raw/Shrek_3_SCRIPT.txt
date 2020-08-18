@@ -91,7 +91,7 @@ _DONKEY
  "The sun is shining through! Good
 "morning! Good morning."
 (coming closer and closer
-_TO SHREK)
+(TO SHREK)
  "To you!"
 (TO SHREK)
  "And you!"
@@ -115,7 +115,7 @@ Donkey yanks the sheets off of Fiona and Shrek. He i urprised to see Shrek's bar
 _DONKEY
 "Aaahhh! You know you really need to get yourself a pair of jammies."
 Shrek sighs.
-_CUT TO:
+CUT TO:
 INT. KNIGHTING CEREMONY - DA he camera pans down from a stained glass window. The song
  "Royal Pain" by the Eels plays in the background as the
 title: "Shrek The Third" is superimposed  large crowd has gathered to watch the knighting. Shre alks down the aisle of the church hrek walks up to the knight who seems a bit nervous hrek takes a sword from Puss, but he doesn't have any ide hat he is supposed to do with it. Shrek looks at Puss, wh ndicates how to knight a person with his own sword. Shre tarts to knight the knight.
@@ -125,10 +125,10 @@ Shrek accidentally stabs the knight.
 _SHREK
 "He-he. Ooh."
 The crowd, Fiona, Puss and Donkey look on, shocked.
-_CUT TO:
+CUT TO:
 "Shrek the Third - Final Screening Script"
 EXT. BOAT DOCKS - DA hrek and Fiona officiate at a boat christening for the Roya avy hrek is holding a bottle of champagne. He leans on th oat, accidentally pushing it down the ramp. Shrek throw he bottle at the boat and it punches an enormous hole in th ide of the hull. The boat quickly sinks hrek turns to find the patrons of Far Far Away shaking thei eads as they leave.
-_CUT TO:
+CUT TO:
 INT. DRESSING ROOM - DA aul, the make-up specialist, tightens some aprons aroun hrek and Fiona. Donkey, Puss and Raul stand in front o hem.
 _DONKEY
 "Well, since you're filling in for one, you might as well look like a real King. Can somebody come in here and work on Shrek please?"
@@ -232,7 +232,7 @@ _DONKEY
 2.
 
 The fire causes a Far Far Away shield to detach from a woode eiling beam and fall onto the stage, breaking it in half he whole stage collapses in the middle. The buffet table lide toward Shrek and Fiona at the other end and collide RASH! BANG!
-"CUT TO BLACK:"
+CUT TO BLACK:
 INT. SHREK AND FIONA'S BEDROOM - NIGH he door to Fiona's room flies open.
 _SHREK
 "That's it! We're leaving!"
@@ -299,7 +299,7 @@ _SHREK
 There is a knock on the bedroom door. The door bursts open evealing a Royal Page hrek springs up.
 _SHREK
 "Well, somebody better be dying."
-_CUT TO:
+CUT TO:
 INT. KING'S ROOM - MOMENTS LATE he camera pushes through a corridor that leads to the King' edroom. The King is lying on his lily pad, coughing.
 _KING HAROLD
 "I'm dying."
@@ -406,7 +406,7 @@ EXT. CASTLE - CONTINUOU he knights of Far Far Away march toward the castle as th
 Fairy-tale Creatures all bow their heads solemnly hrek puts his arm around Fiona he funeral has ended and the crowd begins to disperse hrek, Fiona and the Queen stand by the pond. The Quee adly gazes at the pond.
 _DISSOLVE TO:
 EXT. A BLUFF OVERLOOKING THE CASTLE - CONTINUOU he camera pulls back to reveal a cloaked figure, o orseback, overlooking the funeral. The figure removes hi ood to reveal Prince Charming. He gives a smug smile, an ides off.
-_CUT TO:
+CUT TO:
 EXT. POISONED APPLE BAR - NIGH rince Charming rides up to the Poison Apple Bar.
 "Shrek the Third - Final Screening Script "
 
@@ -491,7 +491,7 @@ The crowd listens, rapt.
 _PRINCE CHARMING
 "So who will join me? Who wants to come out on top for once? Who wants their happily ever after?!"
 The crowd of villains cheer and starts getting rowdy. A ba oom brawl ensues. Prince Charming looks on, shocked. H ucks out of the way of a flying liquor bottle. He smile ervously and lifts his fruity, Fuzzy Navel to drink.
-_CUT TO:
+CUT TO:
 EXT. DOCKS - DUS he camera booms down from the lighthouse.
 _BLIND MOUSE #
 "This way gents."
@@ -649,7 +649,7 @@ He sees a baby sitting in his bed, smiling up at him. Th aby shrugs.
 _OGRE BABY
 "Bubabatoo?"
 Suddenly, Shrek hears a loud rumble. He turns around abies start pouring out of the window and the fireplace irst there is one, then two, then thirty more follow undreds of them start piling in hrek makes a run for the doorway, but no matter how hard h uns, the doorway keeps getting farther and farther away! H eeps trying, hundreds of babies trailing behind NT. GRADUATION STAGE - CONTINUOU inally, Shrek reaches the door and opens it. He slams i hut behind him and closes his eyes. Everything is quiet e opens his eyes and finds himself on stage in front of hi igh school hrek looks up to find a graduation cap on his head. Th udience is full of ogre babies laughing at him. The camer ulls back to reveal Shrek standing at the podium, naked.
-_CUT TO:
+CUT TO:
 EXT. BOAT DECK - DAWN, CONTINUOU hrek's eyes pop open, he sits upright and tries to compos imself.
 _SHREK
 "Ahhhh! Oh, Donkey! Donkey, wake- up!"
@@ -677,7 +677,7 @@ Shrek walks away onkey leans over to Puss.
 _DONKEY
 "How does it happen?"
 Puss rolls his eyes at Donkey.
-_CUT TO:
+CUT TO:
 Donkey sees Shrek at the back of the boat staring out at th istant horizon. He walks up next to his friend.
 _DONKEY
 (SINGING)
@@ -722,7 +722,7 @@ Everyone turns to look at the Captain who clears his throat.
 _SHIP CAPTAIN
 "Uh, with your journey."
 He points to shore. A majestic castle stands proudly on  earby bluff.
-_CUT TO:
+CUT TO:
 EXT. WORCESTERSHIRE ACADEMY - DA hrek, Puss and Donkey stand at the entrance to the castle onkey reads the sign hanging over the entrance.
 _DONKEY
 "Wor-ces-ter-shireee. Now that sounds fancy."
@@ -791,7 +791,7 @@ _SHREK
 While Xavier tries to control the bleeding, Gary point owards the athletic field.
 _GARY
 "He's over there."
-_CUT TO:
+CUT TO:
 EXT. JOUSTING RANGE - CONTINUOU n the distance, Shrek spots A BOLD KNIGHT atop his steed e looks very impressive as he rears up ready to charge hrek, Donkey and Puss arrive to see the beginning of th harge. It's an exciting back and forth ooves pound on sand he Knight's eyes steady he horse rears majestically he opponent's eyes widen in fear he lance hits, and the opponent flies through the air an ands in front of Shrek, Puss and Donkey hrek looks back at the victorious Knight. He removes hi elmet revealing a strong handsome face. The Knight enjoy is victory.
 _KNIGHT (LANCELOT)
 "Ha ha! There is no sweeter taste on thy tongue than victory!"
@@ -815,7 +815,7 @@ _PUSS
 "That information is on a need to know basis."
 _DONKEY
 "It's top secret, hushity hush."
-_CUT TO:
+CUT TO:
 EXT. JOUSTING RANGE - KNIGHTS ARE he Knight commands his troops.
 _KNIGHT (LANCELOT)
 "Now gentlemen let's away... to the showers!"
@@ -860,7 +860,7 @@ _SHREK
 _GUINEVERRE
 "It's like whatever. She's just totally into college guys and mythical creatures and stuff."
 She pops her gum.
-_CUT TO:
+CUT TO:
 INT. HALLWAY - LATE hrek and Puss search the hallways, looking for Artie.
 _SHREK
 "Oh Arthur! Come out, come out wherever you are..."
@@ -990,7 +990,7 @@ Shrek shoves the kid through the door.
 _ARTIE
 "Ow!"
 Shrek, Donkey, and Puss exit the gymnasium.
-_CUT TO:
+CUT TO:
 INT. LIBRARY - DA ll the Princesses and Fairy-tale Creatures have gathered fo iona's baby shower. A group of birds gently place  lowered wreath on Fiona's head. The Princesses all gaze a er.
 _PRINCESSES
 (GASP)
@@ -1116,7 +1116,7 @@ _FIONA
 "Well, when he first found out...Shrek said-"
 _DRAGON
 "Roarrr!"
-_CUT TO:
+CUT TO:
 EXT. SKY ABOVE FAR FAR AWAY - DA he Fairy-tale Villains are heading into town on flyin roomsticks. The Evil Trees are hanging underneath some o he large broomsticks. Prince Charming is riding side saddl ith one of the witches.
 "PRINCE CHARMING (CONT'D)"
 (LAUGHING)
@@ -1152,11 +1152,11 @@ The camera pans up to Prince Charming on the broomstic lying down Rodeo Drive.
 _PRINCE CHARMING
 "Enough pillaging! To the castle!"
 Prince Charming, on the broom, leads the Fairy-tale Villain p to the castle.
-_CUT TO:
+CUT TO:
 EXT. CASTLE - CONTINUOU he Evil Witches surround the castle. Dragon takes down on f the witches flying by, but more Evil Witches circle her iona runs to the window he Evil Witches drop a metal net over Dragon. Sh truggles.
 _DRAGON
 "Roarrrr!"
-_CUT TO:
+CUT TO:
 INT. LIBRARY - CONTINUOU ANG! The Fairy-tale Creatures run to barricade the door he Three Pigs and Pinocchio push a dresser and othe urniture in front of the door he Fairy-tale Creatures are fortifying the room. They brac hemselves against the furniture.
 _GINGERBREAD MAN
 (TO FIONA)
@@ -1273,7 +1273,7 @@ _PINOCCHIO
 Pinocchio's nose grows again.
 _WOLF
 "Oh boy."
-_CUT TO:
+CUT TO:
 EXT. BOAT DECK - DUS he boat cuts through the open sea. Artie smiles as h atches Worcestershire shrinking away on the horizon.
 "Shrek the Third - Final Screening Script"
 _ARTIE
@@ -1526,7 +1526,7 @@ _MERLIN
 Shrek grabs Merlin's mouth and closes it.
 _SHREK
 "Alright, alright... journey to the soul..."
-_CUT TO:
+CUT TO:
 EXT. MERLIN'S CAMP - LATE  fire blazes erlin throws a handful of dirt into the fire, it flares.
 _MERLIN
 "Now all of you, look into the "Fire of Truth" and tell me what you see! Yah! Ha!"
@@ -1619,7 +1619,7 @@ _ARTIE
 _SHREK
 "Yeah. I got that."
 The camera slowly booms up and away from the group as th ire continues to burn.
-_CUT TO:
+CUT TO:
 INT. SEWER CATACOMBS - CONTINUOU he Princesses, Fiona and the Queen are surrounded b arkness as they tiptoe down the steps and into the catacomb elow the castle hey round a corner and step onto a ledge with Fiona leadin he way, holding a torch.
 _CINDERELLA
 "Oh this place is filthy. I feel like a hobo."
@@ -1699,7 +1699,7 @@ He stops and flashes a sadistic smile.
 _PRINCE CHARMING
 "Sorry? Don't you realize --once Shrek sets foot in Far Far Away he's doomed?"
 Prince Charming leads Rapunzel out. She looks back at the pologetically. Everyone wears a look of defeat he guards march them off iona and the princesses are locked away in a prison cell iona looks through the bars of the cell, feeling helpless.
-_CUT TO:
+CUT TO:
 EXT. WOODS OUTSIDE OF FAR FAR AWAY - DA hrek startles awake. He sits up and scratches his head ooking around. He realizes it's morning ehind him a peaceful bird lands on a tree branch. Suddenly he tree branch that was holding the bird flicks it off hrek senses the movement behind him and turns around to fin verything is normal. He turns back around to wake u veryone he trees start to advance toward Shrek he log Artie is sleeping on suddenly sits up, knockin rtie, who is still asleep, to the ground.
 "Shrek the Third - Final Screening Script"
 _ARTIE
@@ -1839,7 +1839,7 @@ _MERLIN
 Magic rays shoot out of Merlin's fingers. Shrek, Puss onkey and Artie disappear in a puff of smoke.
 _MERLIN
 "Woah! It worked!"
-_CUT TO:
+CUT TO:
 "Shrek the Third - Final Screening Script"
 EXT. SOMEWHERE IN THE WOODS - CONTINUOU hey reappear and fall out of the sky and bounce through th anopy of a large apple tree. They ping-pong through th oliage and land in a heap at the base of the tree.
 _DONKEY
@@ -2001,7 +2001,7 @@ _PUSS
 (in Donkey's body)
 "Oh, we'll have much to say to Nancy, I promise!"
 The guards look at each other nervously.
-_CUT TO:
+CUT TO:
 INT. COURTYARD STAGE - DA  group of enchanted trees work on through their danc umber wo dwarfs on bungee chords helplessly swing back and fort n the rear of the stage he camera lands on Prince Charming reading his lines next t  Shrek stand in.
 _PRINCE CHARMING
 (reading his lines from a
@@ -2044,7 +2044,7 @@ He throws the script on the ground and notices the stand-in.
 _PRINCE CHARMING
 "And what are you laying around for? Get up! Honestly."
 Prince Charming storms off.
-_CUT TO:
+CUT TO:
 INT. CHARMING'S DRESSING ROOM -- MOMENTS LATE rince Charming storms into his colossal gold leafed dressin oom, its walls covered with posters of inspirational saying nd portraits of Prince Charming in different acting roles lamming the door, he plops down in his throne chair in fron f a dressing table and large 3-way mirror. A statuette o is mother is on the vanity. He looks at it intently.
 _PRINCE CHARMING
 "Our happily ever after is nearly complete, mummy. And I assure you, the people of this kingdom will pay dearly for every second we've had to wait."
@@ -2221,7 +2221,7 @@ _FIONA
 Snow thinks for a moment and then glances at the othe rincesses. They nod now looks determined. She rips off a sleeve, revealing  opey tattoo.
 "Shrek the Third - Final Screening Script"
 Sleeping Beauty tears the bottom of her dress he Queen puts lipstick smudges under her eyes (a la  ootball player) inderella sharpens the heal of her glass slipper oris burns her bra he Princesses place their hands over Fiona's. Puss an onkey's hands come in last.
-_CUT TO:
+CUT TO:
 EXT. COURTYARD STAGE - CONTINUOU aptain Hook replaces his "hook" appendage with a "baton" an aps it on the score in front of him.
 _ANNOUNCER
 "Ladies and gentlemen. The Far Far Away Theatre at the Charming Pavilion is proud to present: "It's a Happily Ever After, After All.""
@@ -2246,7 +2246,7 @@ Cyclops picks her up and embraces her.
 _CYCLOPS
 "Who woulda thought a monster like me deserves something as special as you?"
 They touch foreheads affectionately hrek looks at the two of them and then gets a determine ook on his face.
-_CUT TO:
+CUT TO:
 EXT. CASTLE GARDEN he camera booms down into some trees just outside of th astle. Fiona and the Princesses appear behind a log. Tw vil Trees guard the castle gate. Fiona uses a duck call t ignal Snow White. She skips down the path toward a sid ntrance, where two Evil Trees are standing guard. Sno hite stops in front of them, singing our version of: "Anima riends/With A Smile."
 "Shrek the Third - Final Screening Script SNOW WHITE (O.S.)"
 (SINGING)
@@ -2279,7 +2279,7 @@ _SNOW WHITE
 All the animals turn and attack the trees. Fiona and th rincesses charge forward.
 _FIONA
 "Move it! Go! Go! Go!"
-_CUT TO:
+CUT TO:
 "Shrek the Third - Final Screening Script"
 EXT. FAR FAR AWAY ZOO - CONTINUOU onkey and Puss (in each other's bodies) run through fron ates of the Far Far Away Zoo he Dronkeys are held captive in the zoo. Donkey (in Puss ody) busts open their cage.
 _DONKEY
@@ -2292,23 +2292,23 @@ _PUSS
 _DONKEY
 (in Puss' body)
 "Hey!"
-_CUT TO:
+CUT TO:
 EXT. CASTLE GARDENS - CONTINUOU he Princesses run toward the castle. Doris punches throug he lock to open the gates s they enter the castle grounds, a group of guards run owards them. Cinderella takes out a couple of them with he oomerang crystal slipper. Sleeping Beauty falls to th round, asleep. The guards trip over her body oris runs up to the foot of a canopy and takes a knee. Th rincesses use Doris as a step to leap onto the canopy an ver the castle wall.
-_CUT TO:
+CUT TO:
 EXT. RODEO DRIVE - CONTINUOU onkey and Puss (in each other's bodies) break Pinocchio ou f his marionette theatre.
-_CUT TO:
+CUT TO:
 "Shrek the Third - Final Screening Script"
 EXT. BAKERY - MOMENTS LATE ingerbread Man is locked inside a bakery display case onkey and Puss arrive (in each other's bodies). Donkey (i uss' body) awkwardly tries to cut the glass open with hi laws. Puss (in Donkey's body) intervenes, quickly bashing  oof through the glass. They pull Gingerbread Man out of th ase.
-_CUT TO:
+CUT TO:
 EXT. CASTLE ROOFTOP - CONTINUOU iona leads the Princesses and Queen, as they stealthil reep along the rooftop.
-_CUT TO:
+CUT TO:
 EXT. CASTLE ROOFTOP - CONTINUOU iona peers around a corner and sees two guards blockin heir path. She gets an idea he Guards turn around to find a leg sticking out. They
  "ooh" and "aah" as they approach the leg. The camera pans up
 to reveal Doris.
 _DORIS
 "Hey. How's it going?"
 She kicks the guards to the ground, and they take of unning.
-_CUT TO:
+CUT TO:
 EXT. FAR, FAR AWAY CASTLE- LATE onkey, Puss, (still in each other's bodies) and the rescue airy Tale Creatures run toward the castle onkey and Puss peek out from behind a bush.
 _PUSS
 (in Donkey's body)
@@ -2364,7 +2364,7 @@ _DONKEY
 (in Puss' body)
 "Charming was going to kill you Artie. Shrek saved your life."
 Artie realizes the truth and is suddenly concerned for hi riend.
-_CUT TO:
+CUT TO:
 EXT. COURTYARD STAG he lights dim he curtain rises NT. BACKSTAGE - CONTINUOU umplestiltskin orders for the spotlight.
 _RUMPLESTILTSKIN
 "Cue the spot!"
@@ -2732,9 +2732,9 @@ Shrek opens the front door to reveal the Dwarf.
 _NANNY DWARF
 "Where's the baby?"
 Shrek puts a bottle into the Dwarf's mouth and slams th oor.
-_CUT TO:
+CUT TO:
 EXT. SWAMP HOUSE - DA iona slides one of the babies down a "slip `n slide" mad ut of mud shot from geysers. Shrek slides down himself he babies scramble out of the way as Shrek slides by praying mud everywhere.
-_CUT TO:
+CUT TO:
 INT. SWAMP HOUSE - EVENIN hrek and Fiona are diapering two of the babies in perfec nison. They continue diapering, Fiona holds up the thir aby and Shrek holds up an unhappy, diapered Puss hrek grabs a gourd bottle off of a shelf. He tosses it t iona.
 "Shrek the Third - Final Screening Script "
 
@@ -2743,7 +2743,7 @@ INT. SWAMP HOUSE - EVENIN hrek and Fiona are diapering two of the babies in perf
 Fiona stands holding one baby over her shoulder. She catche he gourd thrown to her, twirls it around (a la Tom Cruise i ocktail), lifts up her leg where another baby is perched o er foot and puts the gourd in the baby's mouth hrek is burping a baby over his shoulder. The baby burps iona has a baby over her shoulder and the baby burps.  ronkey sitting on a chair does a flame-belch and an ogr aby crawling by farts which causes a flame thrower effec nto the fireplace hrek and Fiona tuck all the babies into bed.
 _SHREK
 "Well, what shall we do now?"
-_CUT TO:
+CUT TO:
 INT. SHREK AND FIONA'S BEDROOM - NIGH hrek and Fiona are sound asleep, snoring.
 _DISSOLVE TO:
 EXT. SWAMP HOUSE - CONTINUOU  baby starts to cry.

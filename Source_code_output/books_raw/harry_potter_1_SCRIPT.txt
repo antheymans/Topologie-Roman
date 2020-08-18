@@ -224,7 +224,8 @@ _Harry appears
 "I-I am."
 _Hagrid
 "Oh, well, of course you are! Got something for ya. 'Fraid I might have sat on it at some point! I imagine that it'll taste fine just the same. Ahh. Baked it myself. {Hands Harry the cake} Words and all. Heh."
-_Harry: Thank you! {Opens cake, which reads
+_Harry
+" Thank you! {Opens cake, which reads"
 "Happee Birdae Harry.}"
 _Hagrid
 "It's not every day that your young man turns eleven, now is it?"
@@ -274,7 +275,8 @@ _Hagrid
 "Oh, and I suppose a great Muggle like yourself's going to stop him, are you?"
 _Harry
 "Muggle?"
-_Hagrid: Non magic folk. This boy's had his name down ever since he was born! He's going to the finest school of witchcraft and wizardry in the world, and he'll be under the greatest headmaster Hogwarts' has ever seen
+_Hagrid
+" Non magic folk. This boy's had his name down ever since he was born! He's going to the finest school of witchcraft and wizardry in the world, and he'll be under the greatest headmaster Hogwarts' has ever seen"
 "Albus Dumbledore."
 _Vernon
 "I will not pay for some crackpot old fool to teach him magic tricks!"
@@ -582,7 +584,8 @@ Draco glares. McGonagall returns and smacks him on the shoulder with a paper. He
 _McGonagall
 "We're ready for you now."
 She leads everyone through two large doors and into the Great Hall, where there are four long tables with many kids, as well as floating candles. The roof appears to be the sky.
-_Hermione: It's not real, the ceiling. It's just bewitched to look like the night sky. I read about it in Hogwarts
+_Hermione
+" It's not real, the ceiling. It's just bewitched to look like the night sky. I read about it in Hogwarts"
 "A History."
 _McGonagall
 "All right, will you wait along here, please? Now, before we begin, Professor Dumbldedore would like to say a few words."
@@ -632,7 +635,8 @@ _Sorting Hat
 "Hmm...difficult, very difficult. Plenty of courage I see, not a bad mind, either. There's talent, oh yes, and a thirst to prove yourself. But where to put you?"
 _Harry
 "{whispers} Not Slytherin. Not Slytherin."
-_Sorting Hat: Not Slytherin, eh? Are you sure? You could be great, you know. Its all here in your head. And Slytherin will help you on your way to greatness! There's no doubt about that! No? {Harry whispers
+_Sorting Hat
+" Not Slytherin, eh? Are you sure? You could be great, you know. Its all here in your head. And Slytherin will help you on your way to greatness! There's no doubt about that! No? {Harry whispers"
 "Not Slytherin...anything but Slytherin} Well, if youre sure...better be...GRYFFINDOR!!"
 There is an immense cheering and Harry goes to the Gryffindor table.
 _Fred and George are also there, and cheer
@@ -851,7 +855,8 @@ _Boy 2
 _McGonagall
 "{appears quickly} Harry Potter? Follow me. {Harry sullenly follows her. Draco and his goons laugh.}"
 
-_Quirrell: An iguana s-such as this is {McGonagall approaches the class and stops Harry
+_Quirrell
+" An iguana s-such as this is {McGonagall approaches the class and stops Harry"
 "You wait here.} an essential in-gredient"
 _McGonagall
 "Excuse me, excuse me, Professor Quirrell. Could I borrow Wood for a moment?"
@@ -995,7 +1000,8 @@ _Hermione
 _Flitwick
 "Oh, well done! See here, everyone! Ms. Granger's done it! Oh, splendid!"
 Seamus begins swishing at his feather.
-_Seamus: Wingard Levosa. Wingard Levosa. {Flitwick to Hermione
+_Seamus
+" Wingard Levosa. Wingard Levosa. {Flitwick to Hermione"
 "Well done, dear.}"
 BOOOM!!! Seamus' feather explodes. Flitwick gasps.
 _Flitwick
@@ -1064,7 +1070,8 @@ _Harry
 Ron grabs his wand. Under the sink, Hermione waves her hand.
 _Hermione
 "Swish and flick!"
-_Ron: Wingardium Leviosa! {flick. The club is lifted out of the troll's hand and hovers above its head. The troll looks up, confused, just as the club comes crashing back down. (Ron
+_Ron
+" Wingardium Leviosa! {flick. The club is lifted out of the troll's hand and hovers above its head. The troll looks up, confused, just as the club comes crashing back down. (Ron"
 "Cool.) It hits the troll's head and the troll wavers, then drops Harry, who crawls away, and comes crashing down, hard."
 Hermione approaches carefully.
 _Hermione
@@ -1126,7 +1133,7 @@ _Harry
 "But who...?"
 {He sees Professor McGonagall up at the head table, stroking Hedwig. She smiles and Harry nods.}
 
-_OIiver
+_Oliver
 "Scared, Harry?"
 _Harry
 "A little bit."
@@ -1734,7 +1741,8 @@ _Hermione
 "We've got to do something!"
 _Harry
 "What?"
-_Hermione: Uh! I remember reading something in Herbology. {Ron
+_Hermione
+" Uh! I remember reading something in Herbology. {Ron"
 "Help!} Um Devil's Snare, Devil's Scare, {The snare shuts Ron's mouth} it's deadly fun...but will sulk in the sun! That's it! Devil's Snare hates sunlight! {takes out wand and points upwards.} Lumus Solem! {A beam of light shoots out. The Snare shrieks and recoils. Ron falls below.}"
 _Ron
 "Ahhh!"
@@ -1811,7 +1819,8 @@ _Hermione
 _Ron
 "You there! D-5! {A black pawn moves forward, diagonal to the white pawn. The white pawn raises its swords and smashes the black one. The three jump.} Yes, Hermione, I think this is going to be exactly like wizard's chess!"
 The game continues. Pieces smash each other, boom! Boom!
-_Ron: Castle to E-4! Smash! Ron
+_Ron
+" Castle to E-4! Smash! Ron"
 "Pawn to C-3! Smash! Boom! The Queen turns, and smashes a piece! Harry, Ron and Hermione wince. The Queen turns again. Both Ron and Harry study the game."
 _Harry
 "Wait a minute."

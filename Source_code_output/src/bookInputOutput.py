@@ -104,7 +104,7 @@ def get_object(filename):
 # Serialize and loading functions
 ###############################################################
 def update_stats(name, stat):
-    resfilename = PATH_SERIALIZED+"speakerIDstats.txt"
+    resfilename = PATH_SERIALIZED+"speakerIDstats"
     if os.path.isfile(resfilename):
         resfile = get_object(resfilename)
         resfile[name] = stat
@@ -115,7 +115,7 @@ def update_stats(name, stat):
     csv_dialog_extr_stats(resfile)
 
 def update_stats_CID(name,stat):
-    resfilename = PATH_SERIALIZED+"speakerIDstats_postCID.txt"
+    resfilename = PATH_SERIALIZED+"speakerIDstats_postCID"
     
     if os.path.isfile(resfilename):
         resfile = get_object(resfilename)
@@ -459,7 +459,7 @@ def write_graph(G,filename):
 # All graphs outputting function
 ###############################################################
 
-def output_graphs(filename, iGraphs, graphs, png = False):
+def output_graphs(filename, iGraphs, graphs, png = True):
     csv_clustering(filename,graphs,"Context")
     csv_clustering(filename,iGraphs,"Incremental")
     csv_degree_incremental(filename,iGraphs[-1])

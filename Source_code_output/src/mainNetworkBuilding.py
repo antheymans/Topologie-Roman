@@ -28,4 +28,4 @@ def generate_graph(filename):
         print("Output complete")
         
 if __name__ == '__main__':
-    load_single_file()
+    load_all_files()

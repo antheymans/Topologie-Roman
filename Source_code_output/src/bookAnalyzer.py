@@ -79,10 +79,18 @@ def read_all():
     for f in files:
         if f not in files_analyzed and f[-4:] == ".txt":
             book_analyze(f)
+            
+def read_all2():
+    # Go through all the books
+    files = bIO.get_files_in_folder(PATH_BOOKS)
+    for f in files:
+        book_analyze(f)
     
 if __name__ == "__main__":
     title = input("Enter the title of the .txt file to be analyzed ('all' for all files).\n")
     if title == "all":
+        read_all2()
+    elif title == "some": 
         read_all()
     elif title[-4:] == ".txt":
         book_analyze(title)

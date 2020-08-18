@@ -16,6 +16,8 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{tikz}
 \usepackage{breqn}
+\usepackage{subcaption}
+\usepackage{graphicx}
 
 \usepackage{cleveref}
 % Logos
@@ -91,7 +93,7 @@
 	\end{picture}
 	\restoregeometry
 
-
+\tableofcontents
 
 \chapter{Introduction}
 Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consist of using graph and network theory to represent relations among actors as a network in order to analyze them.  Originally the ``actor'' used in the network are people but in some field use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various field like geography \citep{economic_geography} or organizations  management \citep{management}.  It has been used in psychology \citep{psy} as  it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agent of  Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it.  Social network analysis have also be designated as a way to enforce laws and disrupt gang by the The International Association of Chiefs of Police \citep{police}. \\
@@ -102,9 +104,39 @@ This master thesis consists firstly in the development of a software that extrac
 
 
 \chapter{Social Network}
-Before extracting or analyzing any social networks, let's introduce the basic concept related to network. We should note that the word network and the word graph have the same meaning, the choice of of these words usually depends on the application. For ``instance social'' network are never called  ``social graph'' but it would have the same meaning. \citep{network_theory}
-\section{Network Theory: Basics}
+ Before extracting or analyzing any social networks, let's introduce the notion of social network and the basic concept related to network theory.
+Social network are defined as ``a network of social connections and personal relationships between people''. Example are given on table \ref{SNA_Overview}.
+ In social network analysis, relationships between people are represented using network in order to analyze them with mathematical tools provided by network 
+and graph theory. ``It helps in understanding the
+dependencies between social entities in the data, characterizing
+their behaviors and their effect on the network as
+a whole and over time.'' \citep{SNA_Overview}
+We should note that in computer science, the word network and the word graph have the same meaning. The choice of these words usually depends on the application. For instance ``social networks'' are never called  ``social graphs'' 
+but it would represent the same concept. The word ``graph'' is more used in mathematics while the word ``network'' is most common in engineering \citep{network_theory}. In this work, the word network will be used most of the time to avoid confusion.
 
+\begin{table}
+\center
+\scalebox{0.7}{%
+\begin{tabular}{|c|c|}
+\hline
+Examples & Applications \\
+\hline
+Friendship networks & College/school students Organizations or web(Facebook, MySpace, etc.)\\
+Follower networks & Twitter, LinkedIn, Pinterest, etc.\\
+Preference similarity &  networks Pinterest, Instagram, Twitter, etc.\\
+Interaction networks & Phone calls, Messages, Emails, Whatsapp, Snapchat, etc.\\
+Co-authorship networks & Dblp, Science direct, Wikibooks, other scientific databases, etc.\\
+User-user citation networks & Dblp, Science direct, Wikibooks, other scientific databases, etc.\\
+Spread networks & Epidemics, Information, Rumors, etc.\\
+Co-actor networks & IMDB, etc.\\
+\hline
+\end{tabular}}
+\caption{Example of social networks \citep{SNA_Overview}}\label{SNA_Exemple}
+\end{table}
+
+
+
+\section{Network Theory: definition}
 \begin{figure}
 \centering
 \includegraphics{diestel_graph.png}
@@ -112,14 +144,155 @@ Before extracting or analyzing any social networks, let's introduce the basic co
 \label{diestel graph}
 \end{figure}
 
-Network vs graph : Same ? Network can evoluate with time ? Presence of attribute in network ? Network transport things while graphs have inherent property ?
+Network theory is the study of networks. A  network or a graph are defined mathematically as a pair of set $G = (N, E)$ such that $E  \subseteq [N ]^2$. Concretely it means that element from the second set should be tuple of 2 element from the first set.
+Graph are usually represented with points symbolizing element from the first set linked by lines representing element from the second set. You can see an example of this representation on figure X. In network theory, element from the first set are called ``nodes'' and element from the second set are called ``links'' or ``edges''. If for any pair $XY \in N$,  the link $(X,Y) = (Y,X)$ then the graph is called undirected. This is the most common type of graph. There exist also directed graphs whose edges are directed from a sender to a receiver. In this work we will focus on undirected graphs. \citep{diestel}\\
 
-Network theory is the study of networks. A  network or a graph are defined mathematically as a pair of set $G = (V, E)$ such that $E  \subseteq [V ]^2$. Concretely it means that element from the second set should be tuple of 2 element from the first set.
-Graph are usually represented with points symbolizing element from the first set linked by lines representing element from the second set. You can see an example of this representation on figure X. In network theory, element from the first set are called ``nodes'' and element from the second set are called ``edges''. If for any pair $XY \in V$,  the link $(X,Y) = (Y,X)$ then the graph is called undirected. This is the most common type of graph. There exist also directed graphs whose edges are directed from a sender to a receiver.
+In many applications, values are associated to nodes or link of the network. Often, a numerical value is associated to links and called weight. Those values are considered to be part of the network even if it is not in the mathematical definition. 
 
 
+\section{Network key notion}
 
+Some key notion are needed to understand this measure:
+\begin{itemize}
+\item \textbf{Neighborhood} : Two nodes are defined as \textit{neighbors} if they are linked on a graph. The nodes $u,v \in G$ are neighbors if the edge $(u,v) \in G$. The \textit{neighborhood}n $N_i$ , of a node i is the set of nodes that are neighbors with the node i.
+
+\item \textbf{Degree}: The degree, $k_i$ of a node i is defined as the size of its the neighborhood, which correspond to the number of edges that are incident to the node i.
+
+
+\item \textbf{Path}: A path is a sequence of nodes such that for all pair of consecutive nodes $i,j$, the edge $ij \in E$, the nodes are linked by an edge. The \textit{Shorter Path} between two nodes is a path binding the 2 nodes such that there exist no shorter path binding them. The notion of distance of a path can be defined as the sum of the weight along this path or as the number of nodes bounded by the path. The length of a shorter path is named \textit{Geodesic Distance}. It can't be measured on disconnected nodes.
+
+\item \textbf{Connection}: Two nodes of a graph are connected if there exists a path in the graph that bind them. The nodes don't have to share an edge. To avoid any confusion, the nodes that share a same edge are referred here as linked. A graph is connected if all nodes from the graph are connected.
+
+\item \textbf{Clique}: A k-clique is a set of fully connected k nodes, a set of nodes $K$ such that there is an edge $xy \in E \forall x,y \in K $. 
+
+\item \textbf{Eccentricity}:  The eccentricity,$\epsilon_i$ , of a node i is the maximum size of the shortest path that bind the node with an other node of the graph. It can be seen as the distance between the node and the further node from the graph. It  can only be measured on connected graph.
+
+\end{itemize}	
 \citep{diestel}
+\section{Network: Measure}
+\label{measure}
+Different measure exists to characterize networks. I will give here the measure that are commonly used in social network analysis. Further explanations about the measure used in social network analysis are available at \cite{SNA_Overview}.
+
+\subsection{Mean degree}
+The mean degree is the mean value among the degree of all nodes. It can be computed more easily with the formula $\mu = \frac{|N|}{|E|}$ where $|N|$ is the total number of nodes and $|E|$ the total number of edges. It represent how much nodes of a network tends to share links, how much the network is connected.
+
+\subsection{Clustering coefficients}
+%The strength is a measure near from the degree that exist for weighted graphs only. It corresponds to the sum of the weights of all edges incident to a node.
+\begin{equation}
+C_i = \frac{2 \cdot |e_{jk}|}{k_i \cdot (k_i - 1)}: i, k \in N_i, e_{jk} \in E
+\label{clustering_local}
+\end{equation}
+Different clustering coefficient may be computed.\\
+The local clustering coefficient,$C_i$ of a node i is given by the formula \ref{clustering_local} where E is the set of edges and N_i is the neighborhood of i. It represent how much the node is part of a connected neighborhood or how much the node is close to being part of a clique. In a group of friends, this measure is usually close to 1 as most of the friends know each other. In a network that represent love relationships, most of the method will have a clustering coefficient close to 0 as romantic partners of an individual don't tend to share such a relations between each others.\\
+
+There exists multiple measure of a graph global clustering. We will give here the most popular. The first one have been given by \cite{globalClustering1}. It be computed by taking the mean local clustering coefficient among all nodes. It is also named the mean local clustering coefficient.  \\
+
+\begin{figure}
+\centering
+\includegraphics{graph_clustering.png}
+\caption{Graph of transitivity 1/3. They are 3 potential triangle: 0-4-7, 0-7-1 and 1-4-7. Only 0-4-7 is a triangle. }
+\label{transitivity}
+\end{figure}
+
+The second global clustering coefficient is taken by counting the number of triangle in the graph divided by the number of ``potential triangle''. ``Potential triangle'' are set of 3 vertex such that one vertex is linked to the 2 others vertex. An illustration of this is given on figure \ref{transitivity}. This measure is also called transitivity and will be named in that way in this master thesis to avoid any confusion. \\
+
+Both of this measure are related to the probability of clique formation and transitivity. Network with high clustering coefficient tend to have cluster of nodes connected between them. Pair of nodes connected by a third node tend to be also linked by an edge. This is why the second measure is called ``transitivity''.\\
+
+\subsection{Radius and Diameter}
+The diameter from a graph is the greater eccentricity of its nodes. It can be used to know how far could potentially be actors in a network. The radius of a network is the smaller eccentricity of all its nodes. A small eccentricity indicates that a particular node is particularly near from all the other nodes. However both of those measures are very sensitive to outliers and not very robust. As the eccentricity, it can be measured on disconnected network.
+
+\subsection{Average Path length}
+The average path length \citep{path_length} or average geodesic distance is the mean distance of the shorter path between each pair of node from a connected network. It measure the distance between 2 random actors of the network. This measure can be compared with the radius and the diameter which gives close information but unlike them it is considered as robust.
+ 
+\section{Networks characterization}
+There exists a lot of networks. Of course there is a lot of network from human origin such as the internet network, electrical networks or social networks. The notion of network can also be used to observe natural process as the set of vein of a body or the relation between metabolic and protein. Some networks seems build in a structured way, some of them seems random. Some networks have been humanly designed, some of them seems to evolutate from themselves. To characterize network we use topology and models.\\
+\begin{figure}
+\centering
+\includegraphics{lattice.png}
+\caption{Square Lattice. \citep{complex_networks} }
+\label{lattice}
+\end{figure}
+
+Some networks have a very regular and easily-recognizable topology such as lattices, stars, circle. An example of it is available on figure \ref{lattice}. We also saw fully connected graphs on previous question. However most of the networks don't have a such regular topology. especially social networks. The structure of social network is not decided in advance, it's the product of a continuous growing due to local interactions among individuals. We can oppose regular graphs to random graphs, graphs that are the result to a random growth. Of course, some graphs are also the result of a process that includes randomness but can not be modeled using random graphs.\\
+
+\begin{figure}
+\centering
+\includegraphics{normal_distrib.png}
+\caption{Random graph: degree distribution}
+\label{random}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{erdos.png}
+\caption{Example of random graph\citep{erdos_image}}
+\label{erdos}
+\end{figure}
+
+\subsection{Random networks}
+2 popular models have been given to represent the growth of random network. In the first one, given a number of nodes N and a probability p, a graph is constructed with N nodes and each potential edge is added with a probability p. In average the number of edge that appears is $N \cdot (N-1) \cdot p$ with $ 0< p <1$. The second model takes a number of nodes N and a number of edge M as input. The M edges are chosen randomly without replacement in the set of $N \cdot (N-1)$ potential edges. Those models are asymptotically the same. The first model gives a variable number of edges but for big values of N, the networks generated with those models should share a common topology. This topology is mainly characterized by a number of edges approximately constant for a given couple (N, p) and by a distribution of degree. Figure \ref{random} shows the plot of the degree distribution of a random graph obtained with the second model. The graph has 10000 nodes and 20000 edges, so the mean degree of its node is  $\frac{2 \cdot E}{N} = 4$ . the plot includes a normal distribution centered on 4. The degree distribution of random graphs follows normal distributions.  An illustration of random graph is also given on \ref{erdos} The mean path length of random networks is small and  logarithmically with N. Due to random connection, nodes are likely to share connections with very distant nodes. Due to this random connections, their clustering coefficients are very small.\\
+
+\subsection{Small-world networks}
+Small world networks are an other type of networks that presents elements of randomness. Initially the goal of this classification was to represent networks that are highly clustered as latices but have an irregular topology and have a very short average path length between its nodes. A lot of social networks responds to this properties, for example network of friends are highly clustered: people sharing common friends are likely to be friends. Of course they are not regular as their evolve randomly and their average path length can be surprisingly small: \cite{milgram} have shown that the median number of intermediary needed to connect two randomly chosen people is six. Random networks don't have those properties as links are randomly added, node have the same probability to share an edge with each other node of the network. Some regular networks such as lattices are also highly clustered but they have a very long mean path length: as each vertex is only connected to its nearest neighbors, a path needs to go through a lot of cluster of neighbors before joining an opposite node. \citep{complex_networks} \\
+
+\begin{figure}
+\centering
+\includegraphics{small-world.png}
+\caption{Construction of a small-world network \citep{small-world}}
+\label{small-world_pictures}
+\end{figure}
+
+A first model for small-worlds network have been given by \cite{globalClustering1}. The networks of N nodes, $N \cdot 2 \cdot k$ edges are constructed by the following algorithm taking a probability p as input:
+\begin{enumerate}
+\item A lattice of N site is drawn, each drawn being connected to its 2k neighbors.
+\item For each nodes, each edge is removed with a probability p. 
+\item For each edge removed on a node, a new edge is added linking the node with an other node randomly chosen. The step 2 and 3 may be executed at once.
+\end{enumerate}
+After this construction, a network is obtained with a high clustering thanks to the initial lattice structure. But the edges added in the last step allow to connect groups of neighbors that are fare for each other and reduce the mean path length. The construction of the network is illustrated on figure \ref{small-world_pictures}. An initial graph is shown on image (a) and the following image shows the network after the removal and additions of some links. The networks constructed with this model are characterized by being connected and having an almost constant degree for each node. Others models have been given for small-world network by following the same intuition of combining lattice with randomness and long range link. An common properties of those networks is that the mean-path length grows logarithmically with N and that their degree distribution is similar to random graphs.\citep{small-world, complex_networks}
+
+\subsection{Scale-Free networks}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{Degree-distribution-of-random-and-scale-free-networks.png}
+\caption{Comparison between the degree distribution of a random network- small world network and a scale free network \citep{scale-free_degree}}
+\label{scale-free_degree}
+\end{figure}
+
+Scale free networks are a third type of network that present elements of randomness. It has been introduced by \cite{scale-free}. They are usually defined as networks having degree distribution following power laws: $ P(k) \approx c \cdot k^{-y}$. An exemple of such distributions is given of figure \ref{scale-free_degree}. It means that a very small number of nodes present a very huge connectivity.  This property is present in different networks such as the world-wide-web \citep{www} or the web of human sexual contacts \citep{sexual}. The constructions of scale-free network follows two principle. Firstly they \textit{grow} and during this growth new node are added and linked with existing nodes. Secondly the creation of new nodes is done with \textit{preferential  attachment}: nodes have always more chance to be connected to nodes that already have a lot of edges.The growth and the preferential attachment are responsible of the creation of nodes having a lot of connections that are called \textit{hubs}. Hubs have a key role in such networks. For instance a big part of the circulation in the internet network go through those hubs and the removal of several hubs would lead to a major increasing of some path-length and could also lead to some disconnections between set of nodes in the network \citep{general_scale-free}.\citep{general_scale_free2}\\
+
+\begin{figure}
+\centering
+\includegraphics[scale= 0.6]{scale-free.png}
+\caption{Comparison between (a) a random network and (b) a scale-free network \citep{complex_networks}}
+\label{scale-free_pictures}
+\end{figure}
+
+The most popular method for constructing scale-free networks have been given by \cite{barabasi_model}. The algorithm depends on two parameters: a number of node N, an initial number of node $N_0$ and a number $m \leq N_0$.\\
+\begin{itemize}
+\item Initially, a fully-connected network of size $N_0$ is constructed.
+\item Iteratively a new node is added to the network. m edges are added to the node. An edge is connected to an existing node with a probability $p = \frac{k_i}{\sum_{j} k_j}$.
+\item The algorithm ends when $N -N_0$ nodes have been added.
+\end{itemize}
+An example of network obtained by this algorithm can be seen on figure \ref{scale-free_pictures} . As previously explained, the main characteristics of scale-free graph is their degree distribution in power law. \cite{globalClustering2} also showed that the clustering coefficient tends to zero if $ 1 < y < 2$. However scale-free networks can have high clustering coefficients for bigger value of y. The mean path length of this model increases in $\frac{\log{N}}{\log{\log{N}}}$ with the number of nodes N.\\
+
+\subsection{Comparison between type of networks}
+
+\begin{figure}
+\centering
+\includegraphics[scale= 0.6]{Regular-random-small-world-and-scale-free-networks.jpg}
+\caption{Comparison between different type of networks \citep{img_comp}}
+\label{comparison_networks}
+\end{figure}
+
+As previously explained social networks are almost never regular due to their mechanism of growth and evolution. However the topology of different social network can have different properties: They may be close from random, small-world or scale-free networks. Also the definition of small world and scale free networks are such that a network can present both properties. Networks may be classified in topologies using all the measures that we explained in section \ref{measure} and visualization tool. Figure \ref{comparison_networks} shows network of each type for visual comparison.
+
+
+
+
+
+
+
+
 
 \chapter{Social network construction}
 
@@ -340,7 +513,7 @@ To count the number of  false character, I've decided to consider only the most 
 \center
 \caption{Number of detected character that refers to actual characters(true positive).}\label{tab1}
 \scalebox{1}{%
-\begin{tabular}{c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
 book &Porposed method & \cite{original} & \cite{character_meta}\\
 \hline
@@ -427,10 +600,12 @@ False positive & Appearance & Aliases                                      \\
 
 In the character extraction of Pride and Prejudice, a first difficulty that appears is the extraction of the Bennet family. In this family there is 5 daughters named in the text and a mother only referred as Mrs. Bennet. In the presented method, the character of Mrs.Bennet have been mixed with ``Elizabeth Bennet'', the most common character among the sisters. About that last characters, both method have been able to link it with her nicknames ``Eliza'' and ``Lizzy'' . In the Bennet family both method isolate correctly the sisters ``Jane''' and ``Lydia'' but \cite{character_meta} didn't record the alias ``Lydia Bennet''. Our method have a second error, the character `` Mr. Fitzwilliam Darcy `` is separated in 2 characters: ``Mr Darcy'' and ``Mr Fitzwilliam'' that don't appear on the figure as it is less used. But the character ``Charlotte Lucas'' is correctly extracted while \cite{character_meta} mix it with an other character`Mary King'. They also mix the character ``William Goulding'' with the character ``William Lucas''. We see that they have considered 2 anaphoric noun phrase as character: ``servant'' and ``housekeeper'' while our method have wrongly considered 2 location as character ``Permberley House'' and ``Netherfield Park''. Our method bind family names such as ``'The Gardiners'' with the most common character of the family while the other method avoid to use them.\\
 
-The observation of the characters extracted by both method shows some tendencies. Our method tend to extract more aliases but also extract some incorrect ones. It also bind set of aliases more cautiously with result in dividing a character in two set of aliases but avoid to mix between them completely different characters. The only case of mixed characters in our method comes from characters of a same family that differs only by a title, both associated to the same gender. As previously shown, the proposed method ignore anaphoric noun phrase but is likely to consider locations as characters. This analysis don't allow to consider one of the method to be really better than the other. From this we can consider that our method is approximately at the level of the state of the art.\\
+The observation of the characters extracted by both method shows some tendencies. Our method tend to extract more aliases but also extract some incorrect ones. It also bind set of aliases more cautiously with result in dividing a character in two set of aliases but avoid to mix between them completely different characters. The only case of mixed characters in our method comes from characters of a same family that differs only by a title, both associated to the same gender. As previously shown, the proposed method ignore anaphoric noun phrase but is likely to consider locations as characters. This analysis don't allow to consider one of the method to be really better than the other. From this we can consider that our method is approximately at the level of the state of the art. \\
+
+A major default that should be pointed of the proposed method is the use of a words dataset for honorific detection. Honorifics are only properly labeled if they are present in the word list. Therefore, novels using set of foreign honorifics or inventing their own set of honorifics (which is common in fantasy or science fiction) could completely miss them. Honorifics would be considered as first name and it could decrease the performance of the alias-resolution process. Also the gender of characters would be assigned in less cases. \\
 
 \subsubsection{Further improvement}
-The method develloped here for character extraction in novels gives satisfying result but could have several improvements. Firstly a NER tool should be used in order to use syntactical information to separate location from characters names. Secondly some rules could be added to link aliases between them for instance in the case of characters having multiple last names. Then a way of using anaphoric noun phrase in the system could be used in order to detect unnamed characters but this addition should be handle carefully as the addition of anaphoric noun phrase could lead to the extraction of many nouns that are not univoquely linked to a character.
+The method developed here for character extraction in novels gives satisfying result but could have several improvements. Firstly a NER tool should be used in order to use syntactical information to separate location from characters names. Secondly some rules could be added to link aliases between them for instance in the case of characters having multiple last names. Then a way of using anaphoric noun phrase in the system could be used in order to detect unnamed characters but this addition should be handle carefully as the addition of anaphoric noun phrase could lead to the extraction of many nouns that are not univoquely linked to a character. Thirdly, it would be interesting to extend the set of recognized honorifics or to implement a way to detect new honorifics in a novel.\\
 
 \begin{table}
 \center
@@ -574,7 +749,7 @@ This method has the disadvantage of giving more appearance of most common speake
 All characters that don't have been identified a single time among all conversations are removed from the list of character. They will not be part of the social network.
 
 \section{Construction of the network}
-The social network is constructed using the identification of characters in dialogs in section \ref{identification}.
+The social network is constructed using the identification of characters in dialogs in section \ref{identification}. The implementations is made using the python library \textit{networkx} \citep{networkx}.
 Two types of network are constructed:
 \begin{enumerate}
 \item context networks: social network that are relative to a single conversation and the associated context. 
@@ -622,8 +797,49 @@ The other data produced by the program are csv files containing:
 \item the index of the begin and end of each conversation.
 \end{itemize}
 
+\chapter{Network analysis}
+In this second chapter of this work, the social network produced are analyzed. Some analysis have been produced by \cite{original} and will be actualized using the correction of network extraction process. The analysis will also benefits to the addition of new metrics and the comparison between novels and scripts.
+
+\section{Distribution of degree}
+\cite{original} has shown that characters social networks extracted from literature tend to have degree distribution following powerlaw. From this statement, the networks have been considered as scale-free. The modification in character extraction decreases a lot the number of characters so we should check that this observation hold.
+
+\begin{figure}
+\begin{subfigure}{.25\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/ASOIAF_1_degree}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.25\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/Harry_Potter_1_degree}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.25\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/Pride_and_prejudice_degree}
+\end{subfigure}
+\begin{subfigure}{.25\textwidth}
+\centering
+
+\includegraphics[width=\linewidth]{pictures/TLC_1_degree}
+\end{subfigure}
+\caption{Degree distribution of social networks extracted from the first novel of the series ``A song of ice and fire'', ``Harry Potter'', ``The Lunar Chronicles'' and from  the novel ``Pride and prejudice''.}
+\end{figure}
+
+\section{Measures}
+Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network.\\
+
+The small-world networks are created using the method given in section, with the same number of nodes and edges than the original graph and with a probability of 0.2 .\\
+The scale free graph is created following the method of section, with the same number of node than the original graph. The $m$ value used is computed using the parameters of the original network: $[NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of edges of the network.\\
+The random network is created using the method from section , with a number of edges following a random variable centered around the number of edges of the social network.\\
+Lattice have not been generated as each type of lattice have approximately always the same values for clustering coefficient and mean degree. The mean path length of lattice growth with with $\sqrt{N}$ for square lattice.
 
 
+\subsection{}
+
+\listoffigures
+
+\listoftables
 
 \bibliography{biblio} 
 
