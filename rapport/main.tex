@@ -288,12 +288,6 @@ As previously explained social networks are almost never regular due to their me
 
 
 
-
-
-
-
-
-
 \chapter{Social network construction}
 
 In this part of this Master Thesis, I will briefly explain what are the main step executed by the software to extract social network and meta data from novels or script. The modification of the program that I've made will be more detailed. The bigger changes concerns the extraction of characters from novels.  Also the original software was only analyzing novels, some adjustments have been made to extend it to movie scripts. I don't the state of the part for part who don't have been deeply modified. Every information about it are available at \cite{original} and \cite{original_thesis}. 
@@ -804,33 +798,94 @@ In this second chapter of this work, the social network produced are analyzed. S
 \cite{original} has shown that characters social networks extracted from literature tend to have degree distribution following powerlaw. From this statement, the networks have been considered as scale-free. The modification in character extraction decreases a lot the number of characters so we should check that this observation hold.
 
 \begin{figure}
-\begin{subfigure}{.25\textwidth}
+\label{distrib_degree_4_novels}
+\begin{subfigure}{.24\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/ASOIAF_1_degree}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.24\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/Harry_Potter_1_degree}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.24\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/Pride_and_prejudice_degree}
 \end{subfigure}
-\begin{subfigure}{.25\textwidth}
+\begin{subfigure}{.24\textwidth}
 \centering
-
 \includegraphics[width=\linewidth]{pictures/TLC_1_degree}
 \end{subfigure}
 \caption{Degree distribution of social networks extracted from the first novel of the series ``A song of ice and fire'', ``Harry Potter'', ``The Lunar Chronicles'' and from  the novel ``Pride and prejudice''.}
 \end{figure}
 
+\begin{figure}
+\label{distrib_degree_4_scripts}
+\begin{subfigure}{.24\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/Alien_1_SCRIPT_degree}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.24\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/Harry_potter_1_SCRIPT_degree}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.24\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/pride_and_prejudice_SCRIPT_degree}
+\end{subfigure}
+\begin{subfigure}{.24\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/Thor_Ragnarok_SCRIPT_degree}
+\end{subfigure}
+\caption{Degree distribution of social networks extracted from the script of the first movie of the saga``Harry Potter'', ``Alien'' and from the movies ``Pride and prejudice'', ``Thor: Ragnarok''.}
+\end{figure}
+
+On figure \ref{distrib_degree_4_novels}, the degree distributions from 4 novels shows a big amount of nodes with small degree and less nodes with more degrees. The first graph look like a heavy-tail distribution but others seems to have a more flattened curve. Also we see that the graphs have many irregularities. For this reason I have added all the distributions extracted from novels in a single distribution to fit it. It was already the way used by \cite{original}.\\
+The distributions extracted from 4 movies are also shown on figure \ref{distrib_degree_4_scripts}. The first example shows a distribution completely different from the others networks, this is due to the fact that movie is a ``huis-clos'': all the narrative happen in a close environment with a limited amount of characters. In such movie, it's intuitive that most characters are linked, this should also happened to books following this principle. However no books from our collections present this specificity, this could be a coincidence. An other hypothesis is that movie are more likely to present configurations with a smaller number of characters as this is easier to produce. Other books present a decreasing graph like novels but it seems polynomial. Like novels, the degree distribution have been summed in order to observe their general behavior.
+
+\begin{figure}
+\begin{subfigure}{.30\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/degree_novels}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.30\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/degree_novels2}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.30\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/degree_novels_log}
+\end{subfigure}
+
+\caption{Mean degree distribution of all novels}
+\label{cumulated_degree_novel}
+\end{figure}
+
+\begin{figure}
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/degree_script}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/degree_script_log}
+\end{subfigure}
+\caption{Mean degree distribution of all scripts}
+\label{cumulated_degree_script}
+\end{figure}
+
+The figure \ref{cumulated_degree_novel} shows the mean distribution on all novels with an exponential fit and a scale-free fit.
 \section{Measures}
 Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network.\\
 
 The small-world networks are created using the method given in section, with the same number of nodes and edges than the original graph and with a probability of 0.2 .\\
-The scale free graph is created following the method of section, with the same number of node than the original graph. The $m$ value used is computed using the parameters of the original network: $[NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of edges of the network.\\
+The scale free graph is created following the method of section, with the same number of node than the original graph. The $m$ value used is computed using the parameters of the original network: $m = [NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of edges of the network.\\
 The random network is created using the method from section , with a number of edges following a random variable centered around the number of edges of the social network.\\
 Lattice have not been generated as each type of lattice have approximately always the same values for clustering coefficient and mean degree. The mean path length of lattice growth with with $\sqrt{N}$ for square lattice.
 
