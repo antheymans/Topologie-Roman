@@ -6,13 +6,14 @@ print(files)
 
 EMPTY_STRING=re.compile('\s+',re.U)
 SCRIPT_SPEAKER =re.compile('_',re.U)
-skip_line = re.compile('\n',re.U)
+skip_line = re.compile('\s*\n',re.U)
 omitted = re.compile('.*OMITTED',re.U)
 #end_number = re.compile('(.*)        +[A-Z]?[1-9]+\.?',re.U)
 end_number = re.compile('\s+[A-Z]?[1-9]+\.?\s+',re.U)
 begin_number = re.compile('[1-9]+',re.U)
 scene_number = re.compile('[A-Z]+[1-9]+(  +)',re.U)
 space_context = re.compile('^ {1,9}',re.U)
+cut = re.compile('\s*CUT',re.U)
 dialog = re.compile('^ {1,9}([\w|-].*)',re.U)
 parenthesis_dialog = re.compile('^  +(\(\w)',re.U)
 blue_draft = re.compile('^ +BLUE DRAFT', re.U)
@@ -24,14 +25,23 @@ dialog2 = re.compile('^"',re.U)
 speaker2 = re.compile('^_',re.U)
     
 #with open('Path/to/file', 'r') as content_file:
-#    content = content_file.read()$
+#    content = content_file.read()
+
 for f in files:
     print(f, f[-9:-4])
     file1 = open(f, "r", encoding="utf8")
     Lines = file1.readlines() 
     New_lines = []
+    skipped = 0
     for index in range(len(Lines)):
-        if not skip_line.match(Lines[index]) and not omitted.match(Lines[index]) and not blue_draft.match(Lines[index]) :
+        if  cut.match(Lines[index]):
+            New_lines.append("\n")
+            skipped = 0
+        elif skip_line.match(Lines[index]):
+            if skipped == 1:
+                New_lines.append("\n")
+            skipped  += 1
+        elif not omitted.match(Lines[index]) and not blue_draft.match(Lines[index]) :
             Lines[index] = tab.sub("        ", Lines[index])
             Lines[index] = end_number.sub("\n", Lines[index])
             Lines[index] = scene_number.sub(r"  \1", Lines[index])
@@ -41,11 +51,9 @@ for f in files:
             Lines[index] = speaker.sub(r'_\1', Lines[index])
             Lines[index] = multiple_space.sub(r' ', Lines[index])
             if begin_number.match(Lines[index]):
-                Lines[index] = "\n" + Lines[index] + "\n"
+                Lines[index] = "\n" + Lines[index]
             New_lines.append(Lines[index])
-
-            
-            
+            skipped = 0
 
     Lines = New_lines
     New_lines = []
@@ -55,7 +63,9 @@ for f in files:
         if speaker2.match(Lines[index]) or EMPTY_STRING.match(Lines[index]):
             if lastline != "":
                 New_lines.append(current_string)
-            New_lines.append(Lines[index])
+                New_lines.append(Lines[index])
+            elif speaker2.match(Lines[index]):
+                New_lines.append(Lines[index])
             lastline = ""
         elif dialog2.match(Lines[index]):
             if lastline == "dialog":
@@ -67,7 +77,8 @@ for f in files:
                 lastline = "dialog"
         else:
             if lastline == "context":
-                current_string = current_string[:-2] + " " + Lines[index][1:]
+                #print(current_string[-1:] + " oui " + Lines[index][:1])
+                current_string = current_string[:-1] + " " + Lines[index][:]
             else: 
                 if lastline == "dialog":
                     New_lines.append(current_string)

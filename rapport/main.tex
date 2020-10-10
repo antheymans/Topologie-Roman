@@ -104,16 +104,6 @@ This master thesis consists firstly in the development of a software that extrac
 
 
 \chapter{Social Network}
- Before extracting or analyzing any social networks, let's introduce the notion of social network and the basic concept related to network theory.
-Social network are defined as ``a network of social connections and personal relationships between people''. Example are given on table \ref{SNA_Overview}.
- In social network analysis, relationships between people are represented using network in order to analyze them with mathematical tools provided by network 
-and graph theory. ``It helps in understanding the
-dependencies between social entities in the data, characterizing
-their behaviors and their effect on the network as
-a whole and over time.'' \citep{SNA_Overview}
-We should note that in computer science, the word network and the word graph have the same meaning. The choice of these words usually depends on the application. For instance ``social networks'' are never called  ``social graphs'' 
-but it would represent the same concept. The word ``graph'' is more used in mathematics while the word ``network'' is most common in engineering \citep{network_theory}. In this work, the word network will be used most of the time to avoid confusion.
-
 \begin{table}
 \center
 \scalebox{0.7}{%
@@ -134,6 +124,15 @@ Co-actor networks & IMDB, etc.\\
 \caption{Example of social networks \citep{SNA_Overview}}\label{SNA_Exemple}
 \end{table}
 
+ Before extracting or analyzing any social networks, let's introduce the notion of social network and the basic concept related to network theory.
+Social network are defined as ``a network of social connections and personal relationships between people'' \citep{SNA_Overview}. Example are given on table \ref{SNA_Exemple}.
+ In social network analysis, relationships between people are represented using network in order to analyze them with mathematical tools provided by network 
+and graph theory. ``It helps in understanding the
+dependencies between social entities in the data, characterizing
+their behaviors and their effect on the network as
+a whole and over time.'' \citep{SNA_Overview}
+We should note that in computer science, the word network and the word graph have the same meaning. The choice of these words usually depends on the application. For instance ``social networks'' are never called  ``social graphs'' 
+but it would represent the same concept. The word ``graph'' is more used in mathematics while the word ``network'' is most common in engineering \citep{network_theory}. In this work, the word network will be used most of the time to avoid confusion.
 
 
 \section{Network Theory: definition}
@@ -154,12 +153,12 @@ In many applications, values are associated to nodes or link of the network. Oft
 
 Some key notion are needed to understand this measure:
 \begin{itemize}
-\item \textbf{Neighborhood} : Two nodes are defined as \textit{neighbors} if they are linked on a graph. The nodes $u,v \in G$ are neighbors if the edge $(u,v) \in G$. The \textit{neighborhood}n $N_i$ , of a node i is the set of nodes that are neighbors with the node i.
+\item \textbf{Neighborhood} : Two nodes are defined as \textit{neighbors} if they are linked on a graph. The nodes $u,v \in G$ are neighbors if the edge $(u,v) \in G$. The \textit{neighborhood} $N_i$ , of a node i is the set of nodes that are neighbors with the node i.
 
-\item \textbf{Degree}: The degree, $k_i$ of a node i is defined as the size of its the neighborhood, which correspond to the number of edges that are incident to the node i.
+\item \textbf{Degree}: The degree, $k_i$ of a node i is defined as the size of its neighborhood, which corresponds to the number of edges that are incident to the node i.
 
 
-\item \textbf{Path}: A path is a sequence of nodes such that for all pair of consecutive nodes $i,j$, the edge $ij \in E$, the nodes are linked by an edge. The \textit{Shorter Path} between two nodes is a path binding the 2 nodes such that there exist no shorter path binding them. The notion of distance of a path can be defined as the sum of the weight along this path or as the number of nodes bounded by the path. The length of a shorter path is named \textit{Geodesic Distance}. It can't be measured on disconnected nodes.
+\item \textbf{Path}: A path is a sequence of nodes such that for all pair of consecutive nodes $i,j$: the edge $ij \in E$ which means that the nodes are linked by an edge. The \textit{Shorter Path} between two nodes is a path binding the 2 nodes such that there is no shorter path binding them. The notion of distance of a path can be defined as the sum of the weight along this path or as the number of nodes bounded by the path. The length of a shorter path is named \textit{Geodesic Distance}. It can not be measured on disconnected nodes.
 
 \item \textbf{Connection}: Two nodes of a graph are connected if there exists a path in the graph that bind them. The nodes don't have to share an edge. To avoid any confusion, the nodes that share a same edge are referred here as linked. A graph is connected if all nodes from the graph are connected.
 
@@ -171,10 +170,10 @@ Some key notion are needed to understand this measure:
 \citep{diestel}
 \section{Network: Measure}
 \label{measure}
-Different measure exists to characterize networks. I will give here the measure that are commonly used in social network analysis. Further explanations about the measure used in social network analysis are available at \cite{SNA_Overview}.
+There is multiple measures characterizing  networks. I will give here the measures that are commonly used in social network analysis. Further explanations about the measures used in social network analysis are available at \cite{SNA_Overview}.
 
 \subsection{Mean degree}
-The mean degree is the mean value among the degree of all nodes. It can be computed more easily with the formula $\mu = \frac{|N|}{|E|}$ where $|N|$ is the total number of nodes and $|E|$ the total number of edges. It represent how much nodes of a network tends to share links, how much the network is connected.
+The mean degree is the mean value among the degree of all nodes. It can be computed more easily with the formula $\mu = \frac{|N|}{|E|}$ where $|N|$ is the total number of nodes and $|E|$ the total number of edges. It represents how much nodes of a network tends to share links or  how much the network is connected.
 
 \subsection{Clustering coefficients}
 %The strength is a measure near from the degree that exist for weighted graphs only. It corresponds to the sum of the weights of all edges incident to a node.
@@ -183,9 +182,9 @@ C_i = \frac{2 \cdot |e_{jk}|}{k_i \cdot (k_i - 1)}: i, k \in N_i, e_{jk} \in E
 \label{clustering_local}
 \end{equation}
 Different clustering coefficient may be computed.\\
-The local clustering coefficient,$C_i$ of a node i is given by the formula \ref{clustering_local} where E is the set of edges and N_i is the neighborhood of i. It represent how much the node is part of a connected neighborhood or how much the node is close to being part of a clique. In a group of friends, this measure is usually close to 1 as most of the friends know each other. In a network that represent love relationships, most of the method will have a clustering coefficient close to 0 as romantic partners of an individual don't tend to share such a relations between each others.\\
+The local clustering coefficient ,$C_i$, of a node i, is given by the formula \ref{clustering_local} where E is the set of edges and $N_i$ is the neighborhood of i. It represent how much the node is part of a connected neighborhood or how much the node is close to being part of a clique. In a group of friends, this measure is usually close to 1 as most of the friends know each other. In a network that represent love relationships, most of the methods will have a clustering coefficient close to 0 as romantic partners of an individual don't tend to share such a relations between each others.\\
 
-There exists multiple measure of a graph global clustering. We will give here the most popular. The first one have been given by \cite{globalClustering1}. It be computed by taking the mean local clustering coefficient among all nodes. It is also named the mean local clustering coefficient.  \\
+As there is multiple global measure of graph clustering named ''global clustering coefficient'', we will give here the most popular. The first one have been given by \cite{globalClustering1}. It's computed by taking the mean local clustering coefficient among all nodes. It is also named the mean local clustering coefficient.  \\
 
 \begin{figure}
 \centering
@@ -194,18 +193,18 @@ There exists multiple measure of a graph global clustering. We will give here th
 \label{transitivity}
 \end{figure}
 
-The second global clustering coefficient is taken by counting the number of triangle in the graph divided by the number of ``potential triangle''. ``Potential triangle'' are set of 3 vertex such that one vertex is linked to the 2 others vertex. An illustration of this is given on figure \ref{transitivity}. This measure is also called transitivity and will be named in that way in this master thesis to avoid any confusion. \\
+The second global clustering coefficient is taken by counting the number of triangle in the graph divided by the number of ``potential triangle''. ``Potential triangle'' are set of 3 vertices such that one vertex is linked to the 2 others vertices. An illustration of this is given on figure \ref{transitivity}. This measure is also called  transitivity and will be named in that way in this master thesis to avoid any confusion. \\
 
 Both of this measure are related to the probability of clique formation and transitivity. Network with high clustering coefficient tend to have cluster of nodes connected between them. Pair of nodes connected by a third node tend to be also linked by an edge. This is why the second measure is called ``transitivity''.\\
 
 \subsection{Radius and Diameter}
-The diameter from a graph is the greater eccentricity of its nodes. It can be used to know how far could potentially be actors in a network. The radius of a network is the smaller eccentricity of all its nodes. A small eccentricity indicates that a particular node is particularly near from all the other nodes. However both of those measures are very sensitive to outliers and not very robust. As the eccentricity, it can be measured on disconnected network.
+The diameter from a graph is the greater eccentricity of its nodes. It can be used to know how far could potentially be actors in a network. The radius of a network is the smaller eccentricity of all its nodes. A small eccentricity indicates that a particular node is  near from all the other nodes. However both of those measures are very sensitive to outliers and not very robust. As the eccentricity, it can not be measured on disconnected network.
 
 \subsection{Average Path length}
-The average path length \citep{path_length} or average geodesic distance is the mean distance of the shorter path between each pair of node from a connected network. It measure the distance between 2 random actors of the network. This measure can be compared with the radius and the diameter which gives close information but unlike them it is considered as robust.
+The average path length \citep{path_length} or average geodesic distance is the mean distance of the shorter path between each pair of node from a connected network. It measures the distance between 2 random actors of the network. This measure can be compared with the radius and the diameter which gives close information but unlike them it is considered as robust.
  
 \section{Networks characterization}
-There exists a lot of networks. Of course there is a lot of network from human origin such as the internet network, electrical networks or social networks. The notion of network can also be used to observe natural process as the set of vein of a body or the relation between metabolic and protein. Some networks seems build in a structured way, some of them seems random. Some networks have been humanly designed, some of them seems to evolutate from themselves. To characterize network we use topology and models.\\
+There exists a lot of networks. Of course a lot of them have human origin such as the internet network, electrical networks or social networks. But the notion of network can also be used to observe natural process as the set of vein of a body or the relation between metabolic and protein. Some networks seems build in a structured way, some of them seems random. Some networks have been humanly designed, some of them seems to evolutate from themselves. To characterize network we use topology and models.\\
 \begin{figure}
 \centering
 \includegraphics{lattice.png}
@@ -214,7 +213,7 @@ There exists a lot of networks. Of course there is a lot of network from human o
 \end{figure}
 
 Some networks have a very regular and easily-recognizable topology such as lattices, stars, circle. An example of it is available on figure \ref{lattice}. We also saw fully connected graphs on previous question. However most of the networks don't have a such regular topology. especially social networks. The structure of social network is not decided in advance, it's the product of a continuous growing due to local interactions among individuals. We can oppose regular graphs to random graphs, graphs that are the result to a random growth. Of course, some graphs are also the result of a process that includes randomness but can not be modeled using random graphs.\\
-
+%%todo explanation model
 \begin{figure}
 \centering
 \includegraphics{normal_distrib.png}
@@ -647,9 +646,6 @@ In order to use annotations while diminishing the number of related errors, a me
 \item Cluster are made of nouns connected by primary links. The most common of the nouns is the head of the cluster. Each cluster represent a character and its aliases.
 \end{enumerate}
 
-The method allow to increase the number of detected aliases, link aliases between them and infer gender from names. It also allow to filter useless information from speaker and split multiple speakers when their appears. 	As speakers are not always properly chosen in pre-processing, we may still have some errors. There is also still the problem with non-speaking character. However those characters are minor and we consider that it is not an important issue.  On the movie ``Blackkklansman'', no errors are detected. All the extracted characters are really speakers from the story and their aliases are correctly bound. However some of the speakers are not human being: ``Pre - Recorded Message'' refers to a sentence given by the messagery of a phone, ``All'' refers to a sentence said by a crowd. I remind that in section \ref{performance}, I've defined speaking object as potential character. The list of extracted characters of ``blackklansman'' is given on figure \ref{character_bkm}.\\
-
-An other solution would have been to use the character extractor developed for novels on script. The table \ref{tab1} shows that this system is  doing many errors. Using this system on script could lead to even more errors as script have a less regular format than novels. This difference could be explained by the fact that scripts are not commercial product, they are not salable so error in the format are not corrected while the script is understandable for the users. In particular we found more uppercase words that makes the extractions of proper nouns more difficult. However the use of techniques associated to novels on scripts could improve the result for further advancement when character extractor will decrease this number of false positive, as techniques associated to novels use more information than just the annotation.\\
 
 \begin{table}[]
 \scalebox{0.7}{%
@@ -693,9 +689,14 @@ Cluster mentions & Gender   & Main Name                  & Other names      &   
 1                & 1        & Josh                       &                  &           &          &            \\ \hline
 1                & 0        & American Terrorists        & Terrorists       & American  &          &            \\ \hline
 \end{tabular}}
-\label{character_bkm}
 \caption{Extracted characters for the script of the movie Blackkklansman. The first column contain the total number of times each alias of the character have been recorded as speaker. The second one contain the gender of the character. Then comes all aliases of the name. }
+\label{character_bkm}
 \end{table}
+
+
+The method allow to increase the number of detected aliases, link aliases between them and infer gender from names. It also allow to filter useless information from speaker and split multiple speakers when their appears. As speakers are not always properly chosen in pre-processing, we may still have some errors. There is also still the problem with non-speaking character. However those characters are minor and we consider that it is not an important issue.  On the movie ``Blackkklansman'', no errors are detected. All the extracted characters are really speakers from the story and their aliases are correctly bound. However some of the speakers are not human being: ``Pre - Recorded Message'' refers to a sentence given by the messagery of a phone, ``All'' refers to a sentence said by a crowd. I remind that in section \ref{performance}, I've defined speaking object as potential character. The list of extracted characters of ``blackklansman'' is given on figure \ref{character_bkm}.\\
+
+An other solution would have been to use the character extractor developed for novels on script. The table \ref{tab1} shows that this system is  doing many errors. Using this system on script could lead to even more errors as script have a less regular format than novels. This difference could be explained by the fact that scripts are not commercial product, they are not salable so error in the format are not corrected while the script is understandable for the users. In particular we found more uppercase words that makes the extractions of proper nouns more difficult. However the use of techniques associated to novels on scripts could improve the result for further advancement when character extractor will decrease this number of false positive, as techniques associated to novels use more information than just the annotation.\\
 
 \subsection{Identification of character appearance}
 \label{identification}
@@ -765,11 +766,11 @@ The name ``incremental network'' come from \cite{original} in opposition from th
 The final incremental networks represent all the relations in the narrative. It can be considered as a standard social network extracted from fiction that have been studied in many article such as \cite{agarwal-etal-2013-automatic, NER, character_country, movie, fiction, Dekker2018EvaluatingSN}.\\
 
 \begin{equation}
-\label{sentiment}
 sentiment_{incremental}^{n+1} = \frac{weight - 1}{weight} \cdot Time-Factor * sentiment_{incremental}^{n} + sentiment_{context}\\
+\label{sentiment}
 \end{equation}
 
-To build incremental networks, the context graphs are merges as follow: All new nodes of the new context graph are added to the incremental networks. All links are added by conserving the sentiment of the node and setting a weight at 1. This weight represent the number of conversation where the link appear and should not be confused with the weight of the context network. If a link was already existent in the incremental networks, the weight is increased by one. The sentiment score is modified by using equation \cite{equation} with $Time-Factor = 1$. The goal of this equation is to slightly decrease importance of previous sentiment score and see how the sentiment between characters evolve during the narrative. At the end of the addition of links, all node that represent character that don't appear in enough conversation are removed. The goal of this removal is to throw all false characters and minor character that are not important for the social network. The threshold value have been kept at 1 to keep minor character as the new character extraction system have already removed a lot of false characters.
+To build incremental networks, the context graphs are merges as follow: All new nodes of the new context graph are added to the incremental networks. All links are added by conserving the sentiment of the node and setting a weight at 1. This weight represent the number of conversation where the link appear and should not be confused with the weight of the context network. If a link was already existent in the incremental networks, the weight is increased by one. The sentiment score is modified by using equation \ref{sentiment} with $Time-Factor = 1$. The goal of this equation is to slightly decrease importance of previous sentiment score and see how the sentiment between characters evolve during the narrative. At the end of the addition of links, all node that represent character that don't appear in enough conversation are removed. The goal of this removal is to throw all false characters and minor character that are not important for the social network. The threshold value have been kept at 1 to keep minor character as the new character extraction system have already removed a lot of false characters.
 
 \newpage
 \section{Data-extracted}
@@ -794,11 +795,85 @@ The other data produced by the program are csv files containing:
 \chapter{Network analysis}
 In this second chapter of this work, the social network produced are analyzed. Some analysis have been produced by \cite{original} and will be actualized using the correction of network extraction process. The analysis will also benefits to the addition of new metrics and the comparison between novels and scripts.
 
+\section{Connectivity}
+\begin{table}
+\scalebox{0.65}{%
+\begin{tabular}{|l|c|}
+\hline
+Title                         & Components Size                  \\
+\hline
+ASOIAF\_1                     & {[}176{]}                        \\
+ASOIAF\_2                     & {[}268{]}                        \\
+ASOIAF\_3                     & {[}313, 1, 1, 2, 1{]}            \\
+ASOIAF\_4                     & {[}263, 1{]}                     \\
+ASOIAF\_5                     & {[}374, 1, 1{]}                  \\
+Harry\_Potter\_1              & {[}105, 1{]}                     \\
+Harry\_Potter\_2              & {[}118, 1{]}                     \\
+Harry\_Potter\_3              & {[}123, 1{]}                     \\
+Harry\_Potter\_4              & {[}161, 1{]}                     \\
+Harry\_Potter\_5              & {[}269, 1{]}                     \\
+Harry\_Potter\_6              & {[}195{]}                        \\
+Harry\_Potter\_7              & {[}190, 1, 1, 1{]}               \\
+His\_Dark\_Materials\_1       & {[}106{]}                        \\
+His\_Dark\_Materials\_2       & {[}72, 1, 1, 1, 1, 1, 1{]}       \\
+His\_Dark\_Materials\_3       & {[}79, 1{]}                      \\
+Les\_Miserables\_1\_4            & {[}67, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1{]} \\
+Pride\_and\_prejudice         & {[}54{]}                         \\
+TLC\_1                        & {[}34{]}                         \\
+TLC\_2                        & {[}43{]}                         \\
+TLC\_3                        & {[}54{]}                         \\
+TLT\_1                        & {[}6, 106, 1, 1{]}               \\
+TLT\_2                        & {[}96, 1, 1, 1, 1, 1{]}          \\
+TLT\_3                        & {[}93, 1{]}                      \\
+TMI\_1                        & {[}93, 1{]}                      \\
+TMI\_2                        & {[}99{]}                         \\
+TMI\_3                        & {[}86, 1{]}                      \\
+TMI\_4                        & {[}95, 1{]}                      \\
+TMI\_5                        & {[}124, 1, 1{]}                  \\
+TMI\_6                        & {[}152, 1, 1, 1, 1{]}            \\
+TRWC\_1                       & {[}58, 1, 1, 1, 1, 1{]}          \\
+TRWC\_2                       & {[}51, 1, 1, 1, 1{]}             \\
+TRWC\_3                       & {[}63, 1, 1{]}                   \\
+TRWC\_4                       & {[}68, 1, 1, 1{]}                \\
+TWOT\_00                      & {[}108, 1, 1, 1, 1{]}            \\
+TWOT\_01                      & {[}187, 1, 1, 1{]}               \\
+Alien\_1\_SCRIPT              & {[}9{]}                          \\
+Alien\_2\_SCRIPT              & {[}35{]}                         \\
+Alien\_3\_SCRIPT              & {[}30, 1, 1, 1, 1, 1{]}          \\
+Blackkklansman\_SCRIPT        & {[}32, 1, 1, 1{]}                \\
+Black\_Panther\_SCRIPT        & {[}102, 1{]}                     \\
+Boyhood\_SCRIPT               & {[}69, 1{]}                      \\
+Halloween\_SCRIPT             & {[}32, 3, 2, 1, 1, 2, 2{]}       \\
+Harry\_potter\_1\_SCRIPT      & {[}58{]}                         \\
+Harry\_potter\_2\_SCRIPT      & {[}46, 1, 1{]}                   \\
+Harry\_potter\_3\_SCRIPT      & {[}40, 1, 1, 1, 1, 2, 1{]}       \\
+Harry\_potter\_4\_SCRIPT      & {[}53, 1{]}                      \\
+Harry\_potter\_6\_SCRIPT      & {[}47{]}                         \\
+Harry\_potter\_7\_SCRIPT      & {[}71, 2, 2, 1, 1, 1, 1{]}       \\
+Joker\_SCRIPT                 & {[}39, 1, 1, 1, 1, 1, 2{]}       \\
+Jurassic\_Parc\_1\_SCRIPT     & {[}32, 1{]}                      \\
+Jurassic\_Parc\_2\_SCRIPT     & {[}2, 31{]}                      \\
+Jurassic\_Parc\_3\_SCRIPT     & {[}24, 1, 1{]}                   \\
+Lord\_of\_the\_Rings1\_SCRIPT & {[}29, 1, 1{]}                   \\
+Lord\_of\_the\_Rings2\_SCRIPT    & {[}41, 1, 1, 1, 1, 1{]}                                                          \\
+Lord\_of\_the\_Rings3\_SCRIPT & {[}62, 1{]}                      \\
+pride\_and\_prejudice\_SCRIPT & {[}1, 58, 1{]}                   \\
+Shrek\_1\_SCRIPT              & {[}2, 1, 25, 1, 1, 1, 1, 1{]}    \\
+The\_devil\_wears\_prada\_SCRIPT & {[}33, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1{]}                            \\
+Thor\_Ragnarok\_SCRIPT        & {[}35{]}                         \\
+Titanic\_SCRIPT               & {[}80, 1, 2, 1, 1, 1, 1, 1, 1{]}\\
+\hline
+\end{tabular}}
+\caption{Size of the components of each novel and script. Some title are under the form of an abbreviation, the corresponding title
+ is in the appendix. The title of movies script are terminated with the mention \textit{SCRIPT}.}
+ \label{components}
+\end{table}
+The size of each components of novels and scripts is on table \ref{components}. The number of components changes a lot between the texts. In all cases, there is a big components and other components are way smaller. The size of those secondary components is often 1 or 2. The bigger secondary components is located in TLT\_1 and have a size of 6 while the main component have a size of 106. So the social network are composed of main set of connected characters while some characters are isolated or connected in small groups. Some of the isolated characters are due to errors in characters detection while others are due to dialog between minor characters or monologue of characters appearing in one scene only. From this we consider that the main component of a network is sufficient to observe the topology of the network. In next sections when only connected networks can be considered, the main component will be used. For instance the mean path length can be computed only on a connected network.
+
 \section{Distribution of degree}
 \cite{original} has shown that characters social networks extracted from literature tend to have degree distribution following powerlaw. From this statement, the networks have been considered as scale-free. The modification in character extraction decreases a lot the number of characters so we should check that this observation hold.
 
 \begin{figure}
-\label{distrib_degree_4_novels}
 \begin{subfigure}{.24\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/ASOIAF_1_degree}
@@ -818,10 +893,10 @@ In this second chapter of this work, the social network produced are analyzed. S
 \includegraphics[width=\linewidth]{pictures/TLC_1_degree}
 \end{subfigure}
 \caption{Degree distribution of social networks extracted from the first novel of the series ``A song of ice and fire'', ``Harry Potter'', ``The Lunar Chronicles'' and from  the novel ``Pride and prejudice''.}
+\label{distrib_degree_4_novels}
 \end{figure}
 
 \begin{figure}
-\label{distrib_degree_4_scripts}
 \begin{subfigure}{.24\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/Alien_1_SCRIPT_degree}
@@ -841,28 +916,28 @@ In this second chapter of this work, the social network produced are analyzed. S
 \includegraphics[width=\linewidth]{pictures/Thor_Ragnarok_SCRIPT_degree}
 \end{subfigure}
 \caption{Degree distribution of social networks extracted from the script of the first movie of the saga``Harry Potter'', ``Alien'' and from the movies ``Pride and prejudice'', ``Thor: Ragnarok''.}
+\label{distrib_degree_4_scripts}
 \end{figure}
 
 On figure \ref{distrib_degree_4_novels}, the degree distributions from 4 novels shows a big amount of nodes with small degree and less nodes with more degrees. The first graph look like a heavy-tail distribution but others seems to have a more flattened curve. Also we see that the graphs have many irregularities. For this reason I have added all the distributions extracted from novels in a single distribution to fit it. It was already the way used by \cite{original}.\\
 The distributions extracted from 4 movies are also shown on figure \ref{distrib_degree_4_scripts}. The first example shows a distribution completely different from the others networks, this is due to the fact that movie is a ``huis-clos'': all the narrative happen in a close environment with a limited amount of characters. In such movie, it's intuitive that most characters are linked, this should also happened to books following this principle. However no books from our collections present this specificity, this could be a coincidence. An other hypothesis is that movie are more likely to present configurations with a smaller number of characters as this is easier to produce. Other books present a decreasing graph like novels but it seems polynomial. Like novels, the degree distribution have been summed in order to observe their general behavior.
 
 \begin{figure}
-\begin{subfigure}{.30\textwidth}
+\begin{subfigure}{.49\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/degree_novels}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.30\textwidth}
+\begin{subfigure}{.49\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/degree_novels2}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.30\textwidth}
+\begin{subfigure}{.49\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/degree_novels_log}
 \end{subfigure}
-
-\caption{Mean degree distribution of all novels}
+\caption{Mean degree distribution of all novels on linear and log-log scale. The power-law fit has for equation $f(x) =  147.23761823  \cdot x^{-1.59962459}$ and the exponential fit has for equation $f(x) = 25.13373576 \cdot -0.15795688^x$.  }
 \label{cumulated_degree_novel}
 \end{figure}
 
@@ -876,21 +951,31 @@ The distributions extracted from 4 movies are also shown on figure \ref{distrib_
 \centering
 \includegraphics[width=\linewidth]{pictures/degree_script_log}
 \end{subfigure}
-\caption{Mean degree distribution of all scripts}
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/degree_script_exp}
+\end{subfigure}
+\caption{Mean degree distribution of all scripts on linear, log-log  and log scale. The power-law fit has for equation $f(x) = 14.05704682 \cdot x^{-0.96477256}$ and the exponential fit has for equation $f(x) = 5.51683625 \cdot -0.11227941^x$. }
 \label{cumulated_degree_script}
 \end{figure}
 
-The figure \ref{cumulated_degree_novel} shows the mean distribution on all novels with an exponential fit and a scale-free fit.
+The figure \ref{cumulated_degree_novel} shows the mean distribution on all novels with an exponential fit and a power-law fit. The  power-law distribution seems to be a better approximation of the degree distribution. On the second sub-figure which is a zoom on the left of the graph, we can see that the exponential fit don't grow as fast as the distribution while the  power-law fit have an equivalent growth. On the third figure which is on a log-log scale, the distribution seems linear like a  power-law distribution for small values of x. From this we can conclude that the degree distribution of novels follows a power-law like scale-free networks. The parameter of this power-law is -1.59962459.\\
+
+The mean distribution on all scripts appears on figure \ref{cumulated_degree_script}. On the first figure, it's difficult to say whether the exponential or power-law distribution are the best approximation. However on the next figures we see that the distribution is more linear on a log scale than on a log-log scale. The exponential seems to be the best approximation but is not a perfect fit. The distribution is may be the composed of an exponential and a power-law. It's a major difference between novels and script.
+
+
 \section{Measures}
 Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network.\\
 
 The small-world networks are created using the method given in section, with the same number of nodes and edges than the original graph and with a probability of 0.2 .\\
 The scale free graph is created following the method of section, with the same number of node than the original graph. The $m$ value used is computed using the parameters of the original network: $m = [NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of edges of the network.\\
+
 The random network is created using the method from section , with a number of edges following a random variable centered around the number of edges of the social network.\\
 Lattice have not been generated as each type of lattice have approximately always the same values for clustering coefficient and mean degree. The mean path length of lattice growth with with $\sqrt{N}$ for square lattice.
 
+\subsection{Clustering coefficient}
 
-\subsection{}
+\subsection{Mean Path Length}
 
 \listoffigures
 

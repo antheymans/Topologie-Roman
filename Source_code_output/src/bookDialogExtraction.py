@@ -24,7 +24,7 @@ def spacing_map(sentences,breaks):
             else:
                 dialog_spacing.append((index,index-previousIndex))
             sceneBreak = False
-            previousIndex = index     
+            previousIndex = index   
     return dialog_spacing
 
 #TODO: Make sure best option
@@ -151,9 +151,7 @@ def get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts, spea
         d_sentiment = get_weight_from_sentiments(sentiments[index])
         dialog_occurrence = {'from': d_from, 'to': d_to, 'sentiment': d_sentiment, 
                              'sentence': sentence, 'index': index, 'context': context}
-        
         dialog_occurrences.append(dialog_occurrence)
-        #print("sentence ",sentence, "speaker ", speakers[index], d_from, d_to)
         
     
     print("Dialog metadata generation: 100% completed!")
@@ -170,5 +168,6 @@ def dialog_extraction(sentences, breaks, sentiments, chunks, speakers):
     dialog_contexts = get_contexts(chunks, breaks,dialog_spacing,threshold,len(sentences))
     print("Context generation complete...")
     dialog_occurrences = get_occurrences(sentences, sentiments, dialog_spacing, dialog_contexts, speakers)
+    #print(dialog_occurrences)
     
     return dialog_spacing, dialog_occurrences, dialog_contexts, count, threshold

@@ -204,9 +204,9 @@ def character_analysis(dialog_contexts, dialog_occurrences, chunks, oldAliasTabl
         context_chunks = {(i+context[0]):context[2][i] for i in range(len(context[2]))}#dict: index: chunks of context
 
         dialog_indices = [o['index'] for o in current_context_dialogs]#index of the context chunks
-        
         #Use the alias table to replace chunk objects by keys of the alias table
         current_context_dialogs = uniformize_speakers(current_context_dialogs, aliasTable, aliases, context_chunks,dialog_indices)
+
     
     print("Character analysis: 100 % completed...")
     filter_alias_table(aliasTable, connectionsTable, aliases, dialog_occurrences)

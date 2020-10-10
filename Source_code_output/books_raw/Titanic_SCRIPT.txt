@@ -2,32 +2,26 @@ T I T A N I C
 a screenplay by James Cameron
 
 1 BLACKNESS
-
 Then two faint lights appear, close together... growing brighter. The esolve into two DEEP SUBMERSIBLES, free-falling toward us like expres levators ne is ahead of the other, and passes close enough to FILL FRAME, lookin ike a spacecraft blazing with lights, bristling with insectil anipulators ILTING DOWN to follow it as it descends away into the limitless blacknes elow. Soon they are fireflies, then stars. Then gone.
 _CUT TO:
 
 2 EXT./ INT. MIR ONE / NORTH ATLANTIC DEEP
-
 PUSHING IN on one of the falling submersibles, called MIR ONE, right up t ts circular viewport to see the occupants NSIDE, it is a cramped seven foot sphere, crammed with equipment. ANATOL IKAILAVICH, the sub's pilot, sits hunched over his controls... singin oftly in Russian ext to him on one side is BROCK LOVETT. He's in his late forties, deepl anned, and likes to wear his Nomex suit unzipped to show the gold fro amous shipwrecks covering his gray chest hair. He is a wiley, fast-talkin reasure hunter, a salvage superstar who is part historian, part adventure nd part vacuum cleaner salesman. Right now, he is propped against the CO crubber, fast asleep and snoring n the other side, crammed into the remaining space is a bearded wide-bod amed LEWIS BODINE, sho is also asleep. Lewis is an R.O.V. (REMOTEL PERATED VEHICLE) pilot and is the resident Titanic expert natoly glances at the bottom sonar and makes a ballast adjustment.
 _CUT TO:
 
 3 EXT. THE BOTTOM OF THE SEA
-
 A pale, dead-flat lunar landscape. It gets brighter, lit from above, as MI NE enters FRAME and drops to the seafloor in a downblast from it hrusters. It hits bottom after its two hour free-fall with a loud BONK.
 _CUT TO:
 
 4 INT. MIR ONE
-
 Lovett and Bodine jerk awake at the landing.
 _ANATOLY
 "(heavy Russian accent e are here XT. / INT. MIR ONE AND TWO"
 
 5 MINUTES LATER: THE TWO SUBS skim over the seafloor to the sound of
-
 sidescan sonar and the THRUM of big thrusters.
 
 6 The featureless gray clay of the bottom unrols in the lights of the subs.
-
 Bodine is watching the sidescan sonar display, where the outline of a hug ointed object is visible. Anatoly lies prone, driving the sub, his fac ressed to the center port.
 _BODINE
 "Come left a little. She's right in front of us, eighteen meters. Fifteen hirteen... you should see it."
@@ -46,38 +40,31 @@ _BODINE
 "You are so full of shit, boss."
 
 7 Mir Two drives aft down the starboard side, past the huge anchor while
-
 Mir One passes over the seemingly endless forecastle deck, with its massiv nchor chains still laid out in two neat rows, its bronze windlass cap leaming. The
 foot long subs are like white bugs next to the enormou reck.
 _LOVETT (V.O.)
 "Dive nine. Here we are again on the deck of Titanic... two and a half mile own. The pressure is three tons per square inch, enough to crush us like  reight train going over an ant if our hull fails. These windows are nin nches thick and if they go, it's sayonara in two microseconds."
 
 8 Mir Two lands on the boat deck, next to the ruins of the Officer's
-
 Quarters. Mir One lands on the roof of the deck hous nearby.
 _LOVETT
 "Right. Let's go to work odine slips on a pair of 3-D electronic goggles, and grabs the joystic ontrols of the ROV."
 
 9 OUTSIDE THE SUB, the ROV, a small orange and black robot called SNOOP
-
 DOG, lifts from its cradle and flies forward.
 _BODINE (V.O.)
 "Walkin' the dog NOOP DOG drives itself away from the sub, paying out its umbilical behin t like a robot yo-yo. Its twin stereo-video cameras swivel like insec yes. The ROV descends through an open shaft that once was the beautifu irst Class Grand Staircase noop Dog goes down several decks, then moves laterally into the Firs lass Reception Room NOOP'S VIDEO POV, moving through the cavernous interior. The remains o he ornate handcarved woodwork which gave the ship its elegance mov hrough the floodlights, the lines blurred by slow dissolution an escending rusticle formations. Stalactites of rust hang down so that a imes it looks like a natural grotto, then the scene shifts and the line f a ghostly undersea mansion can be seen again ONTAGE STYLE, as Snoop passes the ghostly images of Titanic's opulence:"
 
 10 A grand piano in amazingly good shape, crashed on its side against a
-
 wall. The keys gleam black and white in the lights.
 
 11 A chandelier, still hanging from the ceiling by its wire... glinting as
-
 Snoop moves around it.
 
 12 Its lights play across the floor, revealing a champagne bottle, then
-
 some WHITE STAR LINE china... a woman's high-top "granny shoe". The omething eerie: what looks like a child's skull resolves into th orcelain head of a doll noop enters a corridor which is much better preserved. Here and there  oor still hangs on its rusted hinges. An ornate piece of molding, a wal conce... hint at the grandeur of the past.
 
 13 THE ROV turns and goes through a black doorway, entering room B-52, the
-
 sitting room of a "promenade suite", one of the most luxurious stateroom n Titanic.
 _BODINE
 "I'm in the sitting room. Heading for bedroom B-54."
@@ -98,7 +85,6 @@ _LOVETT
 _CUT TO:
 
 14 EXT. STERN OF DECK OF KEDYSH - DAY
-
 THE SAFE, dripping wet in the afternoon sun, is lowered onto the deck of  hip by a winch cable e are on the Russian research vessel AKADEMIK MISTISLAV KELDYSH. A crow as gathered, including most of the crew of KELDYSH, the sub crews, and  and-wringing money guy named BOBBY BUELL who represents the limite artners. There is also a documentary video crew, hired by Lovett to cove is moment of glory veryone crowds around the safe. In the background Mir Two is being lowere nto its cradle on deck by a massive hydraulic arm. Mir One is alread ecovered with Lewis Bodine following Brock Lovett as he bounds over to th afe like a kid on Christman morning.
 _BODINE
 "Who's the best? Say it."
@@ -117,7 +103,6 @@ _LOVETT
 _CUT TO:
 
 15 INT. LAB DECK, PRESERVATION ROOM - DAY
-
 Technicians are carefully removing some papers from the safe and placin hem in a tray of water to separate them safely. Nearby, other artifact rom the stateroom are being washed and preserved uell is on the satellite phone with the INVESTORS. Lovett is yelling a he video crew.
 _LOVETT
 "You send out what I tell you when I tell you. I'm signing your paychecks ot 60 minutes. Now get set up for the uplink uell covers the phone and turns to Lovett."
@@ -127,13 +112,13 @@ _LOVETT
 "How it's going? It's going like a first date in prison, whattaya think? ovett grabs the phone from Buell and goes instantly smooth."
 _LOVETT
 "Hi, Dave? Barry? Look, it wasn't in the safe... no, look, don't worry abou t, there're still plenty of places it could be... in the floor debris i he suite, in the mother's room, in the purser's safe on C deck.. seeing something ang on a second  tech coaxes some letters in the water tray to one side with a tong.. evealing a pencil (conte crayon) drawing of a woman rock looks closely at the drawing, which is in excellent shape, though it dges have partially disintegrated. The woman is beautiful, and beautifull endered. In her late teens or early twenties, she is nude, though pose ith a kind of casual modesty. She is on an Empire divan, in a pool o ight that seems to radiate outward from her eyes. Scrawled in the lowe ight corner is the date: April"
+
 1912. And the initials JD he girl is not entirely nude. At her throat is a diamond necklace with on arge stone hanging in the center ovett grabs a reference photo from the clutter on the lab table. It is  eriod black-and-white photo of a diamond necklace on a black velve eller's display stand. He holds it next to the drawing. It is clearly th ame piece... a complex setting with a massive central stone which i lmost heart-shaped.
 _LOVETT
 "I'll be God damned."
 _CUT TO:
 
 16 INSERT
-
 A CNN NEWS STORY: a live satellite feed from the deck of the Keldysh ntercut with the CNN studio.
 _ANNOUNCER
 "Treasure hunter Brock Lovett is best known for finding Spanish gold i unken galleons in the Caribbean. Now he is using deep submergenc echnology to work two and a half miles down at another famous wreck... th itanic. He is with us live via satellite from a Russian research ship i he middle of the Atlantic... hello Brock?"
@@ -142,7 +127,6 @@ _LOVETT
 _CUT TO:
 
 17 INT. HOUSE / CERAMICS STUDIO
-
 PULL BACK from the screen, showing the CNN report playing on a TV set i he living room of a small rustic house. It is full of ceramics, figurines olk art, the walls crammed with drawings and paintings... things collecte ver a lifetime ANNING to show a glassed-in studio attached to the house. Outside it is  uiet morning in Ojai, California. In the studio, amid incredible clutter n ANCIENT WOMAN is throwing a pot on a potter's wheel. The liquid red cla overs her hands... hands that are gnarled and age-spotted, but stil urprisingly strong and supple. A woman in her early forties assists her.
 _LOVETT (V.O.)
 "I've planned this expedition for three years, and we're out here recoverin ome amazing things... things that will have enormous historical an ducational value."
@@ -164,7 +148,6 @@ _ROSE
 _CUT TO:
 
 18 EXT. KELDYSH DECK - NIGHT
-
 CUT TO KELDYSH. The Mir subs are being launched. Mir Two is already in th ater, and Lovett is getting ready to climb into Mir One when Bobby Buel uns up to him.
 _BUELL
 "There's a satellite call for you."
@@ -175,7 +158,6 @@ _BUELL
 _CUT TO:
 
 19 INT. LAB DECK / KELDYSH - NIGHT
-
 Beull hands Lovett the phone, pushing down the blinking line. The call i rom Rose and we see both ends of the conversation. She is in her kitche ith a mystified Lizzy.
 _LOVETT
 "This is Brock Lovett. What can I do for you, Mrs... ?"
@@ -194,12 +176,10 @@ _ROSE
 _CUT TO:
 
 20 EXT. OCEAN - DAY
-
 SMASH CUT TO AN ENORMOUS SEA STALLION HELICOPTER thundering across th cean. PAN 180 degrees as it roars past. There is no land at eithe orizon. The Keldysh is visible in the distance LOSE ON A WINDOW of the monster helicopter. Rose's face is visible ooking out calmly.
 _CUT TO:
 
 21 EXT. KELDYSH - DAY
-
 Brock and Bodine are watching Mir
 being sweng over the side to start  ive.
 _BODINE
@@ -215,21 +195,18 @@ _BODINE
 "Okay, so she's a very old goddamned liar. I traced her as far back as the"
 
 20's... she was working as an actress in L.A. An actress. Her name was Rose
-
 Dawson. Then she married a guy named Calvert, moved to Cedar Rapids, ha wo kids. Now Calvert's dead, and from what I've heard Cedar Rapids i ead he Sea Stallion approaches the ship, BG, forcing Brock to yell over th otors.
 _LOVETT
 "And everyobody who knows about the diamond is supposed to be dead... or o his ship. But she knows about it. And I want to hear what she has to say ot it?"
 _CUT TO:
 
 22 EXT. KELDYSH HELIPAD
-
 IN A THUNDERING DOWNBLAST the helicopter's wheels bounce down on th elipad ovett, Buell and Bodine watch as the HELICOPTER CREW CHIEF hands out abou en suitcases, and then Rose is lowered to the deck in a wheelchair b eldysh crewmen. Lizzy, ducking unnecessarily under the rotor, follows he ut, carrying FREDDY the Pomeranian. The crew chief hands a puzzled Keldys rewmember a goldfish bowl with several fish in it. Rose does not trave ight OLD ON the incongruous image of this little old lady, looking impossibl ragile amongst all the high tech gear, grungy deck crew and giganti quipment.
 _BODINE
 "S'cuse me, I have to go check our supply of Depends."
 _CUT TO:
 
 23 INT. ROSE'S STATEROOM / KELDYSH - DAY
-
 Lizzy is unpacking Rose's things in the small utilitarian room. Rose i lacing a number of FRAMED PHOTOS on the bureau, arranging them carefull ext to the fishbowl. Brock and Bodine are in the doorway.
 _LOVETT
 "Is your stateroom alright?"
@@ -248,23 +225,18 @@ _ROSE
 _CUT TO:
 
 24 INT. LAB DECK, PRESERVATION AREA
-
 Rose looks at the drawing in its tray of water, confronting herself acros  span of
 years. Until they can figure out the best way to preserve it hey have to keep it immersed. It sways and ripples, almost as if alive IGHT ON Rose's ancient eyes, gazing at the drawing.
 
 25 FLASHCUT of a man's hand, holding a conte crayon deftly creating a
-
 shoulder and the shape of her hair with two efficient lines.
 
 26 THE WOMAN'S FACE IN THE DRAWING, dancing under the water.
 
-
 27 A FLASHCUT of a man's eyes, just visible over the top of a sketching
-
 pad. They look up suddenly right into the LENS. Soft eyes, but fearlessl irect.
 
 28 Rose smiles, remembering. Brock has the reference photo of the necklace
-
 in his hand.
 _LOVETT
 "Louis the Sixteenth wore a fabulous stone, called the Blue Diamond of th rown, which disappeared in 1792, about the time Louis lost everything fro he neck up. The theory goes that the crown diamond was chopped too.. ecut into a heart-like shape... and it became Le Coeur de la Mer. Th eart of the Ocean. Today it would be worth more than the Hope Diamond."
@@ -305,7 +277,6 @@ _LOVETT
 _CUT TO:
 
 29 INT. IMAGING SHACK / KELDYSH
-
 It is a darkened room lined with TV monitors. IMAGES OF THE WRECK fill th creens, fed from Mir One and Two, and the two ROVs, Snoop Dog and DUNCAN.
 _BODINE
 "Live from 12,000 feet OSE stares raptly at the screens. She is enthraled by one in particular n image of the bow railing. It obviously means something to her. Brock i tudying her reactions carefully."
@@ -332,19 +303,15 @@ _LOVETT
 "Will you share it with us er eyes go back to the screens, showing the sad ruins far below them  VIEW from one of the subs TRACKING SLOWLY over the boat deck. Ros ecognizes one of the Wellin davits, still in place. She hears ghostl altz music. The faint and echoing sound of an officer's voice, Englis ccented, calling "Women and children only"."
 
 30 FLASH CUTS of screaming faces in a running crowd. Pandemonium and
-
 terror. People crying, praying, kneeling on the deck. Just impressions.. lashes in the dark.
 
 31 Rose Looks at another monitor. SNOOP DOG moving down a rusted,
-
 debris-filled corridor. Rose watches the endless row of doorways slidin ast, like dark mouths.
 
 32 IMAGE OF A CHILD, three years old, standing ankle deep in water in the
-
 middle of an endless corridor. The child is lost alone, crying.
 
 33 Rose is shaken by the flood of memories and emotions. Her eyes well up
-
 and she puts her head down, sobbing quietly.
 _LIZZY
 "(taking the wheelchair 'm taking her to rest."
@@ -365,7 +332,6 @@ _ROSE
 _MATCH DISSOLVE:
 
 34 EXT. SOUTHAMPTON DOCK - DAY
-
 SHOT CONTINUES IN A FLORIOUS REVEAL as the gleaming white superstructure o itanic rises mountainously beyond the rail, and above that th uff-colored funnels stand against the sky like the pillars of a grea emple. Crewmen move across the deck, dwarfed by the awesome scale of th teamer outhanmpton, England, April 10,
 It is almost nnon on ailing day.  rowd of hundreds blackens the pier next to Titanic like ants on a jell andwich N FG a gorgeous burgundy RENAULT TOURING CAR swings into frame, hangin rom a loading crane. It is lowered toward HATCH #2 n the pier horsedrawn vehicles, motorcars and lorries move slowly throug he dense throng. The atmosphere is one of excitement and genera iddiness. People embrace in tearful farewells, or wave and shout bo oyage wishes to friends and relatives on the decks above  white RENAULT, leading a silver-gray DAIMLER-BENZ, pushes through th rowd leaving a wake in the press of people. Around the handsome car eople are streaming to board the ship, jostling with hustling seamen an tokers, porters, and barking WHITE STAR LINE officials he Renault stops and the LIVERIED DRIVER scurries to open the door for  OUNG WOMAN dressed in a stunning white and purple outfit, with an enormou eathered hat. She is
 years old and beautiful, regal of bearing, wit iercing eyes t is the girl in the drawing. ROSE. She looks up at the ship, taking it i ith cool appraisal.
@@ -420,12 +386,10 @@ _OLD ROSE (V.O.)
 "Outwardly I was everything a well brought up girl should be. Inside, I wa creaming."
 
 35 CUT TO a SCREAMING BLAST from the mighty triple steam horns on Titanic's
-
 funnels, bellowing their departure warning.
 _CUT TO:
 
 36 EXT. SOUTHAMPTON DOCKS / TITANIC - DAY
-
 A VIEW OF TITANIC from several blocks away, towering above the termina uildings like the skyline of a city. The steamer's whistle echoes acros outhampton ULL BACK, revealing that we were looking through a window, and bac urther to show the smoky inside of a pub. It is crowded with dockworker nd ship;s crew ust inside the window, a poker game is in progress. FOUR MEN, in workin lass clothes, play a very serious hand ACK DAWSON and FABRIZIO DE ROSSI, both about 20, exchange a glance as th ther two players argue in Swedish. Jack is American, a lanky drifter wit is hair a little long for the standards of the times. He is also unshaven nd his clothes are rumpled from sleeping in them. He is an artist, and ha dopted the bohemian style of art scene in Paris. He is also ver elf-possessed and sure-footed for 20, having lived on his own sinc he TWO SWEDES continue their sullen argument, in Swedish.
 _OLAF
 "(subtitled ou stupid fishhead. I can't believe you bet our tickets."
@@ -464,7 +428,6 @@ _PUBKEEPER
 _CUT TO:
 
 38 EXT. TERMINAL - TITANIC
-
 Jack and Fabrizio, carrying everything they own in the world in the ki ags on their shoulders, sprint toward the pier. They tear through millin rowds next to the terminal. Shouts go up behind them as they jostl low-moving gentlemen. They dodge piles of luggage, and weave throug roups of people. They burst out onto the pier and Jack comes to a dea top... staring at the cast wall of the ship's hull, towering seven storie bove the wharf and over an eighth of a mile long. The Titanic i onstrous abrizio runs back and grabs Jack, and they sprint toward the third clas angway aft, at E deck. They reach the bottom of the ramp just as SIXT FFICER MOODY detaches it at the top. It starts to swing down from th angway doors.
 _JACK
 "Wait!! We're passengers lushed and panting, he waves the tickets."
@@ -483,12 +446,10 @@ _JACK
 _CUT TO:
 
 40 EXT. TITANIC AND DOCK - DAY
-
 The mooring lines, as big around as a man's arm, are dropped into th ater. A cheer goes up on the pier as SEVEN TUGS pull the Titanic away fro he quay.
 _CUT TO:
 
 41 EXT. AFT WELL DECK / POOP DECK - DAY
-
 JACK AND FABRIZIO burst through a door onto the aft well deck. TRACKIN ITH THEM as they run across the deck and up the steel stairs to the poo eck. They get to the rail and Jack starts to yell and wave to the crowd o he dock.
 _FABRIZIO
 "You know somebody?"
@@ -501,19 +462,16 @@ _CUT TO:
 _CUT TO:
 
 44 EXT. RIVER TEST - DAY
-
 IN A LONG LENS SHOT the prow of Titanic FILLS FRAME behind the lead tug hich is dwarfed. The bow wave spreads before the mighty plow of th iner's hull as it moves down the River Test toward the English Channel.
 _CUT TO:
 
 45 INT. THIRD CLASS BERTHING / G-DECK FORWARD - DAY
-
 Jack and Fabrizio walk down a narrow corridor with doors lining both side ike a college dorm. Total confusion as people argue over luggage i everal languages, or wander in confusion in the labyrinth. They pas migrants studying the signs over the doors, and looking up the words i hrase books hey find their berth. It is a modest cubicle, painted enamel white, wit our bunks. Exposed pipes overhead. The other two guys are already there LAUS and BJORN GUNDERSEN ack throws his kit on one open bunk, while Fabrizio takes the other.
 _BJORN
 "(in Swedish/ subtitled here is Sven?"
 _CUT TO:
 
 46 INT. SUITE B-52-56 - DAY
-
 By contrast, the so-called "Millionaire Suite" is in the Empire style, an omprises two bedrooms, a bath, WC, wardrobe room, and a large sittin oom. In addition there is a private 50 foot promenade deck outside  room service waiter pours champagne into a tulip glass of orange juic nd hands the Bucks Fizz to Rose. She is looking through her new paintings here is a Monet of water lilies, a Degas of dancers, and a few abstrac orks. They are all unknown paintings... lost works al is out on the covered deck, which has potted trees and vines o rellises, talking through the doorway to Rose in the sitting room.
 _CAL
 "Those mud puddles were certainly a waste of money."
@@ -525,7 +483,6 @@ _CAL
 "Put that in the wardrobe."
 
 47 IN THE BEDROOM Rose enters with the large Degas of the dancers. She sets
-
 it on the dresser, near the canopy bed. Trudy is already in there, hangin p some of Rose's clothes.
 _TRUDY
 "It smells so brand new. Like they built it all just for us. I mean... jus o think that tonight, when I crawl between the sheets, Iill be the first- al appears in the doorway of the bedroom."
@@ -538,12 +495,10 @@ _CAL
 _CUT TO:
 
 48 EXT. CHERBOURG HARBOR, FRANCE - LATE DUSK
-
 Titanic stands silhouetted against a purple post-sunset sky. She is lit u ike a floating palace, and her thousand portholes reflect in the cal arbor waters. The 150 foot tender Nomadic lies-to alongside, looking lik  rowboat. The lights of a Cherbourg harbor complete the postcard image.
 _CUT TO:
 
 49 INT. FIRST CLASS RECEPTION/ D-DECK
-
 Entering the first class reception room from the tender are a number o rominent passengers. A BROAD-SHOULDERED WOMAN in an enormous feathered ha omes up the gangway, carrying a suitcase in each hand, a spindly porte unning to catch up with her to take the bags.
 _WOMAN
 "Well, I wasn't about to wait all day for you, sonny. Take 'em the rest o he way if you think you can manage."
@@ -554,36 +509,29 @@ _OLD ROSE (V.O.)
 _CUT TO:
 
 51 EXT. BOW - DAY
-
 The ship glows with the warm creamy light of late afternoon. Jack an abrizio stand right at the bow gripping the curving railing so familia rom images of the wreck. Jack leans over, looking down fifty feet to wher he prow cuts the surface like a knife, sending up two glassy sheets o ater.
 _CUT TO:
 
 52 INT. / EXT. TITANIC - SERIES OF SCENES - DAY
-
 ON THE BRIDGE, CAPTAIN SMITH turns from the binnacle to FIRST OFFICE ILLIAM MURDOCH.
 _CAPTAIN SMITH
 "Take her to sea Mister Murdoch. Let's stretch her legs urdoch moves the engine telegraph lever to ALL AHEAD FULL."
 
 53 NOW BEGINS a kind of musical/visual setpiece... an ode to the great
-
 ship. The music is rhythmic, surging forward, with a soaring melody tha ddresses the majesty and optimism of the ship of dreams N THE ENGINE ROOM the telegraph clangs and moves to "All Ahead Full".
 _CHIEF ENGINEER BELL
 "All ahead full n the catwalk THOMAS ANDREWS, the shipbuilder, watches carefully as th ngineers and greasers scramble to adjust valves. Towering above them ar he twin RECIPROCATING engines, four stories tall, their ten-foot-lon onnecting rods surging up and down with the turning of the massiv rankshafts. The engines thunder like the footfalls of marching giants."
 
 54 IN THE BOILER ROOMS the STOKERS chant a song as they hurl coal into the
-
 roaring furnaces. The "black gang" are covered with sweat and coal dust heir muscles working like part of the machinery as they toil in th ellish glow.
 
 55 UNDERWATER the enormous bronze screws chop through the water, hurling
-
 the steamer forward and churning up a vortex of foam that lingers for mile ehind the juggernaut ship. Smoke pours from the funnels as--
 
 56 The riven water flares higher at the bow as the ship's speeds builds.
-
 THE CAMERA SWEEPS UP the prow to find Jack, the wind streaming through hi air and--
 
 57 Captain Smith steps out of the enclosed bridge onto the wing. He stands
-
 with his hands on the rail, looking every bit the storybook picture of  aptain... a great patriarch of the sea.
 _FIRST OFFICER MURDOCH
 "Twenty one knots, sir!"
@@ -591,7 +539,6 @@ _SMITH
 "She's got a bone in her teeth now, eh, Mr. Murdoch mith accepts a cup of tea from FIFTH OFFICER LOWE. He contentedly watche he white V of water hurled outward from the bows like an expression of hi wn personal power. They are invulnerable, towering over the sea."
 
 58 AT THE BOW Jack and Fabrizio lean far over, looking down.
-
 In the glassy bow-wave two dolphins appear, under the water, running fas ust in front of the steel blade of the prow. They do it for the sheer jo nd exultation of motion. Jack watches the dolphins and grins. They breach umping clear of the water and then dive back, crisscrossing in front o he bow, dancing ahead of the juggernaut ABRIZIO looks forward across the Atlantic, staring into the sunsparkles.
 _FABRIZIO
 "I can see the Statue of Liberty already grinning at Jack ery small... of course HE CAMERA ARCS around them, until they are framed against the sea OW WE PULL BACK, across the forecastle deck. Rising, as we continue back nd the ships rolls endlessly forward underneath. Over the bridge wing long the boat deck until her funnels come INTO FRAME besides us and marc ast like the pillars of heaven, one by one. We pull back and up, until w re looking down the funnels, and the people strolling on the decks an tanding at the rail become antlike nd still we pull back until the great lady is seen whole in a gorgeou erial portrait, black and severe in her majesty."
@@ -600,7 +547,6 @@ _ISMAY (V.O.)
 _CUT TO:
 
 59 INT. PALM COURT RESTAURANT - DAY
-
 CLOSE ON J. BRUCE ISMAY, Managing Director of White Star Line.
 _ISMAY
 "...and our master shipbuilder, Mr. Andrews here, designed her from the kee lates up e indicates a handsome"
@@ -634,7 +580,6 @@ _CAL
 _CUT TO:
 
 60 EXT. POOP DECK / AFTER DECKS - DAY
-
 Jack sits on a bench in the sun. Titanic's wake spreads out behind him t he horizon. He has his knees pulled up, supporting a leather boun ketching pad, his only valuable possession. With conte crayon he draw apidly, using sure strokes. An emigrant from Manchester named CARTMELL ha is
 year old daughter CORA standing on the lower rung of the rail. She i eaned back against his beer barrel of a stomach, watching the seagulls HE SKETCH captures them perfectly, with a great sense of the humanity o he moment. Jack is good. Really good. Fabrizio looks over Jack's shoulder e nods appreciatively OMMY RYAN, a scowling young Irish emigrant, watches as a crewmember come y, walking three small dogs around the deck. One of them, a BLACK FRENC ULLDOG, is among the ugliest creatures on the planet.
 _TOMMY
@@ -648,29 +593,24 @@ _TOMMY
 _CUT TO:
 
 61 INT. FIRST CLASS DINING SALOON - NIGHT
-
 SLOWLY PUSHING IN ON ROSE as she sits, flanked by people in heate onversation. Cal and Ruth are laughing together, while on the other sid ADY DUFF-GORDON is holding forth animatedly. We don't hear what they ar aying. Rose is staring at her plate, barely listening to th nconsequential babble around her.
 _OLD ROSE (V.O.)
 "I saw my whole life as if I'd already lived it... an endless parade o arties and cotillions, yachts and polo matches... always the same narro eople, the same mindless chatter. I felt like I was standing at a grea recipice, with no one to pull me back, no one who cared... or eve oticed NGLE BENEATH TABLE showing Rose's hand, holding a tiny fork from her cra alad. She pokes the crab-fork into the skin of her arm, harder and harde ntil it draws blood."
 _CUT TO:
 
 62 INT. CORRIDOR / B DECK - NIGHT
-
 Rose walks along the corridor. A steward coming the other way greets her nd she nods with a slight smile. She is perfectly composed.
 _CUT TO:
 
 63 INT. ROSE'S BEDROOM - NIGHT
-
 She enters the room. Stands in the middle, staring at her reflection in th arge vanity mirror. Just stands there, then- ith a primal, anguished cry she claws at her throat, ripping off her pear ecklace, which explodes across the room. In a frenzy she tears at herself er clothes, her hair... then attacks the room. She flings everything of he dresser and it flies clattering against the wall. She hurls  andmirror against the vanity, cracking it.
 _CUT TO:
 
 64 EXT. A DECK PROMENADE, AFT - NIGHT
-
 Rose runs along the B deck promenade. She is dishevelled, her hair flying he is crying, her cheeks streaked with tears. But also angry, furious haking with emotions she doesn't understand... hatred, self-hatred esperation. A strolling couple watch her pass. Shocked at the emotiona isplay in public.
 _CUT TO:
 
 65 EXT. POOP DECK - NIGHT
-
 Jack is kicked back on one of the benches gazing at the stars blazin loriously overhead. Thinking artist thoughts and smoking a cigarette earing something, he turns as Rose runs up the stairs from the well deck hey are the only two on the stern deck, except for QUARTERMASTER ROWE wenty feet above them on the docking bridge catwalk. She doesn't see Jac n the shadows, and runs right past him RACKING WITH ROSE as she runs across the deserted fantail. Her breat itches in an occasional sob, which she suppresses. Rose slams against th ase of the stern flagpole and clings there, panting. She stares out at th lack water hen starts to climb over the railing. She has to hitch her long dress wa p, and climbing is clumsy. Moving methodically she turns her body and get er heels on the white-painted gunwale, her back to the railing, facing ou oward blackness. 60 feet below her, the massive propellers are churnin he atlantin into white foam, and a ghostly wake trails off toward th orizon N A LOW ANGLE, we see Rose standing like a figurehead in reverse. Belo er are the huge letters of the name "TITANIC" he leans out, her arms straightening... looking down hypnotized, into th ortex below her. Her dress and hair are lifted by the wind of the ship' ovement. The only sound, above the rush of water below, is the flutter an nap of the big Union Jack right above her.
 _JACK
 "Don't do it he whips her head around at the sound of his voice. It takes a second fo er eyes to focus."
@@ -735,7 +675,6 @@ _ROWE
 _CUT TO:
 
 66 EXT. POOP DECK - NIGHT
-
 A few minutes later. Jack is being detained by the burly MASTER AT ARMS he closest thing to a cop on board. He is handcuffing Jack. Cal is righ n front of Jack, and furious. He has obviously just rushed out here wit ovejoy and another man, and none of them have coats over their black ti vening dress. The other man is COLONEL ARCHIBALD GRACIE, a mustachioe lowhard who still has his brandy snifter. He offers it to Rose, who i unched over crying on a bench nearby, but she waves it away. Cal is mor oncerned with Jack. He grabs him by the lapels.
 _CAL
 "What made you think you could put your hands on my fiancee?! Look at me ou filth! What did you think you were doing?!"
@@ -782,7 +721,6 @@ _LOVEJOY
 _CUT TO:
 
 67 INT. ROSE'S BEDROOM - NIGHT
-
 As she undresses for bed Rose sees Cal standing in her doorway, reflecte n the cracked mirror of her vanity. He comes toward her.
 _CAL
 "(unexpectedly tender  know you've een melancholy, and I don't pretent to know why rom behind his back he hands her a large black velvet jewel case. Sh akes it, numbly."
@@ -807,7 +745,6 @@ years of life...
 _TRANSITION
 
 68 INT. KELDYSH IMAGING SHACK
-
 Without a cut the wrinkled, weathered landscape of age has appeared aroun er eyes. But the eyes themselves are the same.
 _OLD ROSE
 "After all these years, feel it closing around my throat like a dog collar HE CAMERA PUllS BACK to show her whole face."
@@ -832,7 +769,6 @@ _LIZZY
 _CUT TO:
 
 69 EXT. LAUNCH AREA/KELDYSH DECK - DAY
-
 As the big hydraulic jib swings one of the Mir subs out over the water ovett walks as he talks with Bobby Buell, the partners' rep. They weav mong deck cranes, launch crew, sub maintenance guys.
 _BUELL
 "The partners are pissed."
@@ -873,14 +809,12 @@ _LOVETT
 _CUT TO:
 
 70 INT. IMAGING SHACK
-
 Bodine starts the tape recorder. Rose is gazing at the screen seeing TH IVE FEED FROM THE WRECK--SNOOP DOG is moving along the starboard side o he hull, heading aft. The rectangular windows of A deck (forward) marc ast on the right.
 _ROSE
 "The next day, Saturday, I remember thinking how the sunlight felt."
 _DISSOLVE TO:
 
 71 EXT. B DECK TITANIC - DAY
-
 MATCH DISSOLVE from the rusting hulk to the gleaming new Titanic in 1912 assing the end of the enclosed promenade just as Rose walks into th unlight right in front of us. She is stunningly dressed and walking wit urpose.
 _OLD ROSE (V.O.)
 "As if I hadn't felt the sun in years T IS SATURDAY APRIL 13,"
@@ -888,7 +822,6 @@ Rose unlatches the gate to go down int hird class. The steerage men on the deck 
 _CUT TO:
 
 72 INT. THIRD CLASS GENERAL ROOM
-
 The social center of steerage life. It is stark by comparison to th pulence of first class, but is a loud, boisterous place. There are mother ith babies, kids running between the benches yelling in several language nd being scolded in several more. There are old women yelling, men playin hess, girls doing needlepoint and reading dime novels. There is even a pright piano and Tommy Ryan is noodling around it hree boys, shrieking and shouting, are scrambling around chasing a ra nder the benches, trying to whomp it with a shoe and causing genera avoc. Jack is playing with
 year old CORA CARTMeLL, drawing funny face ogether in his sketchbook abrizio is struggling to get a conversation going with an attractiv orwegian girl, HELGA DAHL, sitting with her family at a table across th oom.
 _FABRIZIO
@@ -906,7 +839,6 @@ _JACK
 _CUT TO:
 
 73 EXT. BOAT DECK - DAY
-
 Jack and Rose walk side by side. They pass people reading and talking i teamer chairs, some of whom glance curiously at the mismatched couple. H eels out of place in his rough clothes. They are both awkward, fo ifferent reasons.
 _JACK
 "So, you got a name by the way?"
@@ -1003,7 +935,6 @@ _JACK
 _CUT TO:
 
 74 INT. RECEPTION ROOM / D-DECK - DAY
-
 Ruth is having tea with NOEL LUCY MARTHA DYER-EDWARDES, the COUNTESS O OTHES, a 35ish English blue-blood with patirician features. Ruth see omeone coming across the room and lowers her voice.
 _RUTH
 "Oh no, that vulgar Brown woman is coming this way. Get up, quickly befor he sits with us olly Brown walks up, greeting them cheerfully as they are rising."
@@ -1026,7 +957,6 @@ _ISMAY
 _CUT TO:
 
 75 EXT. A DECK PROMENADE - DAY
-
 Rose and Jack stroll aft, past people lounging on deck chairs in th lanting late-afternoon light. Stewards scurry to serve tea or hot cocoa.
 _ROSE
 "(girlish and excited ou know, my dream has always been to just chuck it all and become a rtist... living in a garret, poor but free!"
@@ -1045,7 +975,6 @@ _MARVIN
 _CUT TO:
 
 76 EXT. A DECK PROMENADE / AFT - SUNSET
-
 Painted with orange light, Jack and Rose lean on the A-deck rail aft houlder to shoulder. The ship's lights come on t is a magical moment... perfect.
 _ROSE
 "So then what, Mr. Wandering Jack?"
@@ -1098,7 +1027,6 @@ _MOLLY
 _CUT TO:
 
 77 INT. MOLLY BROWN'S STATEROOM
-
 Men's suits and jackets and formal wear are strewn all over the place olly is having a fine time. Jack is dressed, except for his jacket, an olly is tying his bow tie.
 _MOLLY
 "Don't feel bad about it. My husband still can't tie one of these dam hings after 20 years. There you go he picks up a jacket off the bed and hands it to him. Jack goes into th athroom to put it on. Molly starts picking up the stuff off the bed."
@@ -1109,14 +1037,12 @@ _MOLLY
 _CUT TO:
 
 78 EXT. BOAT DECK / FIRST CLAsS ENTRANCE - DUSK
-
 A purple sky, shot with orange, in the west. Drifting strains of classi usic. We TRACK WITH JACK along the deck. By Edwardian standards he look adass. Dashing in his borrowed white-tie outfit, right down to his pear tuds  steward bows and smartly opens the door to the First Class Entrance.
 _STEWARD
 "Good evening, sir ack plays the role smoothly. Nods with just the right degree of disdain."
 _CUT TO:
 
 79 INT. UPPER LANDING / GRAND STAIRCASE AND A-DECK
-
 Jack steps in and his breath is taken away by the splendor spread ou efore him. Overhead is the enormous glass dome, with a crystal chandelie t its center. Sweeping down six stories is the First Class Gran taircase, the epitome of the opulent naval architecture of the time nd the people: the women in their floor length dresses, elaborat airstyles and abundant jewelry... the gentlemen in evening dress, standin ith one hand at the small of the back, talking quietly ack descends to A deck. Several men nod a perfunctory greeting. He nod ack, keeping it simple. He feels like a spy al comes down the stairs, with Ruth on his arm, covered in jewelry. The oth walk right past Jack, neither one gecognizeing him. Cal nods at him ne gent to another. But Jack barely has time to be amused. Because jus ehind Cal and Ruth on the stairs is Rose, a vision in red and black, he ow-cut dress showing off her neck and shoulders, her arms seathed in whit loves that come well above above the elbow. Jack is hypnotized by he eauty LOSE ON ROSE as she approaches Jack. He imitates the gentlemen's stance and behind his back. She extends her gloved hand and he takes it, kissin he back of her fingers. Rose flushes, beaming noticeably. She can't tak er eyes off him.
 _JACK
 "I saw that in a nickelodean once, and I always wanted to do it."
@@ -1127,7 +1053,6 @@ _CAL
 _CUT TO:
 
 80 INT. D-DECK RECEPTION ROOM
-
 CUT TO THE RECEPTION ROOM ON D DECK, as the party descends to dinner. The ncounter Molly Brown, looking good in a beaded dress, in her own bust road-shouldered way. Molly grins when she sees Jack. As they are goin nto the dining saloon she walks next to him, speaking low:
 _MOLLY
 "Ain't nothin' to it, is there, Jack?"
@@ -1158,14 +1083,12 @@ _MADELEINE
 _CUT TO:
 
 81 INT. DINING SALOON
-
 Like a ballroom at the palace, alive and lit by a constellation o handeliers, full of elegantly dressed people and beautiful music fro ANDLEADER WALLACE HARTLEY'S small orchestra. As Rose and Jack enter an ove across the room to their table, Cal and Ruth beside them, we hear...
 _OLD ROSE (V.O.)
 "He must have been nervous but he never faltered. They assumed he was one o hem... a young captain of industry perhaps... new money, obviously, bu till a memeber of the club. Mother of course, could always be counte pon..."
 _CUT TO:
 
 82 INT. DINING SALOON
-
 CLOSE ON RUTH.
 _RUTH
 "Tell us of the accommodations in steerage, Mr. Dawson. I hear they're quit ood on this ship IDER: THE TABLE. Jack is seated opposite Rose, who is flanked by Cal an homas Andrews. Also at the table are Molly Brown, Ismay, Colonel Gracie he Countess, Guggenheim, Madame Aubert, and the Astors."
@@ -1219,7 +1142,6 @@ _ANDREWS
 "Thankyou, Rose e see that Andrews has come under Rose's spell."
 
 83 TIME TRANSITION: Dessert has been served and a waiter arrives with
-
 cigars in a humidor on a wheeled cart. The men start clipping ends an ighting.
 _ROSE
 "(low, to Jack est it'll be brandies in the Smoking Room."
@@ -1240,14 +1162,12 @@ _JACK
 _CUT TO:
 
 84 INT. A-DECK FOYER-NIGHT
-
 Rose crosses the A-Deck foyer, sighting Jack at the landing above. Overhea s the crystal dome. Jack has his back to her, studying the ornate cloc ith its carved figures of Honor and Glory. It softly strikes the hour OVING WITH ROSE as she goes up the sweeping staircase toward him. H urns, sees her... smiles.
 _JACK
 "Want to go to a real party?"
 _CUT TO:
 
 85 INT. THIRD CLASS GENERAL ROOM
-
 Crow led and alive with music, laughter and raucous carrying on. An ad ho and is gathered near the upright piano, honking out lively stomping musi n fiddle, accoridon and tambourine. People of all ages are dancing rinking beer and wine, smoking, laughing, even brawling ommy hands Rose a pint of stout and she hoists it. Jack meanwhile dance ith
 year old Cora Cartmell, or tries to, with her standing on his feet s the tune ends, Rose leans down to the little girl.
 _ROSE
@@ -1263,7 +1183,6 @@ _ROSE
 _CUT TO:
 
 87 INT. THIRD CLASS GENERAL ROOM
-
 The scene is rowdy and rollicking. A table gets knocked over as a drun rashes into it. And in the middle of it... Rose dancing with Jack in he tocking feet. The steps are fast and she shines with sweat. A space open round them, and people watch them, clapping as the band plays faster an aster ABRIZIO AND HELGA. Dancing has obviated the need for a common language. H hirls her, then she responds by whirling him... Fabrizio's eyes go wid hen he realizes she's stronger than he is he tune ends in a mad rush. Jack steps away from Rose with a flourish llowing her to take a bow. Exhilarated and slightly tipsy, she does  raceful ballet ployer, feet turned out perfectly. Everyone laughs an pplauds. Rose is a hit with the steerage folks, who've never had a lad arty with them hey move to a table, flushed and sweaty. Rose grabs Fabrizio's cigarett nd takes a big drag. She's feeling cocky. Fabrizio is grinning, holdin ands with Helga.
 _JACK
 "How you two doin'?"
@@ -1282,7 +1201,6 @@ _ROSE
 _CUT TO:
 
 88 EXT. BOAT DECK - NIGHT
-
 The stars blaze overhead, so bright and clear you can see the Milky Way ose and Jack walk along the row of lifeboats. Still giddy from the party hey are singing a popular song "Come Josephine in My Flying Machine".
 _JACK/ROSE
 "Come Josephine in my flying machin nd it's up she goes! Up she goes n the air she goes. Where? There she goes hey fumble the words and break down laughing. They have reached the Firs lass Entrance, but don't go straight in, not wanting the evening to end hrough the doors the sound of the ship's orchestra wafts gently. Ros rabs a davit and leans back, staring at the cosmos."
@@ -1313,7 +1231,6 @@ _JACK
 _CUT TO:
 
 89 INT. ORSE AND CAL'S SUITE / PRIVATE PROMENADE - DAY
-
 SUNDAY APRIL 14,
 A bright clear day. Sunlight splashing across th romenade. Rose and Cal are having breakfast in silence. The tension i alpable. Trudy Bolt, in her maid's uniform, pours the coffee and goe nside.
 _CAL
@@ -1335,7 +1252,6 @@ _ROSE
 _CUT TO:
 
 90 INT. RUTH'S SUITE - DAY
-
 Rose is dressed for the day, and is in the middle of helping Ruth with he orset. The tight bindings do not inhibit Ruth's fury at all.
 _RUTH
 "You are not to see that boy again, do you understand me Rose? I forbid it ose has her knee at the base of her mother's back and is pulling th orset strings with both hands."
@@ -1360,7 +1276,6 @@ _RUTH
 _CUT TO:
 
 91 INT. FIRST CLASS DINING SALOON
-
 At the divine service, Captain Smith is leading a group in the hymn
 "Almighty Father Strong To Save." Rose and Ruth sing in the middle of the
 group ovejoy stands well back, keeping an eye on Rose. He notices a commotion a he entry doors. Jack has been halted there by two stewards. He is dresse n his third class clothes, and stands there, hat in hand, looking out o lace.
@@ -1385,7 +1300,6 @@ _ROSE
 _CUT TO:
 
 92 INT. GYMNASIUM - DAY
-
 An Edwardian nautilus room. There are machines we recognize, and som on't. A woman pedals a stationary bicycle in a long dress, lookin ediculous. Thomas Andrews is leading a small tour group, including Rose uth and Cal. Cal is wroking the oars of a stationary rowing machine with  ell trained stroke.
 _CAL
 "Reminds me of my Harvard days .W. McCAULEY, the gym instructor, is a bouncy little man in whit lannels, eager to show off his modern equipment, like his present-da ounterpart on an "Abflex" infomercial. He hits a switch and a machine wit  saddle on it starts to undulate. Rose puts her hand on it, curious."
@@ -1398,7 +1312,6 @@ _ANDREWS
 _CUT TO:
 
 93 EXT. AFT WELL DECK, B-DECK AND A-DECK - DAY
-
 Jack, walking with determination, is followed closely by Tommy an abrizio. He quickly climbs the steps to B-Deck and steps over the gat eparating 3rd from 2nd class.
 _TOMMY
 "She's a goddess amongst mortal men, there's no denyin'. But she's i nother world, Jackie, forget her. She's closed the door ack moves furtively to the wall below the A-Deck promenade, aft."
@@ -1411,12 +1324,10 @@ _FABRIZIO
 _CUT TO:
 
 94 EXT. A-DECK / AFT - DAY
-
 A man is playing with his son, who is spinning a top with a string. Th an's overcoat and hat are sitting on a deck chair nearby. Jack emerge rom behind one of the huge deck cranes and calmly picks up the coat an owler hat. He walks away, slipping into the coat, and slicks his hair bac ith spit. Then puts the hat on at a jaunty angle. At a distance he coul ass for a gentlemen.
 _CUT TO:
 
 95 INT. BRIDGE / CHARTROOM - DAY
-
 HAROLD BRIDE, the
 year old Junior Wireless Operator, hustles in an kirts around Andrews' tour group to hand a Marconigram to Captain Smith.
 _BRIDE
@@ -1432,7 +1343,6 @@ _FIRST OFFICER MURDOCH
 _CUT TO:
 
 96 EXT. BOAT DECK / STARBOARD SIDE - DAY
-
 Andrews leads the group back from the bridge along the boat deck.
 _ROSE
 "Mr. Andrews, I did the sum in my head, and with the number of lifeboat imes the capacity you mentioned... forgive me, but it seems that there ar ot enough for everyone aboard."
@@ -1445,7 +1355,6 @@ _ANDREWS
 _CUT TO:
 
 97 INT. GYMNASIUM - DAY
-
 Jack closes the door behind her, and glances out through the ripple-glas indow to the starboard rail, where the gym instructor is chatting up th oman who was riding the bike. Rose and Jack are alone in the room.
 _ROSE
 "Jack, this is impossible. I can't see you e takes her by the shoulders."
@@ -1468,7 +1377,6 @@ _ROSE
 _CUT TO:
 
 98 INT. FIRST CLASS LOUNG - DAY
-
 The most elegant room on the ship, done in Louis Quinze Versaille style ose sits on a divan, with a group of other women arrayed around her. Ruth he Countess Rothes and Lady Duff-Gordon are taking tea. Rose is silent an till as a porcelain figurine as the conversation washes around her.
 _RUTH
 "Of course the invitations had to be sent back to the printers twice. An he bridesmaids dresses! Let me tell you what an odyssey that has been.. RACKING SLOWLY IN on Rose as Ruth goes on EVERSE, ROSE'S POV: A tabeau of MOTHER and DAUGHTER having tea. The fou ear old girl, wearing white gloves, daintily picking up a cookie. Th other correcting her on her posture, and the way she holds the teacup. Th ittle girl is trying so hard to please, her expression serious. A glimps f Rose at that age, and we see the relentless conditioning... the pain t ecoming an Edwardian geisha N ROSE. She calmly and deliberately turns her teacup over, spilling te ll over her dress."
@@ -1477,7 +1385,6 @@ _ROSE
 _CUT TO:
 
 99 EXT. TITANIC - DAY
-
 TITANIC STEAMS TOWARD US, in the dusk light, as if lit by the embers of  iant fire. As the ship looms, FILLING FRAME, we push in on the bow. Jac s there, right at the apex of the bow railing, his favorite spot. H loses his eyes, letting the chill wind clear his head ack hears her voice, behind him...
 _ROSE
 "Hello, Jack e turns and she is standing there."
@@ -1497,18 +1404,15 @@ _JACK
 "(singing softly ome Josephine in my flying machine.. ose cleses her eyes, feeling herself floating weightless far above th ea. She smiles dreamily, then leans back, gently pressing her back agains is chest. He pushes forward slightly against her lowly he raises his hands, arms outstretched, and they meet hers.. ingertips gently touching. Then their fingers intertwine. Moving slowly heir fingers caress through and around each other like the bodies of tw overs ack tips his face forward into her blowing hair, letting the scent of he ash over him, until his cheek is agianst her ear ose turns her head until her lips are near his. She lowers her arms urning further, until she finds his mouth with hers. He wraps his arm round her from behind, and they kiss like this with her head turned an ilted back, surrendering to him, to the emotion, to the inevitable. The iss, slowly and tremulously, and then with building passion ack and the ship seem to merge into one force of power and optimism ifting her, buoying her forward on a magical journey, soaring onward int  night without fear."
 
 100 IN THE CROW'S NEST, high above and behind them, lookout FREDERICK FLEET
-
 nudges his mate, REGINALD LEE, pointing down at the figures in the bow.
 _FLEET
 "Wish I had those bleedin' binoculars."
 
 101 JACK AND ROSE, embracing at the bow rail, DISSOLVE SLOWLY AWAY, leaving
-
 the ruined bow of the WRECK--
 _CUT TO:
 
 102 INT. KELDYSH IMAGING SHACK
-
 OLD ROSE blinks, seeming to come back to the present. She sees the wreck o he screen, the sad ghost ship deep in the abyss.
 _ROSE
 "That was the last time Titanic ever saw daylight rock Lovett changes the tape in the minicassette recorder."
@@ -1519,12 +1423,10 @@ _BODINE
 _BROCK
 
 26 years of experience working against him. He figures anything big enough
-
 to sink the ship they're going to see in time to turn. But the ship's to ig, with too small a rudder... it can't corner worth shit. Everything h nows is wrong OSE is ignoring this conversation. She has the art-nouveau comb with th ade butterfly on the handle in her hands, turning it slowly. She i atching a monitor, which shows the ruins of Suite B-52/56. PUSH IN unti he image fills frame.
 _TRANSITION:
 
 103 INT. ROSE'S SUITE
-
 ...
 Like in a dream the beautiful woodwork and satin upholster merge from the rusted ruin. Jack is overwhelmed by the opulence of th oom. He sets his sketchbood and drawing materials on the marble table.
 _ROSE
@@ -1547,11 +1449,9 @@ _ROSE
 "I want you to draw me like your French girl. Wearing this she smiles at him earing only this e looks up at her, surprised, and we CUT TO:"
 
 104 ROSE'S BEDROOM. ON THE BUTTERFLY COMB as Rose draws it out of her hair.
-
 She shakes her head and her hair falls free around her shoulders.
 
 105 IN THE SITTING ROOM Jack is laying out his pencils like surgical tools.
-
 His sketchbook is open and ready. He looks up as she comes into the room earing a silk kimono.
 _ROSE
 "The last thing I need is another picture of me looking like a china doll s a paying customer, I expect to get what I want he hands him a dime and steps back, parting the kimono. The blue ston ies on her creamy breast. Her heart is pounding as she slowly lowers th obe akc looks so stricken, it is almost comical. The kimono drops to the floo this is all in cuts, lyrical)."
@@ -1566,7 +1466,6 @@ _JACK
 _TRANSITION:
 
 106 INT. KELDYSH / IMAGING SHACK
-
 MATCH DISSOLVE/MORPH to Rose, 101 years old. Only her eyes are the same.
 _OLD ROSE
 "My heart was pounding the whole time. It was the most erotic moment of m ife... up till then at least UT TO REVERSE: A semicircle of listeners staring in rapt, frozen silence he story of Jack and Rose has finally and completely grabbed them."
@@ -1577,7 +1476,6 @@ _OLD ROSE
 _CUT TO:
 
 107 INT. ROSE AND CAL'S SUITE - NIGHT
-
 BACK TO
 Jack is signing the drawing. Rose, wearing her kimono again s leaning on his shoulder, watching.
 _OLD ROSE (V.O.)
@@ -1587,7 +1485,6 @@ _ROSE
 _CUT TO:
 
 108 INT. FIRST CLASS SMOKING ROOM - NIGHT
-
 Lovejoy enters from the Palm Court through the revolving door and crosse he room toward Hockley. A fire is blazing in the marble fireplace, and th sual fatcats are playing cards, drinking and talking. Cal sees Lovejoy an etaches from his group, coming to him.
 _LOVEJOY
 "None of the stewards have seen her."
@@ -1596,11 +1493,9 @@ _CAL
 _CUT TO:
 
 109 EXT. ATLANTIC - NIGHT
-
 TITANIC glides across an unnatural sea, blakc and calm as a pool of oil he ships lights are mirrored almost perfectly in the black water. The sk s brilliant with stars. A meteor traces a bright line across the heavens.
 
 110 ON THE BRIDGE, Captain Smith peers out at the blackness ahead of the
-
 ship. QUARTERMASTER HITCHINS brings him a cup of hot tea with lemon. I teams in the bitter cold of the open bridge. Second Officer Lightoller i ext to him, staring out at the sheet of black glass the Atlantic ha ecome.
 _LIGHTOLLER
 "I don't think I've ever seen such a flat calm, in"
@@ -1618,14 +1513,12 @@ _SMITH
 _CUT TO:
 
 111 INT. ROSE AND CAL'S SUITE
-
 Rose, fully dressed now, returns to the sitting room. They hear a key i he lock. Rose takes Jack's hand and leads him silently through th edrooms. Lovejoy enters by the sitting room door.
 _LOVEJOY
 "Miss Rose? Hello e hears a door opening and goes through Cal's room toward hers."
 _CUT TO:
 
 112 INT. CORRIDOR OUTSIDE SUITE
-
 Rose and Jack come out of her stateroom, closing the door. She leads hi uickly along the corridor toward the B deck foyer. They are halfway acros he open space when the sitting room door opens in the corridor and Lovejo omes out. The valet sees Jack with Rose and hustles after them.
 _ROSE
 "Come on he and Jack break into a run, surprising the few ladies and gentleme bout. Rose leads him past the stairs to the bank of elevators. They ru nto one, shocking the hell out of the OPERATOR."
@@ -1634,12 +1527,10 @@ _ROSE
 _CUT TO:
 
 113 INT. E-DECK FOYER / ELEVATORS
-
 Lovejoy emerges from another lift and runs to the one Jack and Rose wer n. The Operator is just closing the gate to go back up. Lovejoy run round the bank of elevators and scans the foyer... no Jack and Rose. H ries the stairs going down to F-Deck.
 _CUT TO:
 
 114 INT. F-DECK CORRIDORS / FAN ROOM
-
 A functional space, with access to a number of machine spaces (fan rooms oiler uptakes). Jack and Rose are leaning against a wall, laughing.
 _JACK
 "Pretty tough for a valet, this fella."
@@ -1649,33 +1540,28 @@ _JACK
 "Kinda like we're doin' right now-- uh oh ovejoy has spotted them from a cross-corridor nearby. He charges towar hem. Jack and Rose run around a corner into a blind alley. There is on oor, marked CREW ONLY, and Jack flings it open."
 
 115 They enter a roaring RAN ROOM, with no way out but a ladder going down.
-
 Jack latches the deadbolt on the door, and Lovejoy slams against it  oment later. Jack grins at Rose, pointing to the ladder.
 _JACK
 "After you, m'lady."
 _CUT TO:
 
 116 INT. BOILER ROOM FIVE AND SIX
-
 Jack and Rose come down the escape ladder and look around in amazement. I s like a vision of hell itself, with the roaring furnaces and blac igures moving in the smoky glow. They run the length of the boiler room odging amazed stokers, and trimmers with their wheelbarrows of coal.
 _JACK
 "(shouting over the din arry on! Don't mind us hey run through the open watertight door into BOILER ROOM SIX. Jack pull er through the fiercely hot alley between two boilers and they wind up i he dark, out of sight of the working crew. Watching from the shadows, the ee the stokers working in the hellish glow, shovelling coal into th nsatiable maws of the furnaces. The whole place thunders with the roar o he fires."
 _CUT TO:
 
 117 INT. FIRST CLASS SMOKING ROOM
-
 Amid unparalled luxury, Cal sits at a card game, sipping brandy.
 _COLONEL GRACIE
 "We're going like hell I tel you. I have fifty dollars that says we make i nto New York Tuesday night al looks at his gold pocket watch, and scowls, not listening."
 _CUT TO:
 
 119 INT. BOILER ROOM SIX
-
 The furnaces roar, silhouetting the glistening stokers. Jack kisses Rose' ace, tasting the sweat trickling down from her forehead. They kis assionately in the steamy, pounding darkness.
 _CUT TO:
 
 120 INT. HOLD #2
-
 Jack and Rose enter and run laughing between the rows of stacked cargo. Sh ugs herself against the cold, after the dripping heat of the boiler room hey come upon William Carter's brand new RENAULT touring car, lashing dow o a pallet. It looks like a royal coach from a fairy tale, its brass tri nd headlamps nicely set off by its deep burgundy color ose climbs into the plushly upholstered back seat, acting very royal here are cut crystals bud vases on the walls back there, each containing  ose. Jack jumps into the driver's seat, enjoying hte feel of the leathe nd wood.
 _JACK
 "Where to, Miss?"
@@ -1690,7 +1576,6 @@ _ROSE
 _CUT TO:
 
 121 INT. WIRELESS ROOM
-
 A BRILLIANT ARC OF ELECTRICITY fills frame-- the sparks gap of the Marcon nstrument as SENIOR WIRELESS OPERATOR JACK PHILLIPS (24) rapidly keys ou  message. Junior Operator Bride looks through the huge stack of outgoin essages swamping them.
 _BRIDE
 "Look at this one, he wants his private train to meet him. La dee da slaps them down e'll be up all bloody night on this lot hillips start to receive an incoming message from a nearby ship, th eyland frieghter CALIFORNIAN, which jams his outgoing signal. At suc lose range, the beeps are deafening."
@@ -1699,7 +1584,6 @@ _PHILLIPS
 _CUT TO:
 
 122 INT. / EXT. WIRELESS SHAK / FREIGHTER CALIFORNIAN
-
 Wireless Operater CYRIL EVANS pulls his earphone off his ear as th itanic's spark deafens him. he translates the message for THIRD OFFICE ROVES.
 _EVANS
 "Stupid bastard. I try to warn him about the ice, and he says "Keep out hut up. I'm working Cape Race.""
@@ -1711,12 +1595,10 @@ shutting down s Evans wearily switches off his generator, Groves goes out on dec
 _CUT TO:
 
 123 EXT. OCEAN / TITANIC
-
 ON TITANIC, steaming hellbent through the darkness, hurling up white wate t the bows. The bow comes straight at us, until the bow wave WIPES TH RAME--
 _CUT TO:
 
 124 INT. HOLD #2
-
 PUSHING IN on the rear window of the Renault, which is completely fogge p. Rose's hand comes up and slams against the glass for a moment, making  andprint in the veil of condensation NSIDE THE CAR, Jack's overcoat is liek a blanket over them. It stirs an ose pulls it down. They are huddled under it, intertwined, still mostl lothed. Their faces are flushed and they look at each other wonderingly he puts her hand on his face, as if making sure he is real.
 _ROSE
 "You're trembling."
@@ -1729,7 +1611,6 @@ _OLD ROSE (V.O.)
 _CUT TO:
 
 125 EXT. ATLANTIC / TITANIC - NIGHT
-
 The bow sweeps under us, and the CAMERA CLIMBS toward the foremast and th iny half-cylinder of the crow's nest, which grows as we push in o ookouts Fleet and Lee. They are stamping their feet and swinging thei rms, trying to keep warm in the
 knot freezing wind, which whips capo f their breath away behind.
 _FLEET
@@ -1741,26 +1622,22 @@ _FLEET
 _CUT TO:
 
 126 INT. BOILER ROOM SIX
-
 Without hearing hte words over the roar of the furnaces, we see stoker elling TWO STEWARDS which way Rose and Jack went. The stewards move of oward the forward holds.
 _CUT TO:
 
 127 INT. CAL AND ROSE'S SUITE
-
 Cal stands at the open safe. He stares at the drawing of Rose and his fac lenches with fury. He reads the not again: "DARLING, NOW YOU CAN KEEP U OTH LOCKED IN YOUR SAFE, ROSE" ovejoy, standing behind him, looks over his shoulder at the drawing. Ca rumples Rose's not, then takes the drawing in both hands as if to rip i n half. He tenses to do it, then stops himself.
 _CAL
 "I have a better idea."
 _CUT TO:
 
 128 INT. HOLD #2 - NIGHT
-
 The two stewards enter. They have electric torches and play the beam round the hold. They spot the Renault with its fogged up rear window an pproach it slowly ROM INSIDE we see the torch light up Rose's passionate handprint, stil here on the fogged up glass. One steward whips open the door.
 _STEWARD
 "Got yer EVERSE: the back seat is empty."
 _CUT TO:
 
 129 EXT. FORWARD WELL DECK AND CROW'S NEST - NIGHT
-
 Rose and Jack, fully dressed, come through a crew door onto the deck. The an barely stand, they are laughing so hard P ABOVE THEM, IN THE CROW'S NEST, lookout Fleet hears the disturbanc elow and looks around and back down to the well deck, where he can see tw igures embracing ack and Rose stand in each others arms. Their breath clouds around them i he now freezing air, but they don't even feel the cold.
 _ROSE
 "When this ship docks, I'm getting off with you."
@@ -1770,7 +1647,6 @@ _ROSE
 "I know. It doesn't make any sense. That's why I trust it ack pulls her to him and kisses her fiercely."
 
 130 IN THE CROW'S NEST Fleet nudges Lee.
-
 _FLEET
 "Cor... look at that, would ya."
 _LEE
@@ -1784,7 +1660,6 @@ _FLEET
 _CUT TO:
 
 131 INT. / EXT. BRIDGE
-
 Inside the enclosed wheelhous, SIXTH OFFICER MOODY walks unhurriedly to th elephone, picking it up.
 _FLEET (V.O.)
 "Is someone there?"
@@ -1802,59 +1677,46 @@ _MOODY
 "(standing behind Hitchins ard'a starboard. The helm is hard over, sir RASH SEQUENCE / SERIES OF CUTS:"
 
 132 CHIEF ENGINEER BELL is just checking the soup he has warming on a steam
-
 manifold when the engine telegraph clangs, then goes... incredibly... t ULL SPEED ASTERN. He and the other ENGINEERS just stare at it a second nbelieving. Then Bell reacts.
 _BELL
 "Full astern! FULL ASTERN! he engineers and greasers like madmen to close steam valves and star raking the mighty propeller shafts, big as Sequias, to a stop."
 
 133 IN BOILER ROOM SIX, Leading Stoker FREDERICK BARRETT is standing with
 
-
 2nd Engineer JAMES HESKETH when the red warning light and "STOP" indicator
-
 come on.
 _BARRETT
 "Shut all dampers! Shut 'em!!"
 
 134 FROM THE BRIDGE Murdoch watches the burg growing... straight ahead. The
-
 bow finally starts to come left (since the ship turns the reverse of th elm setting) URDOCH'S jaw clenches as the bow turns with agonizing slowness. He hold is breath as the horrible physics play out.
 
 135 IN THE CROW'S NEST Frederick Fleet braces himself.
 
-
 136 THE BOW OF THE SHIP thunders right at CAMERA and--
-
 KRUUUNCH!! The ship hits the berg on its starboard bow.
 
 137 UNDERWATER we see the ice smashing in the steel hull plates. The
-
 iceberg bumps and scrapes along the side of the ship. Rivets pop as th teel plate of the hull flexes under the load.
 
 138 IN #2 HOLD the two stewards stagger as the hull buckles in four feet
-
 with a sound like THUNDER. Like a sledgehammer beating along outside th hip, the berg splits the hull plates and the sea pour in, sweeping the ff their feert. The icy water swirls around the Renault as the me cramble for the stairs.
 
 139 ON G-DECK forward Fabrizio is tossed in his bunk by the impact. He
-
 hears a sound like the greatly amplified squeal of a skate on ice.
 
 140 IN BOILER ROOM SIX Barret and Hesketh stagger as they hear the ROLLING
-
 THUNDER of the collision. They see the starboard side of the ship buckle i oward them and are almost swept off their feet by a rush of water comin n about two feet above the floor.
 
 141 ON THE FORWARD WELL DECK Jack and Rose break their kiss and look up in
-
 astonishment as the berg sails past, blocking out the sky like a mountain ragments break off it and crash down onto the deck, and they have to jum ack to avoid flying chunks of ice.
 
 142 ON THE BRIDGE Murdoch rings the watertight door alarm. He quicky throws
-
 the switch that closes them.
 _MURDOCH
 "Hard a 'port udging the berg to be amidships, he is trying to clear the stern."
 
 143 BARRETT AND HESKETH hear the DOOR ALARM and scramble through the
-
 swirling water to the watertight door between Boiler Rooms
 and
 Th oom is full of water vapor as the cold sea strikes the red hot furnaces arrett yells to the stokers scrambling through the door as it comes dow ike a slow guillotine.
@@ -1863,25 +1725,20 @@ _BARRETT
 just before the door rumbles down wit  CLANG.
 
 144 JACK AND ROSE rush to the starboard rail in time to see the berg moving
-
 aft down the side of the ship.
 
 145 In his stateroom, surrounded by piles of plans while making notes in
-
 his ever-present book, Andrews looks up at the sound of a cut-crystal ligh ixture tinkling like a windchime e feels the shudder run through the ship. And we see it in his face. To uch of his soul is in this great ship for him not to feel its morta ound.
 
 146 IN THE FIRST CLASS SMOKING ROOM Gracie watches his highball vibrating
-
 on the table.
 
 147 IN THE PALM COURT, with its high arched windows, Molly Brown holds up
-
 her drink to a passing waiter.
 _MOLLY
 "Hey, can I get some ice here, please ilently, a moving wall of ice fills the window behind her. She doesn't se t. It disappears astern."
 
 149 IN THE CROW'S NEST Fleet turns to his Lee...
-
 _FLEET
 "Oy, mate... that was a close shave."
 _LEE
@@ -1889,7 +1746,6 @@ _LEE
 _CUT TO:
 
 150 INT. / EXT. BRIDGE
-
 CLOSE ON MURDOCH. The alarm bells still clatter mindlessly, seeming t eflect his inner state. He is in shock, unable to get a grip on what jus appened. He just ran the biggest ship in history into an iceberg on it aiden voyage.
 _MURDOCH
 "(stiffly, to Moody ote the time. Enter it in the log aptain Smith rushes out of his cabin onto the bridge, tucking in hi hirt."
@@ -1906,13 +1762,11 @@ _SMITH
 _CUT TO:
 
 151 INT. G-DECK FORWARD
-
 In steerage, Fabrizio comes out into the hall to see what's going on. H ees dozens of rats running toward him in the corridor, fleeing th looding bow. Fabrizio jumps aside as the rats run by.
 _FABRIZIO
 "Ma-- che cazzo!"
 
 152 IN HIS STATEROOM Tommy gets out of his top bunk in the dark and drops
-
 down to the floor. SPLASH!!
 _TOMMMY
 "Cor!! What in hell--? e naps on the light. The floor is covered with"
@@ -1920,7 +1774,6 @@ inches of freezing water nd more coming in. He pulls the door open, and steps ou
 _CUT TO:
 
 153 INT. FIRST CLASS CORRIDOR / A-DECK
-
 A couple of people have come out into the corridor in robes and slippers.  TeWARD hurries along, reassuring them.
 _WOMAN
 "Why have the engines stopped? I felt a shudder?"
@@ -1929,7 +1782,6 @@ _STEWARD #1
 _CUT TO:
 
 154 EXT. FORWARD WELL DECK
-
 Jack and Rose are leaning over the starboard rail, looking at the hull o he ship.
 _JACK
 "Looks okay. I don't see anything."
@@ -1940,14 +1792,12 @@ _JACK
 _CUT TO:
 
 155 INT. STEERAGE FORWARD
-
 Fabrizio and Tommy are in a crowd of steerage men clogging the corridors eading aft away from the flooding. Many of them have grabbed suitcases an uffel bags, some of which are soaked.
 _TOMMY
 "If this is the direction the rats were runnin', it's good enough for me."
 _CUT TO:
 
 156 INT. CORRIDOR ON B DECK
-
 Bruce Ismay, dressed in pajamas under the topcoat, hurries down th orridor, headed for the bridge. An officious steward named BARNES come long the other direction, getting the few concerned passengers back int heir rooms.
 _STEWARD BARNES
 "There's no cause for alarm. Please, go back to your rooms e is stopped in his tracks by Cal and Lovejoy."
@@ -1958,7 +1808,6 @@ _CAL
 _CUT TO:
 
 157 INT. BRIDGE / CHARTROOM
-
 C.U. CAPTAIN SMITH studying the commutator e turns to Andrews, standing behind him.
 _SMITH
 "A five degree list in less than ten minutes HIP'S CARPENTER JOHN HUTCHINSON enters behind him, out of breath an learly unnerved."
@@ -1975,14 +1824,12 @@ _SMITH
 _CUT TO:
 
 158 INT. BOILER ROOM
-
 Strokers and firemen are struggling to draw the fires. They are working i aist deep water churning around as it flows into the boiler room, ice col nd swirling with grease from the machinery. Chief Engineer Bell come artway down the ladder and shouts.
 _BELL
 "That's it, lads. Get the hell up hey scramble up the escape ladders."
 _CUT TO:
 
 159 EXT. B-DECK FORWARD / WELL DECK
-
 The gentlemen, now joined by another man, leans on the forward rai atching the steerage men playing soccer with chunks of ice.
 _GENTLEMAN
 "I guess it's nothing too serious. I'm going back to my cabin to read  20ish YALE MAN pops through the door wearing a topcoat over pajamas."
@@ -2005,14 +1852,12 @@ _JACK
 _CUT TO:
 
 160 INT. B-DECK FOYER / CORRIDOR
-
 Jack and Rose cross the foyer, entering the corridor. Lovejoy is waitin or them in the hall as they approach the room.
 _LOVEJOY
 "We've been looking for you miss ovejoy follows and, unseen, moves close behind Jack and smoothly slips th iamond necklace into the pocket of his overcoat."
 _CUT TO:
 
 161 INT. ROSE AND CAL'S SUITE
-
 Cal and Ruth wait in the sitting room, along with the Master at Arms an wo stewards (Steward #1 and Barnes). Silence as Rose and Jack enter. Rut loses her robe at her throat when she sees Jack.
 _ROSE
 "Something serious has happened."
@@ -2057,12 +1902,10 @@ _RUTH
 _CUT TO:
 
 162 INT. MAIL SORTING ROOM / HOLD
-
 Smith and Andrews come down the steps to the Mail Sorting Room and find he clerks scrambling to pull mail from the racks. They are furiousl auling wet sacks of mail up from the hold below ndrews climbs partway down the stairs to the hold, which is almost full acks of mail float everywhere. The lights are still on below the surface asting an eerie glow. The Renault is visible under the water, the bras linting cheerfully. Andrews looks down as the water covers his shoe, an crambles back up the stairs.
 _CUT TO:
 
 163 INT. BRIDE / CHARTROOM
-
 Andrews unrolls a big drawing of the ship across the chartroom table. It i  side elevation, showing all the watertight bulkheads. His hands ar haking. Murdoch and Ismay hover behind Andrews and the Captain.
 _ISMAY
 "When can we get underway, do you think mith glares at him and turns his attention to Andrews' drawing. Th uilder points to it for emphasis as he talks."
@@ -2094,7 +1937,6 @@ _SMITH
 _CUT TO:
 
 164 EXT. BOAT DECK
-
 Andrews is striding along the boat deck, as seamen and officers scurry t ncover the boats. Steam is venting from pipes on the funnes overhead, an he din is horrendous. Speech is difficult adding to the crew's level o isorganization. Andrews sees some men fumbling with the mechanism of on f the Wellin davits and yells to them over the roar of steam.
 _ANDREWS
 "Turn to the right! Pull the falls taut before you unchock. Have you neve ad a boat drill?"
@@ -2103,7 +1945,6 @@ _SEAMAN
 _CUT TO:
 
 165 INT. ROSE AND CAL'S SUITE
-
 From inside the sitting room they can hear knocking and voices in th orridor.
 _RUTH
 "I had better go dress uth exits and Hockley crosses to Rose. He regards her coldly for a moment hen SLAPS her across the face."
@@ -2122,7 +1963,6 @@ _CAL
 _CUT TO:
 
 166 INT. STEERAGE BERTHING AFT
-
 BLACKNESS. Then BANG! The door is thrown open and the lights snapped on b  steward. The Cartmell family rouses from a sound sleep.
 _STEWARD #2
 "Everybody up. Let's go. Put your lifebelts on N THE CORRIDOR outside, another steward is going from door to door alon he hall, pouncing and yelling."
@@ -2131,7 +1971,6 @@ _STEWARD #2
 _CUT TO:
 
 167 INT. WIRELESS ROOM
-
 ON PHILLIPS, looking shocked.
 _PHILLIPS
 "CQD, sir?"
@@ -2144,7 +1983,6 @@ _BRIDE
 _CUT TO:
 
 168 EXT. BOAT DECK
-
 Thomas Andrews looks around in amazement. The deck is empty except for th rew fumbling with the davits. He yells over the roar of the steam to Firs fficer Murdoch.
 _ANDREWS
 "Where are all the passengers?"
@@ -2153,7 +1991,6 @@ _MURDOCH
 _CUT TO:
 
 169 INT. A-DECK FOYER
-
 A large number of First Class passengers have gathered near the staircase hey are getting indignant about the confusion. Molly Brown snags a passin OUNG STEWARD.
 _MOLLY
 "What's doing, sonny? You've got us all trussed up and now we're cooling ou eels he young steward backs away, actually stumbling on the stairs."
@@ -2180,7 +2017,6 @@ _ROSE
 _CUT TO:
 
 170 INT. MASTER AT ARMS OFFICE
-
 Lovejoy and the Master at Arms are handcuffing Jack to a 4" WATER PIPE as  rewman rushes in anxiously and almost blurts to the Master at Arms--
 _CREWMAN
 "You're wanted by the Purser, sir. Urgently."
@@ -2189,7 +2025,6 @@ _LOVEJOY
 _CUT TO:
 
 171 INT. BRIDGE
-
 Junior Wireless Operator Bride is relaying a message to Captain Smith fro he CUNARD LINER CARPATHIA.
 _BRIDE
 "Carpathia says they're making"
@@ -2207,7 +2042,6 @@ _SMITH
 _CUT TO:
 
 172 EXT. BOAT DECK - NIGHT
-
 Lightoller has his boats swung out. He is standing amidst a crowd o ncertain passengers in all states of dress and undress. One first clas oman is barefoot. Others are in stockings. The maitre of the restaurant i n top hat and overcoat. Others are still in evening dress, while some ar n bathrobes and kimonos. Women are wearing lifebelts over velvet gowns hen topping it with sble stoles. Some brought jewels, others books, eve mall dogs ightoller sees Smith walking stiffly toward him and quickly goes to him e yells into the Captain's ear, through cupped hands, over the roar of th team...
 _LIGHTOLLER
 "Hadn't we better get the women and children into the boats, sir mith just nods, a bit abstractly. The fire has gone out of him. Lightolle ees the awesome truth in Smith's face."
@@ -2227,7 +2061,6 @@ _CAL
 _CUT TO:
 
 173 INT. STEERAGE BERTHING AFT / CORRIDORS AND STAIRWELL
-
 It is chaos, with stewards pushing their way through narrow corridor logged with peopel carrying suitcases, duffel bags, children. Some hav ifebelts on, others don't.
 _STEWARD #2
 "(to Steward #3  told the stupid sods no luggage. Aw, bloody hell e throws up his hand at the sight of a family, loaded down with cases an ags, completely blocking the corridor abrizio and Tommy push past the stewards, going the other way. They rech  uge crowd gathered at the bottom of the MAIN 3RD CLASS STAIRWELL. Fabrizi pots Helga with the rest of the Dahl family, standing patiently wit uitcases in hand. He reaches her and she grins, hugging him ommy pushes to where he can see what's holding up the group. There is  teel gate across the top of the stairs, with several stewards and seame n the other side."
@@ -2240,7 +2073,6 @@ _WOMAN
 _CUT TO:
 
 174 EXT. STARBOARD SIDE
-
 Boat
 is less than half full, with
 aboard a boat made for
@@ -2249,7 +2081,6 @@ _FIRST OFFICER MURDOCH
 _CUT TO:
 
 175 EXT. / INT. TITANIC HULL AND MASTER AT ARMS OFFICE
-
 TRACKING along the rows of portholes angling down into the water. Under th urface, they glow green. PUSHING IN on one porthole which is hav ubmerged. Inside we see Jack, looking apprehensively at the water risin p the glass NSIDE THE MASTER AT ARMS' OFFICE Jack sits chained to the waterpipe, nex o the porthole. Lovejoy sits on the edge of a desk. He puts a .45 bulle n the desk and watches it roll across and fall off. He picks up th ullet.
 _LOVEJOY
 "You know... I believe this ship may sink crosses to Jack 've been asked to give you this small token of our appreciation.. e punches Jack hard in the stomach, knocking the wind out of him."
@@ -2258,7 +2089,6 @@ _LOVEJOY
 _CUT TO:
 
 176 EXT. BOAT DECK / STARBOARD SIDE, FORWARD
-
 At the stairwell rail on the bridge wing, Fourth Officer Boxhall an uartermaster Rowe light the first distress rocket. It shoots into the sk nd EXPLODES with a thunderclap over the ship, sending out white starburst hich light up the entire deck as they fall HIP PAN off the starbursts to Ismay. The Managing Director of White Sta ine is cracking. Already at the breaking point from his immense guilt, th ocket panics him. He starts shouting at the officers struggling with th alls of BOAT
 _ISMAY
 "There is no time to waste yelling and waving his arms ower away! Lower away! Lower away IFTH OFFICER LOWE, a baby-faced 28, and the youngest officer, looks u rom the tangled falls at the madman."
@@ -2275,11 +2105,9 @@ _ISMAY
 _CUT TO:
 
 177 EXT. BOAT DECK / PORT SIDE
-
 SECOND OFFICER LIGHTOLLER is loading the boat nearest Cal and Rose... Boat
 
 6.
-
 _LIGHTOLLER
 "Women and children only! Sorry sir, no men yet nother rocket bursts overhead, lighting the crowd. Startled faces tur pward. Fear now in the eyes ANIEL MARVIN has his Biograph camera set up, cranking away... hoping t et an exposure off the rocket's light. he has Mary posed in front of th cene at the boats."
 _MARVIN
@@ -2317,12 +2145,10 @@ _ROSE
 _CUT TO:
 
 178 INT. BOAT DECK FOYER / STAIRCASE / A-DECK FOYER
-
 Cal runs in, and down to the landing, pushing past the gentlemen and ladie ho are filling up the stairs. He scans the A-deck foyer. Rose is gone.
 _CUT TO:
 
 179 EXT. OCEAN / TITANIC / BOAT
-
 The hull of Titanic looms over Boat
 like a cliff. Its enormous mass i uddenly threatening to those in the tiny boat. Quartermaster Hitchins, a he tiller, wants nothing but to get away from the ship. Unfortunately hi wo seamen can't row. They flail like a duck with a broken wing.
 _HITCHINS
@@ -2332,7 +2158,6 @@ _MOLLY
 _CUT TO:
 
 180 INT. MASTER AT ARMS OFFICE / CORRIDOR
-
 Jack pulls on the pipe with all his strength. It's not budging. He hear urgling sound. Water pours under the door, spreading rapidly across th loor.
 _JACK
 "Shit e tries to pull one hand out of the cuffs, working until the skin i aw... no good."
@@ -2340,12 +2165,10 @@ _JACK
 "Help!! Somebody!! Can anybody hear me? to himself his could be bad."
 
 181 THE CORRIDOR outside is deserted. Flooded a couple of inches deep.
-
 Jack's voice comes faintly through the door, but there is no one to hea t.
 _CUT TO:
 
 182 INT. FIRST CLASS CORRIDOR
-
 Thomas Andrews is opening stateroom doors, checking that people are out.
 _ANDREWS
 "Anyone in here ose runs up to him, breathless."
@@ -2364,7 +2187,6 @@ _ANDREWS
 _CUT TO:
 
 183 INT. FOYER / ELEVATORS
-
 Rose runs up as the last Elecator Operator is closing up his lift to leave.
 _OPERATOR
 "Sorry, miss, lifts are closed- ithout thinking she grabs him and shoves him back into the lift."
@@ -2373,14 +2195,12 @@ _ROSE
 _CUT TO:
 
 184 EXT. OCEAN / BOAT
-
 Molly and the two seamen are rowing, and they've made it a hundret feet o o. Enough to see that the ship is angled down into the water, with the bo ail less than ten feet above the surface.
 _MOLLY
 "Come on girls, join in, it'll keep ya warm. Let's go Ruth. Grab an oar uth just stares at the spectacle of the great liner, its rows of light lazing, slanting down into the sullen black mirror of the Atlanic."
 _CUT TO:
 
 185 INT. FIRST CLASS ELEVATOR / CORRIDORS
-
 Through the wrought iron door of the elevator car Rose can see the deck oing past. The lift slows. Suddenly ICE WATER is swirling around her legs he SCREAMS in surprise. So does the operator he car has landed in a foot of freezing water, shocking the hell out o er. She claws the door open and splashes out, hiking up her floor-lengt kirt so she can move. The lift goes back up, behind her, as she look round.
 _ROSE
 "Left, crew passage he spots it and slogs down the flooded corridor. The place i nderstandably deserted. She is on her own."
@@ -2391,13 +2211,11 @@ _ROSE
 _CUT TO:
 
 186 INT. MASTER AT ARMS OFFICE / CORRIDOR
-
 Jack is hopelessly pulling on the pipe again, straining until he turns red e collapses back on the bench. realizing he's screwed. Then he hears he hrough the door.
 _JACK
 "ROSE!! In here!"
 
 187 IN THE HALL Rose hears his voice behind her. She spins and runs back,
-
 locating the right door, then pushes it open, creating a small wave he splashes over Jack and puts her arms around him.
 _ROSE
 "Jack, Jack, Jack... I'm sorry, I'm so sorry hey are so happy to see each other it's embarrassing."
@@ -2414,14 +2232,12 @@ _ROSE
 _CUT TO:
 
 188 EXT. TITANIC / BOAT ONE
-
 While the seamen detach the falls, Boat One rocks next to the hull. Lucil nd Sir Cosmo Duff-Gordon sit with ten others in a boat made for four time hat many.
 _LUCILE
 "I despise small boats. I just know I'm going to be seasick. I always ge easick in small boats. Good Heavens, there's a man down there n a lit porthole beneath the surface she sees Jack looking up at her...  ace in a bubble of light under the water."
 _CUT TO:
 
 189 INT. MASTER AT ARMS OFFICE
-
 Rose stops trashing the room, and stands there, breathing hard.
 _ROSE
 "There's no key in here hey look around at the water, now almost two feet deep. Jack has pulle is feet up onto the bench."
@@ -2434,11 +2250,9 @@ _JACK
 _CUT TO:
 
 190 INT. STAIRWELL AND CORRIDORS
-
 Rose splashes down the hall to a stairwell going up to the next deck. Sh limbs the stairs, her long skirt leaving a trail like a giant snail. Th eight of it is really slowing her down. She rips at the buttons an himmies quickly out of the thing. She bounds up the stairs in he tockings and knee-length slip, to find herself in--
 
 191 A LONG CORRIDOR... part of the labyrinth of steerage hallways forward.
-
 She is alone here. A long groan of stressing metal echoes along the hall a he ship continues to settle. She runs down the hall, unimpeded now.
 _ROSE
 "Hello? Somebody? he turns a corner and runs along another corridor in a daze. The hal lopes down into water which, shimmers, reflecting the light. The margin o he water creeps toward her. A YOUNG MAN appears, running through th ater, sending up geysers of spray. He pelts past her without slowing, hi yes crazed..."
@@ -2458,12 +2272,10 @@ _ROSE
 "See you there, buster he steward runs off, holding his bloody nose. She spits after him. Jus he way Jack taugh: her he turns around, SEES: a glass case with a fire-axe in it. She breaks th lass with a battered suitcase which is lying discarded nearby, and seize he axe, running back the way she came."
 
 192 AT THE STAIRWELL she looks down and gasps. The water has flooded the
-
 bottom five steps. She goes down and has to crouch to look along th orridor to the room where Jack is trapped ose plunges into the water, which is up to her waist... and power orward, holding the axe above her head in two hands. She grimaces at th ain from the literally freezing water.
 _CUT TO:
 
 193 INT. MASTER AT ARMS OFFICE
-
 Jack has climbed up on the bench, and is hugging the waterpipe. Rose wade n, holding the axe above her head.
 _ROSE
 "Will this work?"
@@ -2487,18 +2299,15 @@ _CUT TO:
 
 194 EXT. BOAT
 AND TITANIC
-
 TIGHT ON THE LETTERS TITANIC painted two feet high on the bow of the doome teamer. Once 50 feet above the waterline, they now quietly slip below th urface. We see them, gold on black, rippling and dimming to a pale gree s they go deeper.
 
 195 IN BOAT SIX, Ruth looks back at the Titanic, transfixed by the sight of
-
 the dying liner. The bowsprit is now barely above the waterline. Another o oxhall's rockets EXPLODES overhead. K-BOOM! It lights up the whole area nd we see half a dozen boats in the water, spreading out from the ship.
 _MOLLY
 "Now there's somethin' you don't see every day."
 _CUT TO:
 
 196 INT. SCOTLAND ROAD / E-DECK
-
 The widest passageway in the ship, it is used by crew and steerage alike nd runs almost the length of the ship. Right now steerage passengers mov long it like refugees, heading aft RASH! A wooden doorframe splinters and the door bursts open under th orce of Jack's shoulder. Jack and Rose stumble through, into the corridor  STEWARD, who was nearby herding people along, marches over.
 _STEWARD
 "Here you! You'll have to pay for that, you know. That's White Star Lin roperty--"
@@ -2511,7 +2320,6 @@ _IRISHMAN
 _CUT TO:
 
 197 EXT. BOAT DECK
-
 ON THE BOAT DECK, the action has moved to the aft group of boats, numbers
 
 9, 11,
@@ -2519,7 +2327,6 @@ and
 on the starboard side, and 10, 12,
 and
 on the port
-
 side. The pace of work is more frantic. You see crew and officers runnin ow to work the davits, their previous complacency gone AL pushes through the crowd, scanning for Rose. Around him is chaos an onfusion. A woman is calling for a child who has become seperated from th rowd. A man is shouting over people's heads. A woman takes hold of Secon fficer Lightoller's arm as he is about to launch Boat 10.
 _WOMAN
 "Will you hold the boat a moment? I have to run back to my room fo omething- ightoller grabs her and shoves her bodily into the boat. Thomas Andrew ushes up to him just then."
@@ -2552,12 +2359,10 @@ _LIGHTOLLER
 _CUT TO:
 
 198 EXT. BRIDGE / FORWARD WELL DECK / FOC'SLE
-
 AT THE BOW... the place where Jack and Rose first kissed... the bow railin oes under water water. Water swirls around the captsans and windlasses o he foc'sle deck mith strides to the bridge rail and looks down at the well deck. Water i hipped over the sides and the well deck is awash. Two men run across th eck, their feet sending up spray. Behind Smith, Boxhall fires anothe ocket. WHOOSH!
 _CUT TO:
 
 201 INT. E-DECK CORRIDORS AND STAIRWELL
-
 Fabrizio, standing with Helga Dahl and her family, hears Jack's voice.
 _JACK
 "Fabrizio! Fabri abrizio turns and sees Jack and Rose pushing through the crowd. He an ack hug like brothers."
@@ -2584,7 +2389,6 @@ _FABRIZIO
 _CUT TO:
 
 204 INT. CAL AND ROSE'S SUITE
-
 CLUNK! Cal opens his safe and reaches inside. As Lovejoy watches, he pull ut two stacks of bills, still banded by bank wrappers. Then he takes out
 "Heart of the Ocean", putting it in the pocket of his overcoat, and locks
 the safe.
@@ -2595,7 +2399,6 @@ _LOVEJOY
 _CUT TO:
 
 205 INT. STEERAGE, AFT
-
 Jack, Rose, Fabrizio and Tommy are lost, searching for a way out. They pus ast confused passengers... past a mother changing her baby's diaper on to f an upturned steamer trunk... past a woman arguing heatedly with a man i erbo-Croatian, a wailing child next to them... past a man kneeling t onsole a woman who is just sitting on the floor, sobbing... and pas nother man with an English/Arabic dictionary, trying to figure out wha he signs mean, while his wife and children wait patiently ack et al come upon a narrow stairwell and they go up two decks befor hey are stopped by a small group pressed up against a steel gate. Th teerage men are yelling at a scared STEWARD.
 _STEWARD
 "Go to the main stairwell, with everyone else. It'll all get sorted ou here ack takes one look at this scene and finally just loses it."
@@ -2611,19 +2414,16 @@ _CUT TO:
 
 206 EXT. BOAT
 / TITANIC - NIGHT
-
 Ruth rows with Molly Brown, two other women and the incompetent sailors he rests on her oars, exhausted, and looks back at the ship t slants down into the water, still ablaze with light. Nothing is abov ater forward of the bridge except for the foremast. Another rocket goe ff, lighting up the entire area... there are a dozen boats moving outwar rom the ship.
 
 207 AT THE BOAT DECK RAIL Captain Smith is shouting to Boat
 through a
-
 large metal megaphone.
 _SMITH
 "Come back! Come back to the ship HIEF OFFICER WILDE joins him, blowing his silver whistle."
 
 208 FROM BOAT
 the whistle comes shrilly across the water. Quartermaster
-
 Hitchins grips the rudder in fear.
 _HITCHINS
 "The suction will pull us right down if we don't keep going."
@@ -2633,14 +2433,12 @@ _HITCHINS
 "No! It's our lives now, not theirs. And I'm in charge of this boat! No ow!!"
 
 209 CAPTAIN SMITH, at the rail of the boat deck, lowers his megaphone
-
 slowly
 _SMITH
 "The fools."
 _CUT TO:
 
 210 INT. A-DECK FOYER
-
 As Cal and Lovejoy cross the foyer encounter Benjamin Guggenheim and hi alet, coth dressed in white tie, tail-coats and top hats.
 _CAL
 "Ben, what's the occasion?"
@@ -2651,19 +2449,16 @@ _CAL
 _CUT TO:
 
 211 INT. FIRST CLASS SMOKING ROOM
-
 There are still two cardgames in progress. The room is quiet and civilized  silver serving cart, holding a large humidor, begins to roll slowl cross the room. One of the cardplayers takes a cigar from it as it roll y.
 _CARDPLAYER
 "It seems we've been dealt a bad hand this time."
 _CUT TO:
 
 212 EXT. / INT. A-DECK PROMENADE
-
 Cal and Lovejoy are walking aft with a purposeful stride. They pass CHIE AKER JOHGHIN, who is working up a sweat tossing deck chairs over the rail fter they go by, Joughin takes a break and pulls a bottle of scotch from  ocket, opening it. He drains it, and tosses it over the side too, the tands there a little unteadily.
 _CUT TO:
 
 213 EXT. BOAT DECK AND A-DECK, AFT
-
 PANIC IS SETTING IN around the remaining boats aft. The crowd here is now  ix of all three classes. Officers repeatedly warn men back from the boats he crowd presses in closer eamen SCAROTT brandishes the tiller of boat
 to discourage a close pres f men who look ready to rush the boat. Several men break ranks and rus orward ightoller pulls out his Webley revolver and aims it at them.
 _LIGHTOLLER
@@ -2673,7 +2468,6 @@ _LOWE
 _CUT TO:
 
 214 EXT. BOAT DECK, STARBOARD SIDE, AFT
-
 Cal and Lovejoy arrive in time to see Murdoch lowering his last boat.
 _CAL
 "We're too late."
@@ -2681,7 +2475,6 @@ _LOVEJOY
 "There are still some boats forward. Stay with this one... Murdoch. He seem o be quite... practical."
 
 215 IN THE WATER BELOW there is another panic. Boat 13, already in the
-
 water but still attached to its falls, is pushed aft by the discharge wate eing pumped out of the ship. It winds up directly under boat 15, which i oming downt he right on top of it he passengers shout in panic to the crew above to stop lowering. They ar gnored. Some men put their hands up, trying futilely to keep the
 tons o oat
 from crushing them red Barrett, the stoker, gets out his knife and leaps to the after falls limbing rudely over people. He cuts the aft falls while another crewma uts the forward lines.
@@ -2690,7 +2483,6 @@ just seconds befor t touches the water with a slap al, looking down from the rai
 _CUT TO:
 
 216 EXT. BOAT DECK / A-DECK, PORT, AFT
-
 Fifth Officer Lowe, in Boat
 is firing his gun as a warning to a bunch o en threatening to jump into the boat as it passes the open promenade o -Deck.
 _LOWE
@@ -2698,7 +2490,6 @@ _LOWE
 _CUT TO:
 
 217 EXT. BOAT DECK, STARBOARD, AFT
-
 The shots echo away.
 _CAL
 "It's starting to fall apart. We don't have much time al sees three dogs run by, including the black French bulldog. Someone ha eleased the pets from the kennels al sees Murdoch turn from the davits of boat"
@@ -2708,7 +2499,6 @@ _CAL
 _CUT TO:
 
 219 EXT. BOAT DECK, PORT
-
 Jack, Rose et al burst out onto the boat deck from the crew stairs just af f the third funnel. They look at the empty davits.
 _ROSE
 "The boats are gone he sees Colonel Gracie chugging forward along the deck, escorting tw irst class ladies."
@@ -2721,7 +2511,6 @@ _TOMMY
 _CUT TO:
 
 220 EXT. BOAT DECK, STARBOARD, FORWARD
-
 Water pours like a spillway over the forward railing on B-Deck. CAMER WEEPS UP past A-Deck to the Boat Deck where Murdoch and his team ar oading Collapsible Car the forward-most davits OTE: There are four so-called collapsibles, or Engelhardts boats ncluding two which are stored on the roof of the officer's quarters he crowd is sparse, with most people still aft. Cal slips his hand out o te pocket of his overcoat and into the waist pocket of Murdoch' reatcoat, leaving the stacks of bills there.
 _CAL
 "So we have an understanding then?"
@@ -2738,7 +2527,6 @@ _MURDOCH
 _CUT TO:
 
 221 EXT. BOAT DECK / PORT SIDE - NIGHT
-
 ON THE PORT SIDE Lightoller is getting people into Boat
 He keeps hi istol in his hand at this point. Twenty feet below them the sea is pourin nto the doors and windows of B deck staterooms. They can hear the roar o ater cascading into the ship.
 _LIGHTOLLER
@@ -2781,7 +2569,6 @@ _CAL
 "I always win, Jack. One way or another looks at him, smiling ity I didn't keep that drawing. It's going to be worth a lot more b orning ack knows he is screwed. He looks down at Rose, not wanting to waste  econd of his last view of her."
 
 222 ROSE'S PERCEPTION... IN SLOW MOTION: The ropes going through the
-
 pulleys as the seamen start to lower. All sound going away... Lightolle iving orders, his lips moving... but Rose hears only the blood pounding i er ears... this cannot be happening... a rocket bursts above i low-motion, outlining Jack in a halo of light... Rose's hair blowing i low motion as she gazes up at him, descending away from him... she see is hand trembling, the tears at the corners of his eyes, and canno elieve the unbearable pain she is feeling.. ose is still staring up, tears pouring down her face UDDENLY SHE IS MOVING. She lunges across the women next to her. Reache he gunwale, climbing it.. urls herself out of the boat to the rail of the A-Deck promenade, catchin t, and scrambling over the rail. The Boat
 continues down. But Rose i ack on Titanic.
 _JACK
@@ -2789,7 +2576,6 @@ _JACK
 _CUT TO:
 
 223 INT. GRAND STAIRCASE
-
 TRACKING WITH JACK as he bangs through the doors to the foyer and sprint own the stairs. He sees her coming into A-deck foyer, running toward him al's long coat flying out behind her as she runs hey meet at the bottom of the stairs, and collide in an embrace.
 _JACK
 "Rose, Rose, you're so stupid, you're such an idiot- nd all the while he's kissing her and holding her as tight as he can."
@@ -2800,7 +2586,6 @@ _JACK
 _CUT TO:
 
 224 INT. D-DECK RECEPTION ROOM
-
 The bottom of the grand staircase is flooded several feet deep. Jack an ose come down the stairs two at a time and run straight into the water ording across the room to where the floor slopes up, until they reach dr ooting at the entrance to the dining saloon TEADICAM WITH HOCKLEY as he reels down the stairs in time to see Jack an ose splashing through the water toward the dining saloon. He FIRES twice ig gouts of spray near them, but he's not a great shot he water boils up around his feet and he retreast up the stairs a coupl f steps. Around him the woodward groans and creaks.
 _CAL
 "(calling to them njoy your time together! ovejoy arrives next to him. Cal suddenly remembers something and starts t augh."
@@ -2813,7 +2598,6 @@ _CAL
 _CUT TO:
 
 225 INT. DINING SALOON
-
 Lovejoy moves among the tables and ornate columns, searching.. istening... his eyes tracking rapidly. It is a sea of tables, and the ould be anywhere. A silver serving tolley rolls downhill, bumping int ables and pillars e glances behind him. The water is following him into the room, advancin n a hundred foot wide tide. The reception room is now a roiling lake, an he grand staircase is submerged past the first landing. Monstrous groan cho through the ship N JACK AND ROSE, crouched behind a table, somewhere in the middle. The ee the water advancing toward them, swirling over the floor. They craw head of it to the next row of tables.
 _JACK
 "(whispering tay here e moves off as- ovejoy moves over one row and looks along the tables. Nothing he ship GROANS and CREAKS. He moves another row NGLE ON A METAL CART... five feet tall and full of stacks of china dishes t starts to roll down the aisle between tables N ROSE as the cart rolls toward her. It hits a table and the stacks o ishes topple out, EXPLODING across the floor and showering her he scrambles out of the way and- ovejoy spins, seeing her. He moves rapidly toward her, keeping the gu imed- hat's when Jack tackles him from the side. They slam together into  able, crashing over it, and toppling to the floor. They land in the wate hich is flowing rapidly between the tables ack and Lovejoy grapple in the icy water. Jack jams his knee down o ovejoy's hand, breaking his grip on the pistol, and kicks it away. Lovejo crmbles up and lunges at him, but Jack GUTPUCHES him right in the sola lexus, doubling him over."
@@ -2824,17 +2608,14 @@ _JACK
 _CUT TO:
 
 226 INT. GALLEY / STAIRWELL
-
 They run throught the galley and Rose spots the stairs. She starts up an ack grabs her hand. He leads her DOWN hey crouch together on the landing as Lovejoy runs to the stairs. Assumin hey have gone up (who wouldn't?) he clombs up them two at a time hey wait for the footstep to recede. A long CREAKING GROAN. Then they hea t... a CRYING CHILD. Below them. They go down a frew steps to looks alon he next deck.
 _CUT TO:
 
 227 INT. E-DECK CORRIDORS
-
 The corridor is awash, about a foot deep. Standing against the wall, about
 
 50 feet away, is a little BOY, aobut
 The water swirls around his legs
-
 and he is wailing.
 _ROSE
 "We can't leave him ack nods and they leave the promise of escape up the stairwell to run t he child. Jack scoops up the kid and they run back to the stairs but-  torrent of water comes pouring down the stairs like rapids. In seconds i s too powerful for them to go against."
@@ -2846,12 +2627,10 @@ _ROSE
 "No! Not that way! Come back!"
 
 228 DOUBLE DOORS BLAST OPEN. A wall of water thunders into the corridor.
-
 The father and child DISAPPEAR instantly ack and Rose run as a wave blasts around the corner, foaming from floor t eiling. It gains on them like a locomotive. They make it to a stairwa oing up.
 _CUT TO:
 
 229 INT. STAIRWELL
-
 Jack and Rose pound up the steps as white water swirls up behind them. PUL ACK to reveal that a steel gate blocks the top of the stairs. Jack SLAM gainst the fate, gripping the bars  terrified steward standing guard on the landing above turns to run at th ight of the water thundering up the stairs.
 _JACK
 "Wait! Wait! Help us! Unlock the gate he steward runs on. The water wells up around Jack and Rose, pourin hrough the gate and slamming them against it. In seconds it is up to thei aist."
@@ -2864,24 +2643,20 @@ _JACK
 _CUT TO:
 
 230 EXT. BOAT DECK, STARBOARD SIDE
-
 Cal comes reeling out of the first class entrance, looking wild-eyed. Th urches down the deck toward the bridge. Waltz music wafts over the ship omewhere the band is still playing AL'S POV: A little girl, maybe two years old, is crying along in th lcove. She looks up at Cal beseechingly. Cal moves on without a glanc ack... reaching a large crowd clustered around COLLAPSIBLE A just aft o he bridge. He sees Murdoch and a number of crewmen struggling to drag th oat to the davits, with no luck al pushes forward, trying to signal Murdoch, but the officer ignores him earby Tommy and Fabrizio are being pushed forward by the crowd behind URSER MCELROY pushes them back, getting a couple of seamen to help him. H randishes his gun, waving it in the air, yelling for the crowd to sta ack.
 _CUT TO:
 
 231 EXT. BOAT DECK, PORT SIDE / ROOF OF OFFICERS' QUARTERS
-
 Lightoller, with a group of crew and passengers, is trying to ge ollapsible B down from the roof. They slide it down a pair of oars leane gainst the deck house.
 _LIGHTOLLER
 "Hold it! Hold it he weight of the boat snaps the oars and it crashes to the deck, upsid own. The two Swedish cousins, OLAUS and BJORN GUNERSEN, jump back as th oat nearly hits them."
 _CUT TO:
 
 233 INT. STAIRWELL
-
 Jack and Rose run up seemingly endless stairs as the ship groans an orgues around them.
 _CUT TO:
 
 234 EXT. BOAT DECK, STARBOARD SIDE
-
 Murdoch, at Collapsible A, is no longer in control. The crowd i hreatening to rush the boat. They push and jostle, yelling and shouting a he officers. The pressure from behind pushes them forward, and one gu alls off the edge of the deck into the water less than ten feet below.
 _TOMMY
 "Give us a chance to live, you limey bastards urdoch fires his Webley twice in the air, then point it at the crowd."
@@ -2902,7 +2677,6 @@ _CAL
 _CUT TO:
 
 235 INT. FIRST CLASS SMOKE ROOM
-
 Thomas Andrews stands in front of the fireplace, staring at the larg ainting above the mantle. The fire is still going in the fireplace he room is empty except for Andrews. An ashtray falls off the table ehind him Jack and Rose run into the room, out of breath and soaked. The un through, toward the aft revolving door... then Rose recognizes him. Sh ees that his lifebelt is off, lying on a table.
 _ROSE
 "Won't you even make a try for it, Mr. Andrews?"
@@ -2917,82 +2691,66 @@ _ROSE
 _CUT TO:
 
 236 EXT. BOAT DECK AND VARIOUS LOCATIONS
-
 The band finishes the waltz. Wallace Hartley looks at the orchestr embers.
 _HARTLEY
 "Right, that's it then hey leave him, walking forward along the deck. Hartley puts his violin t is chin and bows the first notes of "Nearer My God to Thee". One by on he band memebers turn, hearing the lonely melody ithout a word they walk back and take their places. They join in wit artley, filling out the sound so that it reaches all over the ship on thi till night. The vocalist begins: "If in my dreams I be, nearer my God t hee... HE HYMN PLAYS OVER THE FOLLOWING SEQUENCE:"
 
 237 A seaman pulls off his lifebelt and catches up to Captain Smith as he
-
 walks to the bridge. He proffers it, but Smith seems to stare through him ithout a word he turns and goes onto the bridge. He enters the enclose HEELHOUSE and closes the door. He is alone, surrounded by the gleamin rass instruments. He seems to inwardly collapse.
 
 238 IN THE FIRST CLASS SMOKING ROOM Andrews stands like a statue. He pulls
-
 out his pocketwatch and checks the time. Then he opens the face of th antle clock and adjusts it to the correct time: 2:12 a.m. Everything mus e correct.
 
 239 IN CAL'S PARLOUR SUITE water swirls in from the private promenade deck.
-
 Rose's paintings are submerged. The Picasso tranforms under the water' urface. Degas' colors run. Monet's water lilies come to life.
 
 240 DOWNANGLE on the two figures lying side by side, fully clothed, on a
-
 bed in a FIRST CLASS CABIN. Elderly Ida and Isador Strauss stare at th eiling, holding hands like young lovers. Water pours into the room throug  doorway. It swirls around the bed, two feet deep rising fast.
 
 241 IN A STEERAGE CABIN somewhere in the bowels of the ship, the young
-
 IRISH MOTHER, seen earlier stoically waiting at the stairs, is tucking he wo young children into bed. She pulls up the covers, making sure they ar ll warm and cozy. She lies down with them on the bed, speaking soothingl nd holding them.
 _CUT TO:
 "EXT. BOAT DECK / BRIDGE"
 
 242 IN A WIDE SHOT we see a wave travel up the boat deck as the bridge
-
 house sinks into the water.
 
 243 ON THE PORT SIDE Collapsible B is picked up by water. Working
-
 frantically, the men try to detach it from the falls so the ship won't dra t under. Colonel Gracie hands Lightoller a pocket knife and he saw uriously at the ropes as the water swirls around his legs. The boat, stil pside down, is swept off the ship. Men start diving in, swimming to sta ith it.
 
 244 IN COLLAPSIBLE A Cal sits next to the wailing child, whom he has
-
 completely forgotten. He watches the water rising around the men as the ork, scrambling to get the ropes cut so the ship won't drag th ollapsible under abrizio removes the lifebelt from Tommy's body and struggles to put it o s the water rises around him.
 
 245 CAPTAIN SMITH, standing near the wheel, watches the black water
-
 climbing the windows of the enclosed wheelhouse. He has the stricke xpression of a damned sould on Judgment Day. The windows burst suddenl nd a wall of water edged with shards of glass slams into Smith. H isappears in a vortex of foam.
 
 246 Collapsible A is hit by a wave as the bow plunges suddenly. It
-
 partially swamps the boat, washing it along the deck. Over a hundre assengers are plunged into the freezing water and the area around the boa ecomes a frenzy of splashing, screaming people s men are trying to climb into the callapsible, Cal grabs an oar an ushes them back into the water.
 _CAL
 "Get back! You'll swamp us abrizio, swimming for his life, gets swirled under a davit. The ropes an ulleys tangle around him as the davit goes under the water, and he i ragged down. Underwater he struggles to free himself, and then kicks bac o the surface. He surfaces, gasping for air in the freezing water."
 
 247 WALLACE HARTLEY sees the water rolling rapidly up the deck toward them.
-
 He holds the last note of the hymn in a sustain, and then lowers hi iolin.
 _HARTLEY
 "Gentlemen, it has been a previlege playing with you tonight."
 _CUT TO:
 
 248 EXT. A-DECK AFT, PORT SIDE
-
 Jack and Rose run out of the PALM COURT into a dense crowd. Jack pushes hi ay to the rail and looks at the state of the ship. The bridge is unde ater and tehre is chaos on deck. Jack helps her put her lifebelt on eople stream around them, shouting and pushing.
 _JACK
 "Okay... we keep moving aft. We have to stay on the ship as long a ossible hey push their way aft through the panicking crowd."
 _CUT TO:
 
 249 EXT. FORWARD FUNNEL
-
 Collapsible A is whirled like a leaf in the currents around the sinin hip. It slams against the side of the forward funnel.
 _CAL
 "(to the crew in the boat ow! Row you bastards!!"
 
 250 NEARBY: Fabrizio is drawn up against the grating of a STOKEHOLD VENT as
-
 water pours through it. The force of tons of water roaring down the shi raps him against it, and he is dragged down under the surface as the shi inks. He struggles to free himself but cannot uddenly there is a concussion deep in the bowels of the ship as a furnac xplodes and a blast of hot air belches out of hte ventilator, ejectin abrizio. He surfaces in a roar of foam and keeps swimming.
 _CUT TO:
 
 251 EXT. A-DECK / B-DECK / WELL DECK, AFT
-
 Jack and Rose clamber over the A-Deck aft rail. Then, using all hi trength, he lowers her toward the deck below, holding on with one hand he dangles, then falls. Jack jumps down behind her hey join a crush of people literally clawing and scrambling over eac ther to get down the narrow stairs to the well deck... the only way aft eeing that the stairs are impossible, Jack climbs over the B-Deck railin nd helps Rose over. He lowers her again, and she falls in a heap. Bake oughin, now three sheets to the wind, happens to be next to her. He haul ose to her feet. Jack drops down and the three of them push through th rowd across the well deck. Near them, at the rail, people are jumping int he water he ship GROANS and SHUDDERS. The man ahead of Jack is walking like  ombie.
 _MAN
 "Yeah, though I walk through the valley of the shadow of death--"
@@ -3001,41 +2759,33 @@ _JACK
 _CUT TO:
 
 252 EXT. FORWARD FUNNEL
-
 The stay cables along the top of the funnel snap, and they lash like stee hips down into the water. Cal watches as the funnel topples from it ounts. Falling like a temple pillar twenty eight feet across it whomp nto the water with a tremendous splash. People swimming underneath i isappear in an instant abrizio, a few feet away, is hurled back by a huge wave. He comes up asping... still swimming. The water pouring into the open end of th unnel draws in several swimmers. The funnel sinks, disappearing, but- undreds of tons of water pour down through the 30 foot hole where th unnel stood, thundering down into the belly of the ship. A whirlpoo orms, a hole in the ocean, like at enormous toiler-flush. T. W. McCauley he gym instructor swims in a frenzy as the vortex draws him in. He i ucked down like a spider going down a drain abrizio, nearby, swims like Hell as more people are sucked down behin im. He manages to get clear. He's going to live no matter what it takes.
 _CUT TO:
 
 253 INT. BOAT DECK FOYER / GRAND STAIRCASE
-
 Water raors through the doors and windows, cascading down the stairs like  apids. John Jacob Astor is swept down the marble steps to A-Deck, which i lready flooded... a roiling vortex. He grabs the headless cherub at th ottom of the staircase and wraps his arms around it stor looks up in time to see the 30 foot glass dome overhead EXPLOS NWARD with the wave of water washing over it. A Niagara of sea wate hunders down into the room, blasting through the first class opulence. I s the Armageddon of elegance.
 _CUT TO:
 
 255 INT. BELOWDECKS
-
 The flooding is horrific. Walls and doors are splintered like kindling ater roars down corridors with pile-driver force he CARTMELL FAMILY is at the top of a stairwell, jammed against a locke ate like Jack and Rose were. Water boils up the stairwell behind them ert Cartmell shakes the gate futilely, shouting for help. Little Cor ails as the water boils up around them all.
 _CUT TO:
 
 256 EXT. STERN
-
 Rose and Jack struggle to climb the well deck stairs as the ship tilts runk Baker Joughin puts a hand squarely on Rose's butt and shoves her u nto the deck.
 _JOUGHIN
 "Sorry, miss undreds of people are already on the poop deck, and more are pouring u very second. Jack and Rose cling together as tehy struggle across th ilting deck."
 
 257 As the bow goes down, the STERN RISES. IN BOAT 2, which is just off the
-
 stern, passengers gape as the giant bronze propellers rise out of the wate ike gods of the deep, FILLING FRAME behind them eople are JUMPING from the well deck, the poop deck, the gangway doors ome hit debris in the water and are hurt or killed.
 
 260 EXT. STERN
-
 ON THE POOP DECK Jack and Rose struggle aft as the angle increases undreds of passengers, clinging to every fixed object on deck, huddle o heir knees around FATHER BYLES, who has his voice raised in prayer. The re praying, sobbing, or just staring at nothing, their minds blank wit read ulling himself from handhold to handhold, Jack tugs Rose aft along th eck.
 _JACK
 "Come on, Rose. We can't expect God to do all the work for us hey struggle on, pushing through the praying people. A MAN loses hi ooting ahead and slides toward them. Jack helps him."
 
 261 THE PROPELLERS are twenty feet above the water and rising faster.
 
-
 262 JACK AND ROSE make it to the stern rail, right at the base of the
-
 flagpole. They grip the rai, jammed in between other people. It is the spo here Jack pulled her back onto the ship, just two night... and  iftime... ago bove the wailing and sobbing, Father Byles' voice carries, cracking wit motion.
 _FATHER BYLES
 "...and I saw new heavens and a new earth. The former heavens and the forme arth had passed away and the sea was no longer he lights flicker, threatening to go out. Rose grips Jack as the ster ises into a night sky ablaze with stars."
@@ -3049,60 +2799,48 @@ _CUT TO:
 "INT. SHIP-- VARIOU s the ship tilts further everything not bolted down inside shifts."
 
 263 CUPBOARDS burst open in the pantry showering the floor with tons of
-
 china. A PIANO slides across the floor, crashing into a wall. FURNITUR umbles across the Smoking Room floor.
 
 264 ON THE A-DECK PROMENADE passengers lose their grip and slide down the
-
 wooden deck like a bobsled run, hundreds of feet before they hit the water RUDY BOLT, Rose's maid, slips as she struggles along the railing an lides away screaming.
 
 265 AT THE STERN the propellers are 100 feet out of the water and rising.
-
 Panicking people leap from the poop deck rail, fall screaming and hit th ater like mortar rounds. A man falls from the poop deck, hitting th ronze hub of the starboard propeller with a sickening smack.
 
 266 SWIMMERS LOOK UP and see the stern towering over them like a monolith,
-
 the propellers rising against the stars. 110 feet. 120.
 
 267 AT THE STERN RAIL a man jumps. IN HIS POV we fall seemingly forever,
-
 right past one of the giant screws. The water rushes up--
 _CUT TO:
 "EXT. TITANIC / BOAT"
 
 268 TRACKING SLOWLY IN on Ruth as the sounds of the dying ship and the
-
 screaming people come across the water.
 
 269 REVERSE / HER POV: IN A WIDE SHOT we see the spectacle of the Titanic,
-
 her lights blazing, reflecting in the still water. Its stern is high in th ir, angles up over forty five degrees. The propellers are 150 feet out o he water. Over a thousand passengers cling to the decks, looking from  istance like a swarm of bees he image is shocking, unbelieveable, unthinkable. Ruth stares at th pectacle, unable to frame it or put it into any proportion.
 _MOLLY BROWN
 "God Almighty he great liner's lights flicker."
 _CUT TO:
 
 270 INT. ENGINE ROOM
-
 In darkness Chief Engineer Bell hangs onto a pipe at the master brake anel. Around him men climb through tilted cyclopean mahcines with electri and-torches. It is a black hell of breaking pipes, spraying water, an roaning machinery threatening to tear right out of its bedplates ater sprays down, hitting the breaker panel, but Bell will not leave hi ost. CLUNK. The breakers kick. He slams them in again and-- WHOOM! a blas f light! Something melts and arcing fills the engine room with nightmaris ight--
 _CUT TO:
 
 271 EXT. TITANIC
-
 WIDE SHOT. The lights go out all over the ship. Titanic becomes a vas lack silhouette against the stars N COLLAPSIBLE C: BRUCE ISMAY has his back to the ship, unable to watch th reat steamer die. He is catatonic with remorse, his mind overloaded. H an avert his eyes, but he can't block out the sounds of dying people an achinery  loud CRACKING REPORT comes across the water.
 _CUT TO:
 
 272 EXT. BOAT DECK
-
 Near the third funnel a man clutches the ship's rail. He stares down as th ECK SPLITS right between his feet. A yawning chasm opens with a THUNDER o reaking stee OVEJOY is clutching the railing on the roof of the Officers' Mess. H atches in horror as the ship's structure RIPS APART right in front of him e gapes down into a widening maw, seeing straight down into the bowels o he ship, amid a BOOMING CONCUSSION like the sound of artillery. Peopl alling into the widening crevasse look like dolls he stay cables on the funnel part and snap across the decks like whips ipping off davits and ventilators. A man is hit by a whipping cable an natched OUT OF FRAME. Another cable smashes the rail next to Lovejoy an t rips free. He falls backward into the pit of jagged metal ires, explosions and sparks light the yawning chasm as the hull split own through nine decks to the keel. The sea pours into the gaping wound--
 _CUT TO:
 
 273 INT. ENGINE ROOM
-
 It is a thundering black hell. Men scream as monstrous machinery come part around them, steel frames twisting like taffy. Their torche lluminate the roaring, foaming demon of water as it races at the throug he manchines. Trying to climb they are overtaken in seconds.
 _CUT TO:
 
 274 EXT. TITANIC - NIGHT
-
 The STERN ALF of the ship, almost four hundred feet long, falls back towar he water. On the poop deck everyone screams as they feel themselve lummeting. The sound goes up like the roar of fans at a baseball stadiu hen a run is scored wimming in the water directly under the stern a few unfortunates shriek a hey see the keel coming down on them like God's bootheel. The massiv tern section falls back almost level, thundering down into the sea an ushing out a mighty wave of displaced water ack and Rose struggle to hole onto the stern rail. They feel the shi eemingly RIGHT ITSELF. Some of those praying think it is salvation.
 _SEVERAL PEOPLE
 "We're saved ack looks at Rose and shakes his head, grimly ow the horrible mechanics play out. Pulled down by the awesome weight o he flooded bow, the buoyant stern tilts up rapidly. They feel the RUSH O SCENT as the fantail angles up again. Everyone is clinging to benches ailings, ventilators... anything to keep from sliding as the stern lifts he stern goes up and up, past"
@@ -3119,20 +2857,16 @@ _ROSE
 "I trust you elow them the poop deck is disappearing. The plunge gathers speed... th oiling surface engulfs the docking bridge and then rushes up the las hirty feet."
 
 278 IN A HIGH SHOT, we see the stern descend into the boiling sea. The name
-
 TITANIC disappears, and the tiny figures of Jack and Rose vanish under th ater here the ship stood, now there is nothing. Only the black ocean.
 _CUT TO:
 
 279 EXT. OCEAN / UNDERWATER AND SURFACE
-
 Bodies are whirled and spun, some limp as dolls, others strugglin pasmodically, as the vortex sucks them down and tumbles them.
 
 280 Jack rises INTO FRAME F.G. kicking hard for the surface... holding
-
 tightly to Rose, pulling her up.
 
 281 AT THE SURFACE: a roiling chaos of screaming, thrashing people. Over a
-
 thousand people are now floating where the ship went down. Some ar tunned, gasping for breath. Others are crying, praying, moaning houting... screaming ack and Rose surface among them. They barely have time to gasp for ai efore people are clawing at them. People driven insane by the water egrees below freezing, a cold so intense it is indistinguishable for eath by fire  man pushes Rose under, trying to climb on top of her... senselessl rying to get out of the water, to climb onto anything. Jack PUNCHES hi epeatedly, pulling her free.
 _JACK
 "Swim, Rose! SWIM he tries, but her strokes are not as effective as his because of he ifejacket. They break out of the clot of people. He has to find some kin f flotation, anything to get her out of the freezing water."
@@ -3141,7 +2875,6 @@ _JACK
 _CUT TO:
 
 283 EXT. OCEAN
-
 Jack strokes rhythmically, the effort keeping him from freezing.
 _JACK
 "Look for something floating. Some debris... wood... anything."
@@ -3162,7 +2895,6 @@ _MAN
 _CUT TO:
 
 284 EXT. COLLAPSIBLE A / OCEAN
-
 The boat is overloaded and half-flooded. Men cling to the sides in th ater. Others, swimming, are drawn to it as their only hope. Cal, standin n the boat, slaps his oar in the water as a warning.
 _CAL
 "Stay back! Keep off abrizio, exhausted and near the limit, makes it almost to the boat. Ca LUBS HIM with the oar, cutting open his scalp."
@@ -3173,7 +2905,6 @@ _CAL
 _CUT TO:
 
 285 EXT. OCEAN
-
 JACK AND ROSE still float amid a chorus of hte damned. Jack sees the ship' fficer nearby, CHIEF OFFICER WILDE. He is blowing his whistle furiously nowing the sound will carry over the water for miles.
 _JACK
 "The boats will come back for us, Rose. Hold on just a little longer. The ad to row away for the suction and now they'll be coming back he nods, his words helping her. She is shivering uncontrollably, her lip lue and her teeth chattering."
@@ -3186,7 +2917,6 @@ _MAN
 _CUT TO:
 
 286 EXT. LIFEBOATS / OCEAN
-
 IN BOAT 6: Ruth has her ears covered against the wailing in the darkness he first class women in the boat sit, stunned, listening to the sounds o undreds screaming.
 _HITCHINS
 "They'll pull us right down I tell ya!"
@@ -3198,7 +2928,6 @@ _HITCHINS
 "If you don't shut that hole in yer face, there'll be one less in this boat uth keeps her ears covered and her eyes closed, shutting it all out."
 
 287 IN BOAT ONE: Sir Cosmo and Lucile Duff-Gordon sit with ten other people
-
 in a boat that is two thirds empty. They are two hundred yards from th creaming in the darkness.
 _FIREMAN HENDRICKSON
 "We should do something ucile squeezes Cosmo's hand and pleads him with her eyes. She i errified."
@@ -3207,7 +2936,6 @@ _SIR COSMO
 _CUT TO:
 
 288 EXT. OCEAN
-
 Jack and Rose drift under the blazing stars. The water is glassy, with onl he faintest undulating swell. Rose can actually see the stars reflectin n the black mirror of the sea ack squeezes the water out of her long coat, tucking it in tightly aroun er legs. He rubs her arms. His face is chalk with in the darkness. A lo OANING in the darknes around them.
 _ROSE
 "It's getting quiet."
@@ -3240,7 +2968,6 @@ _ROSE
 _CUT TO:
 
 289 EXT. LIFEBOATS / OCEAN - NIGHT
-
 Fifth Officer Lowe, the impetuous young Welshman, has gotten Boats 10 nd Collapsible D together with his own Boat
 A demon of energy, he' ad everyone hold the boats together and is transferring passengers fro nto the others, to empty his boat for a rescue attempt s the women step gingerly across the other boats, Lowe sees a shawle igure in too much of a hurry. He rips the shawl off, and finds himsel taring into the face of a man. He angrily shoves the stowaway into anothe oat and turns to his crew of three.
 _LOWE
@@ -3248,7 +2975,6 @@ _LOWE
 _CUT TO:
 
 290 EXT. OCEAN / BOAT
-
 The beam of an electric torch plays across the water like a searchlight a oat
 comes toward us NGLE FROM THE BOAT as the torch illuminates floating debris, a poignan rail of flotsam: a violin, a child's wooden soldier, a framed photo of  teerage family. Daniel Marvin's wooden Biograph camera hen, their white lifebelts bobbing in the darkness like signoposts, th irst bodies come into the torch's beam. The people are dead but no rowned, killed by the freezing water. Some look like they could b leeping. Others stare with frozen eyes at the stars oon bodies are so thick the seamen cannot row. They hit the oars on th eads of floating men and women... a wooden thunk. One seaman throws up owe sees a mother floating with her arms frozen around her lifeless baby.
 _LOWE
@@ -3256,7 +2982,6 @@ _LOWE
 _CUT TO:
 
 291 EXT. OCEAN
-
 IN A HOVERING DOWNANGLE we see Jack and Rose floating in the black water he stars reflect in the mill pond surface, and the two of them seem to b loating in interstellar space. They are absolutely still. Their hands ar ocked together. Rose is staring upwards at the canopy of stars wheelin bove her. The music is transparent, floating... as the long sleep steal ver Rose, and she feels peace LOSE ON Rose's face. Pale, like the faces of the dead. She seems to b loating in a void. Rose is in a semi-hallucinatory state. She knows she i ying. Her lips barely move as she sings a scrap of Jack's song:
 _ROSE
 ""Come Josephine in my flying machine...""
@@ -3267,24 +2992,20 @@ _ROSE
 "Oh, Jack ll hope, will and spirit leave her. She looks at the boat. It is furthe way now, the voices fainter. Rose watches them go he closes her eyes. She is so weak, and there just seems to be no reaso o even try nd then... her eyes snap open he raises her head suddenly, cracking the ice as she rips her hair off th ood. She calls out, but her voice is so weak they don't hear her. The boa s invisible now, the torch light a star impossibly far away. She struggle o draw breath, calling again."
 
 292 IN THE BOAT Lowe hears nothing behind him. He points to something
-
 ahead, turning the tiller.
 
 293 ROSE struggles to move. Her hand, she realizes, is actually frozen to
-
 Jack's. She breaths on it, melting the ice a little, and gently unclasp heir hands, breaking away a thin tinkling film.
 _ROSE
 "I won't let go. I promise he releases him and he sinks into the black water. He seems to fade ou ike a spirit returning to some immaterial plane ose rolls off the floating staircase and plunges into the icy water. Sh wims to Chief Officer Wilde's body and grabs his whistle. She starts t LOW THE WHISTLE with all the strength in her body. Its sound slaps acros he still water."
 
 294 IN BOAT
 Lowe whips around at the sound of the whistle.
-
 _LOWE
 "(turning the tiller ow back! That way! Pull ose keeps blowing as the boat comes to her. She is still blowing when Low akes the whistle from her mouth as they haul her into the boat. She slip nto uncosciousness and they scramble to cover her with blankets..."
 _DISSOLVE TO:
 
 295 INT. IMAGING SHACK / KELDYSH
-
 EXTREME CLOSEUP of Rose's ancient, wrinkled face. Present day.
 _OLD ROSE
 "Fifteen hundred people went into the sea when Titanic sank from under us here were twenty boats floating nearby and only one came back. One. Si ere saved from the water, myself included. Six out of fifteen hundred s she speaks THE CAMERA TRACKS slowly across the faces of Lizzy and th alvage crew on KELDYSH. Lovett, Bodine, Buell, the others... the realit f what happened here"
@@ -3294,22 +3015,18 @@ _OLD ROSE
 _DISSOLVE TO:
 
 296 EXT. LIFEBOATS / OPEN SEA - PRE-DAWN
-
 MATCHING MOVE as the camera tracks along the faces of the saved ISSOLVE TO: ANOTHER BOAT, and then ANOTHER, seeing faces we know among th urvivors: Ismay in a trance, just staring and trembling... Cal, sippin rom a hip flask offered to him by a black-faced stoker... Ruth huggin erself, rocking gently N BOAT 14: CLOSE ON ROSE, lying swaddled. Only her face is visile, whit s the moon. The man next to her jumps up, pointing and yelling. Soo veryone is looking and shouting excitedly. In Rose's POV it is all silent LOW MOTION N SLOW-MOTION SILENCE we see Lowe light a green flare and wave it a veryone shouts and cheers. Rose doesn't react. She floats beyond all huma motion.
 _DISSOLVE TO:
 
 298 EXT. LIFEBOATS / OPEN SEA - DAWN
-
 Golden lgiht washes across the white boats, which gloat in a calm se eflecting the rosy sky. All around them, like a flotilla of sailing ships re icebergs. The CARPATHIA sits nearby, as boats row toward her.
 _DISSOLVE TO:
 
 299 EXT. LIFEBOATS / OCEAN / CARPATHIA MONTAGE - DAY
-
 IMAGES DISSOLVE into one another: a ship's hull looming, with the letter ARPATHIA visible on the bow... Rose watching, rocked by the sea, her fac lank... seamen helping survivors up the rope ladder to the Carpathia' angway doors... two women crying and hugging each other inside the ship.. LL SILENT, ALL IN SLOW-MOTION. There is just music, so gentle and sad art elegy, part hymn, part aching song of love lost forever HE IMAGES CONTINUE to music... Rose, outside of time, outside of herself oming into Carpathia, barely able to stand... Rose being draped wtih war lankets and given hot tea... BRUCE ISMAY climbing aboard. He has the fac nd eyes of a damned soul s Ismay walks along the hall, guided by a crewman toward the doctor' abin, he passes rows of seated and standing widows. He must run th auntlet of their accusing gazes.
 _CUT TO:
 
 300 EXT. DECK / CARPATHIA - DAY
-
 It is the afternoon of the 15th. Cal is searching the faces of the widow ining the deck, looking for Rose. The deck of Carpathia is crammed wit uddled people, and even the recovered lifeboats of Titanic. On a hatc over sits an enormous pile of lifebelts e keeps walking toward the stern. Seeing Cal's tuxedo, a stewar pproaches him.
 _CARPATHIA STEWARD
 "You won't find any of your people back here, sir. It's all steerage al ignores him and goes amongst this wrecked group, looking under shawl nd blankets at one bleak face after another ose is sipping hot tea. Her eyes focus on him as he approaches her. H arely recognizes her. She looks like a refugee, her matted hair hanging i er eyes."
@@ -3334,11 +3051,9 @@ _OLD ROSE (V.O.)
 hit his interests hard, and he put a pisto n his mouth that year. His children fought over the scraps of his estat ike hyenas, or so I read.
 
 301 ANGLE ON ROSE, at the railing of the Carpathia, 9pm April 18th. She
-
 gazes up at the Statue of Liberty, looking just as it does today, welcomin er home with her glowing torch. It is just as Fabrizio saw it, so clearly n his mind.
 
 302 LATER CARPATHIA DISCORGES THE SURVIVORS at the Cunard pier, Pier
-
 Over 30,000 people line the dock and fill the surrounding streets. Th agnesium flashes of the photographers go off like small bombs, lighting a mazing tableau everal hundred police keep the mob back. The dock is packes with friend nd reletives, officials, ambulances, and the press- eporters and photographers swarm everywhere...
 deep at the foot of th angways, lining the tops of cars and trucks... it is the
 equicalen f a media circus. They jostle to get close to the survivors, tugging o hem as they pass and shouting over each other to ask them questions ose is covered with a whoollen shawl and walking with a group of steerag assengers. Immigration officers are asking them questions as they come of he gangway.
@@ -3351,7 +3066,6 @@ _OLD ROSE (V.O.)
 _CUT TO:
 
 303 INT. IMAGING SHACK / KELDYSH
-
 Old Rose sits with the group in the Imaging Shack, lit by the blue glow o he screens. She holds the haircomb with the jade butterfly on the handl n her gnarled hands.
 _BODINE
 "We never found anything on Jack. There's no record of him at all."
@@ -3360,14 +3074,12 @@ _OLD ROSE
 _CUT TO:
 
 305 EXT. OCEAN FLOOR / TITANIC WRECK
-
 The Mir submersibles make their last pass over the ship. We hear Yuri th ilot on the UQC:
 _YURI
 "Mir One returning to surface he sub rises off the deck of the wreck, taking its light with it, leavin he Titanic once again it its fine and private darkness."
 _CUT TO:
 
 306 EXT. KELDYSH DECK
-
 A desultory wrap party for the expedition is in progress. There is musi nd some of the (co-ed) Russian crew are dancing. Bodine is getting drun n the aggressive style of Baker Joughin ovett stands at the rail, looking down into the black water. Lizzy come o him, offering him a beer. She puts her hand on his arm.
 _LIZZY
 "I'm sorry."
@@ -3378,7 +3090,6 @@ _LOVETT
 _CUT TO:
 
 307 EXT. KELDYSH STERN DECK
-
 Rose walks through the shadows of the deck machinery. Her nightgown blow n the wind. Her feet are bare. Her hands are clutched at her chest, almos s if she is praying N LOVETT AND LIZZY running down the stairs from the top deck, hauling ass OSE reaches the sern rail. Her gnarled fingers wrap over the rail. He ncient foot steps up on the gunwale. She pushes herself up, leanin orward. Over her shoulder, we see the black water glinting far below OVETT AND LIZZY run up behind her.
 _LIZZY
 "Grandma, wait!! Don't- OSE TURNS her head, looking at them. She turns further, and we see she ha omething in her hand, something she was about to drop overboard t is the "Heart of the Ocean" ovett sees his holy grail in her hand and his eyes go wide. Rose keeps i ver the railing where she can drop it anytime."
@@ -3411,18 +3122,15 @@ _LOVETT
 "Would you like to dance izzy grins at him and nods. Rose smiles. She looks up at the stars."
 
 308 IN THE BLACK HEART OF THE OCEAN, the diamond sinks, twinkling end over
-
 end, into the infinate depths.
 _CUT TO:
 
 309 INT. ROSE'S CABIN / KELDYSH
-
 A GRACEFUL PAN across Rose's shelf of carefully arranged pictures ose as a young actress in California, radiant... a theatrically lit studi ublicity shot... Rose and her husband, with their two children... Ros ith her son at his college graduation... Rose with her children an randchildren at her 70th birthday. A collage of images of a life live ell HE PAN STOPS on an image filling frame. Rose, circa 1920. She is at th each, sitting on a horse at the surfline. The Santa Monica pier, with it ollercoaster is behind her. She is grinning, full of life e PAN OFF the last picture to Rose herself, warm in her bunk. A profil hot. She is very still. She could be sleeping, or maybe something else.
 _CUT TO:
 "BLACKNESS"
 
 310 THE WRECK OF TITANIC looms like a ghost out of the dark. It is lit by a
-
 kind of moonlight, a light of the mind. We pass over the endless forecastl eck to the superstructure, moving faster than subs can move... almost lik e are flying E GO INSIDE, and the echoing sound of distant waltz music is heard. Th ust fades away from the walls of the dark corridor and it i ransformed... WE EMERGE onto the grand staircase, lit by glowin handelier. The music is vibrant now, and the room is populated by men i ie and tails, women in gowns. It is exquisitely beautiful N POV we sweep down the staircase. The crowd of beautiful gentlmen an adies turn as we descend toward them. At the bottom a man stands with hi ack to us... he turns and it is Jack. Smiling he holds his hand out towar s N A SIDE ANGLE Rose goes into his arms, a girl of
 The passengers fficers and crew of the RMS Titanic smile and applaud in the utter silenc f the abyss.
 _FADE OUT
