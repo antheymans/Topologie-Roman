@@ -24,12 +24,12 @@ Tout les autres output, csv graphs et images, sont situés dans plusieurs dossie
 
 ### Installation du projet
 
-Afin de pouvoir exécuter le projet, les commandes suivantes doivent être exécutées:
-git clone https://github.com/antheymans/Topologie-Roman.git
-cd Topologie-Roman
-conda create --name topologie-roman --file spec-file.txt 
-conda activate topologie-roman
-cd Source_code_output/src
+Afin de pouvoir exécuter le projet avec anaconda, les commandes suivantes doivent être exécutées sur l'anaconda prompt:
+* git clone https://github.com/antheymans/Topologie-Roman.git
+* cd Topologie-Roman
+* conda create --name topologie-roman --file spec-file.txt 
+* conda activate topologie-roman
+* cd Source_code_output/src
 
 ### Exécution du code
 
