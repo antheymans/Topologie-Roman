@@ -18,3 +18,5 @@ supplemental/
 *.gexf
 *.JSON
 *.png
+*.gz
+*.bak
