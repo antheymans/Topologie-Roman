@@ -51,3 +51,8 @@ Comme le projet pattern sur python 3 n'a pas abouti, une branche permettant d'ut
 a été fournie à l'adresse:
 https://github.com/antheymans/pattern
 
+
+## Contact
+
+Pour des questions ou des requêtes, je suis disponible à l'adresse heymansantoine@gmail.com
+
