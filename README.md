@@ -24,12 +24,12 @@ Tout les autres output, csv graphs et images, sont situés dans plusieurs dossie
 
 ### Installation du projet
 
-Afin de pouvoir exécuter le projet, les commandes suivantes doivent être exécutées:
-git clone https://github.com/antheymans/Topologie-Roman.git
-cd Topologie-Roman
-conda create --name topologie-roman --file spec-file.txt 
-conda activate topologie-roman
-cd Source_code_output/src
+Afin de pouvoir exécuter le projet avec anaconda, les commandes suivantes doivent être exécutées sur l'anaconda prompt:
+* git clone https://github.com/antheymans/Topologie-Roman.git
+* cd Topologie-Roman
+* conda create --name topologie-roman --file spec-file.txt 
+* conda activate topologie-roman
+* cd Source_code_output/src
 
 ### Exécution du code
 
@@ -50,4 +50,9 @@ Cette version du projet tourne sur python 3.6 et demande notamment les librairie
 Comme le projet pattern sur python 3 n'a pas abouti, une branche permettant d'utiliser les fonctions nécessaires 
 a été fournie à l'adresse:
 https://github.com/antheymans/pattern
+
+
+## Contact
+
+Pour des questions ou des requêtes, je suis disponible à l'adresse heymansantoine@gmail.com
 
