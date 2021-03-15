@@ -214,6 +214,7 @@ def get_signature(files):
     signature_female_graph = {}
     signature_gendered_graph = {}
     speaker_rates = get_rates()
+    s = 17
     for book_file in files:
         filename = book_file[:-5]
         #degree = get_degree(filename)
@@ -229,11 +230,10 @@ def get_signature(files):
             "Clustering": get_clustering(filename),"Transitivity": get_transitivity_from_graph(graph),
             "Average Degree":get_average_degree(filename),"Graph Size": (len(graph), graph_edge_size), "Components": get_number_component_from_graph(graph) }
         
-        s = 17
         #lattice = nx.lattice.grid_2d_graph(round(pow(graph_size,0.5)), round(pow(graph_size,0.5)))
-        small_world = nx.connected_watts_strogatz_graph(graph_size, round(2* graph_edge_size / graph_size) , 0.2, tries=5, seed=s)
+        small_world = nx.watts_strogatz_graph(graph_size, 2*round(graph_edge_size / graph_size) , 0.2, seed=s)
         barabasi = nx.barabasi_albert_graph(graph_size, round(graph_edge_size/graph_size), seed=s)
-        random_graph = nx.fast_gnp_random_graph(graph_size, graph_edge_size * 2 /(graph_size * (graph_size -1))) #nbr edge among all existing edge 
+        random_graph = nx.fast_gnp_random_graph(graph_size, graph_edge_size * 2 /(graph_size * (graph_size -1)), seed = s) #nbr edge among all existing edge 
         signature_random_graph[filename] = {"Clustering": get_clustering_from_graph(random_graph),
             "Transitivity": get_transitivity_from_graph(random_graph), "Mean Path": get_mean_path_from_graph(random_graph),
             "Average Degree":get_average_degree_from_graph(random_graph), "Graph Size": (len(random_graph), random_graph.number_of_edges()) }
