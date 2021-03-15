@@ -169,7 +169,8 @@ def export_signature_table(signature):
     f.write(csv)
     f.close()
 
-def signature_to_csv(signature):
+
+def signature_to_csv_without_mean_path(signature):
     csv = "Book" + CSV_COMMA + "Clustering" + CSV_COMMA +"Transitivity" +  CSV_COMMA 
     csv += "Average Degree" + CSV_COMMA + "Graph Size" + CSV_COMMA + "\n"
     for book in list(signature.keys()):
@@ -178,8 +179,17 @@ def signature_to_csv(signature):
         csv += str(signature[book]["Graph Size"]) + CSV_COMMA + "\n"  
     return csv
     
+def signature_to_csv(signature):
+    csv = "Book" + CSV_COMMA + "Clustering" + CSV_COMMA +"Transitivity" +  CSV_COMMA 
+    csv += "Average Degree" + CSV_COMMA + "Mean Path" + CSV_COMMA + "Graph Size" + CSV_COMMA + "\n"
+    for book in list(signature.keys()):
+        csv += book + CSV_COMMA + str(signature[book]["Clustering"]) + CSV_COMMA 
+        csv += str(signature[book]["Transitivity"]) + CSV_COMMA + str(signature[book]["Average Degree"]) + CSV_COMMA
+        csv += str(signature[book]["Mean Path"]) + CSV_COMMA + str(signature[book]["Graph Size"]) + CSV_COMMA + "\n"  
+    return csv
+    
 def export_graph_signature_table(signature, filename):
-    csv = signature_to_csv(signature)
+    csv = signature_to_csv_without_mean_path(signature)
     f = open(PATH_CSV+ filename + ".csv","w+")
     f.write(csv)
     f.close()  

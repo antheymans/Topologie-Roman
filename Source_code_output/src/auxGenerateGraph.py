@@ -89,7 +89,11 @@ def exponential(x, a, b):
 def power_law(x, a, b):
     return a*numpy.power(x , b)
     
-def mean_distrib(files):
+def mean_distrib(files, isScript):
+    story = "Novels"
+    if isScript:
+        story = "Scripts"
+
     distribution = []
     print(files)    
     for file in files:
@@ -118,8 +122,17 @@ def mean_distrib(files):
     res2 = sum(degree_distribution[xmin:xmax] - power_law(x_vec[xmin:xmax], *pars2))
     print(pars, cov, res)#nov 25.13373576 -0.15795688] [[ 2.12875618e+00 -1.32679551e-02] #script[ 5.51683625 -0.11227941] [[ 1.06685611e-01 -2.16226351e-03]
     print(pars2, cov2, res2)#nov [147.23761823  -1.59962459] [[ 6.43356139e+00 -3.85331087e-02] #script [14.05704682 -0.96477256] [[ 2.32232473 -0.08762363]
+    
+    plt.plot(x, degree_distribution, label=str(story+': mean degree distribution'))   
+    plt.plot(x, exponential(x, *pars), label=str('exponential fitting'))
+    plt.plot(x[xmin:xmax], power_law(x_vec[xmin:xmax], *pars2), label=str('power-law fitting')) 
+    plt.ylabel("Number of nodes")
+    plt.xlabel("Nodes Degree")    
+    plt.legend()
+    plt.show()
+    
     plt.yscale("log") 
-    plt.plot(x, degree_distribution, label=str('Novels: mean degree distributions'))   
+    plt.plot(x, degree_distribution, label=str(story+': mean degree distribution'))   
     plt.plot(x, exponential(x, *pars), label=str('exponential fitting'))
     plt.plot(x[xmin:xmax], power_law(x_vec[xmin:xmax], *pars2), label=str('power-law fitting')) 
     plt.ylabel("Number of nodes")
@@ -130,7 +143,7 @@ def mean_distrib(files):
     
     
     #plt.loglog(x, degree_distribution, label=str('mean degree distributions'))
-    plt.loglog(x, degree_distribution, label=str('Novels: mean degree distributions'))   
+    plt.loglog(x, degree_distribution, label=str(story+': mean degree distribution'))   
     plt.loglog(x, exponential(x, *pars), label=str('exponential fitting'))
     plt.loglog(x[xmin:xmax], power_law(x_vec[xmin:xmax], *pars2), label=str('power-law fitting')) 
     plt.legend()
@@ -138,16 +151,43 @@ def mean_distrib(files):
     plt.xlabel("Nodes Degree") 
     plt.show()
 
-
+def generate_mean_path_distrib(files):
+    import auxSignature
+    degree = []
+    mean_path = []
+    for file in files:
+        graph = auxSignature.get_graph(file)
+        mean_path.append(auxSignature.get_mean_path_from_graph(graph))
+        degree.append(len(graph))
+    print(mean_path, degree)
+    #plt.yscale("log") 
+    plt.scatter(degree, mean_path, s = 2, label=str('Evolution of mean path lenth following graph size'))   
+    plt.ylabel("Mean Path length")
+    plt.xlabel("Size of the bigger component")    
+    plt.legend()
+    plt.show()
+    
+    plt.yscale("log") 
+    plt.xscale("log") 
+    plt.scatter(degree, mean_path, s = 2, label=str('Evolution of mean path lenth following graph size'))   
+    plt.ylabel("Mean Path length")
+    plt.xlabel("Size of the bigger component")    
+    plt.legend()
+    plt.show()
+   
 if __name__ == '__main__':
     files = get_files_in_folder(PATH_BOOKS)
     files2 = []
     for file in files:
-        print(file[-10:-4])
+        #print(file[-10:-4])
         if file[-10:-4]=="SCRIPT":
             files2.append(file)
-    mean_distrib(files2) 
+        #files2.append(file[:-4])    
+    #mean_distrib(files2) 
+    
     #for file in files:
     #    generate_graph_degree(file[:-4])
+    mean_distrib(files2, True)
+    #generate_mean_path_distrib(files2)
 
 
