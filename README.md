@@ -28,6 +28,7 @@ Afin de pouvoir exécuter le projet avec anaconda, les commandes suivantes doive
 * git clone https://github.com/antheymans/Topologie-Roman.git
 * cd Topologie-Roman
 * conda create --name topologie-roman --file spec-file.txt 
+* pip install git+git://github.com/antheymans/pattern.git
 * conda activate topologie-roman
 * cd Source_code_output/src
 

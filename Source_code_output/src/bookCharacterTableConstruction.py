@@ -111,6 +111,8 @@ def build_alias_table(sentences, oldAliasTable,oldConnectionsTable,oldAliases):
     proper_names = list(proper_nouns)
     for proper_noun  in proper_names:
         canonical_names_dict[proper_noun] = []
+    
+    nltk.download('names')  
     names_corpus = nltk.corpus.names
     
     male_names = names_corpus.words('male.txt')
