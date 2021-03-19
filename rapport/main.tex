@@ -20,6 +20,9 @@
 \usepackage{graphicx}
 \usepackage{csvsimple}
 \usepackage{cleveref}
+\usepackage[toc,page]{appendix} 
+\usepackage{graphicx}
+\usepackage{caption}
 % Logos
 \newcommand{\ulb}{\includegraphics[scale=1.1]{logo_ULB2.pdf}}
 \newcommand{\polytech}{\includegraphics[scale=0.35]{logo_polytech_FR.pdf}}
@@ -54,7 +57,7 @@
 \newcommand{\yearB}{\fontText{2019 - 2020}}
 
 \begin{document}
-
+	\maxdeadcycles=200
 	\thispagestyle{empty}
 	\newgeometry{top=2.5cm, bottom=1.5cm, left=2.5cm, right=1cm}
 	\setlength{\unitlength}{1mm}
@@ -229,9 +232,11 @@ Some networks have a very regular and easily-recognizable topology such as latti
 \end{figure}
 
 \subsection{Random networks}
+\label{random-section}
 2 popular models are used to represent the build random network. In the first one introduced by \cite{erdosRandom}, given a number of nodes N and a probability p, a graph is constructed with N nodes and each potential edge is added with a probability p. In average the number of edge that appears is $N \cdot (N-1) \cdot p$ with $ 0< p <1$. The second model \citep{gilbertRandom} l takes a number of nodes N and a number of edge M as input. The M edges are chosen randomly without replacement in the set of $N \cdot (N-1)$ potential edges. Those models are asymptotically the same. The first model gives a variable number of edges but for big values of N, the networks generated with those models should share a common topology. This topology is mainly characterized by a number of edges approximately constant for a given couple (N, p) and by a distribution of degree. Figure \ref{random} shows the plot of the degree distribution of a random graph obtained with the second model. The graph has 10000 nodes and 20000 edges, so the mean degree of its node is  $\frac{2 \cdot E}{N} = 4$ . the plot includes a normal distribution centered on 4. The degree distribution of random graphs follows normal distributions.  An illustration of random graph is also given on \ref{erdos} The mean path length of random networks is small and grows logarithmically with N. Due to random connection, nodes are likely to share connections with very distant nodes. Due to this random connections, their clustering coefficients are very small.\\
 
 \subsection{Small-world networks}
+\label{sm-section}
 Small world networks are an other family of networks that presents elements of randomness. Initially the goal of this classification was to represent networks that are highly clustered as latices but have an irregular topology and have a very short average path length between its nodes. A lot of social networks responds to this properties. For instance, network of friends are highly clustered: people sharing common friends are likely to be friends. Of course they are not regular as their evolve randomly and their average path length can be surprisingly small: \cite{milgram} have shown that the median number of intermediary needed to connect two randomly chosen people is six. Random networks don't have those properties as links are randomly added, node have the same probability to share an edge with each other node of the network. Some regular networks such as lattices are also highly clustered but they have a very long mean path length: as each vertex is only connected to its nearest neighbors, a path needs to go through a lot of cluster of neighbors before joining an opposite node. \citep{complex_networks} \\
 
 \begin{figure}
@@ -241,7 +246,7 @@ Small world networks are an other family of networks that presents elements of r
 \label{small-world_pictures}
 \end{figure}
 
-A first model for small-worlds network have been given by \cite{globalClustering1}. The networks of N nodes, $N \cdot 2 \cdot k$ edges are constructed by the following algorithm taking a probability p as input:
+The Watts-Strogatz model for small-worlds network have been given by \cite{globalClustering1}. The networks of N nodes, $N \cdot 2 \cdot k$ edges are constructed by the following algorithm taking a probability p as input:
 \begin{enumerate}
 \item A lattice of N site is drawn, each drawn being connected to its 2k neighbors.
 \item For each nodes, each edge is removed with a probability p. 
@@ -250,6 +255,7 @@ A first model for small-worlds network have been given by \cite{globalClustering
 After this construction, a network is obtained with a high clustering thanks to the initial lattice structure. But the edges added in the last step allow to connect groups of neighbors that are fare from each others and reduce the mean path length. The construction of the network is illustrated on figure \ref{small-world_pictures}. An initial graph is shown on image (a) and the following image shows the network after the removal and additions of some links. The networks constructed with this model are characterized by being connected and having an almost constant degree for each node. Others models have been given for small-world network by following the same intuition of combining lattice with randomness and long range link. An common properties of those networks is that the mean-path length grows logarithmically with N  similarly to random graphs.\citep{small-world, complex_networks}
 
 \subsection{Scale-Free networks}
+\label{scale-free_section}
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{Degree-distribution-of-random-and-scale-free-networks.png}
@@ -257,7 +263,7 @@ After this construction, a network is obtained with a high clustering thanks to 
 \label{scale-free_degree}
 \end{figure}
 
-Scale free networks are a third type of network that present elements of randomness. It has been introduced by \cite{scale-free}. They are usually defined as networks having degree distribution following power laws: $ P(k) \approx c \cdot k^{-y}$. An exemple of such distributions is given of figure \ref{scale-free_degree}. It means that a very small number of nodes present a very huge connectivity.  This property is present in different networks such as the world-wide-web \citep{www} or the web of human sexual contacts \citep{sexual}. The constructions of scale-free network follows two principle. Firstly they \textit{grow} and during this growth new node are added and linked with existing nodes. Secondly the creation of new nodes is done with \textit{preferential  attachment}: nodes have always more chance to be connected to nodes that already have a lot of edges.The growth and the preferential attachment are responsible of the creation of nodes having a lot of connections that are called \textit{hubs}. Hubs have a key role in such networks. For instance a big part of the circulation in the internet network go through those hubs and the removal of several hubs would lead to a major increasing of some path-length and could also lead to some disconnections between set of nodes in the network \citep{general_scale-free}. Finally according to \cite{SMVSSF} scale-free networks tend to have clustering coefficient smaller than small-world network, as nodes that are not hubs are not likely to be directly connected. \citep{general_scale_free2}\\
+Scale free networks are a third type of network that present elements of randomness. It has been introduced by \cite{scale-free}. They are usually defined as networks having degree distribution following power laws: $ P(k) \approx c \cdot k^{-y}$. An exemple of such distributions is given of figure \ref{scale-free_degree}. It means that a very small number of nodes present a very huge connectivity.  This property is present in different networks such as the world-wide-web \citep{www} or the web of human sexual contacts \citep{sexual}. The usual constructions of scale-free network follows two principle. Firstly they \textit{grow} and during this growth new node are added and linked with existing nodes. Secondly the creation of new nodes is done with \textit{preferential  attachment}: nodes have always more chance to be connected to nodes that already have a lot of edges. Some authors consider that those principles are requirements for a network to be scale-free, havinh a $k$ parameters between 2 and 3 can also be a requirement \citep{sf_rare}. The growth and the preferential attachment are responsible of the creation of nodes having a lot of connections that are called \textit{hubs}. Hubs have a key role in such networks. For instance a big part of the circulation in the internet network go through those hubs and the removal of several hubs would lead to a major increasing of some path-length and could also lead to some disconnections between set of nodes in the network \citep{general_scale-free}. Finally according to \cite{SMVSSF} scale-free networks tend to have clustering coefficient smaller than small-world network, as nodes that are not hubs are not likely to be directly connected. \citep{general_scale_free2}\\
 
 \begin{figure}
 \centering
@@ -283,8 +289,7 @@ An example of network obtained by this algorithm can be seen on figure \ref{scal
 \label{comparison_networks}
 \end{figure}
 
-As previously explained social networks are almost never regular due to their mechanism of growth and evolution. However the topology of different social network can have different properties: They may be close from random, small-world or scale-free networks. Also the definition of small world and scale free networks are such that a network can present both properties. Networks may be classified in topologies using all the measures that we explained in section \ref{measure} and visualization tool. Figure \ref{comparison_networks} shows network of each type for visual comparison.
-
+As previously explained social networks are almost never regular due to their mechanism of growth and evolution. However the topology of different social network can have different properties: They can share properties of random, small-world and scale-free networks. There are defined in such a way that a network can present both properties. Erdos-Rényi random networks are small-world network as they mean path length growth with $\log N$ and \cite{xs} classify Barabási and Albert as ``ultra small-word'' because they mean path length grows with $\frac{\log{N}}{\log{\log{N}}}$ as we saw in previous section. Networks may be classified in topologies using all the measures that we explained in section \ref{measure} and visualization tool. Figure \ref{comparison_networks} shows network of each type for visual comparison.
 
 
 
@@ -318,9 +323,8 @@ The Lunar Chronicles 1$\rightarrow$3 &Thor Ragnarok\\
 His Dark Materials 1$\rightarrow$ 3& Blackkklansman\\
 The Mortal Instruments 1$\rightarrow$6 & Boyhood\\
 The Liveship Traders 1$\rightarrow$3 &Halloween\\
-The Wheel of Time 1$\rightarrow$14 & Joker\\
-Rain
-Wild Chronicles 1$\rightarrow$4 & Jurassic Parc  1$\rightarrow$3\\
+The Wheel of Time 0$\rightarrow$14 & Joker\\
+The Rain Wild Chronicles 1$\rightarrow$4 & Jurassic Parc  1$\rightarrow$3\\
 &Lord of the ring  1$\rightarrow$3\\
 & Shrek 1 and 3\\
 &The devil wears prada\\
@@ -640,7 +644,7 @@ The observation of the characters extracted by both method shows some tendencies
 A major default that should be pointed of the proposed method is the use of a words dataset for honorific detection. Honorifics are only properly labeled if they are present in the word list. Therefore, novels using set of foreign honorifics or inventing their own set of honorifics (which is common in fantasy or science fiction) could completely miss them. Honorifics would be considered as first name and it could decrease the performance of the alias-resolution process. Also characters would be less likely to be gendered. \\
 
 \subsubsection{Further improvement}
-The method developed here for character extraction in novels gives satisfying result but could have several improvements. Firstly a NER tool should be used in order to use syntactical information to separate location from characters names. Secondly some rules could be added to link aliases between them for instance in the case of characters having multiple last names. Contextual information could be use in order link the appearances proper nouns of category 3-4-5 to different characters. For instance appearances of ``Mr Potter'' could be bound to ``Harry Potter'' or ``James Potter'' following contextual information. Then a way of using anaphoric noun phrase in the system could be used in order to detect unnamed characters but this addition should be handle carefully as the addition of anaphoric noun phrase could lead to the extraction of many nouns that are not univoquely linked to a character. It would also be useful to extend the set of recognized honorifics or to implement a way to detect new honorifics in a novel.\\
+The method developed here for character extraction in novels gives satisfying result but could have several improvements. Firstly a NER tool should be used in order to use syntactical information to separate location from characters names. Secondly some rules could be added to link aliases between them for instance in the case of characters having multiple last names. Contextual information could be use in order link the appearances proper nouns of category 3-4-5 to different characters. For instance appearances of ``Mr Potter'' could be bound to ``Harry Potter'' or ``James Potter'' following contextual information. Then a way of using anaphoric noun phrase in the system could be used in order to detect unnamed characters but this addition should be handle carefully as the addition of anaphoric noun phrase could lead to the extraction of many nouns that are not linked to a character on an unambiguous way. It would also be useful to extend the set of recognized honorifics or to implement a way to detect new honorifics in a novel.\\
 
 \begin{table}
 \center
@@ -847,6 +851,12 @@ The other data produced by the program are csv files containing:
 
 
 
+
+
+
+
+
+
 \chapter{Network analysis}
 In this second chapter, the extracted social networks are analyzed. Some analysis have been produced by \cite{original} and will be actualized using the correction of network extraction process. The analysis will also benefits to the addition of new metrics and the comparison between novels and scripts.
 
@@ -866,21 +876,13 @@ The size of each component of novels and scripts is on table \ref{signature}. Th
 
 
 \section{Measures}
-Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network. The result of this measurement is on table //TODO. The generated networks don't have exactly the same number of edges and nodes than the original ones.\\
+Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network. The result of this measurement is on table //TODO. The generated networks don't have exactly the same number of edges and nodes than the original ones. However it's important to remember that those family of graphs are not distinct.\\
 
-The small-world networks are created using the method given in section, with the same number of nodes and edges than the original graph and with a probability of 0.2 .\\
-The scale free graph is created following the method of section, with the same number of node than the original graph. The $m$ value used is computed using the parameters of the original network: $m = [NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of edges of the network.\\
-The random network is created using the method from section, with a number of edges following a random variable centered around the number of edges of the social network.\\
-Lattice have not been generated as each type of lattice have approximately always the same values for clustering coefficient and mean degree. The mean path length of lattice growth with $\sqrt{N}$ for square lattice.\\
+A Watts-Strogatz small-world networks are created using the method given in section \ref{sm-section}, with the same number of nodes than the original graph and with a probability of 0.5 . The mean degree is the nearest integer from the original mean degree.
+A Barabási-Albert scale free graph is created following the method of section \ref{scale-free-section}. The $m$ value used is computed using the parameters of the original network: $m = [NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of edges of the network.
+A random Erdös-Rényi network is created using the method from section \ref{random-section}, with a number of edges following a random variable centered around the number of edges of the social network.
+Lattice have not been generated as each type of lattice have approximately always the same values for clustering coefficient and mean degree. The mean path length of lattice growth with $\sqrt{N}$ for square lattice.
 
-\begin{table}[]
-\scalebox{0.54}{%
-\csvautotabular[separator=semicolon]{csv/signatures.csv}
-}
-\caption{Data collected for each novel and script. Some title are under the form of an abbreviation, the corresponding title
- is in the appendix. The title of movies script are ended with the mention \textit{SCRIPT}.}
- \label{signature}
-\end{table}
 
 \subsection{Distribution of degree}
 \cite{original} has shown that characters social networks extracted from literature tend to have degree distribution following powerlaw. From this statement, the networks have been considered as scale-free. The modification in character extraction decreases a lot the number of characters so we should check that this observation hold.\\
@@ -932,7 +934,7 @@ Lattice have not been generated as each type of lattice have approximately alway
 \end{figure}
 
 On figure \ref{distrib_degree_4_novels}, the degree distributions from 4 novels shows a big amount of nodes with small degree and less nodes with more degrees. The first graph look like a heavy-tail distribution but others seems to have a more flattened curve. Also we see that the graphs have many irregularities. For this reason I have added all the distributions extracted from novels in a single distribution to fit it. It was already the way used by \cite{original}.
-The distributions extracted from 4 movies are also shown on figure \ref{distrib_degree_4_scripts}. The first example shows a distribution completely different from the others networks, this is due to the fact that movie is a ``huis-clos'': all the narrative happen in a close environment with a limited amount of characters. In such movie, it's intuitive that most characters are linked, this should also happened to books following this principle. However no books from our collections present this specificity, this could be a coincidence. An other hypothesis is that movie are more likely to present configurations with a smaller number of characters as this is easier to produce. Other books present a decreasing graph like novels but it seems polynomial. Like novels, the degree distribution have been summed in order to observe their general behavior.
+The distributions extracted from 4 movies are also shown on figure \ref{distrib_degree_4_scripts}. The first example shows a distribution completely different from the others networks, this is due to the fact that movie is a ``huis-clos'': all the narrative happen in a close environment with a limited amount of characters. In such movie, it's intuitive that most characters are linked, this should also happened to books following this principle. However no books from our collections present this specificity, this could be a coincidence. An other hypothesis is that movie are more likely to present configurations with a smaller number of characters as this is easier to produce. Other books present a decreasing graph like novels but it seems polynomial. Like novels, the degree distribution have been summed in order to observe their general behavior.\\
 
 \begin{figure}
 \begin{subfigure}{\textwidth}
@@ -997,8 +999,6 @@ Mean	of all novels & 0.060090885&	0.059953799&	0.14185425&	0.095554636&	0.336369
 \hline
 Standard Deviation 	of all scripts &0.115688058&	0.121983066&	0.086152797&	0.087509623&	0.101517005&	0.104581786&	0.147973772&	0.15368119\\	
 Mean	of all scripts & 0.191651597&	0.190647547&	0.253319084&	0.20257765&	0.367782598&	0.352827121&	0.644556967&	0.440894941\\	
-
-
 \hline
 
 \end{tabular}}
@@ -1007,7 +1007,7 @@ Mean	of all scripts & 0.191651597&	0.190647547&	0.253319084&	0.20257765&	0.36778
 \end{table}
 
 
-The first thing to notice on the values pf table \ref{} is that the transitivity is lower than the average clustering for almost all graphs. This result is due to the fact that transitivity gives more weight to node with higher degree, those nodes being evolved in more potential triangle. In our social network, the main characters are linked with multiple set of connected characters. For instance in ``Harry potter'', Harry is connected to all member of the Dursley family and to most of the Hogwarts Student. For this reason main characters tends to have lower clustering coefficient. The only network that present a high transitivity is the first movie of the saga Alien which story present only 6 main characters and almost no minor characters. Table \ref{clustering_coeff_average} shows that the mean values of the global clustering coefficients are bigger on the extracted social networks than for any generated network. This is true for both scripts and novels, however novels have lower coefficients than scripts. This can be explain by the fact that movies tends to introduce less secondary characters as their script are shorter than novels. We should also consider a bias in character extraction: in movies we are only extracting character that have have been annotated as speaker which erase some extra roles. This very big clustering coefficients is a property shared by structured network as lattices and small-world networks.  \\
+The first thing to notice on the values pf table \ref{signature} is that the transitivity is lower than the average clustering for almost all graphs. This result is due to the fact that transitivity gives more weight to node with higher degree, those nodes being evolved in more potential triangle. In our social network, the main characters are linked with multiple set of connected characters. For instance in ``Harry potter'', Harry is connected to all member of the Dursley family and to most of the Hogwarts Student. For this reason main characters tends to have lower clustering coefficient. The only network that present a high transitivity is the first movie of the saga Alien which story present only 6 main characters and almost no minor characters. Table \ref{clustering_coeff_average} shows that the mean values of the global clustering coefficients are bigger on the extracted social networks than for any generated network. This is true for both scripts and novels, however novels have lower coefficients than scripts. This can be explain by the fact that movies tends to introduce less secondary characters as their script are shorter than novels. We should also consider a bias in character extraction: in movies we are only extracting character that have have been annotated as speaker which erase some extra roles. Very big clustering coefficients are a property shared by networks as lattices and small-world networks.  \\
 
 
 \subsection{Mean Path Length}
@@ -1017,22 +1017,114 @@ The first thing to notice on the values pf table \ref{} is that the transitivity
 \includegraphics[width=\linewidth]{pictures/mean_path}
 \end{subfigure}
 \hfill
-\begin{subfigure}{.49\textwidth}>
+\begin{subfigure}{.49\textwidth}
 \centering
 \includegraphics[width=\linewidth]{pictures/mean_path_log}
 \end{subfigure}
-\caption{Distribution of the mean shortest path following the graph size on all texts. The first graph have a linear scale and the second one a log scale. }
+\hfill
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/path_novels_log_semi}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/path_script_semi_log}
+\end{subfigure}
+\caption{Mean shortest path following the graph size. The 2 first images presents the values for all the texts. The last one present only values from novels or script with a logarithmic fitting. }
 \label{mean_path}
 \end{figure}
 
+
+\begin{table}[]
+\scalebox{0.5}{%
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+&Erdos Random Networks & Barabasi-Albert Scale-Free Networks & Watts-Strogatz Small-World Networks & Social Network \\
+\hline
+Standard Deviation 	of all texts & 0.497325878&	0.360324271&	0.764052807&	0.269248092\\
+Mean of all texts &2.558330812	&2.433149983	&3.070594256&	2.242487429\\
+\hline
+Standard Deviation 	of all novels &0.398109091&	0.280303615	&0.632982852&	0.17254051\\	
+Mean	of all novels & 2.778345124&	2.603138839&	3.374638372&	2.368047787\\	
+\hline
+Standard Deviation 	of all scripts &0.409088171&	0.280991354&	0.674406656	&0.266162628\\	
+Mean	of all scripts &2.169074722&	2.132400468	&2.532670051&	2.02034218\\	
+\hline
+
+\end{tabular}}
+\caption{Mean and standard deviation of mean global clustering coefficient and transitivity for extracted social networks and generated networks on novels and scripts.}
+\label{path_length_values}
+\end{table}
+
 As some graphs have multiple components, the mean path have been computed on the bigger ones. It is available at \ref{signature}. This should be a meaningful measure as graphs are usually composed by a big component and few very little ones whose length are near from 1. The first thing to notice is that the mean path length is very small for all stories and doesn't vary a lot. The bigger values are under 3 and the smaller ones around 1,6. There is an exception for ``Alien 1'' which has a mean path length of 1,25. It confirms the intuition that stories with very few character such as ``huis-clos'' tend to have more clustered networks. 
 The distribution of mean path following graph size is given on figure \ref{mean_path}.
-For small network size it seems to follow a logarithmic law, this evolution is characteristics of small world network. 
+For small network size it seems to follow a logarithmic law, this evolution is characteristics of small world network. However the data is very sparse and we can not be sure that it's not satisfying the ``ultra small-world property'' of scale-free networks. More data are needed in order to approximate this curve with precision.
 For bigger graph size, the mean path seems to become more constant. This particularity might be explained by the nature of social network extracted from stories: most small-world network are scalable. 
-A very small portions of their nodes are hubs but the number of hubs increases with the increasing of the network. Most non-hubs nodes are bounded to hubs but some shortest path may need to pass on multiple hubs. 
-In case of social network extracted from stories, hubs represent main character.
-But even if the stories becomes bigger and more secondary character are encountered, the number of main characters will tend to stay constant, especially in movies. 
+A very small portions of their nodes are hubs but the number of hubs increases with the growth of the network. Most non-hubs nodes are directly linked to hubs but some shortest path may need to pass on multiple hubs. 
+In case of social network extracted from stories, hubs represent main characters.
+Even if the stories becomes bigger and more secondary character are encountered, the number of main characters will tend to be bounded, especially in movies. 
 An exception to this is found in the series `A song of Ice and Fire'' and ``The Wheel of Time'' that evoke multiple plot with different sets of main characters in a single book.
+On table ref{path_length_values}, we see that for both scripts and movies the social networks tends to have smaller mean path length than generated networks. Script have smaller value but the network generated by the scripts also have smaller values. It shows that the number of edges and nodes of scripts is more likely to generate smaller mean path length. Table \ref{mean_path} was also showing that smaller stories tends to have smaller mean path length.
+
+\subsection{Preferential attachment}
+
+\begin{figure}
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/attachement/Harry_potter_1_SCRIPT}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/attachement/Harry_potter_1}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{pictures/attachement/Blackkklansman_SCRIPT}
+\end{subfigure}
+\hfill
+\begin{subfigure}{.49\textwidth}
+\includegraphics[width=\linewidth]{pictures/attachement/ASOIAF_1}
+\end{subfigure}
+\caption{Probability of attachment to a node following the final degree of the node with a linear fitting for 2 scripts and novels : Harry Potter (novels and script), Blackkklansman and A Song Of Ice and Fire (from which Games of Thrones has been adapted
+).}
+\label{attachement}
+\end{figure}
+
+To measure the preferential attachment, probability of attachment to a node has been plotted following the node degree. There is various way of doing it. In this work, the probability of attachment to a node n corresponds to the probability for a new node to be linked to n when the new node is added in the incremental network. The degree taken is the final degree of the second node at the end of the graph construction. It would also be possible to use the degree value at the moment of the addition of the new node. But this method would mix values observed for a node with degree X at the start of the story and the values observed for a second node of degree X at the end of the story despite the fact that the importance of X-degree node will evolve a long the story (all nodes tend to increase they degree along the story). \\
+
+The result are given on figure \ref{attachement} for 2 novels and scripts. Other attachment plot are available on appendix \ref{ref_attachement}. For most extracted social networks the probability of attachment to a node evolve linearly with the final degree of this node. From this we can observe that both scripts and movie tends to increase their social network with a mechanism of preferential attachment. This is quite intuitive as new characters are more likely to interact with new characters. This property is a characteristic of scale-free networks.
+
+
+\subsection{Gender distribution}
+During the network construction, a gender has been assigned to characters in order to simplify the alias resolution process. For reason of simplification, the hypothesis has been done that all characters have a masculine of feminine gender. During the process noun that could not be labeled have kept a neutral label that could also be called a ``unknown'' label. It doesn't mean that the program consider them as gender-neutral characters. These gender-neutral characters groups secondary characters that have not been called by a nickname or an honorific, characters that have been called with a nickname or an honorific  known by the dataset and words that have been wrongly extracted as characters. Among these characters, some of them could indeed be considered as gender-neutral, for instance the talking hat in Harry Potter.\\
+
+In this section, we will observe the distribution of gender in novels and script while keeping in mind that the extracted networks do not form a perfect dataset: the gender of some characters might have been incorrectly labeled and a lot of characters didn't received a gender at all. Some bias may exist in the dataset of first name and honorific that would favor the labeling of masculine or feminine characters. Also in novels characters have been extracted from all the text while in movie characters have only been taken from annotations : networks extracted from novels should assign a gender to more main characters than networks from scripts, as there is more aliases available to extract a gender. But networks extracted from novels also extracts more secondary characters and locutions wrongly considered as characters which are more likely to have an unknown gender. For this reason the rate of masculine and feminine characters has been computed 2 times. The first one is a simple rate and the second one have been done using the degree of the nodes as weight.\\
+
+\begin{table}[]
+\scalebox{1}{%
+\csvautotabular[separator=semicolon]{csv/gender_rate_short.csv}
+}
+\caption{Mean value and variance on gendered, masculine and feminine rate of characters, computed on scripts, novels or all texts. The \textit{gendered rate} represents the  rate of characters that have been labeled masculine or feminine. The \textit{masculine} and \textit{feminine rate} represents the rate of characters that have been labeled masculine or feminine. The detailed result are available on appendix \ref{gender_all}}
+ \label{gender_short}
+\end{table}
+
+
+\begin{table}[]
+\scalebox{1}{%
+\csvautotabular[separator=semicolon]{csv/gender_weighted_rate_short.csv}
+}
+\caption{Mean value and variance on gendered, masculine and feminine weighted rate of characters, computed on scripts, novels or all texts. The \textit{weighted gendered rate} represents the rate of characters that have been labeled masculine or feminine, weighted according their node degree. The \textit{masculine} and \textit{feminine weighted rate} represents the weighted rate of characters that have been labeled masculine or feminine. The detailed result are available on appendix \ref{gender_all_weighted} }
+ \label{gender_short_weighted}
+\end{table}
+
+Table \ref{gender_short} gives the rate of feminine and masculine characters in novels and scripts. A first observation is that scripts have a higher rate of gendered characters than novels. Both novels and scripts tends to have more masculine characters.
+The ratio between the rate of masculine and feminine characters is also more important in scripts:$0.163 / 0.128 \approx 1,27$ against $0.277 / 0.097 \approx 2,86$. For Harry Potter, some movies have a ratio near from the corresponding books (2 and 3), the 6th movie has a lower ratio of masculine character than the corresponding novels but the first and the fourth movies have a higher ratio. In pride and prejudice both the novel and its adaptation have more feminine characters than masculine character but the movie have a ratio nearer from 1.
+19 works out of 73 have an higher rate of feminin characters: all the series of ``A song of Ice and Fire'', ``Pride and Prejudice'' the novel and the script, The Rain Wild Chronicles 1, The Lunar Chronicles 1 and 3 (the second book have a ratio of 1), The Liveship Traders 2 and 3 and The Wheel of Time ( books 0,2,5,6,7,8,11). Those works tends to be part of a same series. In this list the only movie script is ``Pride and Prejudice'' a story adapted from a novel that has a ratio of masculine characters rate over feminine characters rate far from 1 $\approx 0.70$ and this ratio increases in the script $\approx 0.82$.
+
+
 
 
 \listoffigures
@@ -1041,6 +1133,45 @@ An exception to this is found in the series `A song of Ice and Fire'' and ``The 
 
 \bibliography{biblio} 
 
+
+\begin{appendices}
+
+\chapter{Gender analysis}
+\ref{gender_table}
+\begin{table}[]
+\scalebox{0.54}{%
+\csvautotabular[separator=semicolon]{csv/gender_rate.csv}
+}
+\caption{Mean value and variance on gendered, masculine and feminine rate of characters, computed on scripts, novels or all texts. The \textit{gendered rate} represents the  rate of characters that have been labeled masculine or feminine. The \textit{masculine} and \textit{feminine rate} represents the rate of characters that have been labeled masculine or feminine. }
+ \label{gender_all}
+\end{table}
+
+\begin{table}[]
+\scalebox{0.54}{%
+\csvautotabular[separator=semicolon]{csv/gender_weighted_rate.csv}
+}
+\caption{Mean value and variance on gendered, masculine and feminine rate of characters, computed on scripts, novels or all texts. The \textit{weighted gendered rate} represents the rate of characters that have been labeled masculine or feminine, weighted according their node degree. The \textit{masculine} and \textit{feminine weighted rate} represents the weighted rate of characters that have been labeled masculine or feminine. }
+ \label{gender_all_weighted}
+\end{table}
+
+
+
+\chapter{Attachment}
+\label{ref_attachement}
+\input{annexeA.tex}
+
+
+
+
+
+\chapter{Social networks}
+\label{final_sn}
+\input{SN.tex}
+
+
+
+
+\end{appendices} 
 
 \end{document}
 

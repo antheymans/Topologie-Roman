@@ -103,6 +103,13 @@ def get_object(filename):
 ###############################################################
 # Serialize and loading functions
 ###############################################################
+def set_preferential_attachement(degree, count, total, title):
+    set_object([degree, count, total], PATH_SERIALIZED+title+"attachement")
+    
+def get_preferential_attachement(title):
+    return get_object(PATH_SERIALIZED+title+"attachement")
+
+
 def update_stats(name, stat):
     resfilename = PATH_SERIALIZED+"speakerIDstats"
     if os.path.isfile(resfilename):
@@ -398,10 +405,39 @@ def build_png_graphs(filename,graphs,mode):
         edgecolor=[edge[2]['sentiment'] for edge in g.edges(data=True)]
         nodesize=[100*int(g.degree()[n]) for n in g.nodes()]
         cmap = plt.cm.get_cmap(name="RdYlGn")
-        #nx.draw(g,with_labels=True,node_color='#65a5cc',alpha=0.8,node_size=nodesize,font_size=7,width=edgesize,edge_color=edgecolor,edge_cmap=cmap) #update this line to avoid depreciation messahe
-        nx.draw_networkx(g,with_labels=True,node_color='#65a5cc',alpha=0.8,node_size=nodesize,font_size=7,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
-        plt.savefig(PATH_PNG+filename+"/"+mode.lower()+"/Context_"+str(context)+".png")
+        figure = plt.gcf()
+        figure.set_size_inches(16, 12)
+        nx.draw_kamada_kawai(g,with_labels=True,font_size = 10, node_color='#65a5cc',alpha=0.8,node_size=nodesize,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
+        plt.savefig(PATH_PNG+filename+"/"+mode.lower()+"/Context_"+str(context)+".png", dpi=100)
         plt.close()
+
+
+def build_last_png_graphs(filename,g):
+    edgesize=[float(edge[2]['mentions']) for edge in g.edges(data=True)]
+    if len(edgesize) > 0:
+        ms = max(edgesize)
+        edgesize = [1+s*24/ms for s in edgesize] 
+    color_map = []
+    for n, d in g.nodes(data=True):
+        if d['gender']==1:
+            color_map.append('b')
+        elif d['gender']==0: 
+            color_map.append('g') 
+        else:
+            color_map.append('r') 
+            
+    edgecolor=[edge[2]['sentiment'] for edge in g.edges(data=True)]
+    nodesize=[100*int(g.degree()[n]) for n in g.nodes()]
+    cmap = plt.cm.get_cmap(name="RdYlGn")
+    figure = plt.gcf()
+    figure.set_size_inches(16, 12)
+    ax = plt.gca()
+    ax.set_title("Social network of "+str(filename), fontsize = 24) 
+    nx.draw_kamada_kawai(g,with_labels=True,font_size = 10, node_color=color_map,alpha=0.8,node_size=nodesize,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
+    plt.savefig(PATH_PNG+"_final_graph/"+filename+".png", dpi=100)
+    plt.close()
+
+        
 
 def output_csv_graphs(filename,graphs,mode):
     for i in range(len(graphs)):
@@ -469,6 +505,7 @@ def output_graphs(filename, iGraphs, graphs, png = True):
     print("csv saved")
     write_graph(iGraphs[-1], filename)
     print("json saved")
+    build_last_png_graphs(filename, iGraphs[-1])
     if png:
         build_png_graphs(filename,graphs,"Context")
         build_png_graphs(filename,iGraphs,"Incremental")

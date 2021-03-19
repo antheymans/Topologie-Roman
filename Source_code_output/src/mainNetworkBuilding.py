@@ -22,9 +22,9 @@ def generate_graph(filename):
         aliasTable, connectionsTable, aliases = bIO.get_object(PATH_SERIALIZED+filename+"_alias")
         len_dialog_contexts = len(dialog_contexts)
         print("Loading OK. Graph building...")
-        iGraphs, graphs = bNB.build_networks(dialog_occurrences, len_dialog_contexts, connectionsTable)
+        iGraphs, graphs = bNB.build_networks(dialog_occurrences, len_dialog_contexts, connectionsTable, filename)
         print("OK, graph will be saved")
-        bIO.output_graphs(filename, iGraphs, graphs)
+        #bIO.output_graphs(filename, iGraphs, graphs)
         print("Output complete")
         
 if __name__ == '__main__':

@@ -268,4 +268,4 @@ def main_signature(files):
     
 if __name__ == '__main__':
     files = get_files_in_folder(PATH_BOOKS_OBJECT)
-    main_signature(files)
+    main_signature(files[0:3])

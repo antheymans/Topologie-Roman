@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import networkx as nx
-
+from bookInputOutput import set_preferential_attachement, get_preferential_attachement
 from helpers import uniques
 TIME_FACTOR = 0.9 #Factor by which the score decreases after each new mention during the incremental networks
 NOTABILITY = 1 #Minimum number of conversations in which an agent must be present for relevance
@@ -49,16 +49,49 @@ def build_context_networks(len_dialog_contexts,dialog_occurrences):
 # Global network generation function
 ###############################################################
 
-def build_inc_networks(graphs, nodeCount):
+def build_inc_networks(graphs, nodeCount, title):
     """
     Build a global graph for the entire book
     """
     iGraphs = []
     G = nx.Graph()
+    #count=[0 for i in range(500)]
+    #total=[0 for i in range(500)]
+    count = {}
+    total = {}
     
     for g in graphs:
+        """
+        
+        ### count local attachement
+        for n in g.nodes():
+            if n not in G.nodes:
+                print(n)
+                for n2 in G.nodes:
+                    total[G.degree[n2]] +=1
+                for (n3, n4) in g.edges(n):
+                    if n4 in G.nodes:
+                        print(n4, G.degree[n4])
+                        count[G.degree[n4]] +=1
+        """
+        ##global attachement
+        for n in g.nodes():
+            if n not in G.nodes:
+                for n2 in G.nodes:
+                    if n2 in total:
+                        total[n2] +=1
+                    else:
+                        count[n2] = 0
+                        total[n2] = 1
+                for (n3, n4) in g.edges(n):
+                    if n4 in G.nodes:
+                        count[n4] +=1
+                        
         for n in g.nodes():
             G.add_node(n)
+            
+                
+                
         
         for e in list(g.edges(data=True)):
             if G.has_edge(e[0],e[1]):
@@ -76,16 +109,17 @@ def build_inc_networks(graphs, nodeCount):
         if "" in G.nodes():
             G.remove_node("")
         iGraphs.append(G.copy())
-        
+    if title != "":
+        set_preferential_attachement([G.degree(node) for node in count.keys()], list(count.values()), list(total.values()), title)
     return iGraphs
 
 ###############################################################
 # Main network generation function
 ###############################################################
 
-def build_networks(dialog_occurrences, len_dialog_contexts, connectionsTable):
+def build_networks(dialog_occurrences, len_dialog_contexts, connectionsTable, title = ""):
     graphs, nodeCount = build_context_networks(len_dialog_contexts, dialog_occurrences)
-    iGraphs = build_inc_networks(graphs,nodeCount)
+    iGraphs = build_inc_networks(graphs,nodeCount,title)
     for node in iGraphs[-1].nodes():
         if node in connectionsTable.nodes():
             gender = connectionsTable.nodes()[node]["gender"]
