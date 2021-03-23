@@ -41,7 +41,7 @@ def generate_graph_degree(filename):
     for elem in degree:
         degree_distribution[int(elem)]+=1  
 
-    plt.plot(x, degree_distribution, label=str('Node Degree of ' + filename))    
+    plt.plot(x, degree_distribution, label=str('Node degree distribution of ' + filename))    
     plt.ylabel("Number of nodes")
     plt.xlabel("Nodes Degree")    
     plt.legend()
@@ -297,6 +297,7 @@ if __name__ == '__main__':
     files2 = []
     for file in files:
         #attachement_distribution(file[:-4])
+        generate_graph_degree(file[:-4])
         #print(file[-10:-4])
         if file[-10:-4]!="SCRIPT":
             #files2.append(file)
@@ -304,7 +305,7 @@ if __name__ == '__main__':
         else: 
             novels.append(file[:-4])
         files2.append(file[:-4])
-    draw_final(files2)
+    #draw_final(files2)
     #mean_distrib(files2) 
     #all_attachement_distribution(scripts, "Scripts")
     #all_attachement_distribution(novels, "Novels")

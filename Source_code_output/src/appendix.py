@@ -20,6 +20,29 @@ def attachment():
     if len(liste)%2 == 1: str += end
     print(str)
     
+    
+   
+def degree():
+    begin = "\\begin{figure} \ContinuedFloat \n \t\\centering\n"
+    end = "\\end{figure}\n"
+    str = ""
+
+    liste = os.listdir("../../rapport/pictures/degree")
+    for index in range(len(liste)):
+        image = liste[index]
+        if index % 2 == 0: str += begin 
+        str += "\t\\begin{subfigure}{.49\\textwidth}\n"
+        str += "\t\t\\centering\n"
+        str += "\t\t\\includegraphics[width=\\linewidth]{pictures/degree/"+image+"}\n"
+        str += "\t\t\\phantomcaption\n"
+        str += "\t\\end{subfigure}\n"
+        if index % 2 == 1: str += end 
+    if len(liste)%2 == 1: str += end
+    print(str)
+degree()
+exit()    
+    
+    
 def final():
     begin = "\\begin{figure} \ContinuedFloat \n \t\\centering\n"
     end = "\\end{figure}\n"
@@ -70,8 +93,6 @@ def gender_count(weighted = False):
     f.write(csv)
     f.close()
 
-gender_count(True)
-
 
 def draw():
     import networkx as nx
@@ -89,7 +110,7 @@ def draw():
     color_map = []
     for n, d in g.nodes(data=True):
         if d['gender']==1:
-            color_map.append('b')
+            color_map.append('#65a5cc')
         elif d['gender']==0: 
             color_map.append('g') 
         else:
@@ -99,8 +120,10 @@ def draw():
     figure.set_size_inches(16, 12)
     ax = plt.gca()
     ax.set_title("Social network of ASOIAF_1", fontsize = 24) 
-    nx.draw_spring(g,with_labels=True,font_size = 10, node_color=color_map ,alpha=0.8,node_size=nodesize,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
-    #plt.show()
+    nx.draw_spring(g,with_labels=True,font_size = 10, node_color=color_map ,alpha=0.1,node_size=nodesize,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
+    plt.show()
+    nx.draw_spring(g,with_labels=True,font_size = 10, node_color=color_map ,alpha=1,node_size=nodesize,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
+    plt.show()
     plt.savefig("spring.png", dpi=100)
     plt.close()
     figure = plt.gcf()
@@ -114,3 +137,5 @@ def draw():
     nx.draw(g,with_labels=True,font_size = 10, node_color='#65a5cc',alpha=0.8,node_size=nodesize,width=edgesize,edge_color=edgecolor,edge_cmap=cmap)
     plt.savefig("draw.png", dpi=100)
     plt.close()
+    
+draw()

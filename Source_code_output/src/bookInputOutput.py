@@ -420,7 +420,7 @@ def build_last_png_graphs(filename,g):
     color_map = []
     for n, d in g.nodes(data=True):
         if d['gender']==1:
-            color_map.append('b')
+            color_map.append('#65a5cc')
         elif d['gender']==0: 
             color_map.append('g') 
         else:
