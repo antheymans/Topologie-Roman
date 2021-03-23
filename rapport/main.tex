@@ -702,58 +702,31 @@ In order to use annotations while diminishing the number of related errors, a me
 
 
 \begin{table}[]
-\scalebox{0.7}{%
-\begin{tabular}{|l|l|l|l|l|l|l|}
-\hline
-Cluster mentions & Gender   & Main Name                  & Other names      &           &          &            \\ \hline
-312              & 1        & Ron Stallworth             & Stallworth       & Ron       &          &            \\ \hline
-158              & 0        & Flip                       &                  &           &          &            \\ \hline
-120              & 1        & Felix                      &                  &           &          &            \\ \hline
-78               & 1        & Patrice                    &                  &           &          &            \\ \hline
-58               & 0        & Chief Bridges              & Bridges          & Chief     &          &            \\ \hline
-57               & 1        & Walter                     & Walter Breachway & Breachway &          &            \\ \hline
-57               & 1        & Devin Davis                & Davis            & Devin     &          &            \\ \hline
-29               & 1        & Connie                     &                  &           &          &            \\ \hline
-29               & 1        & Walker                     &                  &           &          &            \\ \hline
-25               & 0        & Ivanhoe                    &                  &           &          &            \\ \hline
-23               & 0        & Sgt Trapp                  & Trapp            & Sgt       &          &            \\ \hline
-20               & 0        & Landers                    &                  &           &          &            \\ \hline
-20               & 0        & Kwame Ture                 & Ture             & Kwame     &          &            \\ \hline
-19               & 1        & Beauregard - Klan Narrator & Klan Narrator    & Narrator  & Klan     & Beauregard \\ \hline
-19               & 1        & Jimmy                      &                  &           &          &            \\ \hline
-13               & 1        & Jerome Turner              & Turner           & Jerome    &          &            \\ \hline
-11               & 1        & Mr Turrentine              & Turrentine       & Mr        &          &            \\ \hline
-10               & 0        & Agent Y                    & Agent            &           &          &            \\ \hline
-5                & 0        & Officer Mulaney            & Mulaney          & Officer   &          &            \\ \hline
-5                & 0        & Pleasant Man               & Man              & Pleasant  &          &            \\ \hline
-5                & 1        & Hakeem                     &                  &           &          &            \\ \hline
-3                & 0        & Wheaton                    &                  &           &          &            \\ \hline
-3                & 1        & Butch                      &                  &           &          &            \\ \hline
-3                & 1        & Jesse                      &                  &           &          &            \\ \hline
-3                & 0        & Cspd Officer Brickhouse    & Brickhouse       & Cspd      &          &            \\ \hline
-3                & 0        & Cspd Officer Myers         & Myers            &           &          &            \\ \hline
-2                & 0        & Black Mass                 & Mass             & Black     &          &            \\ \hline
-1                & 0        & Officer Cincer             & Cincer           &           &          &            \\ \hline
-1                & 0        & Pre - Recorded Message     & Recorded Message & Message   & Recorded & Pre        \\ \hline
-1                & 1        & Ron Stallworth             &                  &           &          &            \\ \hline
-1                & 0        & All                        &                  &           &          &            \\ \hline
-1                & 0        & Voice                      &                  &           &          &            \\ \hline
-1                & 0        & Klansmen                   &                  &           &          &            \\ \hline
-1                & -1       & Odetta                     &                  &           &          &            \\ \hline
-1                & 1        & Josh                       &                  &           &          &            \\ \hline
-1                & 0        & American Terrorists        & Terrorists       & American  &          &            \\ \hline
-\end{tabular}}
-\caption{Extracted characters for the script of the movie Blackkklansman. The first column contain the total number of times each alias of the character have been recorded as speaker. The second one contain the gender of the character. Then comes all aliases of the name. }
-\label{character_bkm}
+\scalebox{0.75}{%
+\csvautotabular[separator=semicolon]{csv/bkk_scriptStyle.csv}
+}
+\caption{Extracted characters of the script of the movie Blackkklansman with the algorithm designed for scripts. There is a 1 in the first column if the headword is not designating a character in an unambiguous way. The second column contain the total number of times each alias of the character have been recorded as speaker. The third one one contain the gender of the character. Then comes all aliases of the name. The rate of true positive is $0.823529412$.}
+ \label{character_bkm}
 \end{table}
 
+\begin{table}[]
+\scalebox{0.50}{%
+\csvautotabular[separator=semicolon]{csv/bkk_novelStyle.csv}
+}
+\caption{Extracted characters of the script of the movie Blackkklansman with the algorithm designed for novels. There is a 1 in the first column if the headword is not designating a character in an unambiguous way. The second column contain the total number of times each alias of the character have been recorded as speaker. The third one one contain the gender of the character. Then comes all aliases of the name. The rate of true positive is $0.251655629$.}
+ \label{bkk_nov}
+\end{table}
 
 The method allows to increase the number of detected aliases, to link aliases between them and to infer gender from names. It also allows to filter useless information from speaker and split multiple speakers when their appears. As speakers are not always properly chosen in pre-processing, we may still have some errors. There is also still the problem with non-speaking character. However those characters are minor and we consider that it is not an important issue.  On the movie ``Blackkklansman'', no errors are detected. All the extracted characters are really speakers from the story and their aliases are correctly bound. However some of the speakers are not human being: ``Pre - Recorded Message'' refers to a sentence given by the messagery of a phone, ``All'' refers to a sentence said by a crowd. I remind that in section \ref{performance}, I've defined speaking object as potential character. The list of extracted characters of ``blackklansman'' is given on figure \ref{character_bkm}.\\
 
-An other solution would have been to use the character extractor developed for novels on script. The table \ref{tab1} shows that this system is  doing many errors. Using this system on script could lead to even more errors as script have a less regular format than novels. This difference could be explained by the fact that scripts are not commercial product, they are not salable so error in the format are not corrected while the script is understandable for the users. In particular we found more uppercase words that makes the extractions of proper nouns more difficult. However the use of techniques associated to novels on scripts could improve the result for further advancement when character extractor will increase the precision, as techniques associated to novels use more information than just the annotation.\\
+
+\subsubsection{Result of the character extraction in scripts}
+Characters have been extracted from the script of Blackkklansman using the algorithm designed for scripts and the one designed for novels. Result are shown on figure \ref{character_bkm} and \ref{bkk_nov}. The rate of true positive is respectively $0.82$ and $0.25$. The result provided by the algorithm fitted for scripts are comparable to the results that we obtained with novels. It seems even higher but we would need to annotate a huge dataset of texts to be sure about it, which would be very time consuming.  We see that the algorithm proposed for novels provide worse results with scripts. Using it on script lead to more errors as script have a less regular format than novels. This difference could be explained by the fact that scripts are not commercial product, they are not salable so error in the format are not corrected while the script is understandable for the users. In particular we found more uppercase words that makes the extractions of proper nouns more difficult. However the use of techniques associated to novels on scripts could improve the result for further advancement when character extractor will increase the precision, as techniques associated to novels use more information than just the annotation.\\
 
 
-\subsection{Identification of character appearance}
+
+
+\subsection{Identification of character appearances}
 \label{identification}
 This step consists in binding each occurrence of character mention to the corresponding character and to identify speakers and listeners in each dialog. The algorithm have been mainly designed by \cite{original_thesis} but some adaptations have been made. The previous algorithm was using proper names and chunks associated to this proper names. The new version use proper nouns only.\\
 
@@ -772,7 +745,7 @@ For each conversation, each character detected as speaker or listener need to be
 \end{enumerate}
 
 
-\subsubsection{Identification of characters in a conversation}
+\subsubsection{Identification of characters in conversations}
 The program loads separately each conversation and look for characters appearance into it. Character are always separated into speaker and listener. \\
 \begin{itemize}
 \item Firstly all dialogs of the conversation are loaded and the program extract characters from the potential speaker and listener and filter them using the procedure given in section \ref{filtering}. 
@@ -809,7 +782,7 @@ Two types of network are constructed:
 \item context networks: social network that are relative to a single conversation and the associated context. 
 \item incremental networks: networks which are the result of the incremental addition of context networks. They represent the link between characters from a set of conversation.
 \end{enumerate}
-\subsection{context networks}
+\subsection{Context networks}
 Context network are a particular type of network developed by \cite{original}. They have the particularity of representing only a conversation, so, all characters of those networks tend to be linked between them. They have been designed only to make possible the construction of incremental network. \\
 
 They are builded by executing the following steps:
@@ -820,7 +793,7 @@ They are builded by executing the following steps:
 \item At the end of the network construction, the sentiment weight of each link is normalized by dividing it by the first weight of the link.
 \end{enumerate}
 
-\subsection{incremental networks}
+\subsection{Incremental networks}
 The name ``incremental network'' come from \cite{original} in opposition from the context networks. They are constructed by incrementally adding context network in a chronological order. There is as much incremental networks as there is conversations in a novel or a script. The objective of constructing such graphs is to observe how the social network evolve with the story.
 The final incremental networks represent all the relations in the narrative. It can be considered as a standard social network extracted from fiction that have been studied in many article such as \cite{agarwal-etal-2013-automatic, NER, character_country, movie, fiction, Dekker2018EvaluatingSN}.\\
 
@@ -1154,6 +1127,7 @@ Table \ref{gender_short_weighted} give weighted rates taking the degree of nodes
 
 
 \section{Characterization of networks}
+\label{char}
 
 As we saw in previous section, the extracted social networks have the small-world property and may be ``ultra-small word``. Their mean path length was shorter than equivalent family generated of small-world or scale-free networks. Networks extracted from novels have also also fill the conditions needed to be considered scale-free: they are constructed using a preferential attachment mechanism and their distribution follows a power-law with a k-value between 2 and 3. Despite this scale-free properties, they have a clustering coefficients near to the coefficients of the Watts-Strogatz generated networks. Networks extracted from scripts fill less scale-free conditions: they also follow preferential attachment but the power-law fit doesn't seems more accurate than the exponential fit and the k-value is around $0.96 \notin [2,3]$ . They also tends to be higher clustering coefficient. From this we can not classify them as scale-free but they are near from it and some individual network could be scale-free.\\
 
@@ -1165,8 +1139,9 @@ In all extracted networks, masculine characters are more frequent than feminine 
 This work consisted in the development of a software extracting social networks from novels and the analysis of extracted social networks.
 The development of the software consisted in 2 major parts: the way characters are extracted has been changed and it has been extended to work with movie scripts.\\
 
-The new character extraction process takes proper nouns instead of proper names. It made the process of alias-resolution more complex, which has been solve by an algorithm using semantic information of names and honorifics and inferring gender of characters.
-The result have shown that it leads to a decrease of the rate of fake characters around a factor of 2. The alias resolution is also more accurate, different characters are less likely to be merged in a single one.
+The new character extraction process takes proper nouns instead of proper names. This is common in state of the art methods but these methods use some tools that were not available in the parsing library used by the software. It made the process of alias-resolution more complex, which has been solved by the development of a multi-pass algorithm using element of different state of the art method and some rules based on semantic information of names and honorifics. This algorithm is inferring gender of names to perform the alias resolution. It has been use to label the gender of the extracted characters.
+The result have shown that it leads to a decrease of the rate of fake characters. This decreasing have a factor of approximately 2. The alias resolution is also more accurate, different characters are less likely to be merged in a single one.
+It's equivalent to the result of a state of the art method used for comparison.
  From this we can conclude that this change allow to produce social networks more representative of the networks describes by the stories. The labeling of the gender of different characters is also an enrichment of social networks.
  However the characters extraction could be improved by using contextual information, by binding some aliases depending to context or by inferring gender of characters based on the pronoun used to describe them. 
  The size of the datasets used to select nouns among uppercase words or infer genders could be increased.\\
@@ -1174,7 +1149,7 @@ The result have shown that it leads to a decrease of the rate of fake characters
  The extension of the software to script required some adjustment. The bigger difference between novels and scripts is that  script have annotated speaker for most sentence of dialogs. Scripts also have less contextual information between dialogs.
  A new algorithm of character extraction has been designed for script, using those annotations. Result have shown that it has best result on script than the initial algorithm. \\
  
-The analysis of the social network consists in the computation of some metrics on the generated networks and the characterization of the graph related to the characteristics of small-world and scale-free networks. Scripts and novels have been compared and the rate of different gender in the networks has been analyzed. It shows that all networks have the small-world property but only those extracted from novels are totally scale-free. However networks extracted from scripts are near from some ``soft'' definition of scale-free. Masculine characters are more frequent in both novels and scripts. But scripts tends to introduce even less feminine characters than novels and to give them less importance. In novels we didn't found any meaningful difference between the importance of feminine and masculine characters.
+The analysis of the social network consists in the computation of some metrics on the generated networks and the \hyperref[char]{characterization} of the graph related to the characteristics of small-world and scale-free networks. Scripts and novels have been compared and the rate of different gender in the networks has been analyzed. It shows that all networks have the small-world property but only those extracted from novels are totally scale-free. However networks extracted from scripts are near from some ``soft'' definition of scale-free. Masculine characters are more frequent in both novels and scripts. But scripts tends to introduce even less feminine characters than novels and to give them less importance. In novels we didn't found any meaningful difference between the importance of feminine and masculine characters.
 
 
 \listoffigures
@@ -1245,15 +1220,14 @@ TWOT & The Wheel of Time\\
 
 \chapter{Attachment}
 \label{ref_attachement}
-\input{annexeA.tex}
+%\input{annexeA.tex}
 
 
 
 
 \chapter{Node degree distribution}
 \label{a_degree}
-\input{appendix_degree.tex}
-
+%\input{appendix_degree.tex}
 
 
 
@@ -1270,7 +1244,7 @@ This section contains the final incremental networks. In those networks:
 \item Graphs are drawn using Kamada–Kawai algorithm. 
 \end{itemize}
 \label{final_sn}
-\input{SN.tex}
+%\input{SN.tex}
 
 
 
