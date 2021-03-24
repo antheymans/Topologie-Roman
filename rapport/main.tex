@@ -98,9 +98,18 @@
 	\end{picture}
 	\restoregeometry
 
+\begin{abstract}
+Social network analysis is a field that use computer science in order to produce result in many fields as sociology or psychology. Some research in social networks concern the networks of characters described in fictions such as novels or films.
+
+In this work a software extracting social networks from literary has been deepen and the resulting social networks have been analyzed.
+The development of the software consists of its extension to movie script and the creation of a new algorithm of characters extraction.
+This is a multi-pass algorithm extracting all proper proper names and iteratively linking them based on semantic information and inferred genders. 
+\end{abstract}
+
+
 \tableofcontents
 
-\chapter{Introduction}
+\part{Introduction}
 Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consists of using graphs and networks theory to represent relations among actors as a network in order to analyze them.  Originally the ``actor'' used in the network are people but some field use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various field like geography \citep{economic_geography} or organizations  management \citep{management}.  It has been used in psychology \citep{psy} as  it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agent of  Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it.  Social network analysis have also be designated as a way to enforce laws and disrupt gang by the The International Association of Chiefs of Police \citep{police}. \\
 
 Research in computer science are developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social network from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated method that analyze text of fiction also produce metadata that help to analyze them. For instance \cite{original} produce the social network novels but also count the mean distance between two dialogs in the novel. This measure produce meaningful result when it is used to classify novels. Social network can be seen as a metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
@@ -779,8 +788,8 @@ All characters that don't have been identified a single time among all conversat
 The social network is constructed using the identification of characters in dialogs in section \ref{identification}. The implementations is made using the python library \textit{networkx} \citep{networkx}.
 Two types of network are constructed:
 \begin{enumerate}
-\item context networks: social network that are relative to a single conversation and the associated context. 
-\item incremental networks: networks which are the result of the incremental addition of context networks. They represent the link between characters from a set of conversation.
+\item Context networks: social network that are relative to a single conversation and the associated context. 
+\item Incremental networks: networks which are the result of the incremental addition of context networks. They represent the link between characters from a set of conversation.
 \end{enumerate}
 \subsection{Context networks}
 Context network are a particular type of network developed by \cite{original}. They have the particularity of representing only a conversation, so, all characters of those networks tend to be linked between them. They have been designed only to make possible the construction of incremental network. \\
@@ -1139,12 +1148,12 @@ In all extracted networks, masculine characters are more frequent than feminine 
 This work consisted in the development of a software extracting social networks from novels and the analysis of extracted social networks.
 The development of the software consisted in 2 major parts: the way characters are extracted has been changed and it has been extended to work with movie scripts.\\
 
-The new character extraction process takes proper nouns instead of proper names. This is common in state of the art methods but these methods use some tools that were not available in the parsing library used by the software. It made the process of alias-resolution more complex, which has been solved by the development of a multi-pass algorithm using element of different state of the art method and some rules based on semantic information of names and honorifics. This algorithm is inferring gender of names to perform the alias resolution. It has been use to label the gender of the extracted characters.
-The result have shown that it leads to a decrease of the rate of fake characters. This decreasing have a factor of approximately 2. The alias resolution is also more accurate, different characters are less likely to be merged in a single one.
+The new character extraction process takes proper nouns instead of proper names. This is common in state of the art methods but these methods use some tools that were not available in the parsing library used by the software. It made the process of alias-resolution more complex, which has been solved by the development of a multi-pass algorithm using element of different state of the art method, especially some rules based on semantic information of names and honorifics. This algorithm is inferring gender of names to perform the alias resolution. It has been use to label the gender of the extracted characters.
+The result have shown that it leads to a decrease of the rate of fake characters by factor of approximately 2.
 It's equivalent to the result of a state of the art method used for comparison.
  From this we can conclude that this change allow to produce social networks more representative of the networks describes by the stories. The labeling of the gender of different characters is also an enrichment of social networks.
  However the characters extraction could be improved by using contextual information, by binding some aliases depending to context or by inferring gender of characters based on the pronoun used to describe them. 
- The size of the datasets used to select nouns among uppercase words or infer genders could be increased.\\
+The size of the datasets used to select nouns among uppercase words or infer genders could be increased.\\
  
  The extension of the software to script required some adjustment. The bigger difference between novels and scripts is that  script have annotated speaker for most sentence of dialogs. Scripts also have less contextual information between dialogs.
  A new algorithm of character extraction has been designed for script, using those annotations. Result have shown that it has best result on script than the initial algorithm. \\
