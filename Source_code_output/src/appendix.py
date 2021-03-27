@@ -39,8 +39,7 @@ def degree():
         if index % 2 == 1: str += end 
     if len(liste)%2 == 1: str += end
     print(str)
-degree()
-exit()    
+
     
     
 def final():
@@ -138,4 +137,48 @@ def draw():
     plt.savefig("draw.png", dpi=100)
     plt.close()
     
-draw()
+def create_csv_characters():
+    filenames = os.listdir("../../rapport/pictures/degree")
+    for filename in filenames:
+        name = filename[:-4]
+        f = open("../csv/"+name+"/alias_cluster.csv", "r")
+        lines = f.readlines()
+        str = lines[0]
+        for line in lines[1:]:
+            elems = line.strip().split(CSV_COMMA)
+            coma_needed = 0
+            for i in range(len(elems)):
+                if i < 3:
+                    str += elems[i] + CSV_COMMA
+                elif len(elems[i]) > 0:
+                    if (i - 2) %8 == 0:
+                        str += "\n ;;;"
+                    elif coma_needed :
+                        str += ","
+                    str += elems[i]
+                    coma_needed = 1
+            str += "\n"
+        f.close()
+        f = open("../../rapport/csv/cluster/"+name+".csv", "w")
+        f.write(str)
+        f.close()
+        
+def characters_to_latex():
+    str = "\\begin{small}"
+
+    liste = os.listdir("../../rapport/csv/cluster")
+    
+    for index in range(len(liste)):
+        csv = liste[index]
+        #if index%2 == 0:
+        str += "\\begin{table}[] \n\n "
+        str += "\t\t\\csvautolongtable[separator=semicolon, respect sharp, respect and, respect dollar]{csv/cluster/"+csv+"}\n"
+        str += "\t \\caption{Extracted characters of "+csv[:-4]+"}\n"
+        #if index%2 == 0:
+        str += "\end{table}\n\n"
+    str += "\\end{small}"
+    print(str)
+create_csv_characters()
+#characters_to_latex()
+
+           

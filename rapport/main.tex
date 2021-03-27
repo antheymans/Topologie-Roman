@@ -5,6 +5,7 @@
 
 % Some highly suggested packages, please read their manuals.
 
+\usepackage{longtable}
 \setcounter{secnumdepth}{3} % default value for 'report' class is "2"
 \usepackage{natbib}
 \bibliographystyle{apalike}
@@ -12,7 +13,7 @@
 \usepackage{lscape}
 \usepackage[utf8]{inputenc}
 \usepackage{color}
-\usepackage[top=2.5cm, bottom=1.5cm, left=2.5cm, right=1cm]{geometry}
+\usepackage[hmargin={1in,1in},vmargin={1in,1in}]{geometry}
 \usepackage[pdftex]{graphicx}
 \usepackage{tikz}
 \usepackage{breqn}
@@ -24,6 +25,7 @@
 \usepackage[toc,page]{appendix} 
 \usepackage{graphicx}
 \usepackage{caption}
+
 
 % Logos
 \newcommand{\ulb}{\includegraphics[scale=1.1]{logo_ULB2.pdf}}
@@ -40,7 +42,7 @@
 \newcommand{\titleA}{\fontTitle{Etude de la topologie de réseaux d'acteurs}} % Titre identique au titre remis au secrétariat
 \newcommand{\titleB}{\fontTitle{extraits à partir de romans célèbre}} % (dans la langue de rédaction a priori)
 % Sous-titre
-\newcommand{\subtitle}{\fontSubtitle{Ligne du sous-titre du mémoire}}
+%\newcommand{\subtitle}{\fontSubtitle{Ligne du sous-titre du mémoire}} l73 uncomment
 % Titre du diplôme
 \newcommand{\diplomaA}{\fontText{Mémoire présenté en vue de l’obtention du diplôme}} % A laisser en Français
 \newcommand{\diplomaB}{\fontText{d’Ingénieur Civil en informatique à finalité spécialisée}}
@@ -63,6 +65,7 @@
 	\thispagestyle{empty}
 	\newgeometry{top=2.5cm, bottom=1.5cm, left=2.5cm, right=1cm}
 	\setlength{\unitlength}{1mm}
+	\extrafloats{100}
 	\noindent\begin{picture}(175,257)
 	
 		\put(0,245){\polytech}
@@ -70,7 +73,7 @@
 		
 		\put(8,155){\makebox(150,10)[l]{\titleA}}
 		\put(8,145){\makebox(150,10)[l]{\titleB}}
-		\put(8,135){\makebox(150,10)[l]{\subtitle}}
+		%\put(8,135){\makebox(150,10)[l]{\subtitle}}
 		
 		\put(0,75){
 		\begin{tikzpicture}[scale=0.1]
@@ -107,33 +110,28 @@ In this work a software extracting social networks from literary has been deepen
 
 The development of the software consists of its extension to movie script and the creation of new algorithms for characters extraction.
 The initial program was using proper nouns (single words names) rather than proper names (single or multiple words names). 
-An algorithm created for novels extracts proper proper names and iteratively links them in a multi-pass way, based on semantic information and inferred genders. The rate of extracted characters wrongly considered as characters is divided by 2 and some of them have a gender labeled. A second algorithm has been created to extract characters in scripts. It's using annotated speaker from scripts and a basic alias resolution system to solve variation in the names provided by the annotations. The algorithm designed for novels is providing bad result for scripts as they contain less contextual information between dialogs. The one designed for scripts gives results that seems at least as accurate than the one given on novels by the related algorithm. \\
+An algorithm created for novels extracts proper proper names and iteratively links them in a multi-pass way, based on semantic information and inferred genders. The rate of extracted characters wrongly considered as characters is divided by 2 and some of them have a gender labeled. A second algorithm has been created to extract characters in scripts. It's using annotated speaker from scripts and a basic alias resolution system to solve variation in the names provided by the annotations. The algorithm designed for novels is providing bad result for scripts as they contain less narration. The one designed for scripts gives results that seems at least as accurate than the one given on novels by the related algorithm. \\
 
 The analysis of the extracted networks consists in the computing of some metrics to characterize them as scale-free or small world and an analysis of the gender distributions. It shows that all social networks have the small-world property and the ones extracted from novels can be considered as scale-free. This is not the case of scripts even if they seems to approach some scale-free properties.  Masculine characters are most frequent in novels and script but the gap is more important in movies scripts. Also in scripts, feminine characters tend to have smaller degree than masculine characters.
 \end{abstract}
 
 \section*{Acknowledgement}
 
-
+\newpage
 \section*{Résumé}
 Ce mémoire de fin d'étude a été réalisé par Antoine Heymans en vue de l'obtention d'un master d’ingénieur civil en informatique à finalité spécialisée à l’Université Libre de Bruxelles en 2020-2021. Le titre complet du mémoire est ``Etude de la topologie de réseaux d'acteurs extraits à partir de roman célèbre.''.\\
 
-Ce travail prends place dans le cadre de l'analyse de réseaux sociaux, un champ de recherches qui mêle science informatique et d'autres domaines tel que la sociologie ou la psychologie. Certaines de ces recherches s'intéressent plus particulièrement aux réseaux de personnages que l'on retrouve dans la fiction, notamment dans les romans ou les films.
-Le mémoire est séparé en deux parties: premièrement le développement d'un logiciel permettant d'extraire des réseaux sociaux à partir de textes. Ce logiciel avait initialement été créé lors d'un autre mémoire de fin d'étude présenté par Thibault Nicodème. La deuxième partie du mémoire consiste en l'analyse des réseaux précédemment obtenus.\\
+Ce travail prends place dans le cadre de l'analyse de réseaux sociaux, un champ de recherches qui mêle science informatique et d'autres domaines tel que la sociologie ou la psychologie.
+Le mémoire est séparé en deux parties: premièrement le développement d'un logiciel existant permettant d'extraire des réseaux sociaux à partir de textes de fictions.  La deuxième partie du mémoire consiste en l'analyse des réseaux précédemment obtenus.\\
 
-Deux changements majeurs ont été apportés au logiciel: tout d'abord le fonctionnement du logiciel a été adapté pour permettre l'utilisation de script de films, le programme initial n'ayant été conçu que pour les romans. Ensuite, alors qu'initialement l'unité lexicale désignant les personnages était le nom propre composé d'un seul mot. La logiciel a été modifié pour permettre au programme d'extraire des noms de personnages composés de plusieurs mots tels que des ensembles composés d'un prénom et d'un nom de famille. Cette modification permet d'accéder à d'avantage d'information lors du processus de résolutions d'alias tout en le rendant plus complexe. Une difficulté majeure réside dans le fait que le programme repose sur une librairie de traitement automatique du langage naturel qui ne permets pas l'utilisation de certains outils modernes. Deux algorithmes ont été créé afin d'extraire les personnages dans le cas des romans et des scripts. Dans le cas des romans, il s'agit d'un algorithme à passe multiple catégorisant tout les alias puis les liant entre eux itérativement en se basant essentiellement sur l'information sémantique qu'ils contiennent. Dans le cas des scripts, des alias sont récupérés à partir des annotations puis certains d'entre eux sont liés à nouveau sur base d'information sémantique. Les deux algorithmes affectent également un genre aux différents alias afin de ne pas lier ensemble des alias de genre différents et augmenter leurs précisions. Les résultats montrent que la précision de l'extraction de personnages dans les nouvelles est similaire à une autre méthode de l'état de l'art lorsque l'on compare le nombre de personnages extraits qui désignent univoquement un personnage apparaissant effectivement dans le texte. Cette précision est approximativement le double de la précision obtenue avec le logiciel original. Le second algorithme permet d'obtenir avec les scripts un résultat légèrement plus précis. Enfin les réseaux obtenus comprennent le genre d'une partie des personnages.\\
-
-
-L'analyse des réseaux obtenus a consisté en le calcul de différentes métriques afin de déterminer si ces réseaux peuvent être considérés étants des réseaux ''petit monde'' et invariants d'échelles. Enfin la distribution des genres parmi les personnages a été analysée. Les résultats montrent que les réseaux extraits à partir de romans répondent à ces deux définitions. Les réseaux extraits de scripts de films en revanche possèdent la propriété du ``petit monde'' mais pas toutes les propriétés requises que pour être considérés comme invariants d'échelle. Ils en semblent néanmoins proches. Concernant le genre des personnages, les personnages masculins sont plus fréquents dans les romans comme dans les scripts mais cet écart plus grand dans le cas des romans que dans le cas des scripts. Les scripts tendent également à avoir des personnages féminins connectés à moins d'interlocuteurs. Cette observation n'est pas retrouvée chez les réseaux extraits de romans.
+Deux changements majeurs ont été apportés au logiciel: tout d'abord le fonctionnement du logiciel a été adapté pour permettre l'utilisation de script de films, le programme initial n'ayant été conçu que pour les romans. Ensuite, alors qu'initialement l'unité lexicale désignant les personnages était le nom propre composé d'un seul mot, le logiciel a été modifié pour permettre au programme d'extraire des noms de personnages composés de plusieurs mots. Cette modification permet d'accéder à d'avantage d'information lors du processus de résolution d'alias tout en le rendant plus complexe. Une difficulté majeure réside dans le fait que le programme repose sur une librairie de traitement automatique du langage naturel qui ne permets pas l'utilisation de certains outils. Deux algorithmes ont été créé afin d'extraire les personnages dans le cas des romans et des scripts. Dans le cas des romans, il s'agit d'un algorithme à passe multiple catégorisant tout les alias puis les liant entre eux itérativement en se basant essentiellement sur l'information sémantique qu'ils contiennent. Dans le cas des scripts, des alias sont récupérés à partir des annotations puis certains d'entre eux sont liés. Les deux algorithmes affectent également un genre aux différents alias. Les résultats montrent que la précision de l'extraction de personnages dans les romans est similaire à une autre méthode de l'état de l'art. Cette précision est approximativement le double de la précision obtenue avec le logiciel original. Le second algorithme permet d'obtenir avec les scripts un résultat légèrement plus précis. Enfin les réseaux obtenus comprennent le genre d'une partie des personnages.\\
 
 
+La caractérisation des réseaux obtenus a été réalisée en mesurant différentes métriques afin de déterminer si ces réseaux peuvent être considérés étants des réseaux ''petit monde'' ou invariants d'échelles. La distribution des genres parmi les personnages a été également analysée. Les résultats montrent que les réseaux extraits à partir de romans répondent à ces deux définitions. Les réseaux extraits de scripts de films en revanche possèdent la propriété du ``petit monde'' mais pas toutes les propriétés requises que pour être considérés comme invariants d'échelle. Les personnages masculins sont plus fréquents dans les romans comme dans les scripts mais cet écart est plus grand dans le cas des scripts. Ceux-ci tendent également à avoir des personnages féminins connectés à moins d'interlocuteurs.
 
 
 
 
-
-
-Ce mémoire consiste 
 
 \section*{Popularizing article}
 
@@ -142,7 +140,7 @@ Ce mémoire consiste
 
 \tableofcontents
 
-\part{Introduction}
+\chapter{Introduction}
 Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consists of using graphs and networks theory to represent relations among actors as a network in order to analyze them.  Originally the ``actor'' used in the network are people but some field use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various field like geography \citep{economic_geography} or organizations  management \citep{management}.  It has been used in psychology \citep{psy} as  it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agent of  Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it.  Social network analysis have also be designated as a way to enforce laws and disrupt gang by the The International Association of Chiefs of Police \citep{police}. \\
 
 Research in computer science are developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social network from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated method that analyze text of fiction also produce metadata that help to analyze them. For instance \cite{original} produce the social network novels but also count the mean distance between two dialogs in the novel. This measure produce meaningful result when it is used to classify novels. Social network can be seen as a metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
@@ -874,6 +872,9 @@ Honorifics are only properly labeled if they are present in the word list. There
 Honorifics would be considered as first name and it could decrease the performance of the alias-resolution process. 
 Also characters would be less likely to be gendered. \\
 
+
+Results for character extraction of other novels are available on appendix \ref{alias_extracted}. \\
+
 \subsubsection{Further improvement}
 The method developed here for character extraction in novels gives satisfying result but could have several improvements. 
 Firstly a NER tool should be used in order to use syntactical information to separate location from characters names.
@@ -980,7 +981,7 @@ We see that the algorithm proposed for novels provide worse results with scripts
 This difference could be explained by the fact that scripts are not commercial product, they are not salable so error in the format are not corrected while the script is understandable for the users. 
 In particular we found more uppercase words that makes the extractions of proper names more difficult. 
 However the use of techniques associated to novels on scripts could improve the result for further advancement when character extractor will increase the precision, 
-as techniques associated to novels use more information than just the annotation.\\
+as techniques associated to novels use more information than just the annotation. Results for character extraction of other scripts are available on appendix \ref{alias_extracted}.\\
 
 
 \subsection{Identification of character appearances}
@@ -1139,7 +1140,7 @@ The size of each component of novels and scripts is on table \ref{signature}. Th
 
 
 \section{Measures}
-Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges than the extracted networks. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network. The result of this measurement is on table //TODO. The generated networks don't have exactly the same number of edges and nodes than the original ones. However it's important to remember that those family of graphs are not distinct.\\
+Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges than the extracted networks. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network. The generated networks don't have exactly the same number of edges and nodes than the original ones. However it's important to remember that those family of graphs are not distinct.\\
 
 \begin{itemize}
 \item Watts-Strogatz small-world networks are created using the method given in section \ref{sm-section}, with the same number of nodes than the original graph and with a probability of 0.5 . Their mean degree is the nearest integer from the original mean degree.
@@ -1499,14 +1500,14 @@ TWOT & The Wheel of Time\\
 
 \chapter{Attachment}
 \label{ref_attachement}
-%\input{annexeA.tex}
+\input{annexeA.tex}
 
 
 
 
 \chapter{Node degree distribution}
 \label{a_degree}
-%\input{appendix_degree.tex}
+\input{appendix_degree.tex}
 
 
 
@@ -1523,9 +1524,14 @@ This section contains the final incremental networks. In those networks:
 \item Graphs are drawn using Kamada–Kawai algorithm. 
 \end{itemize}
 \label{final_sn}
-%\input{SN.tex}
+\input{SN.tex}
 
-
+\chapter{Alias extracted}
+This sections shows the set of alias designating characters for some novels and books.
+The number of appearance of the character and its gender are also given. 
+The main name is the name use on the social network to designate the character.
+\label{alias_extracted}
+\input{characters}
 
 
 \end{appendices} 
