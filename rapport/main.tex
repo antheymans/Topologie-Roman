@@ -5,6 +5,8 @@
 
 % Some highly suggested packages, please read their manuals.
 
+
+\usepackage{cmap}
 \usepackage{longtable}
 \setcounter{secnumdepth}{3} % default value for 'report' class is "2"
 \usepackage{natbib}
@@ -12,6 +14,7 @@
 \usepackage{url}
 \usepackage{lscape}
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{color}
 \usepackage[hmargin={1in,1in},vmargin={1in,1in}]{geometry}
 \usepackage[pdftex]{graphicx}
@@ -105,17 +108,16 @@
 \null
 
 \begin{abstract}
-Social network analysis is a field that use computer science in order to produce result in many fields as sociology or psychology. Some research in social networks concern the networks of characters described in fictions such as novels or films.
-In this work a software extracting social networks from literary has been deepen and the resulting social networks have been analyzed.\\
+Social network analysis is a field that uses computer science in order to produce results in many fields as sociology or psychology. Some research in social networks concerns the networks of characters described in fiction such as novels or films.
+In this work, a software extracting social networks from literature has been deepened and the resulting social networks have been analyzed.\\
 
-The development of the software consists of its extension to movie script and the creation of new algorithms for characters extraction.
-The initial program was using proper nouns (single words names) rather than proper names (single or multiple words names). 
-An algorithm created for novels extracts proper proper names and iteratively links them in a multi-pass way, based on semantic information and inferred genders. The rate of extracted characters wrongly considered as characters is divided by 2 and some of them have a gender labeled. A second algorithm has been created to extract characters in scripts. It's using annotated speaker from scripts and a basic alias resolution system to solve variation in the names provided by the annotations. The algorithm designed for novels is providing bad result for scripts as they contain less narration. The one designed for scripts gives results that seems at least as accurate than the one given on novels by the related algorithm. \\
+The development of the software consists of its extension to movie scripts and the creation of new algorithms for character extraction.
+The initial program was using proper nouns (single word names) rather than proper names (single or multiple word names).
+An algorithm created for novels extracts proper names and iteratively links them in a multi-pass way, based on semantic information and inferred genders. The rate of extracted characters wrongly considered as characters is divided by 2 and some of them have a gender labeled. A second algorithm has been created to extract characters in scripts. It's using annotated speaker from scripts and a basic alias resolution system to solve variation in the names provided by the annotations. The algorithm designed for novels is providing bad results for scripts as they contain less narration. The one designed for scripts gives results that seem at least as accurate as the one given on novels by the related algorithm. \\
 
-The analysis of the extracted networks consists in the computing of some metrics to characterize them as scale-free or small world and an analysis of the gender distributions. It shows that all social networks have the small-world property and the ones extracted from novels can be considered as scale-free. This is not the case of scripts even if they seems to approach some scale-free properties.  Masculine characters are most frequent in novels and script but the gap is more important in movies scripts. Also in scripts, feminine characters tend to have smaller degree than masculine characters.
+The analysis of the extracted networks consists in the computing of some metrics to characterize them as scale-free or small world and an analysis of the gender distributions. It shows that all social networks have the small-world property and the ones extracted from novels can be considered scale-free. This is not the case with scripts even if they seem to approach some scale-free properties. Masculine characters are most frequent in novels and scripts but the gap is more important in movie scripts. Also in scripts, feminine characters tend to have a smaller degree than masculine characters.
 \end{abstract}
 
-\section*{Acknowledgement}
 
 \newpage
 \section*{Résumé}
@@ -136,16 +138,15 @@ La caractérisation des réseaux obtenus a été réalisée en mesurant différe
 \section*{Popularizing article}
 
 \section*{Acknowledgement}
-
-
+I would like to thank my promoter Hugues Bersini for giving me the opportunity to work on this interesting project and to guide me along with this thesis. I would like to thank Michael Waumans and Thibault Nicodème who started this project and provide me a software that I could use as the basis of this master thesis. I would also like to thanks Mathias Dewilde that share with me his linguistic knowledge and Marion Guillaume, Joachim Balis, and Solène Rimbault for the emotional support.
 \tableofcontents
 
 \chapter{Introduction}
-Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consists of using graphs and networks theory to represent relations among actors as a network in order to analyze them.  Originally the ``actor'' used in the network are people but some field use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various field like geography \citep{economic_geography} or organizations  management \citep{management}.  It has been used in psychology \citep{psy} as  it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agent of  Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it.  Social network analysis have also be designated as a way to enforce laws and disrupt gang by the The International Association of Chiefs of Police \citep{police}. \\
+Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consists of using graphs and networks theory to represent relations among actors as a network in order to analyze them. Originally the ``actor'' used in the network are people but some fields use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various fields like geography \citep{economic_geography} or organizations management \citep{management}. It has been used in psychology \citep{psy} as it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agents of Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it. Social network analysis has also be designated as a way to enforce laws and disrupt gangs by The International Association of Chiefs of Police \citep{police}. \\
 
-Research in computer science are developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social network from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated method that analyze text of fiction also produce metadata that help to analyze them. For instance \cite{original} produce the social network novels but also count the mean distance between two dialogs in the novel. This measure produce meaningful result when it is used to classify novels. Social network can be seen as a metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
+Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social networks from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that helps to analyze them. For instance, \cite{original} produce the social network novels but also count the mean distance between two dialogs in the novel. This measure produces meaningful results when it is used to classify novels. Social networks can be seen as metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
 
-This master thesis consists firstly in the development of a software that extracts social networks and other metadata from novels and movie scripts. Secondly it consists in the analysis of the topology of the extracted networks. The software has been originally developed during an other master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was only working on novels. For this reason I will focus on the modification that I have made and the evolution of the state of the art since this period. The global way the software works will also be explained briefly. \\
+This master thesis consists firstly in the development of a software that extracts social networks and other metadata from novels and movie scripts. Secondly, it consists of the analysis of the topology of the extracted networks. The software has been originally developed during another master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was only working on novels. For this reason, I will focus on the modification that I have made and the evolution of the state of the art since this period. The global way the software works will also be explained briefly. \\
 
 
 \chapter{Network theory}
@@ -1093,13 +1094,12 @@ The networks have been drawn using the following rules:
 
 \newpage
 \section{Data-extracted}
-Various data have been extracted from the document and can be used for further analysis. This data include networks, information about the characters and dialogs or meta-data used by the program.
+Various data have been extracted from the document during the building of the network and can be used for further analysis. This data include networks, information about the characters and dialogs or meta-data used by the program.
 Extracted networks includes:
 \begin{itemize}
 \item The global network under the form of a \textit{.gefx} and \textit{.json} file. Those format make possible to manipulate the graph using external software like Gephi.
-\item A \textit{.png} representation of each context and incremental graphs.
+\item A \textit{.png} representation of each context and incremental graphs. Final incremental graphs are available on appendix \ref{final_sn}.
 \item A csv file with the edges, weight and sentiment of all incremental and context graph produced.
-\item Two csv files containing the clustering coefficient of each graph.
 \end{itemize}
 
 The other data produced by the program are csv files containing:
@@ -1122,13 +1122,14 @@ The other data produced by the program are csv files containing:
 
 \chapter{Network analysis}
 In this second chapter, the final incremental social networks are analyzed. In this section we will refer them as the ``extracted networks''. 
+We will compare them with networks of equivalent size generated using different mechanisms, they are referred as the ``generated networks''.
 Some analysis have been produced by \cite{original} and will be actualized using the correction of network extraction process. 
 The analysis will also benefits to the addition of new metrics, the comparison between novels and scripts and the addition of gender in the network.
 
 \section{Connectivity}
 
 \begin{table}[]
-\scalebox{0.54}{%
+\scalebox{0.53}{%
 \csvautotabular[separator=semicolon]{csv/signatures.csv}
 }
 \caption{Data collected for each novel and script. Some title are under the form of an abbreviation, the corresponding title
@@ -1140,7 +1141,7 @@ The size of each component of novels and scripts is on table \ref{signature}. Th
 
 
 \section{Measures}
-Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges than the extracted networks. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network. The generated networks don't have exactly the same number of edges and nodes than the original ones. However it's important to remember that those family of graphs are not distinct.\\
+Multiple measures have been performed on social networks: mean path length, mean degree and clustering coefficients (transitivity and global clustering coefficients). For each graph, a small-world network, a random network and a scale-free network have been generated with approximately the same number of nodes and edges than the extracted networks. Measure have also been performed on those graph in order to allow comparison between different type of network and make easier the classification of characters social network. The generated networks don't have exactly the same number of edges and nodes than the original ones. However it's important to remember that those family of graphs are not distinct. Completes measures are available on appendix \ref{measures_generated}.\\
 
 \begin{itemize}
 \item Watts-Strogatz small-world networks are created using the method given in section \ref{sm-section}, with the same number of nodes than the original graph and with a probability of 0.5 . Their mean degree is the nearest integer from the original mean degree.
@@ -1533,6 +1534,31 @@ The main name is the name use on the social network to designate the character.
 \label{alias_extracted}
 \input{characters}
 
+
+\chapter{Measures of metrics on generated networks}
+\label{measures_generated}
+For each extracted social network, networks with approximately the same number of edges and nodes has been generated using different generation mechanism. This section contains the measures computed on the generated networks.
+
+
+\begin{table}[]
+	\scalebox{0.50}{
+                \csvautotabular[separator=semicolon, respect sharp, respect and, respect dollar]{csv/signatures_random.csv}}
+         \caption{Measures computed on Erdős–Rényi random networks. The title of the associated social network is on the left.}
+\end{table}
+
+
+\begin{table}[]
+	\scalebox{0.50}{
+                \csvautotabular[separator=semicolon, respect sharp, respect and, respect dollar]{csv/signatures_scale-free.csv}}
+         \caption{Measures computed on Barabási-Albert scale-free networks. The title of the associated social network is on the left.}
+\end{table}
+
+
+\begin{table}[]
+	\scalebox{0.50}{
+                \csvautotabular[separator=semicolon, respect sharp, respect and, respect dollar]{csv/signatures_small-world.csv}}
+         \caption{Measures computed on Watts-Strogatz small-world networks. The title of the associated social network is on the left.}
+\end{table}
 
 \end{appendices} 
 
