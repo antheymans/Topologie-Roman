@@ -113,40 +113,88 @@ In this work, a software extracting social networks from literature has been dee
 
 The development of the software consists of its extension to movie scripts and the creation of new algorithms for character extraction.
 The initial program was using proper nouns (single word names) rather than proper names (single or multiple word names).
-An algorithm created for novels extracts proper names and iteratively links them in a multi-pass way, based on semantic information and inferred genders. The rate of extracted characters wrongly considered as characters is divided by 2 and some of them have a gender labeled. A second algorithm has been created to extract characters in scripts. It's using annotated speaker from scripts and a basic alias resolution system to solve variation in the names provided by the annotations. The algorithm designed for novels is providing bad results for scripts as they contain less narration. The one designed for scripts gives results that seem at least as accurate as the one given on novels by the related algorithm. \\
+An algorithm created for novels extracts proper names and iteratively links them in a multi-pass way, based on semantic information and inferred genders. The rate of extracted characters wrongly considered as such is divided by 2 and some of them are labeled with a gender. A second algorithm has been created to extract characters in scripts. It's using annotated speaker from scripts and a basic alias resolution system to solve variation in the names provided by the annotations. The algorithm designed for novels is providing bad results for scripts as they contain less narration. The one designed for scripts gives results that seem more accurate as the one given on novels by the related algorithm. \\
 
-The analysis of the extracted networks consists in the computing of some metrics to characterize them as scale-free or small world and an analysis of the gender distributions. It shows that all social networks have the small-world property and the ones extracted from novels can be considered scale-free. This is not the case with scripts even if they seem to approach some scale-free properties. Masculine characters are most frequent in novels and scripts but the gap is more important in movie scripts. Also in scripts, feminine characters tend to have a smaller degree than masculine characters.
+The analysis of the extracted networks consists in the computing of some metrics to characterize them as scale-free or small world and an analysis of the gender distributions. It shows that all social networks have the small-world property and the ones extracted from novels can be considered scale-free. 
+This is not the case with scripts even if they seem to approach some scale-free properties. Male characters are most frequent in both novels and scripts and they tend to have bigger degrees. In both cases, the gap is more important in movie scripts.
 \end{abstract}
 
 
 \newpage
 \section*{Résumé}
-Ce mémoire de fin d'étude a été réalisé par Antoine Heymans en vue de l'obtention d'un master d’ingénieur civil en informatique à finalité spécialisée à l’Université Libre de Bruxelles en 2020-2021. Le titre complet du mémoire est ``Etude de la topologie de réseaux d'acteurs extraits à partir de roman célèbre.''.\\
+Ce mémoire de fin d'étude a été réalisé par Antoine Heymans
+en vue de l'obtention d'un master d’ingénieur civil en informatique à finalité spécialisée à l’Université Libre de Bruxelles en 2020-2021.
+Le titre complet du mémoire est ``Étude de la topologie de réseaux d'acteurs extraits à partir de roman célèbre.''.\\
 
-Ce travail prends place dans le cadre de l'analyse de réseaux sociaux, un champ de recherches qui mêle science informatique et d'autres domaines tel que la sociologie ou la psychologie.
-Le mémoire est séparé en deux parties: premièrement le développement d'un logiciel existant permettant d'extraire des réseaux sociaux à partir de textes de fictions.  La deuxième partie du mémoire consiste en l'analyse des réseaux précédemment obtenus.\\
-
-Deux changements majeurs ont été apportés au logiciel: tout d'abord le fonctionnement du logiciel a été adapté pour permettre l'utilisation de script de films, le programme initial n'ayant été conçu que pour les romans. Ensuite, alors qu'initialement l'unité lexicale désignant les personnages était le nom propre composé d'un seul mot, le logiciel a été modifié pour permettre au programme d'extraire des noms de personnages composés de plusieurs mots. Cette modification permet d'accéder à d'avantage d'information lors du processus de résolution d'alias tout en le rendant plus complexe. Une difficulté majeure réside dans le fait que le programme repose sur une librairie de traitement automatique du langage naturel qui ne permets pas l'utilisation de certains outils. Deux algorithmes ont été créé afin d'extraire les personnages dans le cas des romans et des scripts. Dans le cas des romans, il s'agit d'un algorithme à passe multiple catégorisant tout les alias puis les liant entre eux itérativement en se basant essentiellement sur l'information sémantique qu'ils contiennent. Dans le cas des scripts, des alias sont récupérés à partir des annotations puis certains d'entre eux sont liés. Les deux algorithmes affectent également un genre aux différents alias. Les résultats montrent que la précision de l'extraction de personnages dans les romans est similaire à une autre méthode de l'état de l'art. Cette précision est approximativement le double de la précision obtenue avec le logiciel original. Le second algorithme permet d'obtenir avec les scripts un résultat légèrement plus précis. Enfin les réseaux obtenus comprennent le genre d'une partie des personnages.\\
-
-
-La caractérisation des réseaux obtenus a été réalisée en mesurant différentes métriques afin de déterminer si ces réseaux peuvent être considérés étants des réseaux ''petit monde'' ou invariants d'échelles. La distribution des genres parmi les personnages a été également analysée. Les résultats montrent que les réseaux extraits à partir de romans répondent à ces deux définitions. Les réseaux extraits de scripts de films en revanche possèdent la propriété du ``petit monde'' mais pas toutes les propriétés requises que pour être considérés comme invariants d'échelle. Les personnages masculins sont plus fréquents dans les romans comme dans les scripts mais cet écart est plus grand dans le cas des scripts. Ceux-ci tendent également à avoir des personnages féminins connectés à moins d'interlocuteurs.
-
+Ce travail prend place dans le cadre de l'analyse de réseaux sociaux,
+un champ de recherches qui mêle science informatique et d'autres domaines tels que la sociologie ou la psychologie.
+Le mémoire est séparé en deux parties: premièrement le développement d'un logiciel existant permettant d'extraire des réseaux sociaux à partir de textes de fiction.
+La deuxième partie du mémoire consiste en l'analyse des réseaux précédemment obtenus.\\
 
 
+Deux changements majeurs ont été apportés au logiciel: tout d'abord le fonctionnement du logiciel a été adapté pour permettre l'utilisation de scripts de films,
+le programme initial n'ayant été conçu que pour les romans.
+Ensuite, alors qu'initialement l'unité lexicale désignant les personnages était le nom propre composé d'un seul mot,
+le logiciel a été modifié pour permettre au programme d'extraire des noms de personnages composés de plusieurs mots.
+Cette modification permet d'accéder à davantage d'information lors du processus de résolution d'alias tout en le rendant plus complexe.
+Une difficulté majeure réside dans le fait que le programme repose sur une librairie de traitement automatique du langage naturel
+qui ne permets pas l'utilisation de certains outils. Deux algorithmes ont été créés afin d'extraire les personnages dans le cas des romans et des scripts.
+Dans le cas des romans, il s'agit d'un algorithme à passes multiples catégorisant l'ensemble des alias
+puis les liant entre eux itérativement en se basant essentiellement sur l'information sémantique qu'ils contiennent.
+Dans le cas des scripts, des alias sont récupérés à partir des annotations puis certains d'entre eux sont liés.
+Les deux algorithmes affectent également un genre aux différents alias.
+Les résultats montrent que la précision de l'extraction de personnages dans les romans est similaire à une autre méthode de l'état de l'art.
+Cette précision est approximativement le double de la précision obtenue avec le logiciel original.
+Le second algorithme permet d'obtenir avec les scripts un résultat légèrement plus précis.
+Enfin les réseaux obtenus comprennent le genre d'une partie des personnages.\\
 
+La caractérisation des réseaux obtenus a été réalisée en mesurant différentes métriques afin de déterminer si ces réseaux peuvent être considérés étant des réseaux ``petit monde''
+ou invariants d'échelles. La distribution des genres parmi les personnages a été également analysée.
+Les résultats montrent que les réseaux extraits à partir de romans répondent à ces deux définitions.
+Les réseaux extraits de scripts de films en revanche possèdent la propriété du ``petit monde''
+mais pas toutes les propriétés requises que pour être considérés comme invariants d'échelle.
+Les personnages masculins sont plus fréquents dans les romans comme dans les scripts mais cet écart est plus grand dans le cas des scripts.
+Ceux-ci tendent également à avoir des personnages féminins connectés à moins d'interlocuteurs.
+
+
+\newpage
 
 \section*{Popularizing article}
+Social network analysis is an interdisciplinary field originally developed under the influence of sociology and mathematics \citep{history_social}.
+It consists of using graphs and networks theory to represent relations among actors as a network to analyze them.
+Originally the ``actor'' used in the network are people but some fields use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}.
+This makes Social Network Analysis useful in various fields like geography \citep{economic_geography} or organizations management \citep{management}.
+It has been used in psychology \citep{psy} as it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}.
+It has also concrete applications outside the academic world: \cite{criminal} provides several interviews with operational agents of Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners.
+Social network analysis has also be designated as a way to enforce laws and disrupt gangs by The International Association of Chiefs of Police \citep{police}. \\
 
-\section*{Acknowledgement}
-I would like to thank my promoter Hugues Bersini for giving me the opportunity to work on this interesting project and to guide me along with this thesis. I would like to thank Michael Waumans and Thibault Nicodème who started this project and provide me a software that I could use as the basis of this master thesis. I would also like to thanks Mathias Dewilde that share with me his linguistic knowledge and Marion Guillaume, Joachim Balis, and Solène Rimbault for the emotional support.
+Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social networks from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that helps to analyze fictions.
+For instance, \cite{original} produce the social networks based on novels but also count the mean distance between two dialogs in the novel.
+This measure produces meaningful results when it is used to classify novels. Social networks can be seen as metadata with the particularity of being present in any fiction no matter the support of this fiction.
+Other metadata are only measurable in movies, novels...
+Those analyses may be used in the future to group fictions that share common properties for commercial purposes. It may also be used to produce sociological observation on literature: for instance, \cite{character_country} observe the evolution of social networks extracted from novels during the 19th century and the difference between plots taking place in urban or rural areas.\\
+
+This master thesis consists firstly in the development of a software that extracts social networks and other metadata from novels and movie scripts. Secondly, it consists of the analysis of the topology of the extracted networks. The software has been originally developed during another master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was initially only working with novels.\\
+
+The development of the software consists of extending its application to movie scripts and creating new algorithms for character extraction. Character extraction is a major part of social network extraction. It consists of extracting all names related to characters in the text, binding names that refer to the same character, and separating names related to different characters. This task is non-trivial as characters are not always mentioned using their first name and last name. The main improvement of this work was to use multiple word names instead of single word names to designate characters. This gives more information to the program to work with but also increases the task difficulty. After these changes, the rate of extracted characters wrongly considered as such is divided by 2 and some of them are labeled with a gender. The gender labels are later used to analyze deeper the social network extracted.\\
+
+Social networks can be classified into different ``families'' of networks sharing different topological properties or emergence mechanisms. During the second part of this work, measures have been taken to characterize the extracted social networks into those families. They have also been compared with networks generated with the same size and belonging to those families. This showed some differences between networks extracted from movies and novels. The repartition of male and female characters has also been observed. Male characters are most frequent in both novels and scripts and they tend to share relations with more characters. In both cases, the gap is more important in movie scripts.
+
+
+
+
+
+%
+%\section*{Acknowledgement}
+%I would like to thank my promoter Hugues Bersini for giving me the opportunity to work on this interesting project and to guide me along with this thesis. I would like to thank Michael Waumans and Thibault Nicodème who started this project and provide me a software that I could use as the basis of this master thesis. I would also like to thanks Mathias Dewilde that share with me his linguistic knowledge and Marion Guillaume, Joachim Balis, and Solène Rimbault for the emotional support.
 \tableofcontents
 
 \chapter{Introduction}
-Social network analysis is an interdisciplinary discipline originally developed under the influence of sociology and mathematics \citep{history_social}. It consists of using graphs and networks theory to represent relations among actors as a network in order to analyze them. Originally the ``actor'' used in the network are people but some fields use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various fields like geography \citep{economic_geography} or organizations management \citep{management}. It has been used in psychology \citep{psy} as it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside of the academic world: \cite{criminal} provides several interviews with operational agents of Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners using it. Social network analysis has also be designated as a way to enforce laws and disrupt gangs by The International Association of Chiefs of Police \citep{police}. \\
+Social network analysis is an interdisciplinary field originally developed under the influence of sociology and mathematics \citep{history_social}. It consists of using graphs and networks theory to represent relations among actors as a network to analyze them. Originally the ``actor'' used in the network are people but some fields use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}. This makes Social Network Analysis useful in various fields like geography \citep{economic_geography} or organizations management \citep{management}. It has been used in psychology \citep{psy} as it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}. It has also concrete applications outside the academic world: \cite{criminal} provides several interviews with operational agents of Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners. Social network analysis has also be designated as a way to enforce laws and disrupt gangs by The International Association of Chiefs of Police \citep{police}. \\
 
-Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social networks from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that helps to analyze them. For instance, \cite{original} produce the social network novels but also count the mean distance between two dialogs in the novel. This measure produces meaningful results when it is used to classify novels. Social networks can be seen as metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
+Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social networks from literary which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that helps to analyze fictions. For instance, \cite{original} extract the social network of novels but also count the mean distance between two dialogs in the novel. This measure produces meaningful results when it is used to classify novels. Social networks can be seen as metadata with the particularity of being present in any fiction no matter the support of this fiction. Other metadata are only measurable in movies, novels... \\
 
-This master thesis consists firstly in the development of software that extracts social networks and other metadata from novels and movie scripts. Secondly, it consists of the analysis of the topology of the extracted networks. The software has been originally developed during another master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was only working on novels. For this reason, I will focus on the modification that I have made and the evolution of the state of the art since this period. The global way the software works will also be explained briefly. \\
+This master thesis consists firstly in the development of software that extracts social networks and other metadata from novels and movie scripts. Secondly, it consists of the analysis of the topology of the extracted networks. The software has been originally developed during another master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was initially only working with novels. For this reason, I will focus on the modification that I have made and the evolution of the state of the art since this period. The global way the software works will also be explained briefly. \\
 
 
 \chapter{Network theory}
@@ -546,7 +594,7 @@ They also link first names with initials and corresponding nicknames from a data
 \cite{character_meta} propose to bind names that share nouns except in some cases, such as names sharing a last name but having a different first name.
 \cite{variation} proposed a method to bind entity representing art object by generating variations of proper nouns and linking them with names corresponding to those variations,
 this method have been applied on characters detection in novels by \cite{quoted, character_meta}.
-In \cite{delete5, structure_clustering, quoted}, a gender is labeled to proper names using a list of masculine and feminine first names and gendered titles.
+In \cite{delete5, structure_clustering, quoted}, a gender is labeled to proper names using a list of male and female first names and gendered titles.
 It is used to avoid merging clusters of names having different genders.
 \cite{ structure_clustering} a sliding window is also used on the text to detect pronoun near names and use it to infer the name gender.
 It ends by removing infrequent characters, characters whose total number of apparitions aliases is smaller than a threshold.
@@ -625,7 +673,7 @@ It separates words contained in a name in a list of honorifics, first name, and 
 To infer the gender, the algorithm uses a list of honorifics and a list of first names classified by gender.
 The gender of names containing the first name from the list of first names or an honorific from the list of labeled honorifics will be assigned.
 If multiple words in the name are related to different genders, the majority vote is used.
-After this phase all names are labeled as \textit{masculine}, \textit{feminine} or {neutral}.\\
+After this phase all names are labeled as \textit{male}, \textit{female} or {neutral}.\\
 
 Then a category will be assigned to each names following their forms:
 \begin{enumerate}
@@ -811,8 +859,8 @@ Aliases \\
 }
 \caption{20 main characters detected in ``Pride and Prejudice'' by the presented method.
 The first column tells if the character refers to a true character from the novel. It was used in the second measurement.
-The second column contains the total number of appearances of names related to the character and the third one contains a 1 if the inferred gender is masculine,
-a 0 if it is neutral and a -1 if it is feminine. The last column contains all aliases of the character. }
+The second column contains the total number of appearances of names related to the character and the third one contains a 1 if the inferred gender is male,
+a 0 if it is neutral and a -1 if it is female. The last column contains all aliases of the character. }
 
 \scalebox{0.7}{
 \begin{tabular}{|l|l|l|}
@@ -1085,7 +1133,7 @@ The final incremental networks of all texts are available in appendix \ref{final
 The networks have been drawn using the following rules:
 \begin{itemize}
 \item The size of each node is proportional to its degree.
-\item The color of each node is given by its labeled gender: blue for masculine characters, green for neutral characters, and red for feminine characters.
+\item The color of each node is given by its labeled gender: blue for male characters, green for neutral characters, and red for female characters.
 \item Edges colors are given by the sentiment between 2 characters.
 \item Edge size is given by the weight of the edge which represents the number of conversations 2 characters participate in.
 \item Networks are drawn using Kamada–Kawai algorithm.
@@ -1364,26 +1412,26 @@ The result is given in figure \ref{attachement} for 2 novels and scripts. Other 
 
 \section{Gender distribution}
 During the network construction, gender has been assigned to characters in order to simplify the alias resolution process.
-For reasons of simplification, the hypothesis has been done that all characters should have a masculine or feminine gender.
+For reasons of simplification, the hypothesis has been done that all characters should have a male or female gender.
 During the process, names that could not be labeled have kept a neutral label that could also be called a ``unknown'' label.
 It doesn't mean that the program considers them as gender-neutral persons.
 These neutral characters groups secondary characters that have not been called
-by a nickname or an honorific, characters that have been called with a nickname or an honorific known by the dataset, and words that have been wrongly extracted as characters.\\
+by a nickname or an honorific and characters that have been called with a nickname or an honorific unknown from the dataset.\\
 
 In this section, we will observe the distribution of gender in novels and script while keeping in mind that the extracted networks do not form a perfect dataset:
 the gender of some characters might have been incorrectly labeled and a lot of characters didn't receive a gender at all.
-Some bias may exist in the dataset of first name and honorific that would favor the labeling of masculine or feminine characters.
+Some bias may exist in the dataset of first name and honorific that would favor the labeling of male or female characters.
 In novels, characters have been extracted from all the text while in movie characters have only been taken from annotations :
 networks extracted from novels should assign a gender to more main characters than networks from scripts, as there are more aliases available to extract a gender.
 But networks extracted from novels also extract more secondary characters and locutions wrongly considered as characters that are more likely to have an unknown gender.
-For this reason, the rate of masculine and feminine characters has been computed 2 times.
+For this reason, the rate of male and female characters has been computed 2 times.
 The first one is a simple rate and the second one has been done using the degree of the nodes as weight.\\
 
 \begin{table}[]
 \scalebox{1}{%
 \csvautotabular[separator=semicolon]{csv/gender_rate_short.csv}
 }
-\caption{Mean value and variance on the gendered, masculine, and feminine rate of characters, computed on scripts, novels, or all texts. The \textit{gendered rate} represents the rate of characters that have been labeled masculine or feminine. The \textit{masculine} and \textit{feminine rate} represent the rate of characters that have been labeled masculine or feminine. The detailed result is available in appendix \ref{gender_all}.}
+\caption{Mean value and variance on the gendered, male, and female rate of characters, computed on scripts, novels, or all texts. The \textit{gendered rate} represents the rate of characters that have been labeled male or female. The \textit{male} and \textit{female rate} represent the rate of characters that have been labeled male or female. The detailed result is available in appendix \ref{gender_all}.}
 \label{gender_short}
 \end{table}
 
@@ -1392,15 +1440,27 @@ The first one is a simple rate and the second one has been done using the degree
 \scalebox{1}{%
 \csvautotabular[separator=semicolon]{csv/gender_weighted_rate_short.csv}
 }
-\caption{Mean value and variance on the gendered, masculine and feminine weighted rate of characters, computed on scripts, novels, or all texts. The \textit{weighted gendered rate} represents the rate of characters that have been labeled masculine or feminine, weighted according to their node degree. The \textit{masculine} and \textit{feminine weighted rate} represent the weighted rate of characters that have been labeled masculine or feminine. The detailed result are available on appendix \ref{gender_all_weighted}. }
+\caption{Mean value and variance on the gendered, male and female weighted rate of characters, computed on scripts, novels, or all texts. The \textit{weighted gendered rate} represents the rate of characters that have been labeled male or female, weighted according to their node degree. The \textit{male} and \textit{female weighted rate} represent the weighted rate of characters that have been labeled male or female. The detailed result are available on appendix \ref{gender_all_weighted}. }
 \label{gender_short_weighted}
 \end{table}
 
-Table \ref{gender_short} gives the rate of feminine and masculine characters in novels and scripts. A first observation is that scripts have a higher rate of gendered characters than novels. Both novels and scripts tend to have more masculine characters.
-The ratio between the rate of masculine and feminine characters is also more important in scripts:$\approx 1.28$ against $\approx 2.87$. For Harry Potter, some movies have a ratio near from the corresponding books (2 and 3), the 6th movie has a lower ratio of masculine character than the corresponding novels but the first and the fourth movies have a higher ratio. In \textit{Pride and Prejudice}, both the novel and its adaptation have more feminine characters than masculine characters but the movie has a ratio nearer from 1.
-On appendix \ref{gender_all},19 works out of 73 have a higher rate of feminine characters: all the novels from the series \textit{A Song of Ice and Fire},  \textit{Pride and Prejudice'}: the novel and the script, The Rain Wild Chronicles 1, The Lunar Chronicles 1 and 3 (the second book have a ratio of 1), The Liveship Traders 2 and 3 and The Wheel of Time ( books 0,2,5,6,7,8,11). Those works tend to be part of the same series. In this list, the only movie script is ``Pride and Prejudice'' a story adapted from a novel that has a ratio of masculine characters rate over feminine characters rate far from 1 ($\approx 0.70$), and this ratio increases in the script ($\approx 0.82$).\\
 
-Table \ref{gender_short_weighted} gives weighted rates taking the degree of nodes as weight. Those results give more importance to recurring characters that have a lot of connections. Here the rate of gendered characters is slightly bigger for novels than for scripts. It confirms the intuition that in novels, the extraction of genders produces better results on main characters. In novels, the ratio of masculine characters over feminine characters remains constant ($\approx 1,29$) but on scripts the ratio increases ($\approx 3.13$).\\
+\begin{table}[]
+\scalebox{1}{%
+\csvautotabular[separator=semicolon]{csv/gender_degree_short.csv}
+}
+\caption{Mean degree of the non-gendered, male and female characters, computed on scripts, novels, or all texts. The detailed result are available on appendix \ref{gender_degree_all}. }
+\label{gender_degree_short}
+\end{table}
+
+
+Table \ref{gender_short} gives the rate of female and male characters in novels and scripts. A first observation is that scripts have a higher rate of gendered characters than novels. Both novels and scripts tend to have more male characters.
+The ratio between the rate of male and female characters is also more important in scripts:$\approx 1.28$ against $\approx 2.87$. For Harry Potter, some movies have a ratio near from the corresponding books (2 and 3), the 6th movie has a lower ratio of male character than the corresponding novels but the first and the fourth movies have a higher ratio. In \textit{Pride and Prejudice}, both the novel and its adaptation have more female characters than male characters but the movie has a ratio nearer from 1.
+On appendix \ref{gender_all},19 works out of 73 have a higher rate of female characters: all the novels from the series \textit{A Song of Ice and Fire},  \textit{Pride and Prejudice'}: the novel and the script, The Rain Wild Chronicles 1, The Lunar Chronicles 1 and 3 (the second book have a ratio of 1), The Liveship Traders 2 and 3 and The Wheel of Time ( books 0,2,5,6,7,8,11). Those works tend to be part of the same series. In this list, the only movie script is ``Pride and Prejudice'' a story adapted from a novel that has a ratio of male characters rate over female characters rate far from 1 ($\approx 0.70$), and this ratio increases in the script ($\approx 0.82$).\\
+
+Table \ref{gender_short_weighted} gives weighted rates taking the degree of nodes as weight. Those results give more importance to recurring characters that have a lot of connections. Here the rate of gendered characters is slightly bigger for novels than for scripts. It confirms the intuition that in novels, the extraction of genders produces better results on main characters. In novels, the ratio of male characters over female characters remains constant ($\approx 1,29$) but on scripts the ratio increases ($\approx 3.13$).\\
+
+Table \ref{gender_degree_short} shows that mean degree is bigger for male characters than for female characters. This difference is more important in movie script than in novels. Non-gendered characters have smaller degree especially with novels.
 
 
 \section{Characterization of networks}
@@ -1408,12 +1468,11 @@ Table \ref{gender_short_weighted} gives weighted rates taking the degree of node
 
 As we saw in the previous section, the extracted social networks have the small-world property and maybe ``ultra-small word``. Their mean path length was shorter than the equivalent family generated of small-world or scale-free networks. Networks extracted from novels have also filled the conditions needed to be considered scale-free: they are constructed using a preferential attachment mechanism and their distribution follows a power-law with a k-value between 2 and 3. Despite these scale-free properties, they have clustering coefficients near to the coefficients of the Watts-Strogatz generated networks. Networks extracted from scripts fill less scale-free conditions: they also follow preferential attachment but the power-law fit doesn't seem more accurate than the exponential fit and the k-value is around $0.96 \notin [2,3]$. They also tend to be higher clustering coefficients. From this, we can not classify them as scale-free but they are near it and some individual networks could be scale-free.\\
 
-In all extracted networks, masculine characters are more frequent than feminine characters. This gap is bigger on movie scripts. Also, feminine characters in movie scripts tend to have less importance than male ones.
-
+In all extracted networks, male characters are more frequent than female characters and they tend to have more importance. This gap is bigger on movie scripts. Scripts adapted from novels also have a lower rate of female characters than the original novel. The non-gendered characters tend to have less importance, especially with novels.
 
 
 \chapter{Conclusion}
-This work consisted in the development of software extracting social networks from novels and the analysis of extracted social networks.
+This work consisted in the development of a software extracting social networks from novels, and the analysis of extracted social networks.
 The development of the software consisted of 2 major parts: the way characters are extracted has been changed and it has been extended to work with movie scripts.\\
 
 The new character extraction process takes proper names instead of proper nouns. This is common in state-of-the-art methods but these methods use some tools that were not available in the parsing library used by the software. It made the process of alias-resolution more complex, which has been solved by the development of a multi-pass algorithm using elements of different state-of-the-art methods, especially some rules based on semantic information of names and honorifics. This algorithm is inferring the gender of names to perform the alias resolution. It has been used to label the gender of the extracted characters.
@@ -1428,7 +1487,7 @@ The size of the datasets used in order to increase the rate of gendered characte
 The extension of the software to script required some adjustment. The bigger difference between novels and scripts is that scripts have annotated speakers for most sentences of dialogs. Scripts also have less contextual information between dialogs.
 A new algorithm of character extraction has been designed for scripts, using those annotations. It gives best results on scripts than the initial algorithm. \\
 
-The analysis of the social network consists of the computation of some metrics on the generated networks and the \hyperref[char]{characterization} of the graph related to the characteristics of small-world and scale-free networks. Scripts and novels have been compared and the rate of different gender in the networks has been analyzed. It shows that all networks have the small-world property but only those extracted from novels are totally scale-free. However, networks extracted from scripts are near from some ``soft'' definition of scale-free. Masculine characters are more frequent in both novels and scripts. But scripts tend to introduce even less feminine characters than novels and to give them less importance. In novels, we didn't found any meaningful difference between the importance of feminine and masculine characters.
+The analysis of the social network consists of the computation of some metrics on the generated networks and the \hyperref[char]{characterization} of the graph related to the characteristics of small-world and scale-free networks. Scripts and novels have been compared and the rate of different gender in the networks has been analyzed. It shows that all networks have the small-world property but only those extracted from novels are totally scale-free. However, networks extracted from scripts are near from some ``soft'' definition of scale-free. Male characters are more frequent in both novels and scripts and have more importance. However this difference is bigger in movie scripts than in novels. Scripts adapted from novels also have a lower rate of female characters than the original novel.
 
 
 \listoffigures
@@ -1474,7 +1533,7 @@ TWOT & The Wheel of Time\\
 \scalebox{0.54}{%
 \csvautotabular[separator=semicolon]{csv/gender_rate.csv}
 }
-\caption{Mean value and variance on the gendered, masculine, and feminine rate of characters, computed on scripts, novels, or all texts. The \textit{gendered rate} represents the rate of characters that have been labeled masculine or feminine. The \textit{masculine} and \textit{feminine rate} represent the rate of characters that have been labeled masculine or feminine. }
+\caption{Mean value and variance on the gendered, male, and female rate of characters, computed on scripts, novels, or all texts. The \textit{gendered rate} represents the rate of characters that have been labeled male or female. The \textit{male} and \textit{female rate} represent the rate of characters that have been labeled male or female. }
 \label{gender_all}
 \end{table}
 
@@ -1482,34 +1541,18 @@ TWOT & The Wheel of Time\\
 \scalebox{0.54}{%
 \csvautotabular[separator=semicolon]{csv/gender_weighted_rate.csv}
 }
-\caption{Mean value and variance on the gendered, masculine, and feminine rate of characters, computed on scripts, novels, or all texts. The \textit{weighted gendered rate} represents the rate of characters that have been labeled masculine or feminine, weighted according to their node degree. The \textit{masculine} and \textit{feminine weighted rate} represent the weighted rate of characters that have been labeled masculine or feminine. }
+\caption{Mean value and variance on the gendered, male, and female rate of characters, computed on scripts, novels, or all texts. The \textit{weighted gendered rate} represents the rate of characters that have been labeled male or female, weighted according to their node degree. The \textit{male} and \textit{female weighted rate} represent the weighted rate of characters that have been labeled male or female. }
 \label{gender_all_weighted}
 \end{table}
 
 
-
-
-
-
-
-
-
-
-
-
-\chapter{Attachment}
-\label{ref_attachement}
-\input{annexeA.tex}
-
-
-
-
-\chapter{Node degree distribution}
-\label{a_degree}
-\input{appendix_degree.tex}
-
-
-
+\begin{table}[]
+\scalebox{0.54}{%
+\csvautotabular[separator=semicolon]{csv/gender_degree.csv}
+}
+\caption{Mean degree of the non-gendered, male and female characters, computed on scripts, novels, or all texts. }
+\label{gender_degree_all}
+\end{table}
 
 
 
@@ -1517,7 +1560,7 @@ TWOT & The Wheel of Time\\
 This section contains the final incremental networks. In those networks:
 \begin{itemize}
 \item The size of each node is proportional to its degree.
-\item The color of each node is given by its labeled gender: blue for masculine characters, green for neutral characters, and red for feminine characters.
+\item The color of each node is given by its labeled gender: blue for male characters, green for neutral characters, and red for female characters.
 \item Edges colors are given by the sentiment between 2 characters.
 \item Edge size is given by the weight of the edge which represents the number of conversations 2 characters participate in.
 \item Graphs are drawn using Kamada–Kawai algorithm.
@@ -1533,7 +1576,7 @@ The main name is the name used on the social network to designate the character.
 \input{characters}
 
 
-\chapter{Measures of metrics on generated networks}
+\chapter{Measures of generated networks}
 \label{measures_generated}
 For each extracted social network, networks with approximately the same number of edges and nodes have been generated using different generation mechanisms. This section contains the measures computed on the generated networks.
 
@@ -1557,6 +1600,20 @@ For each extracted social network, networks with approximately the same number o
 \csvautotabular[separator=semicolon, respect sharp, respect and, respect dollar]{csv/signatures_small-world.csv}}
 \caption{Measures computed on Watts-Strogatz small-world networks. The title of the associated social network is on the left.}
 \end{table}
+
+
+\chapter{Preferential attachment}
+\label{ref_attachement}
+\input{annexeA.tex}
+
+
+
+
+\chapter{Node degree distribution}
+\label{a_degree}
+\input{appendix_degree.tex}
+
+
 
 \end{appendices}
 

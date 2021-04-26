@@ -57,6 +57,35 @@ def final():
     if len(liste)%2 == 1: str += end
     print(str)
     
+def gender_degree():
+    import auxSignature
+    files = get_files_in_folder(PATH_BOOKS)
+    csv = "Book" + CSV_COMMA + "Non gendered mean degree" + CSV_COMMA + "Male mean degree" + CSV_COMMA +"Female mean degree" + "\n"
+
+    for file in files:
+    
+        filename = file[:-4]
+        graph = auxSignature.get_graph(filename)
+
+        all = [graph.degree(n) for n in graph.nodes]
+        male = [graph.degree(n) for n, d in graph.nodes(data=True) if d['gender']==1]
+        female = [graph.degree(n) for n, d in graph.nodes(data=True) if d['gender']==-1]
+        non_gendered = [graph.degree(n) for n, d in graph.nodes(data=True) if d['gender']==0]
+
+            
+        non_gendered_degree = sum(non_gendered)/len(non_gendered)
+        male_degree = sum(male)/len(male)
+        if len(female) != 0:
+            female_degree = sum(female)/len(female)
+        else: 
+            female_degree = "/"
+        csv += filename + CSV_COMMA + str(non_gendered_degree) + CSV_COMMA +str(male_degree) + CSV_COMMA + str(female_degree) + "\n" 
+        
+    filename = PATH_CSV+ "gender_degree" + ".csv"
+    f = open(filename,"w+")
+    f.write(csv)
+    f.close()
+gender_degree()
 def gender_count(weighted = False):
     import auxSignature
     files = get_files_in_folder(PATH_BOOKS)
@@ -91,8 +120,7 @@ def gender_count(weighted = False):
     f = open(filename,"w+")
     f.write(csv)
     f.close()
-
-
+    
 def draw():
     import networkx as nx
     import matplotlib.pyplot as plt
@@ -178,7 +206,7 @@ def characters_to_latex():
         str += "\end{table}\n\n"
     str += "\\end{small}"
     print(str)
-create_csv_characters()
+#create_csv_characters()
 #characters_to_latex()
 
            
