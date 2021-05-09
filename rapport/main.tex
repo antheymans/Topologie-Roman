@@ -168,7 +168,8 @@ Ceux-ci tendent également à avoir des personnages féminins connectés à moin
 %It has also concrete applications outside the academic world: \cite{criminal} provides several interviews with operational agents of Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners.
 %Social network analysis has also be designated as a way to enforce laws and disrupt gangs by The International Association of Chiefs of Police \citep{police}. \\
 %
-%Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} has presented a method to extract social networks from literature which allows to apply Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that helps to analyze fictions.
+%Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} presented a method to extract social networks from literature
+% which allows the application of Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that help to analyze them.
 %For instance, \cite{original} produce the social networks based on novels but also count the mean distance between two dialogs in the novel.
 %This measure produces meaningful results when it is used to classify novels. Social networks can be seen as metadata with the particularity of being present in any fiction no matter the support of this fiction.
 %Other metadata are only measurable in movies, novels...
@@ -389,7 +390,7 @@ As previously explained social networks are almost never regular due to their me
 
 \chapter{Social network construction}
 
-In this section, I will briefly explain what are the main steps executed by the software to extract social networks and metadata from novels or scripts. The modification of the initial program that has been added will be more detailed. The bigger change concerns the extraction of characters from novels. Also, the original software was only analyzing novels, some adjustments have been made to extend it to movie scripts. The state of the art is not presented for parts that don't have been deeply modified. Every information about it are available at \cite{original} and \cite{original_thesis}.
+In this section, I will briefly explain what are the main steps executed by the software to extract social networks and metadata from novels or scripts. The added modifications of the initial program will be more detailed. The bigger change concerns the extraction of characters from novels. Also, the original software was only analyzing novels, some adjustments have been made to extend it to movie scripts. The state of the art is not presented for parts that don't have been deeply modified. Every information about it are available at \cite{original} and \cite{original_thesis}.
 
 \section{Assumption and conception of the social network}
 There are multiple ways of constructing a social network from a text. Especially because there are multiple ways of analyzing the structure of the narrative. \cite{original} choose to see a narrative as a succession of events. The text is composed of a series of \textbf{conversations} that involve a set of characters. Each conversation can be subdivided into a succession of mini-event that are called dialog. In a \textbf{dialog} a person chosen in the set of characters involved in the conversation will address a message to the other characters from the set, the \textbf{audience}. The person that sends the message is called the \textbf{speaker}. Also, all sentences that are out of dialogs are called \textbf{context} and linked with the following conversation or the one that is currently happening. Sentences of context can be located between dialogs from the same conversation. Characters that appear together in a conversation are linked in the social network with a weight that corresponds to the number of conversations they are both in.
@@ -1198,7 +1199,7 @@ $m = [NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of
 \end{itemize}
 
 \subsection{Distribution of degree}
-\cite{original} has shown that characters' social networks extracted from literature tend to have degree distribution following power-law. From this statement, the networks have been considered scale-free. The modification in character extraction decreases a lot the number of characters so we should check that this observation hold.\\
+\cite{original} has shown that characters' social networks extracted from literature tend to have degree distribution following power-law. From this statement, the networks have been considered scale-free. The modifications in character extraction decrease a lot the number of characters so we should check that this observation hold.\\
 
 \begin{figure}
 \begin{subfigure}{.49\textwidth}
