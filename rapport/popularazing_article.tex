@@ -1,0 +1,166 @@
+\documentclass[a4paper, 12pt]{report}
+
+
+
+
+% Some highly suggested packages, please read their manuals.
+
+
+%\usepackage{cmap}
+\usepackage{longtable}
+\setcounter{secnumdepth}{3} % default value for 'report' class is ``2"
+\usepackage{natbib}
+\bibliographystyle{apalike}
+\usepackage[inline]{enumitem}
+\usepackage{url}
+\usepackage{lscape}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage[pdftex]{graphicx}
+%\usepackage[T1]{fontenc}
+\usepackage[hmargin={1in,1in},vmargin={1in,1in}]{geometry}
+\usepackage{pdfpages} 
+\usepackage{tikz}
+\usepackage{breqn}
+\usepackage{caption}
+\usepackage{csvsimple}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage[toc,page]{appendix} 
+\usepackage{caption}
+
+
+% Logos
+\newcommand{\ulb}{\includegraphics[scale=1.1]{logo_ULB2.pdf}}
+\newcommand{\polytech}{\includegraphics[scale=0.35]{logo_polytech_FR.pdf}}
+
+% Polices
+\definecolor{ULBblue}{rgb}{0,0.2196,0.5765}
+\newcommand{\fontTitle}{\sffamily \Huge\selectfont \color{ULBblue}}
+\newcommand{\fontSubtitle}{\sffamily \LARGE \selectfont \color{ULBblue}}
+\newcommand{\fontText}{\sffamily \selectfont}
+\newcommand{\fontColor}{\sffamily \selectfont \color{ULBblue}}
+
+% Titre
+\newcommand{\titleA}{\fontTitle{Etude de la topologie de réseaux d'acteurs}} % Titre identique au titre remis au secrétariat
+\newcommand{\titleB}{\fontTitle{extraits à partir de romans célèbre}} % (dans la langue de rédaction a priori)
+% Sous-titre
+%\newcommand{\subtitle}{\fontSubtitle{Ligne du sous-titre du mémoire}} l73 uncomment
+% Titre du diplôme
+\newcommand{\diplomaA}{\fontText{Mémoire présenté en vue de l’obtention du diplôme}} % A laisser en Français
+\newcommand{\diplomaB}{\fontText{d’Ingénieur Civil en informatique à finalité spécialisée}}
+
+% Etudiant
+\newcommand{\student}{\textbf{\sffamily \large Antoine Heymans}}
+
+% Supervision
+\newcommand{\promAa}{\fontColor{Promoteur}}
+\newcommand{\promAb}{\fontText{Professeur Hugues Bersini}}
+\newcommand{\deptA}{\fontColor{Service}}
+\newcommand{\deptB}{\fontText{Iridia}}
+
+% Année académique
+\newcommand{\yearA}{\fontColor{Année académique}}
+\newcommand{\yearB}{\fontText{2020 - 2021}}
+
+\begin{document}
+	\maxdeadcycles=200
+	\thispagestyle{empty}
+	\newgeometry{top=2.5cm, bottom=1.5cm, left=2.5cm, right=1cm}
+	\setlength{\unitlength}{1mm}
+	\extrafloats{100}
+	\noindent\begin{picture}(175,257)
+	
+		\put(0,245){\polytech}
+		\put(153,139.5){\ulb}
+		
+		\put(8,155){\makebox(150,10)[l]{\titleA}}
+		\put(8,145){\makebox(150,10)[l]{\titleB}}
+		%\put(8,135){\makebox(150,10)[l]{\subtitle}}
+		
+		\put(0,75){
+		\begin{tikzpicture}[scale=0.1]
+		\fill [fill=ULBblue](0,0) rectangle (0.8,90);
+		\fill [fill=ULBblue](0,57) rectangle (152,57.8);
+		\end{tikzpicture}}
+		
+		\put(8,120){\makebox(150,5)[l]{\diplomaA}}
+		\put(8,115){\makebox(150,5)[l]{\diplomaB}}
+		
+		\put(8,75){\makebox(150,10)[l]{\selectfont \student}}
+		
+		\put(8,44){\makebox(80,5)[l]{\promAa}}
+		\put(8,39){\makebox(80,5)[l]{\promAb}}
+		%\put(8,31){\makebox(80,5)[l]{\promBa}} Commenter la ligne si pas nécessaire
+		%\put(8,26){\makebox(80,5)[l]{\promBb}} % Commenter la ligne si pas nécessaire
+		%\put(8,18){\makebox(80,5)[l]{\promCa}} % Commenter la ligne si pas nécessaire
+		%\put(8,13){\makebox(80,5)[l]{\promCb}} % Commenter la ligne si pas nécessaire
+		\put(8,5){\makebox(80,5)[l]{\deptA}}
+		\put(8,0){\makebox(80,5)[l]{\deptB}}
+		
+		\put(145,5){\makebox(30,5)[r]{\yearA}}
+		\put(145,0){\makebox(30,5)[r]{\yearB}}
+	
+	\end{picture}
+	\restoregeometry
+
+\section*{Popularizing article}
+Social network analysis is an interdisciplinary field originally developed under the influence of sociology and mathematics \citep{history_social}.
+It consists of using graphs and networks theory to represent relations among actors as a network to analyze them.
+Originally the ``actor'' used in the network are people but some fields use it to represent abstract entities such as organizations related between them by financial exchange \citep{general_sna}.
+This makes Social Network Analysis useful in various fields like geography \citep{economic_geography} or organizations management \citep{management}.
+It has been used in psychology \citep{psy} as it ''provides a powerful set of tools for describing and modeling the relational context in which behavior takes place, as well as the relational dimensions of that behavior''\citep{intro}.
+It has also concrete applications outside the academic world: \cite{criminal} provides several interviews with operational agents of Criminal Intelligence Analysis using Social Network Analysis and suggests more collaboration between researcher and practitioners.
+Social network analysis has also be designated as a way to enforce laws and disrupt gangs by The International Association of Chiefs of Police \citep{police}. \\
+
+Research in computer science is developing semantically-oriented techniques to analyze fiction. \cite{character_country} presented a method to extract social networks from literature
+ which allows the application of Social Network Analysis techniques on it. \cite{movie} presented a method to extract a social network from movies. Automated methods that analyze texts of fiction also produce metadata that help to analyze them.
+For instance, \cite{original} produce the social networks based on novels but also count the mean distance between two dialogs in the novel.
+This measure produces meaningful results when it is used to classify novels. Social networks can be seen as metadata with the particularity of being present in any fiction no matter the support of this fiction.
+Other metadata are only measurable in movies, novels...
+Those analyses may be used in the future to group fictions that share common properties for commercial purposes. It may also be used to produce sociological observation on literature: for instance, \cite{character_country} observe the evolution of social networks extracted from novels during the 19th century and the difference between plots taking place in urban or rural areas.\\
+
+This master thesis consists firstly in the development of a software that extracts social networks and other metadata from novels and movie scripts. Secondly, it consists of the analysis of the topology of the extracted networks. The software has been originally developed during another master thesis \citep{original_thesis} and further advancement have been achieved in \cite{original}. It was initially only working with novels.\\
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\linewidth]{pictures/stepsSoftware.png}
+\caption[foo bar]{
+Steps of the software
+}
+\label{software}
+\end{figure}
+
+
+The development of the software consists of extending its application to movie scripts and creating new algorithms for character extraction. Character extraction is a major part of social network extraction. It consists of extracting all names related to characters in the text, binding names that refer to the same character, and separating names related to different characters. This task is non-trivial as characters are not always mentioned using their first name and last name. The main improvement of this work was to use multiple word names instead of single word names to designate characters. This gives more information to the program to work with but also increases the task difficulty. After these changes, the rate of extracted characters wrongly considered as such is divided by 2 and some of them are labeled with a gender. The gender labels are later used to analyze deeper the social network extracted.\\
+
+Social networks can be classified into different ``families'' of networks sharing different topological properties or emergence mechanisms. During the second part of this work, measures have been taken to characterize the extracted social networks into those families. They have also been compared with networks generated with the same size and belonging to those families. This showed some differences between networks extracted from movies and novels. The repartition of male and female characters has also been observed. Male characters are most frequent in both novels and scripts and they tend to share relations with more characters. In both cases, the gap is more important in movie scripts.\\
+
+
+
+
+
+An extracted network is given on \ref{sn_harry}, in this representation of the network:
+\begin{itemize}
+\item The size of each node is proportional to its degree.
+\item The color of each node is given by its labeled gender: blue for male characters, green for neutral characters, and red for female characters.
+\item Edges colors are given by the sentiment between 2 characters.
+\item Edge size is given by the weight of the edge which represents the number of conversations 2 characters participate in.
+\end{itemize}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{pictures/_final_graph/Harry_Potter_1.png}
+\caption[foo bar]{
+Network extracted from the novel Harry Potter and the philosopher's stone.
+}
+\label{sn_harry}
+\end{figure}
+
+
+\bibliography{biblio}
+
+\end{document}
+

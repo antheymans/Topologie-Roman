@@ -8,9 +8,13 @@
 
 %\usepackage{cmap}
 \usepackage{longtable}
-\setcounter{secnumdepth}{3} % default value for 'report' class is "2"
-\usepackage{natbib}
+\setcounter{secnumdepth}{4} % default value for 'report' class is ``2"
+\usepackage[square,sort,comma,numbers]{natbib}
 \bibliographystyle{apalike}
+\usepackage{multibib}
+\newcites{movies}{Movie script analyzed}
+\nocitemovies{*}
+\bibliographystylemovies{mla}
 \usepackage{url}
 \usepackage{lscape}
 \usepackage[utf8]{inputenc}
@@ -103,9 +107,11 @@
 	\end{picture}
 	\restoregeometry
 % > > > Empty page
-\thispagestyle{empty} 
-\null
- \includepdf[pages={1}]{memoire-autorisation}
+%\thispagestyle{empty} 
+%\null
+
+% >>> autorisation
+ \includepdf[pages={1}]{memoire-autorisation-1}
 
 \begin{abstract}
 Social network analysis is a field that uses computer science in order to produce results in many fields as sociology or psychology. Some research in social networks concerns the networks of characters described in fiction such as novels or films.
@@ -117,6 +123,8 @@ An algorithm created for novels extracts proper names and iteratively links them
 
 The analysis of the extracted networks consists in the computing of some metrics to characterize them as scale-free or small world and an analysis of the gender distributions. It shows that all social networks have the small-world property and the ones extracted from novels can be considered scale-free. 
 This is not the case with scripts even if they seem to approach some scale-free properties. Male characters are most frequent in both novels and scripts and they tend to have bigger degrees. In both cases, the gap is more important in movie scripts.
+
+\textbf{Keywords}:\textit{Social network analysis, Natural Language Processing (NLP), Network Theory, Alias Resolution, Litterary Analysis, Movie Script Analysis}
 \end{abstract}
 
 
@@ -157,6 +165,9 @@ Les personnages masculins sont plus fréquents dans les romans comme dans les sc
 Ceux-ci tendent également à avoir des personnages féminins connectés à moins d'interlocuteurs.
 
 
+\textbf{Mots-clés}:\textit{Analyse des réseaux sociaux, Traitement Automatique du Langage Naturel (TALN), Théorie des réseaux, Résolution d'alias, Analyse littéraire, Analyse de script de film}
+
+
 %\newpage
 
 %\section*{Popularizing article}
@@ -185,7 +196,7 @@ Ceux-ci tendent également à avoir des personnages féminins connectés à moin
 
 
 
-
+\newpage
 \section*{Acknowledgement}
 I would like to thank my promoter Hugues Bersini for giving me the opportunity to work on this interesting project and to guide me along with this thesis. I would like to thank Michael Waumans and Thibault Nicodème who started this project and provide me a software that I could use as the basis of this master thesis. I would also like to thanks Mathias Dewilde that share with me his linguistic knowledge and Marion Guillaume, Joachim Balis, Gabrielle Froes and Solène Rimbault for their support.
 \tableofcontents
@@ -492,7 +503,7 @@ According to \cite{fiction}, characters in novels may appear in the form of a pr
 We can add a distinction between proper nouns and proper names even if they are sometimes used as synonyms:
 In this work, we use the definition of proper names and proper nouns given by \cite.
 According to this definition, proper nouns are single capitalized words while proper names are a single word or a group of words that designates an entity.
-Proper names composed by a single word are both proper names and proper nouns, for instance: "Harry".\\
+Proper names composed by a single word are both proper names and proper nouns, for instance: ``Harry".\\
 
 In this work, characters are only detected when they are in the form of proper names which includes proper nouns.
 This choice is motivated by the fact that characters will be later connected when they are mentioned in the same conversation.
@@ -550,14 +561,14 @@ The fact that proper nouns are only composed of a single token makes a perfect b
 The pairing is needed to link the first names and last names of characters but in some cases, multiple proper names that should not be linked appear in the same chunk.
 Here are some common mistakes in character extraction with examples from the method of \cite{original} used on the novel Harry Potter 1.
 \begin{enumerate}
-\item \textbf{When both the first name and the last name of a character are used to identify a character, they are not paired}: "Harry" and "Potter" are labeled as different characters.
+\item \textbf{When both the first name and the last name of a character are used to identify a character, they are not paired}: ``Harry" and ``Potter" are labeled as different characters.
 
-\item \textbf{When multiple characters share the same first name or last name, if the linking is made they will all be clustered as a single character}: the names referring to the 8 characters of the "Weasley" family are mixed in 4 clusters. Each cluster is composed of aliases referring to 2, 3, or 4 characters.
+\item \textbf{When multiple characters share the same first name or last name, if the linking is made they will all be clustered as a single character}: the names referring to the 8 characters of the ``Weasley" family are mixed in 4 clusters. Each cluster is composed of aliases referring to 2, 3, or 4 characters.
 
-\item \textbf{Some characters are referred to with proper nouns that should not be used for pairing}: "Mr" is paired with "Dursley" and "Weasley" because the text often refers to "Mr. Dursley" or "Mr. Weasley". It causes the clustering of unrelated words. The same problem appears with other titles like "professor".
+\item \textbf{Some characters are referred to with proper nouns that should not be used for pairing}: ``Mr" is paired with ``Dursley" and ``Weasley" because the text often refers to ``Mr. Dursley" or ``Mr. Weasley". It causes the clustering of unrelated words. The same problem appears with other titles like ``professor".
 
 \item \textbf{Some chunks contain multiple characters}: The algorithm links the chunk to a sinHermionecter.
-For instance: "Ron and Hermione", "Mr and "Mrs. Weasley" or "Fred and George" are each time linked to a single character.
+For instance: ``Ron and Hermione", ``Mr and Mrs. Weasley" or ``Fred and George" are each time linked to a single character.
 \end{enumerate}
 
 \subsubsection{Name Entity Recognition}
@@ -567,14 +578,14 @@ This is the most common way to extract characters' names from a novel.
 The best NER methods are supervised or semi-supervised and trained with annotated datasets of news, text from social media, or biomedical data \citep{NER_survey_recent}.
 This decreases their performance in novels, especially novels from fantasy or the older ones \citep{NER}.
 Unsupervised methods typically rely on rules and domain-based knowledge, which makes them completely domain-dependent.
-POS-tagger may be considered as a naive program of NER.
-The original software \citep{original} was extracting all words labeled as proper names by a POS-tagger with the major issue of considering only single-word nouns
+POS-tagger are tool that assign to each words of a text a part of speech \citep{POStag}. They may be considered as basic program of NER.
+The original software \citep{original} was extracting all words labeled as proper names by a POS-tagger if there are not entirely uppercase and have more than 2 letters. It has the the major issue of considering only single-word nouns
 while in \cite{quoted}, proper nouns are tagged using a POS-tagger and contiguous proper nouns are considered as proper names.
 \cite{character_meta} also extracts subjects of verbs present in a dataset of verbs strongly associated with ``person'' entity.
 This technique allows detecting anaphoric nouns and not only proper names. \cite{ structure_clustering} store the number of times that words are classified at location or person,
 so words that are likely to be locations are removed from the location list.
 Pattern the NLP library of python that is used in the software doesn't have any NER module.
-Spacy, another NLP library of python has an available module that performs NER using "Conditional Random Fields", a statistical model that uses supervised learning.
+Spacy, another NLP library of python has an available module that performs NER using ``Conditional Random Fields", a statistical model that uses supervised learning.
 Pre-trained models are available but the model could also be trained manually with an annotated dataset.
 The most common tool for NER is the Stanford Named Entity Recognizer (NER) which is only available on java. For practicability reasons, it has not been considered in this work.\\
 
@@ -628,7 +639,7 @@ and the remaining ones should be minor in the narrative. So if we miss one of th
 As explained in the state of the art, a python library, Spacy, provides a tool for the task of Named Entity Recognition.
 However, this tool has not been trained specifically with novels nor for the task of extracting characters' names from a text.
 It doesn't detect honorifics and works as a ``black box'' which gives sometimes incorrect results.
-For instance in the book ``Harry Potter 1'' the tool detect as characters: 'Harry bellowed', 'Harry anxiously', 'knew yeh didn', ' baker', `yer meddlin', 'Happy Birthday Harry'.
+For instance in the novel ``Harry Potter 1'' the tool detect as characters: 'Harry bellowed', 'Harry anxiously', 'knew yeh didn', ' baker', `yer meddlin', 'Happy Birthday Harry'.
 It seems that interjection such as ``yer'' or ``yeh'' are interpreted as nouns and a lot of verbs or adjectives are seen as part of names like with ``Harry bellowed''.
 Also, the tool doesn't make a difference between proper nouns and anaphoric nouns such as with ``baker''.
 This is an issue as anaphoric noun phrases lose their meaning out of their context and considering them as character names could lead to major confusion.
@@ -637,7 +648,7 @@ For all those reasons it has been chosen to avoid working with this library. \\
 
 A Named Entity Recognition method has been designed to extract characters' names from novels.
 This technique uses a POS-Tagger to extract proper nouns from the text and several collections of proper nouns commonly used in English to isolate characters' names.
-Then proper names are extracted from chunks containing a valid proper noun if it is not the head of a sentence.
+Then proper names are extracted from chunks having a valid proper noun as head.
 The collection of words contain a list of countries, nationalities, honorifics (classified following the related gender), stop-words, profanities,
 words related to time, and words related to the academic domain.
 In this method, a proper noun is considered as \textit{valid} if it begins with a capital letter but is not composed with capital letters only.
@@ -653,9 +664,9 @@ Secondly, the algorithm check that words labeled as location doesn't appear in t
 In such cases, the word will be removed from the list of proper nouns if it appeared more often as a location than as a name.
 The final step of the Named Entity Recognition method consists of building proper names from proper nouns.
 All chunks containing a proper noun are isolated.
-Then all sequences of consecutive valid proper nouns are extracted and considered as proper names.
+Then all sequences of consecutive  \textit{valid} capitalized words are extracted and considered as proper names. 
 For instance from the chunk ``Mr. Harry Potter and Ron'' 2 proper nouns are extracted: ``Mr. Harry Potter'' and ``Ron''.
-The proper names are registered with the count of their appearance. After this step, all proper nouns that have not been used in any proper names are deleted.\\
+The proper names are registered with the count of their appearance. After this step, all proper names that have not been used in any proper nouns are deleted.\\
 
 In this method, many restrictive conditions are put on proper nouns extraction.
 But the way nouns are extracted implies that if a noun is extracted one time, he will be considered each time as a proper noun.
@@ -689,8 +700,9 @@ the name is considered as an error and is removed.
 
 \subsubsection{Alias resolution}
 \label{section:alias}
-The alias resolution process consists of a multi-pass algorithm that firstly creates a primary link and secondary link between all names,
-then transforms secondary links into primary links in some cases. After this linking phase, clusters are build to represent a character.
+The alias resolution process consists of a multi-pass algorithm that firstly creates primary links and secondary links between some names,
+then transforms secondary links into primary links in some cases.
+After this linking phase, clusters are build to represent a character.
 Each cluster consists of names connected between them by a path of primary links.
 The most used name of the cluster is called the head of the cluster and is used to represent the associated character in the social network.
 In the following explanations, I will use the expression ``compatible genders'' between 2 names,
@@ -698,7 +710,7 @@ which means that the gender assigned to those names doesn't prevent them to poin
 Concretely they have the same gender or one of them is neutral. To be connected, names have to have compatible genders.
 Once two names are linked by a primary link, if one of them was neutral, its gender will be inferred from its neighbor.
 In such situations, the neutral name will delete all its connections with words of the opposite gender.
-In the following explanation, I will also speak about "primary-connection" or secondary"neighbors" to speak about names connected using a path of primary link
+In the following explanation, I will also speak about ``primary-connection" or secondary"neighbors" to speak about names connected using a path of primary link
 and names neighbors from each other by a secondary link. \\
 
 During the first pass, all first names used by names of classes 1 and 2 are taken one by one.
@@ -789,7 +801,7 @@ if the algorithm can isolate names referring to a character in the text. \\
 \scalebox{1}{%
 \begin{tabular}{|c|c|c|c|}
 \hline
-book & Proposed method & \cite{original} & \cite{character_meta}\\
+Novel & Proposed method & \cite{original} & \cite{character_meta}\\
 \hline
 Harry Potter 1& 65\% (70/108) & 32\% (61/193) & // \\
 The Lunar Cycle & 67\% (24/36)& 26\% (25/96)& // \\
@@ -906,7 +918,7 @@ as it is less used. But the character ``Charlotte Lucas'' is correctly extracted
 They also mix the character ``William Goulding'' with the character ``William Lucas''.
 We see that they have considered 2 anaphoric noun phrase as character: ``servant'' and ``housekeeper''
 while our method has wrongly considered 2 locations as character ``Pemberley House'' and ``Netherfield Park''.
-Our method binds family names such as ``'The Gardiners'' with the most common characters of the family while the other method avoids using them.\\
+Our method binds family names such as ``The Gardiners'' with the most common characters of the family while the other method avoids using them.\\
 
 The observation of the characters extracted by both methods shows some tendencies. Our method tends to extract more aliases but also extract some incorrect ones.
 It also binds sets of aliases more cautiously with result in dividing a character into two sets of aliases but avoid to mix between them completely different characters.
@@ -979,7 +991,7 @@ I've corrected some of those but I can't manually fix them all. This causes the 
 In order to use annotations while diminishing the number of related errors, a method has been developed.
 The method is inspired by the previous method for novels with many simplifications. The method is developed hereunder:
 \begin{enumerate}
-\item In pre-processing: When a parenthesis is detected, we assume that the end of the sentence is an additional annotation that we don't keep. All words are capitalized. The sentence is spitted in multiple speakers when ``And'', ``/'' or ``,`` are detected. Useless characters such as ``;'' or ``.'' are removed.
+\item In pre-processing: When a parenthesis is detected, we assume that the end of the sentence is an additional annotation that we don't keep. All words are capitalized. When ``And'', ``/'' or ``," are detected, multiple speakers are extracted. Useless characters such as ``;'' or ``.'' are removed.
 \item At the beginning of character extraction, all speakers are registered as proper names.
 \item Each of the proper names that composed the speakers are also registered as proper names and linked with the corresponding speaker using a secondary link.
 \item Speakers are also split when a ``-'' is detected. ``-'' are used in scripts to gives multiple names to the same speaker, for instance: ``_BEAUREGARD - KLAN NARRATOR ``.
@@ -1089,6 +1101,7 @@ All characters that don't have been identified a single time among all conversat
 
 
 \section{Construction of the network}
+
 The social network is constructed using the identification of characters in dialogs in section \ref{identification}. The implementations is made using the python library \textit{networkx} \citep{networkx}.
 Two types of network are constructed:
 \begin{enumerate}
@@ -1096,7 +1109,16 @@ Two types of network are constructed:
 \item Incremental networks: networks which are the result of the incremental addition of context networks. They represent the link between characters from a set of conversations.
 \end{enumerate}
 \subsection{Context networks}
-Context networks are a particular type of network developed by \cite{original}. They have the particularity of representing only a conversation, so, all characters of those networks tend to be linked between them. They have been designed to make possible the construction of incremental networks. \\
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{pictures/Context_graph.png}
+\caption{A context network from the novel Harry Potter 1.}
+\label{cn_harry}
+\end{figure}
+
+Context networks are a particular type of network developed by \cite{original}. They have the particularity of representing only a conversation, so, all characters of those networks tend to be linked between them. They have been designed to make possible the construction of incremental networks. One of them is given at \ref{cn_harry}. \\
 
 They are built by executing the following steps:
 \begin{enumerate}
@@ -1105,6 +1127,8 @@ They are built by executing the following steps:
 \item If there is already a link between a speaker and a listener, the first weight is incremented. The polarity of the dialog is added to the sentiment-weight.
 \item At the end of the network construction, the sentiment weight of each link is normalized by dividing it by the first weight of the link.
 \end{enumerate}
+
+
 
 \subsection{Incremental networks}
 The name ``incremental network'' comes from \cite{original} in opposition to the context networks. They are constructed by incrementally adding context networks in chronological order. There are as many incremental networks as there are conversations in a novel or a script. The objective of constructing such graphs is to observe how the social network evolves with the story.
@@ -1121,12 +1145,14 @@ The sentiment score is modified by using equation \ref{sentiment} with $Time-Fac
 The goal of this equation is to slightly decrease the importance of the previous sentiment score and see how the sentiment between characters evolves during the narrative.
 At the end of the addition of links, all nodes that represent characters that don't appear in enough conversation are removed. The goal of this removal is to throw all false characters and minor characters that are not important for the social network. The threshold value has been kept at 1 to keep minor characters as the new character extraction system has already removed a lot of false characters.\\
 
+
+
 \subsection{Final incremental networks}
 
-\begin{figure}
+\begin{figure}[h]
 \centering
 \includegraphics[width=\linewidth]{pictures/_final_graph/Harry_Potter_1.png}
-\caption{Final Incremental Network of the novel Harry Potter 1.}
+\caption{Final Incremental Network  extracted from the novel Harry Potter 1.}
 \label{sn_harry}
 \end{figure}
 
@@ -1243,12 +1269,12 @@ $m = [NbrOfEdge / NbrOfNode]$. This gives a rough approximation of the number of
 \centering
 \includegraphics[width=\linewidth]{pictures/degree/Thor_Ragnarok_SCRIPT}
 \end{subfigure}
-\caption{Degree distribution of social networks extracted from the script of the first movie of the saga``Harry Potter'', ``Alien'' and from the movies ``Pride and prejudice'', ``Thor: Ragnarok''. All degree distribution are available on appendix \ref{a_degree}.}
+\caption{Degree distribution of social networks extracted from the script of the first movie of the saga ``Harry Potter'', ``Alien'' and from the movies ``Pride and prejudice'', ``Thor: Ragnarok''. All degree distribution are available on appendix \ref{a_degree}.}
 \label{distrib_degree_4_scripts}
 \end{figure}
 
 In figure \ref{distrib_degree_4_novels}, the degree distributions from 4 novels show a big amount of nodes with small degrees and fewer nodes with more degrees. The first graph looks like a heavy-tail distribution but others seem to have a more flattened curve. Also, we see that the graphs have many irregularities. Because of this, I have added all the distributions extracted from novels in a single distribution to fit it. It was already the way used by \cite{original}.
-The distributions extracted from 4 movies are also shown on figure \ref{distrib_degree_4_scripts}. The first example shows a distribution completely different from the others networks, this is due to the fact that the movie is a ``huis-clos'': all the narratives happen in a close environment with a limited amount of characters. In such a movie, it's intuitive that most characters are linked, this should also happen to books following this principle. However no books from our collections present this specificity, we can not verify it. The other hypothesis is that movies are more likely to present configurations with a smaller number of characters as this limits the cost of production. Other books present a decreasing graph like novels but it seems polynomial. Like novels, the degree distribution has been summed in order to observe their general behavior. \\
+The distributions extracted from 4 movies are also shown on figure \ref{distrib_degree_4_scripts}. The first example shows a distribution completely different from the others networks, this is due to the fact that the movie is a ``huis-clos'': all the narratives happen in a close environment with a limited amount of characters. In such a movie, it's intuitive that most characters are linked, this should also happen to novels following this principle. However no novels from our collections present this specificity, we can not verify it. The other hypothesis is that movies are more likely to present configurations with a smaller number of characters as this limits the cost of production. Other novels present a decreasing graph like novels but it seems polynomial. Like novels, the degree distribution has been summed in order to observe their general behavior. \\
 
 \begin{figure}
 \begin{subfigure}{\textwidth}
@@ -1467,7 +1493,7 @@ Table \ref{gender_degree_short} shows that mean degree is bigger for male charac
 \section{Characterization of networks}
 \label{char}
 
-As we saw in the previous section, the extracted social networks have the small-world property and maybe ``ultra-small word``. Their mean path length was shorter than the equivalent family generated of small-world or scale-free networks. Networks extracted from novels have also filled the conditions needed to be considered scale-free: they are constructed using a preferential attachment mechanism and their distribution follows a power-law with a k-value between 2 and 3. Despite these scale-free properties, they have clustering coefficients near to the coefficients of the Watts-Strogatz generated networks. Networks extracted from scripts fill less scale-free conditions: they also follow preferential attachment but the power-law fit doesn't seem more accurate than the exponential fit and the k-value is around $0.96 \notin [2,3]$. They also tend to be higher clustering coefficients. From this, we can not classify them as scale-free but they are near it and some individual networks could be scale-free.\\
+As we saw in the previous section, the extracted social networks have the small-world property and maybe ``ultra-small word". Their mean path length was shorter than the equivalent family generated of small-world or scale-free networks. Networks extracted from novels have also filled the conditions needed to be considered scale-free: they are constructed using a preferential attachment mechanism and their distribution follows a power-law with a k-value between 2 and 3. Despite these scale-free properties, they have clustering coefficients near to the coefficients of the Watts-Strogatz generated networks. Networks extracted from scripts fill less scale-free conditions: they also follow preferential attachment but the power-law fit doesn't seem more accurate than the exponential fit and the k-value is around $0.96 \notin [2,3]$. They also tend to be higher clustering coefficients. From this, we can not classify them as scale-free but they are near it and some individual networks could be scale-free.\\
 
 In all extracted networks, male characters are more frequent than female characters and they tend to have more importance. This gap is bigger on movie scripts. Scripts adapted from novels also have a lower rate of female characters than the original novel. The non-gendered characters tend to have less importance, especially with novels.
 
@@ -1493,7 +1519,12 @@ The analysis of the social network consisted of the computation of some metrics 
 
 \listoffigures
 \listoftables
+
 \bibliography{biblio}
+
+\input{biblio_books.tex}
+
+\bibliographymovies{movies}
 
 
 \begin{appendices}
@@ -1589,25 +1620,25 @@ This section contains the final incremental networks. In those networks:
 \item Graphs are drawn using Kamada–Kawai algorithm.
 \end{itemize}
 \label{final_sn}
-\input{SN.tex}
+%\input{SN.tex}
 
 \chapter{Preferential attachment}
 \label{ref_attachement}
-\input{annexeA.tex}
+%\input{annexeA.tex}
 
 
 
 
 \chapter{Node degree distribution}
 \label{a_degree}
-\input{appendix_degree.tex}
+%\input{appendix_degree.tex}
 
 \chapter{Alias extracted}
 This section shows the set of alias designating characters for some novels and books.
 The number of appearances of the character and its gender are also given.
 The main name is the name used on the social network to designate the character.
 \label{alias_extracted}
-\input{characters}
+%\input{characters}
 
 \end{appendices}
 
