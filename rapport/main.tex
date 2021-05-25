@@ -14,7 +14,7 @@
 \usepackage{multibib}
 \newcites{movies}{Movie script analyzed}
 \nocitemovies{*}
-\bibliographystylemovies{mla}
+\bibliographystylemovies{apalike}
 \usepackage{url}
 \usepackage{lscape}
 \usepackage[utf8]{inputenc}
@@ -165,7 +165,7 @@ Les personnages masculins sont plus fréquents dans les romans comme dans les sc
 Ceux-ci tendent également à avoir des personnages féminins connectés à moins d'interlocuteurs.
 
 
-\textbf{Mots-clés}:\textit{Analyse des réseaux sociaux, Traitement Automatique du Langage Naturel (TALN), Théorie des réseaux, Résolution d'alias, Analyse littéraire, Analyse de script de film}
+\textbf{Mots-clés}:\textit{Analyse des réseaux sociaux, Traitement Automatique du Langage Naturel (TALN), Théorie des réseaux, Résolution d'alias, Analyse littéraire, Analyse de scripst de films}
 
 
 %\newpage
@@ -340,7 +340,7 @@ Some networks have a very regular and easily recognizable topology such as latti
 
 \subsection{Small-world networks}
 \label{sm-section}
-Small-world networks are another family of networks that presents elements of randomness. Initially, the goal of this classification was to represent networks that are highly clustered as latices but have an irregular topology and have a very short average path length between their nodes. A lot of social networks respond to these properties. For instance, networks of friends are highly clustered: people sharing common friends are likely to be friends. Of course, they are not regular as they evolve randomly and their average path length can be surprisingly small: \cite{milgram} have shown that the median number of intermediary needed to connect two randomly chosen people is six. Random networks don't have those properties as links are randomly added, all nodes have the same probability to share an edge. Some regular networks such as lattices are also highly clustered but they have a very long mean path length: as each vertex is only connected to its nearest neighbors, a path needs to go through a lot of clusters of neighbors before joining an opposite node. \citep{complex_networks} \\
+Small-world networks are another family of networks that presents elements of randomness. Initially, the goal of this classification was to represent networks that are highly clustered as latices but have an irregular topology and have a very short average path length between their nodes. A lot of social networks respond to these properties. For instance, networks of friends are highly clustered: people sharing common friends are likely to be friends. Of course, they are not regular as they evolve randomly and their average path length can be surprisingly small: \cite{milgram} have shown that the median number of intermediary needed to connect two randomly chosen people is six. Random networks don't have those properties as links are randomly added, all nodes have the same probability to share an edge. Some regular networks such as lattices are also highly clustered but they have a very long mean path length: as each vertex is only connected to its nearest neighbors, a path needs to go through a lot of clusters of neighbors before joining an opposite node. To characterize them we define small-world networks as networks with a mean-path length growing logarithmically with N. \citep{small-world, complex_networks} \\
 
 \begin{figure}
 \centering
@@ -356,7 +356,7 @@ The Watts-Strogatz model for building small-world networks has been given by \ci
 \item For each node, each edge is removed with a probability p.
 \item For each edge removed on a node, a new edge is added linking the node with another node randomly chosen. Steps 2 and 3 may be executed at once.
 \end{enumerate}
-After this construction, a network is obtained with a high clustering thanks to the initial lattice structure. But the edges added in the last step allow to connect groups of neighbors that are far from each other and reduce the mean path length. The construction of the network is illustrated in figure \ref{small-world_pictures}. An initial graph is shown on image (a) and the following image shows the network after the removal and additions of some links. The networks constructed with this model are characterized by being connected and having an almost constant degree for each node. Others models have been given for small-world networks by following the same intuition of combining lattice with randomness and long-range link. A common property of those networks is that the mean-path length grows logarithmically with N similarly to random graphs.\citep{small-world, complex_networks}
+After this construction, a network is obtained with a high clustering thanks to the initial lattice structure. But the edges added in the last step allow to connect groups of neighbors that are far from each other and reduce the mean path length. The construction of the network is illustrated in figure \ref{small-world_pictures}. An initial graph is shown on image (a) and the following image shows the network after the removal and additions of some links. The networks constructed with this model are characterized by being connected and having an almost constant degree for each node. Others models have been given for small-world networks by following the same intuition of combining lattice with randomness and long-range link. \citep{small-world, complex_networks}
 
 \subsection{Scale-free networks}
 \label{scale-free-section}
@@ -501,7 +501,7 @@ The first sub-task will be deeper analyzed on this work, as a new detection syst
 \subsection{Character extraction in novels}
 According to \cite{fiction}, characters in novels may appear in the form of a proper noun, a pronoun, or an anaphoric noun phrase. Example are given on figure \ref{appearance_type}.
 We can add a distinction between proper nouns and proper names even if they are sometimes used as synonyms:
-In this work, we use the definition of proper names and proper nouns given by \cite.
+In this work, we use the definition of proper names and proper nouns given by \cite{properNames}.
 According to this definition, proper nouns are single capitalized words while proper names are a single word or a group of words that designates an entity.
 Proper names composed by a single word are both proper names and proper nouns, for instance: ``Harry".\\
 
@@ -1370,7 +1370,7 @@ The first thing to notice on the values pf table \ref{signature} is that the tra
 \centering
 \includegraphics[width=\linewidth]{pictures/path_script_semi_log}
 \end{subfigure}
-\caption{Mean shortest path following the graph size. The 2 first images presents the values for all the texts. The last one present only values from novels or script with a logarithmic fitting. }
+\caption{Mean shortest path following the graph size. The 2 first images presents the values for all the texts. The last ones present only values from novels or script with a logarithmic fitting. }
 \label{mean_path}
 \end{figure}
 
@@ -1427,8 +1427,7 @@ On table \ref{path_length_values}, we see that for both scripts and movies the s
 \begin{subfigure}{.49\textwidth}
 \includegraphics[width=\linewidth]{pictures/attachement/ASOIAF_1}
 \end{subfigure}
-\caption{Probability of attachment to a node following the final degree of the node with a linear fitting for 2 scripts and novels : Harry Potter (novels and script), Blackkklansman and A Song Of Ice and Fire (from which Games of Thrones has been adapted
-).}
+\caption{Probability of attachment to a node following the final degree of the node with a linear fitting for 2 scripts and novels : \textit{Harry Potter} (novels and script), \textit{Blackkklansman} and \textit{A Song Of Ice and Fire}.}
 \label{attachement}
 \end{figure}
 
@@ -1521,11 +1520,8 @@ The analysis of the social network consisted of the computation of some metrics 
 \listoftables
 
 \bibliography{biblio}
-
-\input{biblio_books.tex}
-
 \bibliographymovies{movies}
-
+\input{biblio_books.tex}
 
 \begin{appendices}
 
